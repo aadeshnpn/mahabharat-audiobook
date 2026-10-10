@@ -1,11 +1,10 @@
-"""Join rendered lines with the same gaps the duration model uses, then normalize loudness."""
+"""Join rendered lines with the same gaps the duration model uses; normalise each line, then master the episode (BS.1770)."""
 
 from __future__ import annotations
 
-import shutil
-import subprocess
 from pathlib import Path
 
+from mbh.episode import loudness
 from mbh.episode.audioio import read_mono, resample, write_pcm16
 from mbh.episode.models import EpisodeScript, ScriptLine
 from mbh.episode.render import RenderResult
@@ -21,11 +20,16 @@ def assemble(
     *,
     intro: Path | None = None,
     outro: Path | None = None,
+    normalize_lines: bool = True,
 ) -> dict:
+    """Join lines with gaps. Each line is first brought to ``settings.loudness_lufs`` (so voices match),
+    then the whole episode is mastered to the same target with a true-peak ceiling and re-measured."""
     by_id = {item.line_id: item for item in results}
     pieces: list[tuple[str, list[float]]] = []
     rate = settings.sample_rate
+    target = settings.loudness_lufs
     missing: list[str] = []
+    per_line: list[dict] = []
     prev: ScriptLine | None = None
     if intro and intro.exists():
         samples, src_rate = read_mono(intro)
@@ -40,7 +44,13 @@ def assemble(
         if gap:
             pieces.append(("gap", [0.0] * int(round(gap * rate))))
         samples, src_rate = read_mono(Path(item.path))
-        pieces.append((line.id, resample(samples, src_rate, rate)))
+        samples = resample(samples, src_rate, rate)
+        if normalize_lines:
+            samples, info = loudness.normalize_line(samples, rate, target)
+            after, _method = loudness.measure(samples, rate)
+            per_line.append({"line_id": line.id, "speaker": line.speaker, "voice_id": line.voice_id,
+                             "seconds": round(len(samples) / rate, 2), **info, "after": after})
+        pieces.append((line.id, samples))
         prev = line
     if outro and outro.exists():
         samples, src_rate = read_mono(outro)
@@ -48,25 +58,41 @@ def assemble(
     if not any(name not in {"gap", "intro", "outro"} for name, _samples in pieces):
         raise RuntimeError("no rendered lines to assemble; run `mbh episode render` first")
     mixed = _concat(pieces)
-    peak = _peak_normalize(mixed, db=settings.true_peak_db)
+    mastered, master_info = loudness.master(mixed, rate, target, settings.true_peak_db)
     out_wav.parent.mkdir(parents=True, exist_ok=True)
-    raw_path = out_wav.with_suffix(".raw.wav")
-    write_pcm16(raw_path, peak, rate)
-    loudness = "peak"
-    if shutil.which("ffmpeg"):
-        _ffmpeg_loudnorm(raw_path, out_wav, settings)
-        loudness = "lufs"
-        raw_path.unlink(missing_ok=True)
-    else:
-        raw_path.replace(out_wav)
+    write_pcm16(out_wav, mastered, rate)
+    final, _method = loudness.measure(read_mono(out_wav)[0], rate)  # what is actually on disk (16-bit)
     return {
         "path": str(out_wav),
         "sample_rate": rate,
         "seconds": round(len(mixed) / rate, 3),
-        "loudness": loudness,
+        "loudness": "bs1770",
+        "target_lufs": target,
+        "true_peak_db": settings.true_peak_db,
+        "measured_lufs": final,
+        "master": master_info,
+        "speakers": speaker_spread(per_line),
+        "lines": per_line,
         "missing_lines": missing,
         "pieces": len(pieces),
     }
+
+
+def speaker_spread(per_line: list[dict]) -> dict:
+    """Mean loudness per speaker before and after line normalisation, plus the max-min spread."""
+    out: dict = {"by_speaker": {}}
+    for key in ("before", "after"):
+        groups: dict[str, list[float]] = {}
+        for row in per_line:
+            if row.get(key) is not None:
+                groups.setdefault(row["speaker"], []).append(row[key])
+        means = {spk: round(sum(v) / len(v), 2) for spk, v in groups.items()}
+        for spk, v in means.items():
+            out["by_speaker"].setdefault(spk, {})[f"{key}_mean"] = v
+        values = [row[key] for row in per_line if row.get(key) is not None]
+        out[f"{key}_line_range_db"] = round(max(values) - min(values), 2) if values else None
+        out[f"{key}_speaker_spread_db"] = round(max(means.values()) - min(means.values()), 2) if means else None
+    return out
 
 
 def _concat(pieces: list[tuple[str, list[float]]]) -> list[float]:
@@ -74,20 +100,3 @@ def _concat(pieces: list[tuple[str, list[float]]]) -> list[float]:
     for _name, samples in pieces:
         out.extend(samples)
     return out
-
-
-def _peak_normalize(samples: list[float], db: float) -> list[float]:
-    peak = max((abs(sample) for sample in samples), default=0.0)
-    if peak == 0:
-        return list(samples)
-    target = 10 ** (db / 20.0)
-    gain = target / peak
-    return [sample * gain for sample in samples]
-
-
-def _ffmpeg_loudnorm(src: Path, dest: Path, settings: EngineSettings) -> None:
-    filt = f"loudnorm=I={settings.loudness_lufs}:TP={settings.true_peak_db}:LRA=11"
-    subprocess.run(
-        ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", filt, "-ar", str(settings.sample_rate), str(dest)],
-        check=True,
-    )

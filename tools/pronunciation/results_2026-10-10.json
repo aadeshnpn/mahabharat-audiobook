@@ -1,0 +1,2374 @@
+{
+ "Vaisampayana": {
+  "spoken": "Vaisampayana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Vaisampayana",
+   "vais:Vaisampayana",
+   "bhis:Vaisampayana"
+  ],
+  "tried": {
+   "Vaisampayana": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Vaishampaayana": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Vyshumpaayuhnuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.9
+   },
+   "Vyshampaayana": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Ganga": {
+  "spoken": "Ganga",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Ganga",
+   "vais:Ganga",
+   "bhis:Ganga"
+  ],
+  "tried": {
+   "Ganga": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Gunggah": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Gunga": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Gangaa": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Brahmacharya": {
+  "spoken": "Brahmacharya",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Brahmacharya",
+   "vais:Brahmacharya",
+   "bhis:Brahmacharya"
+  ],
+  "tried": {
+   "Brahmacharya": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Brahmuhcharyuh": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Brahmachaarya": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Bruhmuchaarya": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Apsaras": {
+  "spoken": "Apsaras",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.857,
+  "fmt": "orig",
+  "heard": [
+   "saut:Absaras",
+   "vais:Apsara",
+   "bhis:Apsara"
+  ],
+  "tried": {
+   "Apsaras": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.86
+   },
+   "Upsuras": {
+    "fmt": "p2",
+    "voices": [
+     "bhishma",
+     "sauti"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.81
+   },
+   "Upsuhrahs": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.78
+   },
+   "Upsaras": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.57
+   }
+  }
+ },
+ "Devavrata": {
+  "spoken": "Devavrata",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 1,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "vais:Devavrata",
+   "bhis:Devavrata",
+   "saut:Devavrata"
+  ],
+  "tried": {
+   "Devavrata": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Dayvavrata": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Devavratha": {
+    "fmt": "x",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.97
+   },
+   "Dayva Vrata": {
+    "fmt": "x",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   },
+   "Dayvuhvrahtuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Dayvuvrutta": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Rishi": {
+  "spoken": "Rishee",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "auto",
+  "heard": [
+   "saut:Rishi",
+   "saut:Rishi",
+   "vais:Rishi",
+   "bhis:Rishi"
+  ],
+  "tried": {
+   "Rishee": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Rishi": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 2,
+    "sim": 0.0
+   }
+  }
+ },
+ "Rishis": {
+  "spoken": "Rishis",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.9,
+  "fmt": "orig",
+  "heard": [
+   "saut:Rishi",
+   "saut:Rishis",
+   "vais:Rishis",
+   "bhis:Rishi"
+  ],
+  "tried": {
+   "Rishis": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.9
+   },
+   "Rishees": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.87
+   },
+   "Risheez": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.8
+   }
+  }
+ },
+ "Bhishma": {
+  "spoken": "Bhishma",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Bhishma",
+   "vais:Bhishma",
+   "bhis:Bishma"
+  ],
+  "tried": {
+   "Bhishma": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bheeshmuh": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 2,
+    "sim": 0.92
+   },
+   "Bheeshma": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.62
+   }
+  }
+ },
+ "Naimisha": {
+  "spoken": "Naimisha",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 1,
+  "retakes": 0,
+  "mean_sim": 0.881,
+  "fmt": "orig",
+  "heard": [
+   "saut:Nimesha",
+   "saut:Naimisha",
+   "vais:Nyamisha",
+   "bhis:Naimisha"
+  ],
+  "tried": {
+   "Naimisha": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.88
+   },
+   "Nymisha": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.67
+   },
+   "Nymeesha": {
+    "fmt": "x",
+    "voices": [],
+    "passed": 0,
+    "failed": 2,
+    "retakes": 0,
+    "sim": 0.67
+   },
+   "Nyemeeshuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Narayana": {
+  "spoken": "Naaraayana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "p1",
+  "heard": [
+   "saut:Narayana",
+   "vais:Narayana",
+   "bhis:Narayana"
+  ],
+  "tried": {
+   "Naaraayana": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Narayana": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Naraayuna": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.71
+   },
+   "Nahrahyuhnuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.57
+   }
+  }
+ },
+ "Nara": {
+  "spoken": "Nahruh",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 1,
+  "retakes": 0,
+  "mean_sim": 0.917,
+  "fmt": "auto",
+  "heard": [
+   "saut:Naru",
+   "vais:Nauru",
+   "bhis:Naru"
+  ],
+  "tried": {
+   "Nahruh": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.92
+   },
+   "Nara": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Nuhra": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Naraa": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Saraswati": {
+  "spoken": "Saraswathi",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "p2",
+  "heard": [
+   "saut:Saraswati",
+   "vais:Saraswathi",
+   "bhis:Saraswati"
+  ],
+  "tried": {
+   "Saraswathi": {
+    "fmt": "p2",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Suruswuti": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.89
+   },
+   "Saraswati": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Suhruhswuhtee": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.78
+   }
+  }
+ },
+ "Jaya": {
+  "spoken": "Jaya",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "vaisampayana"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 0,
+  "retakes": 1,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "vais:Jaya",
+   "bhis:Jaya"
+  ],
+  "tried": {
+   "Jaya": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Jayah": {
+    "fmt": "x",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Juyya": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.6
+   },
+   "Juhyaa": {
+    "fmt": "x",
+    "voices": [],
+    "passed": 0,
+    "failed": 2,
+    "retakes": 0,
+    "sim": 0.45
+   },
+   "Juhyuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.25
+   },
+   "Jaiya": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Ugrasrava": {
+  "spoken": "Ugrasrava",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Ugrasrava",
+   "vais:Ugrasrava",
+   "bhis:Ugrasrava"
+  ],
+  "tried": {
+   "Ugrasrava": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Oograshrava": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Oogruhshruhvuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Ugrashrava": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Lomaharshana": {
+  "spoken": "Lomaharshana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "vaisampayana"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 0,
+  "retakes": 2,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "vais:Loma Harshana",
+   "bhis:Loma Harshana"
+  ],
+  "tried": {
+   "Lomaharshana": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 2,
+    "sim": 1.0
+   },
+   "Loma Harshana": {
+    "fmt": "x",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Lohmuhharshuhnuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Lomuharshuna": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Kulapati": {
+  "spoken": "Koolapati",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "vaisampayana"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 0,
+  "retakes": 1,
+  "mean_sim": 1.0,
+  "fmt": "p1",
+  "heard": [
+   "vais:Kula Patti",
+   "bhis:Kulapati"
+  ],
+  "tried": {
+   "Koolapati": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Kula Pati": {
+    "fmt": "x",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Kulapati": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.83
+   },
+   "Kooluhpahtee": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.67
+   },
+   "Kulapathi": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Purana": {
+  "spoken": "Purana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Purana",
+   "vais:Purana",
+   "bhis:Purana"
+  ],
+  "tried": {
+   "Purana": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Poorahnuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Pooraana": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Puraana": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Puranas": {
+  "spoken": "Poorahnuhs",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 1,
+  "retakes": 0,
+  "mean_sim": 0.809,
+  "fmt": "auto",
+  "heard": [
+   "saut:Poranuz",
+   "vais:Pur u",
+   "bhis:poor Anu"
+  ],
+  "tried": {
+   "Poorahnuhs": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.81
+   },
+   "Puranas": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Puraanas": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.7
+   },
+   "Pooraanas": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Saunaka": {
+  "spoken": "Shownuhkuh",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.833,
+  "fmt": "auto",
+  "heard": [
+   "saut:Shonaku",
+   "vais:Shonaku",
+   "bhis:Sh naku"
+  ],
+  "tried": {
+   "Shownuhkuh": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.83
+   },
+   "Shaunaka": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.83
+   },
+   "Saunaka": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Shownaka": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Sauti": {
+  "spoken": "Sowtee",
+  "verified": false,
+  "pass_voices": [
+   "sauti"
+  ],
+  "takes_passed": 1,
+  "takes_failed": 3,
+  "retakes": 0,
+  "mean_sim": 0.812,
+  "fmt": "auto",
+  "heard": [
+   "saut:Sautee",
+   "saut:Saudi",
+   "vais:Sati",
+   "bhis:Soty"
+  ],
+  "tried": {
+   "Sowtee": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 3,
+    "retakes": 0,
+    "sim": 0.81
+   },
+   "Sauti": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 3,
+    "retakes": 0,
+    "sim": 0.62
+   },
+   "Souti": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.75
+   },
+   "Sautee": {
+    "fmt": "x",
+    "voices": [],
+    "passed": 0,
+    "failed": 2,
+    "retakes": 0,
+    "sim": 0.75
+   }
+  }
+ },
+ "Muni": {
+  "spoken": "Moonee",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "auto",
+  "heard": [
+   "saut:Mooni",
+   "saut:Mooney",
+   "vais:Mooney",
+   "bhis:Mooney"
+  ],
+  "tried": {
+   "Moonee": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Muni": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 1,
+    "sim": 0.67
+   }
+  }
+ },
+ "Munis": {
+  "spoken": "Moonees",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.878,
+  "fmt": "p1",
+  "heard": [
+   "saut:Moon E.S",
+   "vais:Mooneys",
+   "bhis:Mooney"
+  ],
+  "tried": {
+   "Moonees": {
+    "fmt": "p1",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.88
+   },
+   "Munis": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   },
+   "Munees": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.67
+   },
+   "Mooneez": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.0
+   }
+  }
+ },
+ "Dwija": {
+  "spoken": "Dwija",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.95,
+  "fmt": "orig",
+  "heard": [
+   "saut:Dweeja",
+   "saut:Dwyja",
+   "vais:Dweeja",
+   "bhis:Dweeja"
+  ],
+  "tried": {
+   "Dwija": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.95
+   },
+   "Dweejuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.8
+   },
+   "Dweeja": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.62
+   }
+  }
+ },
+ "Dwijas": {
+  "spoken": "Dweejuhs",
+  "verified": true,
+  "pass_voices": [
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 1,
+  "retakes": 0,
+  "mean_sim": 0.778,
+  "fmt": "auto",
+  "heard": [
+   "saut:Dwejus",
+   "vais:Dwejus",
+   "bhis:Duizhu"
+  ],
+  "tried": {
+   "Dweejuhs": {
+    "fmt": "auto",
+    "voices": [
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.78
+   },
+   "Dwijas": {
+    "fmt": "orig",
+    "voices": [],
+    "passed": 0,
+    "failed": 2,
+    "retakes": 0,
+    "sim": 0.67
+   },
+   "Dweejas": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.5
+   }
+  }
+ },
+ "Krishna-Dwaipayana": {
+  "spoken": "Krishna Dwaipayana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.932,
+  "fmt": "orig",
+  "heard": [
+   "saut:Krishna Dvipayana",
+   "vais:Krishna Dwyapayana",
+   "bhis:Krishna Dwyapayana"
+  ],
+  "tried": {
+   "Krishna Dwaipayana": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   },
+   "Krishnuh Dwypahyuhnuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   },
+   "Krishna Dwaipaayana": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   },
+   "Krishna Dwypaayana": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   }
+  }
+ },
+ "Dwaipayana": {
+  "spoken": "Dwaipayana",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.889,
+  "fmt": "orig",
+  "heard": [
+   "saut:Dwyapayana",
+   "vais:Dwyapayana",
+   "bhis:Dwyapayana"
+  ],
+  "tried": {
+   "Dwaipayana": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.89
+   },
+   "Dwaipaayana": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.88
+   },
+   "Dwypaayana": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.88
+   },
+   "Dwypahyuhnuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.6
+   }
+  }
+ },
+ "Mahabharata": {
+  "spoken": "Mahabharata",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Mahabharata",
+   "vais:Mahabharata",
+   "bhis:Mahabharata"
+  ],
+  "tried": {
+   "Mahabharata": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Mahaabhaarata": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Mahabhaarata": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Muhhahbhahruhtuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.82
+   }
+  }
+ },
+ "Parikshit": {
+  "spoken": "Puhrikshit",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "auto",
+  "heard": [
+   "saut:Purikshit",
+   "vais:Purikshit",
+   "bhis:Purikshit"
+  ],
+  "tried": {
+   "Puhrikshit": {
+    "fmt": "auto",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Parikshit": {
+    "fmt": "orig",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 0.88
+   },
+   "Pareekshit": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   }
+  }
+ },
+ "Samantapanchaka": {
+  "spoken": "Samantapanchaka",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Samanta Panchaka",
+   "vais:Samanta Panchaka",
+   "bhis:Samantha Panchaka"
+  ],
+  "tried": {
+   "Samantapanchaka": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Samanta Panchaka": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Sumunta Punchaka": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Suhmuntuhpunchuhkuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.81
+   }
+  }
+ },
+ "Kuru": {
+  "spoken": "Kuru",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Kuru",
+   "saut:Kuru",
+   "vais:Kuru",
+   "bhis:Kuru"
+  ],
+  "tried": {
+   "Kuru": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Kooroo": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   }
+  }
+ },
+ "Pandu": {
+  "spoken": "Pandu",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Pandu",
+   "vais:Pandu",
+   "bhis:Pandu"
+  ],
+  "tried": {
+   "Pandu": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Pahndoo": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Pandoo": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Paandu": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.83
+   }
+  }
+ },
+ "Janamejaya": {
+  "spoken": "Janamejaya",
+  "verified": true,
+  "pass_voices": [
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 1,
+  "retakes": 0,
+  "mean_sim": 0.826,
+  "fmt": "orig",
+  "heard": [
+   "saut:Janamajaya",
+   "vais:Jana Mijaya",
+   "bhis:Jana Magia"
+  ],
+  "tried": {
+   "Janamejaya": {
+    "fmt": "orig",
+    "voices": [
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 2,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.83
+   },
+   "Junumayjaya": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.89
+   },
+   "Janamayjaya": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.89
+   },
+   "Juhnuhmayjuhyuh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.78
+   }
+  }
+ },
+ "Brahma": {
+  "spoken": "Brahma",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Brahma",
+   "vais:Brahma",
+   "bhis:Brahma"
+  ],
+  "tried": {
+   "Brahma": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bruhmuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Brahmaa": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bruhmaa": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.83
+   }
+  }
+ },
+ "Brahmarshi": {
+  "spoken": "Brahmarshi",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.958,
+  "fmt": "orig",
+  "heard": [
+   "saut:Brahmarshi",
+   "vais:Brahma she",
+   "bhis:Brahmarshi"
+  ],
+  "tried": {
+   "Brahmarshi": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.96
+   },
+   "Braahmarshi": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.88
+   },
+   "Brahmarshee": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.83
+   }
+  }
+ },
+ "Brahmarshis": {
+  "spoken": "Brahmarshis",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.9,
+  "fmt": "orig",
+  "heard": [
+   "saut:Brahmarshi",
+   "vais:Brahmarshi",
+   "bhis:Brahmarshi"
+  ],
+  "tried": {
+   "Brahmarshis": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.9
+   },
+   "Brahmarsheez": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.9
+   },
+   "Brahmarshees": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.9
+   },
+   "Braahmarshis": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.7
+   }
+  }
+ },
+ "Veda": {
+  "spoken": "Veda",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.933,
+  "fmt": "orig",
+  "heard": [
+   "saut:Vader",
+   "vais:Veda",
+   "bhis:Veda"
+  ],
+  "tried": {
+   "Veda": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.93
+   },
+   "Vayda": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.8
+   },
+   "Vayduh": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.75
+   },
+   "Vaida": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.75
+   }
+  }
+ },
+ "Vedas": {
+  "spoken": "Vedas",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.8,
+  "fmt": "orig",
+  "heard": [
+   "saut:Veda",
+   "vais:Veda",
+   "bhis:Veda"
+  ],
+  "tried": {
+   "Vedas": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.8
+   },
+   "Vayduhs": {
+    "fmt": "auto",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.6
+   },
+   "Vaydas": {
+    "fmt": "p1",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.6
+   },
+   "Vaidas": {
+    "fmt": "p2",
+    "voices": [],
+    "passed": 0,
+    "failed": 1,
+    "retakes": 0,
+    "sim": 0.6
+   }
+  }
+ },
+ "Shastra": {
+  "spoken": "Shastra",
+  "verified": true,
+  "pass_voices": [
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 1,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Shastra",
+   "saut:Shastra",
+   "vais:Shastra"
+  ],
+  "tried": {
+   "Shastra": {
+    "fmt": "orig",
+    "voices": [
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 1,
+    "sim": 1.0
+   },
+   "Shahstruh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Shaastra": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   }
+  }
+ },
+ "Shastras": {
+  "spoken": "Shastras",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 4,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 0.893,
+  "fmt": "orig",
+  "heard": [
+   "saut:Shastra",
+   "saut:Shastra",
+   "vais:Shastras",
+   "bhis:Shastra"
+  ],
+  "tried": {
+   "Shastras": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 4,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.89
+   },
+   "Shahstruhs": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.86
+   },
+   "Shaastras": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 0.86
+   }
+  }
+ },
+ "Bharata": {
+  "spoken": "Bharata",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti",
+   "vaisampayana"
+  ],
+  "takes_passed": 3,
+  "takes_failed": 0,
+  "retakes": 0,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Bharata",
+   "vais:Bharata",
+   "bhis:Bharata"
+  ],
+  "tried": {
+   "Bharata": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti",
+     "vaisampayana"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bhahruhtuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bhaarata": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Bhaaruta": {
+    "fmt": "p2",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   }
+  }
+ },
+ "Vyasa": {
+  "spoken": "Vyasa",
+  "verified": true,
+  "pass_voices": [
+   "bhishma",
+   "sauti"
+  ],
+  "takes_passed": 2,
+  "takes_failed": 0,
+  "retakes": 2,
+  "mean_sim": 1.0,
+  "fmt": "orig",
+  "heard": [
+   "saut:Vyasa",
+   "bhis:Vyasa"
+  ],
+  "tried": {
+   "Vyasa": {
+    "fmt": "orig",
+    "voices": [
+     "bhishma",
+     "sauti"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "retakes": 2,
+    "sim": 1.0
+   },
+   "Vyaasuh": {
+    "fmt": "auto",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   },
+   "Vyaasa": {
+    "fmt": "p1",
+    "voices": [
+     "sauti"
+    ],
+    "passed": 1,
+    "failed": 0,
+    "retakes": 0,
+    "sim": 1.0
+   }
+  }
+ }
+}

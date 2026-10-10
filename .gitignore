@@ -33,3 +33,6 @@ voices/*/ref_replaced_*
 *.onnx
 *.pt
 *.ckpt
+
+# render manifests point into build/cache (local state)
+episodes/*.render.json

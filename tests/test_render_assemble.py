@@ -85,7 +85,6 @@ def test_render_skips_cached_lines_and_reports_missing_voices(tmp_path: Path):
 
 
 def test_assemble_inserts_the_configured_gap(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
-    monkeypatch.setattr("mbh.episode.assemble.shutil.which", lambda _name: None)
     rate = 8000
     a = tmp_path / "a.wav"
     b = tmp_path / "b.wav"
@@ -104,7 +103,7 @@ def test_assemble_inserts_the_configured_gap(tmp_path: Path, monkeypatch: pytest
     ]
     out = tmp_path / "ep.wav"
     report = assemble(script, results, timing, EngineSettings(sample_rate=rate, true_peak_db=-1.5), out)
-    assert report["loudness"] == "peak"
+    assert report["loudness"] == "bs1770"
     samples, got_rate = read_mono(out)
     assert got_rate == rate
     # 1.0 s + 0.50 s speaker-change gap + 0.5 s

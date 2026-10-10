@@ -3,7 +3,7 @@
  "title": "Pilot: Bhishma's Vow, and the Forest of Naimisha",
  "book": 1,
  "target_duration_s": 300.0,
- "estimated_duration_s": 337.832,
+ "estimated_duration_s": 292.71,
  "timing": {
   "wpm": 160.9,
   "gaps": {
@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-10T19:15:56+00:00",
+ "generated_at": "2026-10-10T21:00:08+00:00",
  "ending": {
   "section": 1,
   "paragraph": 5,
@@ -77,7 +77,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Vaisampayana continued,",
-   "tts_text": "vy-shum-PAA-yuh-nuh continued,",
+   "tts_text": "Vaisampayana continued,",
    "turn_id": "t1",
    "non_kmg": false,
    "abridged": false,
@@ -96,7 +96,7 @@
     "excerpt"
    ],
    "start_s": 0.0,
-   "duration_s": 2.237
+   "duration_s": 0.746
   },
   {
    "id": "ep00_pilot-0002",
@@ -109,7 +109,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "O king, the son of Ganga, devoted to truth, having ascertained the scruples of the chief of the fishermen, then said, moved thereto by the desire of benefiting his father,",
-   "tts_text": "O king, the son of GUNG-gah, devoted to truth, having ascertained the scruples of the chief of the fishermen, then said, moved thereto by the desire of benefiting his father,",
+   "tts_text": "O king, the son of Ganga, devoted to truth, having ascertained the scruples of the chief of the fishermen, then said, moved thereto by the desire of benefiting his father,",
    "turn_id": "t3",
    "non_kmg": false,
    "abridged": false,
@@ -127,8 +127,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 2.487,
-   "duration_s": 11.56
+   "start_s": 0.996,
+   "duration_s": 11.187
   },
   {
    "id": "ep00_pilot-0003",
@@ -159,7 +159,7 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 14.547,
+   "start_s": 12.683,
    "duration_s": 7.085
   },
   {
@@ -191,7 +191,7 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 21.883,
+   "start_s": 20.018,
    "duration_s": 7.458
   },
   {
@@ -205,7 +205,7 @@
    "pace": "slow",
    "intensity": 0.9,
    "text": "O fisherman, from this day I adopt the vow of Brahmacharya (study and meditation in celibacy).",
-   "tts_text": "O fisherman, from this day I adopt the vow of BRAH-muh-CHAR-yuh.",
+   "tts_text": "O fisherman, from this day I adopt the vow of Brahmacharya.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -225,8 +225,8 @@
     "excerpt",
     "override"
    ],
-   "start_s": 29.591,
-   "duration_s": 5.221
+   "start_s": 27.726,
+   "duration_s": 4.102
   },
   {
    "id": "ep00_pilot-0006",
@@ -257,7 +257,7 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 35.061,
+   "start_s": 32.078,
    "duration_s": 5.594
   },
   {
@@ -271,7 +271,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Vaisampayana continued,",
-   "tts_text": "vy-shum-PAA-yuh-nuh continued,",
+   "tts_text": "Vaisampayana continued,",
    "turn_id": "t5",
    "non_kmg": false,
    "abridged": false,
@@ -289,8 +289,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 42.155,
-   "duration_s": 2.237
+   "start_s": 39.172,
+   "duration_s": 0.746
   },
   {
    "id": "ep00_pilot-0008",
@@ -303,7 +303,7 @@
    "pace": "measured",
    "intensity": 0.65,
    "text": "Upon these words of the son of Ganga, the hair on the fisherman's body stood on end from glee, and he replied,",
-   "tts_text": "Upon these words of the son of GUNG-gah, the hair on the fisherman's body stood on end from glee, and he replied,",
+   "tts_text": "Upon these words of the son of Ganga, the hair on the fisherman's body stood on end from glee, and he replied,",
    "turn_id": "t7",
    "non_kmg": false,
    "abridged": false,
@@ -321,8 +321,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 44.642,
-   "duration_s": 8.577
+   "start_s": 40.167,
+   "duration_s": 8.204
   },
   {
    "id": "ep00_pilot-0009",
@@ -353,7 +353,7 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 53.719,
+   "start_s": 48.871,
    "duration_s": 1.492
   },
   {
@@ -367,7 +367,7 @@
    "pace": "measured",
    "intensity": 0.65,
    "text": "Immediately after, the Apsaras and the gods with diverse tribes of Rishis began to rain down flowers from the firmament upon the head of Devavrata and exclaimed,",
-   "tts_text": "Immediately after, the UP-suh-rahs and the gods with diverse tribes of RISH-eez began to rain down flowers from the firmament upon the head of DAY-vuh-VRAH-tuh and exclaimed,",
+   "tts_text": "Immediately after, the Apsaras and the gods with diverse tribes of Rishis began to rain down flowers from the firmament upon the head of Devavrata and exclaimed,",
    "turn_id": "t9",
    "non_kmg": false,
    "abridged": false,
@@ -385,8 +385,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 55.711,
-   "duration_s": 12.306
+   "start_s": 50.863,
+   "duration_s": 10.068
   },
   {
    "id": "ep00_pilot-0011",
@@ -399,7 +399,7 @@
    "pace": "slow",
    "intensity": 0.75,
    "text": "This one is Bhishma (the terrible).",
-   "tts_text": "This one is BHEESH-muh.",
+   "tts_text": "This one is Bhishma.",
    "turn_id": "t10",
    "non_kmg": false,
    "abridged": false,
@@ -419,8 +419,8 @@
     "excerpt",
     "override"
    ],
-   "start_s": 68.516,
-   "duration_s": 1.865
+   "start_s": 61.431,
+   "duration_s": 1.492
   },
   {
    "id": "ep00_pilot-0012",
@@ -433,7 +433,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Bhishma then, to serve his father, addressed the illustrious damsel and said,",
-   "tts_text": "BHEESH-muh then, to serve his father, addressed the illustrious damsel and said,",
+   "tts_text": "Bhishma then, to serve his father, addressed the illustrious damsel and said,",
    "turn_id": "t11",
    "non_kmg": false,
    "abridged": false,
@@ -451,8 +451,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 70.881,
-   "duration_s": 4.848
+   "start_s": 63.423,
+   "duration_s": 4.475
   },
   {
    "id": "ep00_pilot-0013",
@@ -483,7 +483,7 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 76.229,
+   "start_s": 68.398,
    "duration_s": 4.475
   },
   {
@@ -497,7 +497,7 @@
    "pace": "measured",
    "intensity": 0.45,
    "text": "That vow made Devavrata into Bhishma.",
-   "tts_text": "That vow made DAY-vuh-VRAH-tuh into BHEESH-muh.",
+   "tts_text": "That vow made Devavrata into Bhishma.",
    "turn_id": "bridge-bridge",
    "non_kmg": true,
    "abridged": false,
@@ -512,8 +512,8 @@
    "flags": [
     "non_kmg"
    ],
-   "start_s": 82.203,
-   "duration_s": 3.729
+   "start_s": 74.372,
+   "duration_s": 2.237
   },
   {
    "id": "ep00_pilot-0015",
@@ -526,7 +526,7 @@
    "pace": "measured",
    "intensity": 0.45,
    "text": "The story that leads there begins in the forest of Naimisha.",
-   "tts_text": "The story that leads there begins in the forest of nye-MEE-shuh.",
+   "tts_text": "The story that leads there begins in the forest of Naimisha.",
    "turn_id": "bridge-bridge",
    "non_kmg": true,
    "abridged": false,
@@ -541,8 +541,8 @@
    "flags": [
     "non_kmg"
    ],
-   "start_s": 86.182,
-   "duration_s": 4.848
+   "start_s": 76.86,
+   "duration_s": 4.102
   },
   {
    "id": "ep00_pilot-0016",
@@ -571,7 +571,7 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 92.53,
+   "start_s": 82.462,
    "duration_s": 0.373
   },
   {
@@ -585,7 +585,7 @@
    "pace": "slow",
    "intensity": 0.6,
    "text": "Having bowed down to Narayana and Nara, the most exalted male being, and also to the goddess Saraswati, must the word Jaya be uttered.",
-   "tts_text": "Having bowed down to nah-RAH-yuh-nuh and NAH-ruh, the most exalted male being, and also to the goddess suh-ruh-SWUH-tee, must the word JUH-yuh be uttered.",
+   "tts_text": "Having bowed down to Naaraayana and Nahruh, the most exalted male being, and also to the goddess Saraswathi, must the word Jaya be uttered.",
    "turn_id": "t13",
    "non_kmg": false,
    "abridged": false,
@@ -601,8 +601,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 93.153,
-   "duration_s": 11.933
+   "start_s": 83.085,
+   "duration_s": 8.95
   },
   {
    "id": "ep00_pilot-0018",
@@ -615,7 +615,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Puranas, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of Saunaka, surnamed Kulapati, in the forest of Naimisha.",
-   "tts_text": "OOG-ruh-shruh-vuh, the son of loh-muh-HAR-shuh-nuh, surnamed SOW-tee, well-versed in the poo-RAH-nuhs, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of SHOW-nuh-kuh, surnamed koo-luh-PAH-tee, in the forest of nye-MEE-shuh.",
+   "tts_text": "Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Poorahnuhs, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of Shownuhkuh, surnamed Koolapati, in the forest of Naimisha.",
    "turn_id": "t14",
    "non_kmg": false,
    "abridged": false,
@@ -631,8 +631,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 106.586,
-   "duration_s": 22.747
+   "start_s": 93.534,
+   "duration_s": 16.408
   },
   {
    "id": "ep00_pilot-0019",
@@ -645,7 +645,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Those ascetics, wishing to hear his wonderful narrations, presently began to address him who had thus arrived at that recluse abode of the inhabitants of the forest of Naimisha.",
-   "tts_text": "Those ascetics, wishing to hear his wonderful narrations, presently began to address him who had thus arrived at that recluse abode of the inhabitants of the forest of nye-MEE-shuh.",
+   "tts_text": "Those ascetics, wishing to hear his wonderful narrations, presently began to address him who had thus arrived at that recluse abode of the inhabitants of the forest of Naimisha.",
    "turn_id": "t14",
    "non_kmg": false,
    "abridged": false,
@@ -661,8 +661,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 129.583,
-   "duration_s": 11.56
+   "start_s": 110.192,
+   "duration_s": 10.814
   },
   {
    "id": "ep00_pilot-0020",
@@ -675,7 +675,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Having been entertained with due respect by those holy men, he saluted those Munis (sages) with joined palms, even all of them, and inquired about the progress of their asceticism.",
-   "tts_text": "Having been entertained with due respect by those holy men, he saluted those MOO-neez with joined palms, even all of them, and inquired about the progress of their asceticism.",
+   "tts_text": "Having been entertained with due respect by those holy men, he saluted those Moonees with joined palms, even all of them, and inquired about the progress of their asceticism.",
    "turn_id": "t14",
    "non_kmg": false,
    "abridged": false,
@@ -693,8 +693,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 141.393,
-   "duration_s": 11.187
+   "start_s": 121.256,
+   "duration_s": 10.814
   },
   {
    "id": "ep00_pilot-0021",
@@ -707,7 +707,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Then all the ascetics being again seated, the son of Lomaharshana humbly occupied the seat that was assigned to him.",
-   "tts_text": "Then all the ascetics being again seated, the son of loh-muh-HAR-shuh-nuh humbly occupied the seat that was assigned to him.",
+   "tts_text": "Then all the ascetics being again seated, the son of Lomaharshana humbly occupied the seat that was assigned to him.",
    "turn_id": "t14",
    "non_kmg": false,
    "abridged": false,
@@ -723,8 +723,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 152.83,
-   "duration_s": 8.95
+   "start_s": 132.32,
+   "duration_s": 7.458
   },
   {
    "id": "ep00_pilot-0022",
@@ -737,7 +737,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Seeing that he was comfortably seated, and recovered from fatigue, one of the Rishis beginning the conversation, asked him,",
-   "tts_text": "Seeing that he was comfortably seated, and recovered from fatigue, one of the RISH-eez beginning the conversation, asked him,",
+   "tts_text": "Seeing that he was comfortably seated, and recovered from fatigue, one of the Rishis beginning the conversation, asked him,",
    "turn_id": "t15",
    "non_kmg": false,
    "abridged": false,
@@ -753,8 +753,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 162.03,
-   "duration_s": 7.458
+   "start_s": 140.028,
+   "duration_s": 7.085
   },
   {
    "id": "ep00_pilot-0023",
@@ -767,7 +767,7 @@
    "pace": "measured",
    "intensity": 0.5,
    "text": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time?",
-   "tts_text": "Whence comest thou, O lotus-eyed SOW-tee, and where hast thou spent the time?",
+   "tts_text": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time?",
    "turn_id": "t16",
    "non_kmg": false,
    "abridged": false,
@@ -783,8 +783,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 169.988,
-   "duration_s": 5.594
+   "start_s": 147.614,
+   "duration_s": 5.221
   },
   {
    "id": "ep00_pilot-0024",
@@ -813,7 +813,7 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 175.831,
+   "start_s": 153.084,
    "duration_s": 2.61
   },
   {
@@ -827,7 +827,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Accomplished in speech, Sauti, thus questioned, gave in the midst of that big assemblage of contemplative Munis a full and proper answer in words consonant with their mode of life.",
-   "tts_text": "Accomplished in speech, SOW-tee, thus questioned, gave in the midst of that big assemblage of contemplative MOO-neez a full and proper answer in words consonant with their mode of life.",
+   "tts_text": "Accomplished in speech, Sauti, thus questioned, gave in the midst of that big assemblage of contemplative Moonees a full and proper answer in words consonant with their mode of life.",
    "turn_id": "t17",
    "non_kmg": false,
    "abridged": false,
@@ -843,8 +843,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 179.942,
-   "duration_s": 11.933
+   "start_s": 157.195,
+   "duration_s": 11.187
   },
   {
    "id": "ep00_pilot-0026",
@@ -857,7 +857,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "Sauti said,",
-   "tts_text": "SOW-tee said,",
+   "tts_text": "Sauti said,",
    "turn_id": "t18",
    "non_kmg": false,
    "abridged": false,
@@ -873,8 +873,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 193.374,
-   "duration_s": 1.119
+   "start_s": 169.882,
+   "duration_s": 0.746
   },
   {
    "id": "ep00_pilot-0027",
@@ -887,7 +887,7 @@
    "pace": "measured",
    "intensity": 0.55,
    "text": "Having heard the diverse sacred and wonderful stories which were composed in his Mahabharata by Krishna-Dwaipayana, and which were recited in full by Vaisampayana at the Snake-sacrifice of the high-souled royal sage Janamejaya and in the presence also of that chief of Princes, the son of Parikshit, and having wandered about, visiting many sacred waters and holy shrines, I journeyed to the country venerated by the Dwijas (twice-born) and called Samantapanchaka where formerly was fought the battle between the children of Kuru and Pandu, and all the chiefs of the land ranged on either side.",
-   "tts_text": "Having heard the diverse sacred and wonderful stories which were composed in his muh-hah-BHAH-ruh-tuh by KRISH-nuh dwy-PAH-yuh-nuh, and which were recited in full by vy-shum-PAA-yuh-nuh at the Snake-sacrifice of the high-souled royal sage juh-nuh-MAY-juh-yuh and in the presence also of that chief of Princes, the son of puh-RIK-shit, and having wandered about, visiting many sacred waters and holy shrines, I journeyed to the country venerated by the DWEE-juhs and called suh-MUN-tuh-PUN-chuh-kuh where formerly was fought the battle between the children of KOO-roo and PAHN-doo, and all the chiefs of the land ranged on either side.",
+   "tts_text": "Having heard the diverse sacred and wonderful stories which were composed in his Mahabharata by Krishna Dwaipayana, and which were recited in full by Vaisampayana at the Snake-sacrifice of the high-souled royal sage Janamejaya and in the presence also of that chief of Princes, the son of Puhrikshit, and having wandered about, visiting many sacred waters and holy shrines, I journeyed to the country venerated by the Dweejuhs and called Samantapanchaka where formerly was fought the battle between the children of Kuru and Pandu, and all the chiefs of the land ranged on either side.",
    "turn_id": "t19",
    "non_kmg": false,
    "abridged": false,
@@ -905,8 +905,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 194.743,
-   "duration_s": 45.867
+   "start_s": 170.877,
+   "duration_s": 36.172
   },
   {
    "id": "ep00_pilot-0028",
@@ -935,7 +935,7 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 240.86,
+   "start_s": 207.299,
    "duration_s": 4.102
   },
   {
@@ -949,7 +949,7 @@
    "pace": "measured",
    "intensity": 0.5,
    "text": "Ye reverend sages, all of whom are to me as Brahma; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye Dwijas (twice-born), shall I repeat, shall I recount the sacred stories collected in the Puranas containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?",
-   "tts_text": "Ye reverend sages, all of whom are to me as BRUH-muh; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye DWEE-juhs, shall I repeat, shall I recount the sacred stories collected in the poo-RAH-nuhs containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?",
+   "tts_text": "Ye reverend sages, all of whom are to me as Brahma; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye Dweejuhs, shall I repeat, shall I recount the sacred stories collected in the Poorahnuhs containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?",
    "turn_id": "t19",
    "non_kmg": false,
    "abridged": false,
@@ -967,8 +967,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 245.212,
-   "duration_s": 32.815
+   "start_s": 211.651,
+   "duration_s": 31.324
   },
   {
    "id": "ep00_pilot-0030",
@@ -981,7 +981,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "The Rishi replied,",
-   "tts_text": "The RISH-ee replied,",
+   "tts_text": "The Rishee replied,",
    "turn_id": "t20",
    "non_kmg": false,
    "abridged": false,
@@ -997,8 +997,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 279.528,
-   "duration_s": 1.492
+   "start_s": 244.475,
+   "duration_s": 1.119
   },
   {
    "id": "ep00_pilot-0031",
@@ -1011,7 +1011,7 @@
    "pace": "measured",
    "intensity": 0.55,
    "text": "The Purana, first promulgated by the great Rishi Dwaipayana, and which after having been heard both by the gods and the Brahmarshis was highly esteemed, being the most eminent narrative that exists, diversified both in diction and division, possessing subtile meanings logically combined, and gleaned from the Vedas, is a sacred work.",
-   "tts_text": "The poo-RAH-nuh, first promulgated by the great RISH-ee dwy-PAH-yuh-nuh, and which after having been heard both by the gods and the brah-MAR-sheez was highly esteemed, being the most eminent narrative that exists, diversified both in diction and division, possessing subtile meanings logically combined, and gleaned from the VAY-duhs, is a sacred work.",
+   "tts_text": "The Purana, first promulgated by the great Rishee Dwaipayana, and which after having been heard both by the gods and the Brahmarshis was highly esteemed, being the most eminent narrative that exists, diversified both in diction and division, possessing subtile meanings logically combined, and gleaned from the Vedas, is a sacred work.",
    "turn_id": "t21",
    "non_kmg": false,
    "abridged": false,
@@ -1027,8 +1027,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 281.519,
-   "duration_s": 22.747
+   "start_s": 246.093,
+   "duration_s": 19.391
   },
   {
    "id": "ep00_pilot-0032",
@@ -1057,7 +1057,7 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 304.516,
+   "start_s": 265.734,
    "duration_s": 4.102
   },
   {
@@ -1071,7 +1071,7 @@
    "pace": "measured",
    "intensity": 0.55,
    "text": "It is elucidated by other Shastras, and comprehendeth the sense of the four Vedas.",
-   "tts_text": "It is elucidated by other SHAH-struhs, and comprehendeth the sense of the four VAY-duhs.",
+   "tts_text": "It is elucidated by other Shastras, and comprehendeth the sense of the four Vedas.",
    "turn_id": "t21",
    "non_kmg": false,
    "abridged": false,
@@ -1087,8 +1087,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 308.868,
-   "duration_s": 5.966
+   "start_s": 270.086,
+   "duration_s": 5.221
   },
   {
    "id": "ep00_pilot-0034",
@@ -1101,7 +1101,7 @@
    "pace": "measured",
    "intensity": 0.5,
    "text": "We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa, which dispelleth the fear of evil, just as it was cheerfully recited by the Rishi Vaisampayana, under the direction of Dwaipayana himself, at the snake-sacrifice of Raja Janamejaya?",
-   "tts_text": "We are desirous of hearing that history also called BHAH-ruh-tuh, the holy composition of the wonderful VYAA-suh, which dispelleth the fear of evil, just as it was cheerfully recited by the RISH-ee vy-shum-PAA-yuh-nuh, under the direction of dwy-PAH-yuh-nuh himself, at the snake-sacrifice of Raja juh-nuh-MAY-juh-yuh?",
+   "tts_text": "We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa, which dispelleth the fear of evil, just as it was cheerfully recited by the Rishee Vaisampayana, under the direction of Dwaipayana himself, at the snake-sacrifice of Raja Janamejaya?",
    "turn_id": "t21",
    "non_kmg": false,
    "abridged": false,
@@ -1117,8 +1117,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 315.085,
-   "duration_s": 22.747
+   "start_s": 275.557,
+   "duration_s": 17.154
   }
  ]
 }

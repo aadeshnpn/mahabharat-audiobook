@@ -62,18 +62,19 @@ def test_vow_and_opening_speakers():
     assert vow.emotion == "solemn_resolve"
     assert vow.pace == "slow"
     assert vow.attribution == "override"
-    assert "BRAH-muh-CHAR-yuh" in vow.tts_text
+    assert "Brahmacharya" in vow.tts_text  # verified spoken form (tools/pronunciation)
+    assert not re.search(r"\b[A-Z]{2,}", vow.tts_text)  # no caps guide respellings reach the engine
     assert "Brahmacharya" in vow.text
 
     chorus = next(line for line in script.lines if "This one is Bhishma" in line.text)
     assert chorus.fx == "celestial"
     assert chorus.voice_id == "devas_chorus"
-    assert "BHEESH-muh" in chorus.tts_text
+    assert chorus.tts_text == "This one is Bhishma."
 
     # Krishna-Dwaipayana in the opening is Vyasa's name, spoken as itself.
     dwaipayana = next(line for line in script.lines if "Krishna-Dwaipayana" in line.text)
     assert "Draupadi" not in dwaipayana.tts_text
-    assert "KRISH-nuh dwy-PAH-yuh-nuh" in dwaipayana.tts_text
+    assert "Krishna Dwaipayana" in dwaipayana.tts_text
 
     bridges = [line for line in script.lines if line.non_kmg]
     assert bridges and all(line.type == "bridge" for line in bridges)
@@ -186,7 +187,8 @@ def test_breaks_never_cut_a_turn_and_offer_the_rishi_question():
     assert abs(para5.at_s - built.estimated_duration_s) < 2.0
     assert built.ending["section"] == 1
     assert built.ending["paragraph"] == 5
-    assert 330 < built.estimated_duration_s < 360
+    # Plain spoken forms (no hyphen chunks counted as words) put the pilot at ~293 s; was 330-360 with caps guides.
+    assert 280 < built.estimated_duration_s < 320
 
 
 def test_parenthetical_glosses_are_omitted_from_tts_only(tmp_path: Path):
@@ -206,7 +208,7 @@ def test_parenthetical_glosses_are_omitted_from_tts_only(tmp_path: Path):
             assert gloss in line.text
             assert "gloss_stripped" in line.flags
     vow = next(line for line in script.lines if "from this day I adopt the vow" in line.text)
-    assert vow.tts_text.endswith("BRAH-muh-CHAR-yuh.") or "BRAH-muh-CHAR-yuh." in vow.tts_text
+    assert vow.tts_text.endswith("Brahmacharya.")
 
     # The global default and the episode flag both strip. Clearing the episode flag still strips.
     spec.strip_glosses = None

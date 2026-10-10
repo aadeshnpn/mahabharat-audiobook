@@ -7,6 +7,7 @@ dependencies = ["fastapi", "uvicorn[standard]", "python-multipart", "pydantic>=2
 [project.optional-dependencies]
 dev = ["pytest", "httpx", "playwright"]
 voxcpm = ["voxcpm", "soundfile", "torch"]
+music = ["numpy", "scipy"]
 [project.scripts]
 mbh = "mbh.cli:main"
 [tool.setuptools.packages.find]

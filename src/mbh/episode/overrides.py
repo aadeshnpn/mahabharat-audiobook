@@ -81,6 +81,8 @@ def _apply_one(line: ScriptLine, row: dict, cast: Cast, respeak: Respeak | None)
         line.direction = row["direction"]
     if "fx" in row:
         line.fx = row["fx"]
+    if "music" in row:
+        line.music = row["music"]
     if "strip_glosses" in row and respeak is not None:
         line.tts_text = respeak(line, bool(row["strip_glosses"]))
     if "tts_text" in row:

@@ -1,0 +1,34 @@
+0001  vaisampayana   warm            -> narration_warm         0.35  [inherit:ep00_pilot-0002]  Vaisampayana continued,
+0002  vaisampayana   warm            -> narration_warm         0.35  [emotion:warm]  O king, the son of Ganga, devoted to truth, havi
+0003  bhishma        commanding      -> royal_resolve          0.60  [emotion:commanding]  Chief of fishermen, thou best of men, listen to 
+0004  bhishma        commanding      -> royal_resolve          0.60  [emotion:commanding]  Ye kings, I have already relinquished my right t
+0005  bhishma        solemn_resolve  -> grave_drone            0.90  [emotion:solemn_resolve]  O fisherman, from this day I adopt the vow of Br
+0006  bhishma        solemn_resolve  -> grave_drone            0.90  [emotion:solemn_resolve]  If I die sonless, I shall yet attain to regions 
+0007  vaisampayana   warm            -> narration_warm         0.50  [inherit:ep00_pilot-0008]  Vaisampayana continued,
+0008  vaisampayana   awed            -> narration_warm         0.50  [rule:before_joy]  Upon these words of the son of Ganga, the hair o
+0009  dasa           joyful          -> bright_lift            over narration_warm 0.80  [emotion:joyful]  I bestow my daughter!
+0010  vaisampayana   awed            -> celestial_swell        0.80  [rule:flowers_rain]  Immediately after, the Apsaras and the gods with
+0011  devas_chorus   awed            -> celestial_swell        1.00  [rule:heavens_speak]  This one is Bhishma (the terrible).
+0012  vaisampayana   warm            -> narration_warm         0.35  [emotion:warm]  Bhishma then, to serve his father, addressed the
+0013  bhishma        tender          -> tender_resolve         0.55  [emotion:tender]  O mother, ascend this chariot, and let us go unt
+0014  sauti          warm            -> narration_warm         0.35  [emotion:warm]  That vow made Devavrata into Bhishma.
+0015  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The story that leads there begins in the forest 
+0016  sauti          solemn          -> sacred_invocation      0.80  [rule:om_invocation]  Om!
+0017  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  Having bowed down to Narayana and Nara, the most
+0018  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Ugrasrava, the son of Lomaharshana, surnamed Sau
+0019  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Those ascetics, wishing to hear his wonderful na
+0020  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Having been entertained with due respect by thos
+0021  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Then all the ascetics being again seated, the so
+0022  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Seeing that he was comfortably seated, and recov
+0023  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  Whence comest thou, O lotus-eyed Sauti, and wher
+0024  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  Tell me, who ask thee, in detail.
+0025  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Accomplished in speech, Sauti, thus questioned, 
+0026  sauti          warm            -> forest_ashram          0.40  [inherit:ep00_pilot-0027]  Sauti said,
+0027  sauti          solemn          -> forest_ashram          0.40  [rule:sauti_arrives]  Having heard the diverse sacred and wonderful st
+0028  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Thence, anxious to see you, I am come into your 
+0029  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Ye reverend sages, all of whom are to me as Brah
+0030  sauti          warm            -> reverent_anticipation  0.60  [inherit:ep00_pilot-0031]  The Rishi replied,
+0031  naimisha_rishi solemn          -> reverent_anticipation  0.60  [rule:rishis_request]  The Purana, first promulgated by the great Rishi
+0032  naimisha_rishi warm            -> reverent_anticipation  0.60  [rule:rishis_request]  Composed in elegant language, it includeth the s
+0033  naimisha_rishi solemn          -> reverent_anticipation  0.60  [rule:rishis_request]  It is elucidated by other Shastras, and comprehe
+0034  naimisha_rishi warm            -> reverent_anticipation  0.60  [rule:rishis_request]  We are desirous of hearing that history also cal

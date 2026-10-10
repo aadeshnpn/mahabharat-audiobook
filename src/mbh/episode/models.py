@@ -61,6 +61,8 @@ class ScriptLine:
     flags: list[str] = field(default_factory=list)
     start_s: float = 0.0
     duration_s: float = 0.0
+    # music cue override: None (follow configs/music.yaml), a cue name, "none", or {cue, intensity}
+    music: str | dict | None = None
 
     def to_dict(self) -> dict:
         return {
@@ -89,6 +91,7 @@ class ScriptLine:
             "flags": list(self.flags),
             "start_s": round(self.start_s, 3),
             "duration_s": round(self.duration_s, 3),
+            **({"music": self.music} if self.music is not None else {}),
         }
 
 

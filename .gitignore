@@ -36,3 +36,6 @@ voices/*/ref_replaced_*
 
 # render manifests point into build/cache (local state)
 episodes/*.render.json
+
+# music A/B scratch (large wavs)
+work/music/

@@ -2,8 +2,13 @@
 
 The KMG line stays in ``text``. ``tts_text`` is what the engine sees, after
 Krishna→Draupadi resolution and this substitution. Possessives and a trailing
-plural -s travel with the respelling. Longer terms win over shorter ones
+plural -s travel with the spoken form. Longer terms win over shorter ones
 (Krishna-Dwaipayana before Krishna).
+
+Two forms per row. ``respelling`` is the human pronunciation guide (stress in caps,
+syllables hyphenated). VoxCPM2 must never see it: it reads "VAY-duhs" as letters.
+``spoken`` is the form the engine gets, verified by the pronunciation harness
+(tools/pronunciation). Rows without one fall back to ``fallback_form``.
 """
 
 from __future__ import annotations
@@ -14,8 +19,9 @@ from pathlib import Path
 
 from mbh.episode.cast import Cast, clean_alias, load_cast, primary_respelling
 from mbh.episode.paths import repo_root
+from mbh.episode.pronounce import is_tts_safe, speakable_respelling
 
-COLUMNS = ("term", "respelling", "ipa", "source", "verified", "notes")
+COLUMNS = ("term", "respelling", "ipa", "source", "verified", "notes", "spoken")
 
 
 @dataclass(frozen=True)
@@ -26,6 +32,7 @@ class Lexeme:
     source: str = ""
     verified: int = 0
     notes: str = ""
+    spoken: str = ""
 
 
 def load_lexicon(path: Path | None = None) -> list[Lexeme]:
@@ -39,23 +46,23 @@ def load_lexicon(path: Path | None = None) -> list[Lexeme]:
             raise ValueError(f"{file}:{line_no}: expected term and respelling")
         while len(parts) < len(COLUMNS):
             parts.append("")
-        term, respelling, ipa, source, verified, notes = parts[:6]
+        term, respelling, ipa, source, verified, notes, spoken = parts[:7]
         if not term.strip() or not respelling.strip():
             continue
         try:
             flag = int(verified or "0")
         except ValueError as exc:
             raise ValueError(f"{file}:{line_no}: verified must be 0 or 1") from exc
-        rows.append(Lexeme(term.strip(), respelling.strip(), ipa.strip(), source.strip(), flag, notes.strip()))
+        rows.append(Lexeme(term.strip(), respelling.strip(), ipa.strip(), source.strip(), flag, notes.strip(), spoken.strip()))
     return rows
 
 
 def write_lexicon(path: Path, rows: list[Lexeme]) -> None:
-    lines = ["# term, respelling, ipa, source, verified, notes — applied to TTS text only",
+    lines = ["# term, respelling (human guide), ipa, source, verified (harness), notes, spoken (what TTS reads) — TTS text only",
              "\t".join(COLUMNS)]
     for row in rows:
         lines.append("\t".join([
-            row.term, row.respelling, row.ipa, row.source, str(row.verified), row.notes.replace("\t", " "),
+            row.term, row.respelling, row.ipa, row.source, str(row.verified), row.notes.replace("\t", " "), row.spoken,
         ]))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -80,11 +87,22 @@ def registry_rows(cast: Cast) -> list[Lexeme]:
 
 
 def sync_registry(path: Path, cast: Cast) -> list[Lexeme]:
-    """Keep curated/hand rows, refresh character-registry rows, write the TSV."""
+    """Keep curated/hand rows, refresh character-registry rows, write the TSV.
+
+    A refreshed registry row keeps its harness result (spoken, verified, ipa) while its
+    respelling is unchanged; a changed respelling resets it to unverified."""
     existing = load_lexicon(path) if path.exists() else []
     kept = [row for row in existing if row.source != "character-registry"]
+    old = {row.term.casefold(): row for row in existing if row.source == "character-registry"}
     have = {row.term.casefold() for row in kept}
-    generated = [row for row in registry_rows(cast) if row.term.casefold() not in have]
+    generated = []
+    for row in registry_rows(cast):
+        if row.term.casefold() in have:
+            continue
+        prev = old.get(row.term.casefold())
+        if prev and prev.respelling == row.respelling:
+            row = Lexeme(row.term, row.respelling, prev.ipa, row.source, prev.verified, row.notes, prev.spoken)
+        generated.append(row)
     rows = kept + generated
     write_lexicon(path, rows)
     return rows
@@ -106,9 +124,26 @@ def apply_lexicon(text: str, lexemes: list[Lexeme]) -> str:
         row = by_fold.get(base.casefold())
         if row is None:
             return word
-        return row.respelling + suffix
+        return tts_form(row) + suffix
 
     return pattern.sub(repl, text)
+
+
+FALLBACK = "term"  # unverified rows: "term" (KMG spelling) or "auto" (speakable_respelling); see tools/pronunciation/REPORT.md
+
+
+def fallback_form(row: Lexeme) -> str:
+    if FALLBACK == "auto":
+        return speakable_respelling(row.respelling)
+    return row.term.replace("-", " ")
+
+
+def tts_form(row: Lexeme) -> str:
+    """What the engine reads: the verified spoken form, else the fallback. Never a caps/hyphen guide."""
+    if row.spoken:
+        return row.spoken
+    form = row.respelling if is_tts_safe(row.respelling) else fallback_form(row)
+    return form
 
 
 def main() -> None:

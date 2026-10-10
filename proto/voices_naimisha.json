@@ -1,0 +1,14 @@
+[
+ {"id": "naimisha_rishis-A_aged_sage", "n": 2,
+  "prompt": "An elderly Indian forest ascetic speaking on behalf of an assembly of sages, warm and slightly resonant tenor-baritone, calm, reverent and unhurried, gentle and kindly, ancient-feeling yet very clear, clear Indian English accent",
+  "line": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time? Tell us, who ask thee, in detail. We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa."},
+ {"id": "naimisha_rishis-B_council_unison", "n": 2,
+  "prompt": "A small council of elderly Indian sages in a forest hermitage speaking together as one voice, warm, reverent and calm, soft resonance, slow unhurried cadence, ancient but very clear, clear Indian English accent",
+  "line": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time? Tell us, who ask thee, in detail. We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa."},
+ {"id": "naimisha_rishis-C_light_elder", "n": 2,
+  "prompt": "A kindly old Indian rishi with a light, warm, slightly airy voice in the middle register, gentle and reverent, serene and unhurried, soft breath, very clear diction, clear Indian English accent",
+  "line": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time? Tell us, who ask thee, in detail. We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa."},
+ {"id": "naimisha_rishis-D_hermit_elders", "n": 2,
+  "prompt": "Venerable aged hermits of the Naimisha forest speaking in gentle unison, mellow and slightly husky, warm reverence and quiet joy, unhurried and peaceful, intelligible and clear, clear Indian English accent",
+  "line": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time? Tell us, who ask thee, in detail. We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa."}
+]

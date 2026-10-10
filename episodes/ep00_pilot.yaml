@@ -1,0 +1,50 @@
+# Pilot episode. Text only: `mbh episode build episodes/ep00_pilot.yaml`
+id: ep00_pilot
+title: "Pilot: Bhishma's Vow, and the Forest of Naimisha"
+book: 1
+target_duration_s: 300
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep00_pilot.json
+summary: >
+  A five-minute cold open on the vow that makes Devavrata into Bhishma,
+  then the Mahabharata itself, from the invocation through the moment
+  the sages of Naimisha ask to hear it.
+end_reason: >
+  The Rishi of Naimisha has finished asking for the Bharata, the history
+  Vyasa composed and Vaisampayana recited at Janamejaya's snake sacrifice.
+  The question is a complete speech turn, and it is the hook the rest of
+  the telling answers. Sauti's reply begins at Book 1 §1 ¶6.
+notes:
+  - Parenthetical glosses such as "(sages)" and "(study and meditation in celibacy)" are kept and will be spoken.
+  - The cold open is a selection of §100 ¶10–11. The words inside that span are unabridged.
+  - The bridge between the vow and the invocation is the only non-KMG text.
+  - At the 160.9 wpm model this cut is about 5:42. The nearest shorter legal break is §1 ¶4 (about 4:43), where Sauti asks what he should recite. ¶5 is kept so the sages' request for the Bharata is heard in full.
+segments:
+  - id: cold_open
+    kind: section
+    section: 100
+    paragraphs: [10, 11]
+    narrator: vaisampayana
+    excerpt: true
+    label: "Cold open: Bhishma's vow"
+    note: "Book 1 §100 ¶10–11, Sambhava Parva. Vaisampayana is telling Janamejaya how Devavrata took the vow."
+  - id: bridge
+    kind: bridge
+    speaker: sauti
+    emotion: warm
+    pace: measured
+    non_kmg: true
+    label: "Bridge back to the beginning"
+    text: >
+      That vow made Devavrata into Bhishma. The story that leads there
+      begins in the forest of Naimisha.
+  - id: opening
+    kind: section
+    section: 1
+    paragraphs: [1, 5]
+    narrator: sauti
+    label: "Sauti arrives at Naimisha"
+    note: "Book 1 §1 ¶1–5, Anukramanika Parva, read in order from the invocation."

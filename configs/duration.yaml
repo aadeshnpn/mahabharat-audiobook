@@ -1,0 +1,18 @@
+# Speech rate fitted to proto/excerpt_100.json rendered with VoxCPM2:
+# 250 words, 99 s of audio, 5.75 s of which are assemble gaps
+# (one same-speaker gap of 0.25 s and eleven speaker changes of 0.50 s).
+# 250 / ((99 - 5.75) / 60) = 160.9 words per minute.
+wpm: 160.9
+gaps:
+  same_speaker_s: 0.25
+  speaker_change_s: 0.50
+  paragraph_s: 1.50
+  segment_s: 1.50
+engine:
+  name: voxcpm2
+  steps: 10
+  cfg_value: 2.0
+  sample_rate: 48000
+loudness:
+  integrated_lufs: -16
+  true_peak_db: -1.5

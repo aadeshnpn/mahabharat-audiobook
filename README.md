@@ -3,6 +3,35 @@
 A full-cast cinematic audiobook of the Mahabharata (KMG English translation), built with open-source TTS on CPU only. Book 1 (Adi Parva) is the first target.
 See `PLAN.md` for the spec and phases, `research-tts.md` for the model survey, and `proto/NOTES.md` for prototype results.
 
+## Episodes
+
+An episode is a YAML spec. `mbh episode build` turns it into a line-level script: speaker, emotion, pace, the original KMG wording, and the TTS text after Krishna→Draupadi resolution and the pronunciation lexicon. The same command writes a Markdown script for review. Audio rendering is optional and is not run in tests.
+
+```bash
+PYTHONPATH=src python3 -m mbh.cli episode build episodes/ep00_pilot.yaml
+PYTHONPATH=src python3 -m mbh.cli episode estimate episodes/ep00_pilot.yaml
+PYTHONPATH=src python3 -m mbh.cli episode breaks episodes/ep00_pilot.yaml
+PYTHONPATH=src python3 -m mbh.cli episode export-script episodes/ep00_pilot.yaml
+# audio, only when VoxCPM2 is installed (see proto/.venv-vox):
+PYTHONPATH=src python3 -m mbh.cli episode render episodes/ep00_pilot.yaml
+PYTHONPATH=src python3 -m mbh.cli episode assemble episodes/ep00_pilot.yaml
+```
+
+`pip install -e .` also installs the `mbh` console script (`mbh episode …`).
+
+- **Spec** (`episodes/<id>.yaml`). Segments are `section` (a section plus an inclusive paragraph range; `excerpt: true` marks a selection) or `bridge` (added narrator text, `non_kmg: true`). `speech_tags` is `keep` or `drop`.
+- **Script** (`episodes/<id>.script.json`) and **review Markdown** (`episodes/<id>_script.md`). Each line has speaker id, voice id, emotion, pace, original text, TTS text, and section/paragraph refs. Bridges and abridgements are flagged.
+- **Overrides** (`episodes/overrides/<id>.json`). A match on section, paragraph, and a text snippet (speaker, emotion, pace, direction, fx) is reapplied on every rebuild.
+- **Lexicon** (`lexicon/book01.tsv`: `term`, `respelling`, `ipa`, `source`, `verified`, `notes`). Whole-word substitution, longest match first, including possessives and a trailing plural *s*. Applied only to TTS text. Refresh the character-registry rows with `PYTHONPATH=src python3 -m mbh.episode.lexicon` (hand-written rows are kept).
+- **Duration** (`configs/duration.yaml`). 160.9 words per minute, calibrated from the Book 1 §100 prototype (250 words, 99 s of speech plus the prototype gaps). Gaps: 0.25 s for the same speaker, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
+- **Render cache** (`build/cache/voxcpm2/<hash>.wav`, gitignored). The key is the TTS text, the instruction, the voice file, and the engine settings, so a rebuild re-synthesizes only changed lines.
+
+The pilot (`episodes/ep00_pilot.yaml`) is text only. It cold-opens on Bhishma's vow (Book 1 §100 ¶10–11, unabridged inside that span), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5 from the invocation. Estimated length is **5 min 42 s** (342.3 s, 34 lines). It ends when the Rishi of Naimisha finishes asking for the Bharata. Sauti's reply begins at §1 ¶6.
+
+```bash
+PYTHONPATH=src python3 -m pytest -q tests/test_episode.py tests/test_lexicon.py tests/test_render_assemble.py
+```
+
 ## Character Map web app
 A local web app for mapping every recurring Book 1 character. It has:
 - an interactive **relationship graph** (Cytoscape.js) with parent, foster-parent, spouse, sibling, teacher, ally, enemy, rival, guardian, curse, slew, incarnation-of, service and narration edges, each with a § reference; nodes are coloured by kind (human, sage, deity, celestial, naga, asura, rakshasa, bird, animal, chorus);
@@ -81,8 +110,13 @@ VIRTUAL_ENV=.venv uv pip install pytest httpx playwright
 ## Layout
 ```
 src/mbh/characters/   extracted/ profiles + build_extracted.py (counts, citation checks); legacy starter + harvest
+src/mbh/episode/      spec, attribution, lexicon apply, duration, breaks, render, assemble
+src/mbh/cli.py        `mbh episode build|estimate|breaks|render|assemble|export-script`
 src/mbh/webapp/       FastAPI app, SQLite store, seed + reseed, static UI (vendored Cytoscape.js)
 src/mbh/voices/       design_one.py (VoxCPM2 CPU voice design, used by the web app jobs)
+episodes/             episode YAML, overrides, generated script JSON and review Markdown
+lexicon/              book01.tsv (respellings applied only to TTS text)
+configs/              duration.yaml (words per minute, gaps, loudness, engine defaults)
 characters/           book01.json (seed), EXTRACTION_REPORT.md, speaker resolution list, backups/
 voices/<id>/          ref.wav (reference clip), candidates/, ref_replaced_* history
 data/                 raw HTML + clean text (data/text/book01), SQLite DB

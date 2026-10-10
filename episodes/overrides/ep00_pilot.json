@@ -1,0 +1,22 @@
+{
+  "overrides": [
+    {
+      "section": 100,
+      "paragraph": 10,
+      "contains": "from this day I adopt the vow",
+      "emotion": "solemn_resolve",
+      "pace": "slow",
+      "intensity": 0.9,
+      "direction": "a sacred vow before assembled kings"
+    },
+    {
+      "section": 100,
+      "paragraph": 11,
+      "contains": "This one is Bhishma",
+      "emotion": "awed",
+      "pace": "slow",
+      "fx": "celestial",
+      "direction": "a voice from the heavens"
+    }
+  ]
+}

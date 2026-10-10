@@ -3,9 +3,13 @@ name = "mbh"
 version = "0.1.0"
 description = "Mahabharata full-cast audiobook pipeline (CPU-only, open-source TTS)"
 requires-python = ">=3.12"
-dependencies = ["fastapi", "uvicorn[standard]", "python-multipart", "pydantic>=2"]
+dependencies = ["fastapi", "uvicorn[standard]", "python-multipart", "pydantic>=2", "pyyaml"]
 [project.optional-dependencies]
 dev = ["pytest", "httpx", "playwright"]
 voxcpm = ["voxcpm", "soundfile", "torch"]
+[project.scripts]
+mbh = "mbh.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]

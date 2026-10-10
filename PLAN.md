@@ -178,8 +178,24 @@ mahabharat-audiobook/
 ## 7. Open questions for Aadesh
 See the end of `proto/NOTES.md`.
 
-## 8. Status
-- **Oct 10:** built the character map web app (FastAPI + SQLite + Cytoscape.js; see README). It is seeded with a **provisional** 87-character / 145-relationship starter set (a hand-written roster plus text statistics) because no LLM key is available. The 8 prototype voices are attached.
+## 8. Episode pipeline (text-only pilot, Oct 10)
+
+The unit of listening is an **episode**, not a whole section. A normal episode is 15–20 minutes and must end on a complete turn. The pilot targets about 5 minutes.
+
+`episodes/<id>.yaml` lists `target_duration_s`, `speech_tags`, the lexicon and timing files, and ordered segments:
+
+- `kind: section` — a section number and an inclusive `paragraphs: [start, end]`, with the frame `narrator`. `excerpt: true` marks a selection taken out of reading order (the pilot cold open).
+- `kind: bridge` — narrator text that is not in KMG. `non_kmg: true` is required, and the flag is copied onto every line.
+
+`mbh episode build` writes `episodes/<id>.script.json` and `episodes/<id>_script.md`. Each line has `speaker`, `voice_id`, `type` (`narration` or `speech`), `emotion`, `pace`, original `text`, `tts_text` (after `krishna.speakable` and the lexicon), and `section` / `paragraph`. Attribution is rule-based from the existing "X said," tags, with a callable hook for a later LLM pass. `episodes/overrides/<id>.json` reapplies human speaker, emotion, pace, and direction edits after every rebuild.
+
+`lexicon/book01.tsv` is the Phase 1b file (`term`, `respelling`, `ipa`, `source`, `verified`, `notes`). Substitution is whole-word, longest match first, and touches TTS text only. `verified` is still 0. `mbh episode breaks` proposes legal end points near the target (complete sentence, not mid-dialogue, preferably a question or a paragraph boundary). Duration uses `configs/duration.yaml` (160.9 wpm from the §100 prototype). `mbh episode render` and `assemble` are the Phase 6–7 interface: VoxCPM2 on CPU, cache key per line, gaps and loudness from the same timing file. No audio is rendered in CI.
+
+CLI: `mbh episode build|estimate|breaks|render|assemble|export-script`.
+
+## 9. Status
+- **Oct 10 (episode pipeline):** text-only pilot at `episodes/ep00_pilot.yaml`. Cold open is Book 1 §100 ¶10–11 (Bhishma's vow, Vaisampayana), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5. Estimated **5 min 42 s** (342.3 s, 34 lines) at 160.9 wpm. It ends at §1 ¶5, when the Rishi finishes asking for the Bharata; the nearest shorter legal break is §1 ¶4 at about 4:43. Lexicon v0 is `lexicon/book01.tsv`. Render and assemble are implemented and unrun. See the README "Episodes" section.
+- **Oct 10:** character map web app merged (FastAPI + SQLite + Cytoscape.js). Seed is the text-grounded `characters/book01.json` (164 characters). The 8 prototype voices are attached. See README.
 
 ### Oct 9
 - Phase 0: first CPU bake-off done. VoxCPM2 design + controllable cloning rendered a full-cast 100 s excerpt of 1:100 end to end (RTF 3.0 on the box; WER ~5%; 13/13 speaker identity). Samples are in `samples/`.

@@ -9,9 +9,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from collections.abc import Callable
+
 from mbh.episode.cast import Cast, narrative_layer
 from mbh.episode.emotion import check_emotion
 from mbh.episode.models import PACES, ScriptLine
+
+Respeak = Callable[[ScriptLine, bool], str]
 
 
 def load_overrides(path: Path | None) -> list[dict]:
@@ -24,7 +28,12 @@ def load_overrides(path: Path | None) -> list[dict]:
     return rows
 
 
-def apply_overrides(lines: list[ScriptLine], overrides: list[dict], cast: Cast) -> list[str]:
+def apply_overrides(
+    lines: list[ScriptLine],
+    overrides: list[dict],
+    cast: Cast,
+    respeak: Respeak | None = None,
+) -> list[str]:
     warnings: list[str] = []
     for row in overrides:
         matches = [line for line in lines if _matches(line, row)]
@@ -36,7 +45,7 @@ def apply_overrides(lines: list[ScriptLine], overrides: list[dict], cast: Cast) 
             warnings.append(f"override matched {len(matches)} lines and was not applied: {label!r}")
             continue
         for line in matches:
-            _apply_one(line, row, cast)
+            _apply_one(line, row, cast, respeak)
     return warnings
 
 
@@ -55,7 +64,7 @@ def _matches(line: ScriptLine, row: dict) -> bool:
     return needle is not None or "section" in row
 
 
-def _apply_one(line: ScriptLine, row: dict, cast: Cast) -> None:
+def _apply_one(line: ScriptLine, row: dict, cast: Cast, respeak: Respeak | None) -> None:
     if "speaker" in row:
         line.speaker = row["speaker"]
         line.voice_id = cast.voice_id(line.speaker)
@@ -72,8 +81,11 @@ def _apply_one(line: ScriptLine, row: dict, cast: Cast) -> None:
         line.direction = row["direction"]
     if "fx" in row:
         line.fx = row["fx"]
+    if "strip_glosses" in row and respeak is not None:
+        line.tts_text = respeak(line, bool(row["strip_glosses"]))
     if "tts_text" in row:
         line.tts_text = row["tts_text"]
+        line.flags = [flag for flag in line.flags if flag != "gloss_stripped"]
     if "addressee" in row:
         line.addressee = row["addressee"]
     if "type" in row:

@@ -21,12 +21,13 @@ PYTHONPATH=src python3 -m mbh.cli episode assemble episodes/ep00_pilot.yaml
 
 - **Spec** (`episodes/<id>.yaml`). Segments are `section` (a section plus an inclusive paragraph range; `excerpt: true` marks a selection) or `bridge` (added narrator text, `non_kmg: true`). `speech_tags` is `keep` or `drop`.
 - **Script** (`episodes/<id>.script.json`) and **review Markdown** (`episodes/<id>_script.md`). Each line has speaker id, voice id, emotion, pace, original text, TTS text, and section/paragraph refs. Bridges and abridgements are flagged.
-- **Overrides** (`episodes/overrides/<id>.json`). A match on section, paragraph, and a text snippet (speaker, emotion, pace, direction, fx) is reapplied on every rebuild.
+- **Overrides** (`episodes/overrides/<id>.json`). A match on section, paragraph, and a text snippet (speaker, emotion, pace, direction, fx, `strip_glosses`, or a full `tts_text`) is reapplied on every rebuild.
+- **Glosses.** Parenthetical translator glosses stay in the KMG line and are removed from TTS text. The global switch is `strip_glosses` in `configs/duration.yaml` (default on). An episode, a segment, or a line override can turn it off. A parenthesis that is only a number, such as "(three)", is spoken.
 - **Lexicon** (`lexicon/book01.tsv`: `term`, `respelling`, `ipa`, `source`, `verified`, `notes`). Whole-word substitution, longest match first, including possessives and a trailing plural *s*. Applied only to TTS text. Refresh the character-registry rows with `PYTHONPATH=src python3 -m mbh.episode.lexicon` (hand-written rows are kept).
 - **Duration** (`configs/duration.yaml`). 160.9 words per minute, calibrated from the Book 1 §100 prototype (250 words, 99 s of speech plus the prototype gaps). Gaps: 0.25 s for the same speaker, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
 - **Render cache** (`build/cache/voxcpm2/<hash>.wav`, gitignored). The key is the TTS text, the instruction, the voice file, and the engine settings, so a rebuild re-synthesizes only changed lines.
 
-The pilot (`episodes/ep00_pilot.yaml`) is text only. It cold-opens on Bhishma's vow (Book 1 §100 ¶10–11, unabridged inside that span), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5 from the invocation. Estimated length is **5 min 42 s** (342.3 s, 34 lines). It ends when the Rishi of Naimisha finishes asking for the Bharata. Sauti's reply begins at §1 ¶6.
+The pilot (`episodes/ep00_pilot.yaml`) is text only. It cold-opens on Bhishma's vow (Book 1 §100 ¶10–11, unabridged inside that span), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5 from the invocation. Estimated length is **5 min 38 s** (337.8 s, 34 lines). Parenthetical glosses are not spoken. It ends when the Rishi of Naimisha finishes asking for the Bharata. Sauti's reply begins at §1 ¶6.
 
 ```bash
 PYTHONPATH=src python3 -m pytest -q tests/test_episode.py tests/test_lexicon.py tests/test_render_assemble.py

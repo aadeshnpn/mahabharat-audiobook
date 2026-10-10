@@ -16,3 +16,6 @@ engine:
 loudness:
   integrated_lufs: -16
   true_peak_db: -1.5
+# Translator glosses in parentheses are removed from TTS text only.
+# An episode YAML or a line override can set strip_glosses false.
+strip_glosses: true

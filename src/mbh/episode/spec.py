@@ -28,6 +28,7 @@ class SegmentSpec:
     pace: str | None = None
     text: str = ""
     non_kmg: bool = False
+    strip_glosses: bool | None = None
 
 
 @dataclass
@@ -48,6 +49,8 @@ class EpisodeSpec:
     intro: Path | None = None
     outro: Path | None = None
     notes: list[str] = field(default_factory=list)
+    # None follows configs/duration.yaml. True/False is this episode's choice.
+    strip_glosses: bool | None = None
 
 
 def load_spec(path: Path) -> EpisodeSpec:
@@ -78,6 +81,7 @@ def load_spec(path: Path) -> EpisodeSpec:
         intro=_opt_path(data.get("intro"), path),
         outro=_opt_path(data.get("outro"), path),
         notes=[str(item) for item in (data.get("notes") or [])],
+        strip_glosses=_opt_bool(data, "strip_glosses"),
     )
 
 
@@ -106,6 +110,7 @@ def _segment(row: dict, index: int) -> SegmentSpec:
         pace=row.get("pace"),
         text=str(row.get("text") or "").strip(),
         non_kmg=bool(row.get("non_kmg", kind == "bridge")),
+        strip_glosses=_opt_bool(row, "strip_glosses"),
     )
     if kind == "section" and spec.section is None:
         raise ValueError(f"segment {spec.id} needs a section number")
@@ -122,6 +127,12 @@ def _check_kind(spec: SegmentSpec) -> None:
     if kind == "section" or kind == "bridge":
         return
     assert_never(kind)
+
+
+def _opt_bool(data: dict, key: str) -> bool | None:
+    if key not in data or data[key] is None:
+        return None
+    return bool(data[key])
 
 
 def _opt_path(value: str | None, spec_path: Path) -> Path | None:

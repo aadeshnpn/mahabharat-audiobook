@@ -8,12 +8,13 @@ from datetime import datetime, timezone
 from mbh.episode.attribute import LLMAttributor, QuoteState, RawLine, RuleAttributor, split_sentences
 from mbh.episode.cast import Cast, load_cast, narrative_layer
 from mbh.episode.emotion import check_emotion, infer
+from mbh.episode.gloss import glosses_removed, strip_glosses
 from mbh.episode.lexicon import apply_lexicon, load_lexicon
 from mbh.episode.models import EpisodeScript, LineType, ScriptLine, assert_never
 from mbh.episode.overrides import apply_overrides, load_overrides
 from mbh.episode.spec import EpisodeSpec, SegmentSpec
 from mbh.episode.textload import Paragraph, SectionText, load_section
-from mbh.episode.timing import Timing, apply_timing, load_timing
+from mbh.episode.timing import Timing, apply_timing, global_strip_glosses, load_timing
 from mbh.text.krishna import speakable
 
 _SHORT_TAG = re.compile(
@@ -55,7 +56,13 @@ def build_episode(
         })
     if spec.speech_tags == "drop":
         lines = [line for line in lines if not _drop_tag(line)]
-    warnings.extend(apply_overrides(lines, load_overrides(spec.overrides_path), cast))
+
+    def respeak(line: ScriptLine, strip: bool) -> str:
+        tts, removed = _tts(line.text, line.section, lexemes, strip)
+        _set_gloss_flag(line, removed)
+        return tts
+
+    warnings.extend(apply_overrides(lines, load_overrides(spec.overrides_path), cast, respeak))
     _renumber(spec.id, lines)
     total = apply_timing(lines, timing)
     ending = _ending(spec, lines)
@@ -81,37 +88,55 @@ def build_section_lines(
     paragraphs: tuple[int, int] | None = None,
     cast: Cast | None = None,
     timing: Timing | None = None,
+    strip_glosses: bool | None = None,
 ) -> list[ScriptLine]:
     """Attribute a section (or a paragraph span) without an episode spec. Used by the break suggester."""
     cast = cast or load_cast()
     timing = timing or load_timing()[0]
     lexemes = load_lexicon()
+    strip = global_strip_glosses() if strip_glosses is None else strip_glosses
     section_text = load_section(section)
     chosen = _select_paragraphs(section_text, paragraphs)
     raws, _warnings = _attribute_section(section_text, chosen, narrator, RuleAttributor(cast))
-    lines = [_finish_raw(raw, "section", False, False, False, cast, lexemes, section) for raw in _explode(raws)]
+    lines = [
+        _finish_raw(raw, "section", False, False, False, cast, lexemes, section, strip)
+        for raw in _explode(raws)
+    ]
     apply_timing(lines, timing)
     return lines
 
 
+def resolve_strip(spec: EpisodeSpec, segment: SegmentSpec | None = None) -> bool:
+    """Episode value wins over the global default. A segment wins over the episode."""
+    if segment is not None and segment.strip_glosses is not None:
+        return segment.strip_glosses
+    if spec.strip_glosses is not None:
+        return spec.strip_glosses
+    return global_strip_glosses(spec.timing_path)
+
+
 def _segment_lines(spec, segment, cast, attributer, lexemes):
     kind = segment.kind
+    strip = resolve_strip(spec, segment)
     if kind == "bridge":
-        return _bridge_lines(segment, cast, lexemes), []
+        return _bridge_lines(segment, cast, lexemes, strip), []
     if kind == "section":
         narrator = segment.narrator or spec.narrator_default
         section_text = load_section(segment.section)
         chosen = _select_paragraphs(section_text, segment.paragraphs)
         raws, warnings = _attribute_section(section_text, chosen, narrator, attributer)
         lines = [
-            _finish_raw(raw, segment.id, segment.excerpt, segment.abridged, False, cast, lexemes, segment.section)
+            _finish_raw(
+                raw, segment.id, segment.excerpt, segment.abridged, False,
+                cast, lexemes, segment.section, strip,
+            )
             for raw in _explode(raws)
         ]
         return lines, warnings
     assert_never(kind)
 
 
-def _bridge_lines(segment: SegmentSpec, cast: Cast, lexemes) -> list[ScriptLine]:
+def _bridge_lines(segment: SegmentSpec, cast: Cast, lexemes, strip: bool) -> list[ScriptLine]:
     speaker = segment.speaker or "sauti"
     emotion, pace, intensity, direction = infer(segment.text, "bridge", speaker)
     if segment.emotion:
@@ -120,7 +145,10 @@ def _bridge_lines(segment: SegmentSpec, cast: Cast, lexemes) -> list[ScriptLine]
         pace = segment.pace
     lines = []
     for piece in split_sentences(segment.text):
-        tts = apply_lexicon(piece, lexemes)
+        tts, removed = _tts(piece, None, lexemes, strip)
+        flags = ["non_kmg"]
+        if removed:
+            flags.append("gloss_stripped")
         lines.append(ScriptLine(
             id="",
             segment_id=segment.id,
@@ -136,7 +164,7 @@ def _bridge_lines(segment: SegmentSpec, cast: Cast, lexemes) -> list[ScriptLine]
             turn_id=f"{segment.id}-bridge",
             non_kmg=True,
             direction=direction,
-            flags=["non_kmg"],
+            flags=flags,
         ))
     return lines
 
@@ -175,12 +203,13 @@ def _explode(raws: list[RawLine]) -> list[RawLine]:
 
 
 def _finish_raw(raw: RawLine, segment_id: str, excerpt: bool, abridged: bool, non_kmg: bool,
-                cast: Cast, lexemes, section: int) -> ScriptLine:
+                cast: Cast, lexemes, section: int, strip: bool) -> ScriptLine:
     kind: LineType = raw.type if raw.type in ("narration", "speech", "bridge") else "narration"
     emotion, pace, intensity, direction = infer(raw.text, kind, raw.speaker)
-    resolved = speakable(section, raw.text)
-    tts = apply_lexicon(resolved, lexemes)
+    tts, removed = _tts(raw.text, section, lexemes, strip)
     flags = list(raw.flags)
+    if removed and "gloss_stripped" not in flags:
+        flags.append("gloss_stripped")
     if excerpt and "excerpt" not in flags:
         flags.append("excerpt")
     if abridged and "abridged" not in flags:
@@ -211,6 +240,20 @@ def _finish_raw(raw: RawLine, segment_id: str, excerpt: bool, abridged: bool, no
         fx=fx,
         flags=flags,
     )
+
+
+def _tts(text: str, section: int | None, lexemes, strip: bool) -> tuple[str, bool]:
+    resolved = speakable(section, text) if section else text
+    spoken = strip_glosses(resolved) if strip else resolved
+    return apply_lexicon(spoken, lexemes), glosses_removed(resolved, spoken)
+
+
+def _set_gloss_flag(line: ScriptLine, removed: bool) -> None:
+    if removed:
+        if "gloss_stripped" not in line.flags:
+            line.flags.append("gloss_stripped")
+        return
+    line.flags = [flag for flag in line.flags if flag != "gloss_stripped"]
 
 
 def _select_paragraphs(section_text: SectionText, span: tuple[int, int] | None) -> list[Paragraph]:

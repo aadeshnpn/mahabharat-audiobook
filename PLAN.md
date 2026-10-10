@@ -40,7 +40,7 @@ Produce a cinematic, full-cast English audiobook of the KMG translation of the M
 
 ### Phase 1: Ingest & normalize text
 - Scrape → `data/raw/book01/*.html` → `data/text/book01/NNN.txt` + `index.json` (**done**: 236 sections).
-- Normalization: decide how to read parenthetical glosses like "Brahmacharya (study and meditation in celibacy)". Options: read them, drop them, or read them as an aside in the narrator's voice. Expand "viz.", fix em-dashes and archaic punctuation.
+- Normalization: parenthetical translator glosses such as "Brahmacharya (study and meditation in celibacy)" stay in the script and are omitted from TTS text (`strip_glosses`, global in `configs/duration.yaml`, overridable per episode, segment, or line). A parenthesis that is only a number is spoken. Expand "viz.", fix em-dashes and archaic punctuation.
 - Pronunciation lexicon `lexicon/sanskrit.tsv`: name → respelling and/or CMUdict phonemes (VoxCPM2 accepts `{...}` phoneme input). Seed it from a name list, then refine by ear.
 
 ### Phase 1b: Pronunciation respelling lexicon (chosen approach; no fine-tuning)
@@ -189,12 +189,12 @@ The unit of listening is an **episode**, not a whole section. A normal episode i
 
 `mbh episode build` writes `episodes/<id>.script.json` and `episodes/<id>_script.md`. Each line has `speaker`, `voice_id`, `type` (`narration` or `speech`), `emotion`, `pace`, original `text`, `tts_text` (after `krishna.speakable` and the lexicon), and `section` / `paragraph`. Attribution is rule-based from the existing "X said," tags, with a callable hook for a later LLM pass. `episodes/overrides/<id>.json` reapplies human speaker, emotion, pace, and direction edits after every rebuild.
 
-`lexicon/book01.tsv` is the Phase 1b file (`term`, `respelling`, `ipa`, `source`, `verified`, `notes`). Substitution is whole-word, longest match first, and touches TTS text only. `verified` is still 0. `mbh episode breaks` proposes legal end points near the target (complete sentence, not mid-dialogue, preferably a question or a paragraph boundary). Duration uses `configs/duration.yaml` (160.9 wpm from the §100 prototype). `mbh episode render` and `assemble` are the Phase 6–7 interface: VoxCPM2 on CPU, cache key per line, gaps and loudness from the same timing file. No audio is rendered in CI.
+`lexicon/book01.tsv` is the Phase 1b file (`term`, `respelling`, `ipa`, `source`, `verified`, `notes`). Substitution is whole-word, longest match first, and touches TTS text only. `verified` is still 0. Parenthetical glosses are stripped from that same TTS text (`strip_glosses: true` on the pilot). The quoted KMG line is unchanged. `mbh episode breaks` proposes legal end points near the target (complete sentence, not mid-dialogue, preferably a question or a paragraph boundary). Duration uses `configs/duration.yaml` (160.9 wpm from the §100 prototype). `mbh episode render` and `assemble` are the Phase 6–7 interface: VoxCPM2 on CPU, cache key per line, gaps and loudness from the same timing file. No audio is rendered in CI.
 
 CLI: `mbh episode build|estimate|breaks|render|assemble|export-script`.
 
 ## 9. Status
-- **Oct 10 (episode pipeline):** text-only pilot at `episodes/ep00_pilot.yaml`. Cold open is Book 1 §100 ¶10–11 (Bhishma's vow, Vaisampayana), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5. Estimated **5 min 42 s** (342.3 s, 34 lines) at 160.9 wpm. It ends at §1 ¶5, when the Rishi finishes asking for the Bharata; the nearest shorter legal break is §1 ¶4 at about 4:43. Lexicon v0 is `lexicon/book01.tsv`. Render and assemble are implemented and unrun. See the README "Episodes" section.
+- **Oct 10 (episode pipeline):** text-only pilot at `episodes/ep00_pilot.yaml`. Cold open is Book 1 §100 ¶10–11 (Bhishma's vow, Vaisampayana), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5. Estimated **5 min 38 s** (337.8 s, 34 lines) at 160.9 wpm, with parenthetical glosses omitted from the spoken line. It ends at §1 ¶5, when the Rishi finishes asking for the Bharata; the nearest shorter legal break is §1 ¶4 at about 4:38. Lexicon v0 is `lexicon/book01.tsv`. Render and assemble are implemented and unrun. See the README "Episodes" section.
 - **Oct 10:** character map web app merged (FastAPI + SQLite + Cytoscape.js). Seed is the text-grounded `characters/book01.json` (164 characters). The 8 prototype voices are attached. See README.
 
 ### Oct 9

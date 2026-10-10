@@ -25,6 +25,9 @@ def render_markdown(script: EpisodeScript, cast: Cast | None = None) -> str:
         section = script.ending.get("section")
         lines.append(f"**Where it ends:** §{section} ¶{para}. {script.ending['reason']}")
         lines.append("")
+    if any("gloss_stripped" in line.flags for line in script.lines):
+        lines.append("Parenthetical glosses stay in the quoted line and are left out of the spoken line.")
+        lines.append("")
     if script.warnings:
         lines.append("## Build warnings")
         lines.append("")
@@ -76,6 +79,8 @@ def _line_block(line: ScriptLine, cast: Cast) -> str:
         flags.append("abridged")
     if "override" in line.flags:
         flags.append("override")
+    if "gloss_stripped" in line.flags:
+        flags.append("gloss not spoken")
     if "unresolved_speaker" in line.flags:
         flags.append("unresolved speaker")
     mark = f" · {', '.join(flags)}" if flags else ""

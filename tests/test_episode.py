@@ -189,6 +189,73 @@ def test_breaks_never_cut_a_turn_and_offer_the_rishi_question():
     assert 330 < built.estimated_duration_s < 360
 
 
+def test_parenthetical_glosses_are_omitted_from_tts_only(tmp_path: Path):
+    spec = load_spec(ROOT / "episodes" / "ep00_pilot.yaml")
+    script = build_episode(spec)
+    glosses = (
+        "(study and meditation in celibacy)",
+        "(sages)",
+        "(twice-born)",
+        "(the terrible)",
+    )
+    for gloss in glosses:
+        hits = [line for line in script.lines if gloss in line.text]
+        assert hits, gloss
+        for line in hits:
+            assert gloss not in line.tts_text
+            assert gloss in line.text
+            assert "gloss_stripped" in line.flags
+    vow = next(line for line in script.lines if "from this day I adopt the vow" in line.text)
+    assert vow.tts_text.endswith("BRAH-muh-CHAR-yuh.") or "BRAH-muh-CHAR-yuh." in vow.tts_text
+
+    # The global default and the episode flag both strip. Clearing the episode flag still strips.
+    spec.strip_glosses = None
+    assert "(sages)" not in next(line.tts_text for line in build_episode(spec).lines if "(sages)" in line.text)
+
+    # Episode off: the gloss is spoken.
+    spec.strip_glosses = False
+    kept = build_episode(spec)
+    assert "(sages)" in next(line.tts_text for line in kept.lines if "(sages)" in line.text)
+
+    # Segment off keeps the opening glosses and still strips the cold open.
+    spec.strip_glosses = True
+    for segment in spec.segments:
+        if segment.id == "opening":
+            segment.strip_glosses = False
+    mixed = build_episode(spec)
+    assert "(sages)" in next(line.tts_text for line in mixed.lines if "(sages)" in line.text)
+    assert "(the terrible)" not in next(line.tts_text for line in mixed.lines if "(the terrible)" in line.text)
+
+    # A line override keeps one gloss. An explicit tts_text replaces the spoken line.
+    spec = load_spec(ROOT / "episodes" / "ep00_pilot.yaml")
+    rows = json.loads(spec.overrides_path.read_text())
+    rows["overrides"].append({
+        "section": 1,
+        "paragraph": 2,
+        "contains": "Munis",
+        "strip_glosses": False,
+    })
+    rows["overrides"].append({
+        "section": 100,
+        "paragraph": 10,
+        "contains": "from this day I adopt the vow",
+        "tts_text": "Custom spoken vow.",
+    })
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps(rows), encoding="utf-8")
+    spec.overrides_path = path
+    edited = build_episode(spec)
+    munis = next(line for line in edited.lines if "Munis" in line.text)
+    assert "(sages)" in munis.tts_text
+    assert "gloss_stripped" not in munis.flags
+    custom = next(line for line in edited.lines if "from this day I adopt the vow" in line.text)
+    assert custom.tts_text == "Custom spoken vow."
+    assert "gloss_stripped" not in custom.flags
+    assert "(study and meditation in celibacy)" in custom.text
+    still = next(line for line in edited.lines if "(the terrible)" in line.text)
+    assert "(the terrible)" not in still.tts_text
+
+
 def test_committed_pilot_matches_the_builder():
     spec = load_spec(ROOT / "episodes" / "ep00_pilot.yaml")
     fresh = build_episode(spec)

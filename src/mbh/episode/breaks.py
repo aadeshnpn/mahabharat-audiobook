@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, replace
 
-from mbh.episode.build import build_episode, build_section_lines
+from mbh.episode.build import build_episode, build_section_lines, resolve_strip
 from mbh.episode.cast import Cast, load_cast
 from mbh.episode.models import ScriptLine
 from mbh.episode.spec import EpisodeSpec
@@ -95,12 +95,14 @@ def suggest_in_section(
     cast: Cast | None = None,
     timing: Timing | None = None,
     limit: int = 5,
+    strip_glosses: bool | None = None,
 ) -> list[BreakSuggestion]:
     cast = cast or load_cast()
     timing = timing or load_timing()[0]
     end = _horizon(section, start_paragraph, target_s, timing)
     lines = build_section_lines(
         section, narrator=narrator, paragraphs=(start_paragraph, end), cast=cast, timing=timing,
+        strip_glosses=strip_glosses,
     )
     return suggest_breaks(lines, target_s, limit=limit)
 
@@ -122,7 +124,7 @@ def suggest_for_spec(spec: EpisodeSpec, *, limit: int = 5) -> dict:
     narrator = last.narrator or spec.narrator_default
     local = suggest_in_section(
         last.section, section_target, narrator=narrator, start_paragraph=start,
-        timing=timing, limit=limit,
+        timing=timing, limit=limit, strip_glosses=resolve_strip(spec, last),
     )
     # Shift the clock so times include the cold open and bridges already counted.
     shifted = [

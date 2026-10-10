@@ -48,9 +48,21 @@ class EngineSettings:
     true_peak_db: float = -1.5
 
 
-def load_timing(path: Path | None = None) -> tuple[Timing, EngineSettings]:
+def load_timing_data(path: Path | None = None) -> dict:
     file = path or (repo_root() / "configs" / "duration.yaml")
     data = yaml.safe_load(file.read_text(encoding="utf-8")) or {}
+    if not isinstance(data, dict):
+        raise ValueError(f"{file} is not a mapping")
+    return data
+
+
+def global_strip_glosses(path: Path | None = None) -> bool:
+    """Default for the gloss rule. Missing key means strip."""
+    return bool(load_timing_data(path).get("strip_glosses", True))
+
+
+def load_timing(path: Path | None = None) -> tuple[Timing, EngineSettings]:
+    data = load_timing_data(path)
     gaps = data.get("gaps") or {}
     engine = data.get("engine") or {}
     loud = data.get("loudness") or {}

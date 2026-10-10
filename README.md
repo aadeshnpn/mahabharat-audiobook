@@ -1,5 +1,92 @@
 # mahabharat-audiobook
 
-A full-cast, cinematic audiobook of the Mahabharata (Kisari Mohan Ganguli's English translation), built with open-source TTS that runs on CPU only.
+A full-cast cinematic audiobook of the Mahabharata (KMG English translation), built with open-source TTS on CPU only. Book 1 (Adi Parva) is the first target.
+See `PLAN.md` for the spec and phases, `research-tts.md` for the model survey, and `proto/NOTES.md` for prototype results.
 
-Book 1 (Adi Parva) is the first target. Work in progress lands on feature branches; see the open pull requests.
+## Character Map web app
+A local web app for mapping every recurring Book 1 character. It has:
+- an interactive **relationship graph** (Cytoscape.js) with parent, foster-parent, spouse, sibling, teacher, ally, enemy, rival, guardian, curse, slew, incarnation-of, service and narration edges, each with a § reference; nodes are coloured by kind (human, sage, deity, celestial, naga, asura, rakshasa, bird, animal, chorus);
+- **profiles** for each character: aliases, a TTS respelling, gender, kind + kind detail, era/age, role, backstory with § citations, personality, emotional range, voice brief, sections appeared in, speech turns per section, a shared `voice_group` (if any), flags (`single_section_speaker`, `chorus`, `non_speaking`) and a **provenance** badge (`text-extracted`, `hand`, or `text-extracted+hand-edited` once saved from the UI);
+- **voice**: play the reference clip, edit the design prompt and sample line, attach or replace a clip (old clips are kept as `ref_replaced_*`), list candidates and pick one as the reference, and **generate a candidate from the brief** with VoxCPM2 on CPU as a background job;
+- full **CRUD** for characters and relationships, plus JSON **import/export** and a REST API (Swagger docs at `/docs`).
+
+### Run
+```bash
+cd /workspace/mahabharat
+uv venv --python 3.12 .venv && VIRTUAL_ENV=.venv uv pip install fastapi "uvicorn[standard]" python-multipart pydantic
+# 1) (re)build characters/book01.json from the text-grounded profiles (validates every § citation; ~4 s)
+PYTHONPATH=src .venv/bin/python -m mbh.characters.build_extracted --write
+# 2a) first time only: seed an empty DB and attach the prototype voices
+PYTHONPATH=src .venv/bin/python -m mbh.webapp.seed
+# 2b) afterwards: re-seed while keeping voices, prompts and UI edits (stop the server first)
+PYTHONPATH=src .venv/bin/python -m mbh.webapp.reseed
+# 3) serve
+PYTHONPATH=src .venv/bin/uvicorn mbh.webapp.app:app --app-dir src --host 0.0.0.0 --port 8765
+```
+Open http://localhost:8765 (the REST API docs are at http://localhost:8765/docs).
+
+"Generate candidate" needs the VoxCPM2 environment. It defaults to `proto/.venv-vox/bin/python`; point `MBH_VOX_PYTHON` elsewhere to override. A job takes about 1–2 minutes on an 8-core CPU, including ~20 s of model load, and uses ~7 GB of RAM. Jobs run one at a time.
+
+Environment variables: `MBH_DB` (SQLite path, default `data/mbh.sqlite3`), `MBH_VOX_PYTHON`.
+
+### REST API (summary)
+| Method | Path | |
+|---|---|---|
+| GET | `/api/characters?q=&kind=` | list or search |
+| POST | `/api/characters` | create (id is slugified from the name unless given) |
+| GET / PUT / PATCH / DELETE | `/api/characters/{id}` | read (includes relationships) / replace / partial update / delete (relationships cascade; `?delete_voice_files=true` also removes the files) |
+| GET / POST | `/api/relationships` (`?character=`) | list / create `{source,target,type,label,notes}` |
+| PUT / DELETE | `/api/relationships/{rid}` | update / delete |
+| GET | `/api/graph` | Cytoscape elements |
+| POST / DELETE | `/api/characters/{id}/voice` | upload (multipart `file`) or replace the reference clip / detach it |
+| GET | `/api/characters/{id}/voice/candidates` | candidate clips |
+| POST | `/api/characters/{id}/voice/select` | `{file}`: make a candidate the reference |
+| POST | `/api/characters/{id}/voice/generate` | `{prompt?, text?, steps?}`: queue a VoxCPM2 design job (202) |
+| GET | `/api/jobs?character=`, `/api/jobs/{jid}` | job status |
+| POST | `/api/import?mode=merge\|replace` | import a JSON body `{characters:[...], relationships:[...]}` |
+| POST | `/api/import/seed?mode=merge\|replace` | re-import `characters/book01.json` |
+| GET | `/api/export[?save=true]` | export JSON (download, or save to `characters/book01.export.<ts>.json`) |
+| GET | `/api/meta` | relationship types and colours, kinds, voice-generation availability |
+
+Note: a `merge` import updates the fields that are present in the file. Fields the file doesn't mention, such as voice clips and prompts, are left alone. Fields it does mention overwrite edits made in the UI. Use `mbh.webapp.reseed` instead of `/api/import/seed` when the DB holds work you want to keep.
+
+### Re-seeding safely (`mbh.webapp.reseed`)
+1. Exports the DB to `characters/backups/db_export.before_reseed.<ts>.json`.
+2. Replaces characters and relationships with `characters/book01.json`.
+3. Restores voice fields (`voice_clip`, `voice_prompt`, `sample_line`, `voice_engine`, `voice_notes`) for every id that still exists.
+4. Detects UI edits by comparing the DB with the file it was last seeded from (`characters/backups/last_seed.json`, rewritten on every re-seed). Edited fields win and provenance becomes `text-extracted+hand-edited`.
+5. Re-adds characters and relationships that were created in the UI.
+An explicit baseline can be passed as the first argument; it must be the exact file the DB was seeded from, otherwise ordinary data changes look like UI edits.
+
+### Tests
+```bash
+VIRTUAL_ENV=.venv uv pip install pytest httpx playwright
+.venv/bin/python -m pytest -q tests          # API: CRUD, cascade, voice upload/replace, import/export, extracted fields, reseed preservation (temp DB)
+.venv/bin/python tests/e2e_ui.py              # headless UI CRUD + graph checks against a running server; writes screens/*.png
+```
+
+## Where the character data comes from
+`characters/book01.json` is a **text-grounded extraction** of Book 1. The profiles were written from a reading of the KMG text (`data/text/book01/`), with § citations. See `characters/EXTRACTION_REPORT.md` for counts, method and open decisions.
+- `src/mbh/characters/extracted/part1..5.py` hold the profiles and `rels.py` the relationships. Each relationship has a type and a § reference.
+- `src/mbh/characters/build_extracted.py` computes, from the text:
+  - mentions and the sections each character appears in, with alias disambiguation (e.g. bare "Krishna" → Vasudeva, Draupadi or Vyasa per occurrence via `mbh.text.krishna`; the two Hidimvas and the two Jaratkarus split by pronouns);
+  - speech turns: "X said," tags plus quote-anchored attribution;
+  - flags.
+  It then checks that every cited section actually mentions the character (or a listed epithet) and fails loudly on any mismatch. It also writes the resolved and unresolved generic speaker tags (`characters/book01_unmapped_speakers.json`).
+- `work/factcheck.py` runs keyword checks on specific factual claims in the backstories.
+- `src/mbh/text/krishna.py` resolves every bare "Krishna" to Vasudeva, Draupadi or Vyasa. `speakable()` returns the TTS text, saying "Draupadi" where the text means her (decision 2026-10-10).
+- **Display names follow the decisions of 2026-10-10:** Balarama and Chitraratha are shown, with the KMG forms Valadeva and Angaraparna kept as aliases. Rishi groups (Satasringa, the Valakhilyas) share the Naimisha Rishis voice via the `voice_group` field.
+- The old provisional starter set (`starter_book01.py` + `harvest.py`) is kept for reference only. **Running `harvest` overwrites book01.json with the starter set.** Backups are in `characters/backups/`.
+
+## Layout
+```
+src/mbh/characters/   extracted/ profiles + build_extracted.py (counts, citation checks); legacy starter + harvest
+src/mbh/webapp/       FastAPI app, SQLite store, seed + reseed, static UI (vendored Cytoscape.js)
+src/mbh/voices/       design_one.py (VoxCPM2 CPU voice design, used by the web app jobs)
+characters/           book01.json (seed), EXTRACTION_REPORT.md, speaker resolution list, backups/
+voices/<id>/          ref.wav (reference clip), candidates/, ref_replaced_* history
+data/                 raw HTML + clean text (data/text/book01), SQLite DB
+proto/                CPU TTS prototype (scripts, venvs, logs, NOTES.md)
+samples/              listening samples; screens/ UI screenshots
+extract_book.py       scrape output → clean section text
+```

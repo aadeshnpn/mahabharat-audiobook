@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahabharata · Book 1 Character Map</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/vendor/cytoscape.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">ॐ Mahabharata <span>Book 1 · Adi Parva · Character Map</span></div>
+  <input id="search" placeholder="Search name / alias / role…" autocomplete="off">
+  <select id="kindFilter"><option value="">All kinds</option></select>
+  <button id="btnNew">+ Character</button>
+  <button id="btnRel">+ Relationship</button>
+  <button id="btnLayout" title="Re-run layout">⟳ Layout</button>
+  <div class="menu">
+    <button id="btnData">Data ▾</button>
+    <div class="menu-items">
+      <a href="/api/export" download="characters.export.json">Download export (JSON)</a>
+      <button id="btnSaveExport">Save export to characters/</button>
+      <label class="filebtn">Import JSON (merge)…<input type="file" id="importFile" accept=".json" hidden></label>
+      <button id="btnReseed">Re-import seed (merge)</button>
+      <a href="/docs" target="_blank">REST API docs</a>
+    </div>
+  </div>
+  <button id="btnView" title="Toggle table view">☰ Table</button>
+</header>
+<div id="legend"></div>
+<main>
+  <section id="graphWrap"><div id="cy"></div><div id="table" hidden></div></section>
+  <aside id="panel">
+    <div id="empty" class="empty">
+      <h2>Select a character</h2>
+      <p>Click a node in the graph (or a row in the table). Drag nodes to rearrange. Use the legend to toggle relationship types.</p>
+      <div id="stats"></div>
+    </div>
+    <div id="detail" hidden>
+      <div class="dhead"><h2 id="dName"></h2><span id="dBadges"></span></div>
+      <div class="tabs"><button data-tab="profile" class="on">Profile</button><button data-tab="voice">Voice</button><button data-tab="rels">Relationships</button></div>
+      <form id="fProfile" class="tab" data-tab="profile">
+        <div class="grid">
+          <label>Name<input name="name" required></label>
+          <label>ID<input name="id" disabled></label>
+          <label>Respelling (TTS)<input name="respelling" placeholder="BHEESH-muh"></label>
+          <label>Gender<input name="gender"></label>
+          <label>Era / age<input name="era_age"></label>
+          <label>Kind<input name="kind" list="kinds"></label>
+        </div>
+        <label>Aliases <small>(comma-separated)</small><input name="aliases"></label>
+        <label>Role<input name="role"></label>
+        <label>Kind detail<input name="kind_detail" placeholder="e.g. Kuru king; Vasu incarnate"></label>
+        <label>Backstory<textarea name="backstory" rows="4"></textarea></label>
+        <label>Personality <small>(comma-separated)</small><input name="personality"></label>
+        <label>Emotional range <small>(comma-separated)</small><input name="emotional_range"></label>
+        <label>Voice brief<textarea name="voice_brief" rows="3"></textarea></label>
+        <div class="grid">
+          <label>Key sections<input name="key_sections"></label>
+          <label>First section<input name="first_section" type="number"></label>
+          <label>Mentions<input name="mentions" type="number"></label>
+          <label>Speech turns<input name="speaking_lines" type="number"></label>
+        </div>
+        <label>All sections appeared in <small>(comma-separated)</small><textarea name="sections" rows="2"></textarea></label>
+        <label class="inline"><input type="checkbox" name="provisional"> Provisional (needs review)</label>
+        <p class="note" id="dSource"></p>
+        <div class="actions"><button type="submit" class="primary">Save</button><button type="button" id="btnDelete" class="danger">Delete character</button></div>
+      </form>
+      <div class="tab" data-tab="voice" hidden>
+        <h3>Reference clip</h3>
+        <div id="vClip"></div>
+        <div class="row">
+          <label class="filebtn">Attach / replace clip…<input type="file" id="voiceFile" accept="audio/*" hidden></label>
+          <button id="btnRemoveVoice" class="danger subtle">Detach</button>
+        </div>
+        <label>Voice design prompt<textarea id="vPrompt" rows="4"></textarea></label>
+        <label>Sample line<textarea id="vLine" rows="2"></textarea></label>
+        <div class="row"><button id="btnSaveVoice">Save prompt &amp; line</button>
+          <button id="btnGen" class="primary">Generate candidate (VoxCPM2, CPU)</button></div>
+        <p class="note" id="vNotes"></p>
+        <h3>Candidates</h3><div id="vCands"></div>
+        <h3>Jobs</h3><div id="vJobs"></div>
+      </div>
+      <div class="tab" data-tab="rels" hidden>
+        <table class="rels"><thead><tr><th>Relation</th><th>Other</th><th>§</th><th></th></tr></thead><tbody id="relBody"></tbody></table>
+        <h3>Add relationship</h3>
+        <form id="fRelInline" class="row">
+          <select name="dir"><option value="out">this →</option><option value="in">→ this</option></select>
+          <select name="type"></select>
+          <input name="other" list="charList" placeholder="other character id" required>
+          <button class="primary">Add</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+</main>
+<dialog id="dlgNew"><form method="dialog" id="fNew">
+  <h3>New character</h3>
+  <label>Name<input name="name" required></label>
+  <label>Gender<input name="gender"></label>
+  <label>Kind<input name="kind" list="kinds" value="human"></label>
+  <label>Role<input name="role"></label>
+  <div class="actions"><button value="cancel" formnovalidate>Cancel</button><button value="ok" class="primary">Create</button></div>
+</form></dialog>
+<dialog id="dlgRel"><form method="dialog" id="fRel">
+  <h3>New relationship</h3>
+  <label>Source<input name="source" list="charList" required></label>
+  <label>Type<select name="type"></select></label>
+  <label>Target<input name="target" list="charList" required></label>
+  <label>Notes<input name="notes"></label>
+  <div class="actions"><button value="cancel" formnovalidate>Cancel</button><button value="ok" class="primary">Add</button></div>
+</form></dialog>
+<datalist id="charList"></datalist><datalist id="kinds"></datalist>
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body></html>

@@ -1,0 +1,17 @@
+{"book":1,"section":100,"sub_parva":"Sambhava Parva","source_url":"https://mahabharata-online.github.io/1/100.html",
+ "note":"Hand-attributed prototype of the Phase-5 output (paragraphs 9 [partial], 19, 21). Text verbatim KMG; parenthetical gloss after Brahmacharya dropped.",
+ "segments":[
+ {"type":"narration","speaker":"vaisampayana","text":"And in course of his ramble, he beheld a black-eyed maiden of celestial beauty, the daughter of a fisherman. The king addressing her, said,","emotion":"warm","pace":"measured"},
+ {"type":"speech","speaker":"santanu","addressee":"satyavati","text":"Who art thou, and whose daughter? What dost thou do here, O timid one?","emotion":"tender","pace":"gentle"},
+ {"type":"narration","speaker":"vaisampayana","text":"She answered,","emotion":"neutral","pace":"measured"},
+ {"type":"speech","speaker":"satyavati","addressee":"santanu","text":"Blest be thou! I am the daughter of the chief of the fishermen. At his command, I am engaged for religious merit, in rowing passengers across this river in my boat.","emotion":"shy","pace":"moderate"},
+ {"type":"narration","speaker":"vaisampayana","text":"O king, the son of Ganga, devoted to truth, having ascertained the scruples of the chief of the fishermen, then said, moved thereto by the desire of benefiting his father,","emotion":"solemn","pace":"measured"},
+ {"type":"speech","speaker":"bhishma","addressee":"dasa","text":"Chief of fishermen, thou best of men, listen to what I say in the presence of these assembled kings. Ye kings, I have already relinquished my right to the throne, I shall now settle the matter of my children.","emotion":"commanding","pace":"slow"},
+ {"type":"speech","speaker":"bhishma","addressee":"dasa","text":"O fisherman, from this day I adopt the vow of Brahmacharya. If I die sonless, I shall yet attain to regions of perennial bliss in heaven!","emotion":"solemn_resolve","pace":"slow"},
+ {"type":"narration","speaker":"vaisampayana","text":"Upon these words of the son of Ganga, the hair on the fisherman's body stood on end from glee, and he replied,","emotion":"awed","pace":"measured"},
+ {"type":"speech","speaker":"dasa","addressee":"bhishma","text":"I bestow my daughter!","emotion":"joyful","pace":"quick"},
+ {"type":"narration","speaker":"vaisampayana","text":"Immediately after, the Apsaras and the gods with diverse tribes of Rishis began to rain down flowers from the firmament upon the head of Devavrata and exclaimed,","emotion":"awed","pace":"measured"},
+ {"type":"speech","speaker":"devas_chorus","text":"This one is Bhishma, the terrible!","emotion":"awed","pace":"slow","fx":"celestial"},
+ {"type":"narration","speaker":"vaisampayana","text":"Bhishma then, to serve his father, addressed the illustrious damsel and said,","emotion":"neutral","pace":"measured"},
+ {"type":"speech","speaker":"bhishma","addressee":"satyavati","text":"O mother, ascend this chariot, and let us go unto our house.","emotion":"tender","pace":"gentle"}
+ ]}

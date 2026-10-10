@@ -1,0 +1,26 @@
+[
+ {
+  "id": "santanu",
+  "n": 2,
+  "prompt": "A mature Indian king in his forties, rich regal baritone, warm but lovestruck and gentle, unhurried, clear Indian English accent",
+  "line": "Who art thou, and whose daughter? What dost thou do here, O timid one? Tell me truly, for my heart is drawn to thee."
+ },
+ {
+  "id": "satyavati",
+  "n": 2,
+  "prompt": "A young Indian woman, a fisherman's daughter, bright clear female voice, modest and shy yet self-assured, soft and melodious, clear Indian English accent",
+  "line": "Blest be thou! I am the daughter of the chief of the fishermen. At his command, I am engaged in rowing passengers across this river in my boat."
+ },
+ {
+  "id": "dasa",
+  "n": 2,
+  "prompt": "An older Indian fisherman chieftain, earthy slightly gravelly male voice, shrewd and cautious, then overjoyed, clear Indian English accent",
+  "line": "O amiable one, there is something else to be said, something else to be reflected upon by thee. I have my doubts in respect of the children thou mayst beget."
+ },
+ {
+  "id": "devas_chorus",
+  "n": 2,
+  "prompt": "A majestic divine voice from the heavens, deep resonant and awe-inspiring, booming yet serene, slow and ceremonial, clear Indian English accent",
+  "line": "This one is Bhishma, the terrible! Let flowers rain upon the son of Ganga, for his vow shall echo through the worlds."
+ }
+]

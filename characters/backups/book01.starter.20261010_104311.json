@@ -1,0 +1,6326 @@
+{
+ "book": 1,
+ "characters": [
+  {
+   "id": "sauti",
+   "name": "Sauti",
+   "aliases": [
+    "Ugrasrava",
+    "Ugrasravas",
+    "son of Lomaharshana",
+    "son of Suta"
+   ],
+   "respelling": "SOW-tee (OOG-ruh-shruh-vuh)",
+   "gender": "male",
+   "era_age": "middle-aged",
+   "role": "Bard; frame narrator who recites the epic to the sages at Naimisha",
+   "kind": "human",
+   "personality": [
+    "humble",
+    "eloquent",
+    "devout"
+   ],
+   "emotional_range": [
+    "reverent",
+    "engaged storytelling",
+    "awed"
+   ],
+   "voice_brief": "A middle-aged Indian man, a gifted storyteller and bard, warm resonant baritone, clear Indian English accent, measured and engaging narration, gentle reverence",
+   "backstory": "Son of Lomaharshana. He arrives at Saunaka's twelve-year sacrifice in the Naimisha forest and narrates the Mahabharata as he heard it recited by Vaisampayana at Janamejaya's snake sacrifice.",
+   "key_sections": [
+    1,
+    2,
+    4,
+    5,
+    43,
+    56
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    67,
+    117
+   ],
+   "mentions": 156,
+   "speaking_lines": 127,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "saunaka",
+   "name": "Saunaka",
+   "aliases": [
+    "Kulapati"
+   ],
+   "respelling": "SHOW-nuh-kuh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Chief of the Rishis at Naimisha; host of the twelve-year sacrifice",
+   "kind": "human",
+   "personality": [
+    "inquisitive",
+    "learned",
+    "dignified"
+   ],
+   "emotional_range": [
+    "curious",
+    "approving"
+   ],
+   "voice_brief": "An elderly Indian sage, patriarchal and courteous, slightly reedy but authoritative voice, inquisitive tone, clear Indian English accent",
+   "backstory": "Head of the ascetics at Naimisha. His questions prompt Sauti's narration, including the Bhrigu lineage stories.",
+   "key_sections": [
+    1,
+    4,
+    5,
+    13,
+    31,
+    40
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    4,
+    5,
+    13,
+    16,
+    17,
+    24,
+    31,
+    34,
+    35,
+    36,
+    40,
+    43,
+    46,
+    49,
+    53,
+    57,
+    58,
+    59
+   ],
+   "mentions": 33,
+   "speaking_lines": 18,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vaisampayana",
+   "name": "Vaisampayana",
+   "aliases": [],
+   "respelling": "vy-shum-PAA-yuh-nuh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Disciple of Vyasa; inner narrator who recites the epic to Janamejaya",
+   "kind": "human",
+   "personality": [
+    "calm",
+    "wise",
+    "patient"
+   ],
+   "emotional_range": [
+    "serene",
+    "solemn",
+    "gently dramatic"
+   ],
+   "voice_brief": "An elderly Indian sage, deep calm and wise voice, slow deliberate pace, soft gravitas, clear Indian English accent",
+   "backstory": "Pupil of Krishna-Dwaipayana (Vyasa). At Vyasa's bidding he recites the history of the Bharatas to King Janamejaya during the snake sacrifice.",
+   "key_sections": [
+    76,
+    78,
+    80,
+    83,
+    100,
+    134
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    5,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    164,
+    165,
+    166,
+    167,
+    170,
+    171,
+    172,
+    173,
+    175,
+    176,
+    177,
+    185,
+    186,
+    187,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236
+   ],
+   "mentions": 327,
+   "speaking_lines": 316,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "janamejaya",
+   "name": "Janamejaya",
+   "aliases": [],
+   "respelling": "juh-nuh-MAY-juh-yuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Kuru king, great-grandson of Arjuna; listener of the inner narration",
+   "kind": "human",
+   "personality": [
+    "eager",
+    "proud",
+    "vengeful toward Takshaka"
+   ],
+   "emotional_range": [
+    "curious",
+    "wrathful",
+    "remorseful"
+   ],
+   "voice_brief": "A young Indian king, bright confident tenor, eager and imperious, quick to passion, clear Indian English accent",
+   "backstory": "Son of Parikshit. Learning that the Naga Takshaka killed his father, he performs the great snake sacrifice, which Astika halts; he then hears the epic from Vaisampayana.",
+   "key_sections": [
+    1,
+    3,
+    49,
+    56,
+    60,
+    94
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12,
+    13,
+    15,
+    20,
+    37,
+    38,
+    44,
+    49,
+    50,
+    51,
+    53,
+    54,
+    55,
+    56,
+    58,
+    59,
+    60,
+    62,
+    64,
+    65,
+    67,
+    68,
+    69,
+    73,
+    74,
+    75,
+    76,
+    86,
+    94,
+    95,
+    102,
+    107,
+    115,
+    116,
+    117,
+    118,
+    123,
+    130,
+    131,
+    143,
+    159,
+    167,
+    187,
+    210,
+    214,
+    216,
+    220,
+    222,
+    223,
+    225,
+    231,
+    234
+   ],
+   "mentions": 111,
+   "speaking_lines": 29,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vyasa",
+   "name": "Vyasa",
+   "aliases": [
+    "Krishna-Dwaipayana",
+    "Dwaipayana",
+    "Vyasadeva"
+   ],
+   "respelling": "VYAA-suh",
+   "gender": "male",
+   "era_age": "ageless sage",
+   "role": "Compiler of the epic; son of Satyavati and Parasara; father of Dhritarashtra, Pandu and Vidura",
+   "kind": "human",
+   "personality": [
+    "austere",
+    "omniscient",
+    "compassionate"
+   ],
+   "emotional_range": [
+    "serene authority",
+    "prophetic",
+    "tender"
+   ],
+   "voice_brief": "An ancient Indian rishi, dark and weathered resonant voice, unhurried and oracular, deeply compassionate, clear Indian English accent",
+   "backstory": "Born to Satyavati and the sage Parasara on an island in the Yamuna. At his mother's request he begets Dhritarashtra, Pandu and Vidura, and he later guides the Pandavas.",
+   "key_sections": [
+    1,
+    2,
+    62,
+    105,
+    106,
+    198
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    5,
+    13,
+    53,
+    55,
+    59,
+    60,
+    61,
+    62,
+    63,
+    67,
+    95,
+    105,
+    106,
+    110,
+    115,
+    116,
+    119,
+    122,
+    128,
+    136,
+    158,
+    164,
+    171,
+    172,
+    187,
+    192,
+    193,
+    197,
+    198,
+    199,
+    200,
+    209
+   ],
+   "mentions": 155,
+   "speaking_lines": 9,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "uttanka",
+   "name": "Uttanka",
+   "aliases": [
+    "Utanka"
+   ],
+   "respelling": "oot-TUN-kuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Disciple of Veda; enemy of Takshaka who urges Janamejaya to the snake sacrifice",
+   "kind": "human",
+   "personality": [
+    "devoted",
+    "determined",
+    "fiery"
+   ],
+   "emotional_range": [
+    "determined",
+    "indignant",
+    "awed"
+   ],
+   "voice_brief": "A young Indian ascetic student, earnest and intense tenor, fervent, clear Indian English accent",
+   "backstory": "Fetches the queen's earrings as his teacher's fee; Takshaka steals them. He later incites Janamejaya to avenge Parikshit.",
+   "key_sections": [
+    2,
+    3,
+    4,
+    50
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    3,
+    4,
+    50
+   ],
+   "mentions": 74,
+   "speaking_lines": 4,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "bhrigu",
+   "name": "Bhrigu",
+   "aliases": [],
+   "respelling": "BHRI-goo",
+   "gender": "male",
+   "era_age": "ancient",
+   "role": "Great Rishi; husband of Puloma; father of Chyavana",
+   "kind": "human",
+   "personality": [
+    "fierce",
+    "righteous"
+   ],
+   "emotional_range": [
+    "wrathful",
+    "grave"
+   ],
+   "voice_brief": "An ancient Indian sage, thunderous low voice, fierce and righteous, clear Indian English accent",
+   "backstory": "Founder of the Bhargava line; he curses Agni to consume everything after Agni reveals Puloma to a Rakshasa.",
+   "key_sections": [
+    2,
+    5,
+    6,
+    7,
+    66,
+    181
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    15,
+    16,
+    31,
+    56,
+    58,
+    59,
+    66,
+    67,
+    75,
+    80,
+    104,
+    131,
+    168,
+    180,
+    181,
+    182,
+    217
+   ],
+   "mentions": 59,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "chyavana",
+   "name": "Chyavana",
+   "aliases": [],
+   "respelling": "CHYUH-vuh-nuh",
+   "gender": "male",
+   "era_age": "ancient",
+   "role": "Son of Bhrigu and Puloma",
+   "kind": "human",
+   "personality": [
+    "fiery",
+    "ascetic"
+   ],
+   "emotional_range": [
+    "fierce"
+   ],
+   "voice_brief": "An Indian sage, intense smoldering baritone, clear Indian English accent",
+   "backstory": "Born prematurely as Puloma is carried off; his radiance burns the Rakshasa Puloman to ashes.",
+   "key_sections": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    66
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    48,
+    53,
+    66
+   ],
+   "mentions": 16,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ruru",
+   "name": "Ruru",
+   "aliases": [],
+   "respelling": "ROO-roo",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Bhargava sage; husband of Pramadvara",
+   "kind": "human",
+   "personality": [
+    "loving",
+    "grief-stricken",
+    "vengeful toward snakes"
+   ],
+   "emotional_range": [
+    "grief",
+    "despair",
+    "joy"
+   ],
+   "voice_brief": "A young Indian man of the Bhrigu line, gentle tenor that breaks with grief, clear Indian English accent",
+   "backstory": "Gives half his life to revive his bride Pramadvara after a snakebite, then vows to kill every snake until a Dundubha teaches him non-violence.",
+   "key_sections": [
+    5,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "first_section": 5,
+   "sections": [
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    58,
+    75
+   ],
+   "mentions": 41,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kasyapa",
+   "name": "Kasyapa",
+   "aliases": [
+    "Kashyapa",
+    "Marichi's son"
+   ],
+   "respelling": "KAASH-yuh-puh",
+   "gender": "male",
+   "era_age": "ancient",
+   "role": "Prajapati; husband of Kadru and Vinata; father of Nagas and Garuda",
+   "kind": "divine",
+   "personality": [
+    "benevolent",
+    "patriarchal"
+   ],
+   "emotional_range": [
+    "kindly",
+    "admonishing"
+   ],
+   "voice_brief": "A primordial Indian patriarch-sage, warm deep voice, benevolent and grand, clear Indian English accent",
+   "backstory": "Grants Kadru a thousand serpent sons and Vinata two mighty sons, Aruna and Garuda.",
+   "key_sections": [
+    30,
+    31,
+    42,
+    43,
+    50,
+    70
+   ],
+   "first_section": 3,
+   "sections": [
+    3,
+    16,
+    20,
+    23,
+    24,
+    29,
+    30,
+    31,
+    36,
+    37,
+    42,
+    43,
+    50,
+    65,
+    66,
+    70,
+    73,
+    75,
+    99,
+    123,
+    131,
+    169
+   ],
+   "mentions": 87,
+   "speaking_lines": 6,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kadru",
+   "name": "Kadru",
+   "aliases": [],
+   "respelling": "KUD-roo",
+   "gender": "female",
+   "era_age": "ancient",
+   "role": "Mother of the Nagas",
+   "kind": "divine",
+   "personality": [
+    "jealous",
+    "cunning",
+    "proud"
+   ],
+   "emotional_range": [
+    "scheming",
+    "triumphant",
+    "cold"
+   ],
+   "voice_brief": "A mature Indian woman, sly silken alto, cunning and imperious, clear Indian English accent",
+   "backstory": "Wins a wager against her co-wife Vinata about the colour of the horse Uchchaihsravas by deceit and enslaves her; she curses her own sons to burn in Janamejaya's sacrifice.",
+   "key_sections": [
+    16,
+    20,
+    23,
+    25,
+    38,
+    65
+   ],
+   "first_section": 16,
+   "sections": [
+    16,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    34,
+    35,
+    37,
+    38,
+    54,
+    65,
+    66,
+    123
+   ],
+   "mentions": 31,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vinata",
+   "name": "Vinata",
+   "aliases": [],
+   "respelling": "vi-NUH-taa",
+   "gender": "female",
+   "era_age": "ancient",
+   "role": "Mother of Aruna and Garuda",
+   "kind": "divine",
+   "personality": [
+    "patient",
+    "sorrowful",
+    "dignified"
+   ],
+   "emotional_range": [
+    "sorrow",
+    "hope",
+    "relief"
+   ],
+   "voice_brief": "A gentle Indian matron, soft melancholy mezzo voice, dignified in suffering, clear Indian English accent",
+   "backstory": "Loses the wager to Kadru and serves her as a slave until her son Garuda brings the amrita.",
+   "key_sections": [
+    16,
+    23,
+    25,
+    27,
+    28,
+    35
+   ],
+   "first_section": 16,
+   "sections": [
+    16,
+    20,
+    21,
+    22,
+    23,
+    25,
+    27,
+    28,
+    30,
+    31,
+    35,
+    36,
+    54,
+    65,
+    66,
+    123,
+    212
+   ],
+   "mentions": 39,
+   "speaking_lines": 4,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "garuda",
+   "name": "Garuda",
+   "aliases": [
+    "Suparna",
+    "son of Vinata",
+    "Vainateya"
+   ],
+   "respelling": "GUH-roo-duh",
+   "gender": "male",
+   "era_age": "youthful immortal",
+   "role": "King of birds; mount of Vishnu",
+   "kind": "divine",
+   "personality": [
+    "mighty",
+    "loyal",
+    "fearless"
+   ],
+   "emotional_range": [
+    "heroic",
+    "defiant",
+    "devoted"
+   ],
+   "voice_brief": "A mighty celestial being, ringing powerful baritone with an airy grandeur, fearless and noble, clear Indian English accent",
+   "backstory": "Steals the amrita from the gods to free his mother, defeats Indra's guards, and becomes Vishnu's mount and the eternal foe of snakes.",
+   "key_sections": [
+    23,
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    16,
+    23,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    61,
+    65,
+    66,
+    67,
+    102,
+    123,
+    140,
+    153,
+    209,
+    212,
+    229
+   ],
+   "mentions": 89,
+   "speaking_lines": 6,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "aruna",
+   "name": "Aruna",
+   "aliases": [],
+   "respelling": "UH-roo-nuh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "Elder son of Vinata; charioteer of the Sun",
+   "kind": "divine",
+   "personality": [
+    "resentful",
+    "dutiful"
+   ],
+   "emotional_range": [
+    "anger",
+    "solemn"
+   ],
+   "voice_brief": "A radiant celestial youth, bright strained voice, clear Indian English accent",
+   "backstory": "Born half-formed because Vinata broke his egg early; he curses her to slavery and becomes Surya's charioteer.",
+   "key_sections": [
+    24,
+    31,
+    34,
+    65,
+    66,
+    123
+   ],
+   "first_section": 24,
+   "sections": [
+    24,
+    31,
+    34,
+    65,
+    66,
+    123
+   ],
+   "mentions": 15,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vasuki",
+   "name": "Vasuki",
+   "aliases": [],
+   "respelling": "VAA-soo-kee",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "King of the Nagas; brother of Jaratkaru",
+   "kind": "naga",
+   "personality": [
+    "anxious",
+    "protective",
+    "wise"
+   ],
+   "emotional_range": [
+    "fear",
+    "relief",
+    "earnest"
+   ],
+   "voice_brief": "A serpent king, smooth low sibilant voice, anxious yet regal, clear Indian English accent",
+   "backstory": "Gives his sister Jaratkaru to the sage Jaratkaru so that her son Astika will save the snakes from the sacrifice.",
+   "key_sections": [
+    18,
+    37,
+    38,
+    39,
+    54,
+    128
+   ],
+   "first_section": 14,
+   "sections": [
+    14,
+    18,
+    35,
+    37,
+    38,
+    39,
+    40,
+    46,
+    47,
+    48,
+    53,
+    54,
+    57,
+    65,
+    123,
+    128
+   ],
+   "mentions": 48,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "takshaka",
+   "name": "Takshaka",
+   "aliases": [],
+   "respelling": "TUK-shuh-kuh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "Naga king; slayer of Parikshit",
+   "kind": "naga",
+   "personality": [
+    "treacherous",
+    "proud",
+    "cunning"
+   ],
+   "emotional_range": [
+    "menacing",
+    "terrified"
+   ],
+   "voice_brief": "A serpent lord, hissing dry baritone, cold menace, clear Indian English accent",
+   "backstory": "Steals Uttanka's earrings, kills King Parikshit to fulfil a curse, and flees to Indra when Janamejaya's sacrifice begins.",
+   "key_sections": [
+    3,
+    42,
+    43,
+    44,
+    50,
+    56
+   ],
+   "first_section": 3,
+   "sections": [
+    3,
+    35,
+    41,
+    42,
+    43,
+    44,
+    50,
+    51,
+    53,
+    56,
+    57,
+    58,
+    65,
+    95,
+    123,
+    225,
+    227,
+    229,
+    230
+   ],
+   "mentions": 93,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "jaratkaru_rishi",
+   "name": "Jaratkaru (sage)",
+   "aliases": [],
+   "respelling": "juh-RUT-kaa-roo",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Ascetic sage; father of Astika",
+   "kind": "human",
+   "personality": [
+    "austere",
+    "irritable",
+    "principled"
+   ],
+   "emotional_range": [
+    "severe",
+    "offended"
+   ],
+   "voice_brief": "An austere elderly Indian ascetic, thin dry voice, curt and principled, clear Indian English accent",
+   "backstory": "Marries only a bride of his own name, Vasuki's sister, and leaves her when she wakes him too late for his evening prayers.",
+   "key_sections": [
+    13,
+    38,
+    39,
+    45,
+    46,
+    47
+   ],
+   "first_section": 13,
+   "sections": [
+    13,
+    14,
+    15,
+    38,
+    39,
+    40,
+    45,
+    46,
+    47,
+    48,
+    53,
+    54,
+    58
+   ],
+   "mentions": 57,
+   "speaking_lines": 4,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "jaratkaru_naga",
+   "name": "Jaratkaru (Naga princess)",
+   "aliases": [
+    "sister of Vasuki"
+   ],
+   "respelling": "juh-RUT-kaa-roo",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Sister of Vasuki; mother of Astika",
+   "kind": "naga",
+   "personality": [
+    "dutiful",
+    "anxious"
+   ],
+   "emotional_range": [
+    "pleading",
+    "sorrow"
+   ],
+   "voice_brief": "A young serpent princess, soft trembling voice, dutiful and gentle, clear Indian English accent",
+   "backstory": "Married to the sage Jaratkaru for the snakes' salvation; mother of Astika.",
+   "key_sections": [
+    40,
+    47
+   ],
+   "first_section": 40,
+   "sections": [
+    40,
+    47
+   ],
+   "mentions": 6,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "astika",
+   "name": "Astika",
+   "aliases": [],
+   "respelling": "AAS-tee-kuh",
+   "gender": "male",
+   "era_age": "boy",
+   "role": "Brahmana boy who stops the snake sacrifice",
+   "kind": "human",
+   "personality": [
+    "wise beyond years",
+    "eloquent",
+    "compassionate"
+   ],
+   "emotional_range": [
+    "earnest",
+    "gentle persuasion"
+   ],
+   "voice_brief": "A wise Indian brahmin boy, clear youthful voice, calm and eloquent beyond his years, clear Indian English accent",
+   "backstory": "Son of the two Jaratkarus; he praises Janamejaya's sacrifice so well that the king grants him a boon, and he asks for the sacrifice to end.",
+   "key_sections": [
+    2,
+    13,
+    15,
+    54,
+    56,
+    58
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    48,
+    53,
+    54,
+    55,
+    56,
+    58
+   ],
+   "mentions": 81,
+   "speaking_lines": 6,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "parikshit",
+   "name": "Parikshit",
+   "aliases": [
+    "Parikshit"
+   ],
+   "respelling": "PUH-reek-shit",
+   "gender": "male",
+   "era_age": "elder king",
+   "role": "Kuru king; son of Abhimanyu; father of Janamejaya",
+   "kind": "human",
+   "personality": [
+    "just",
+    "momentarily rash"
+   ],
+   "emotional_range": [
+    "anger",
+    "fear",
+    "resignation"
+   ],
+   "voice_brief": "A mature Indian king, steady baritone, just but proud, clear Indian English accent",
+   "backstory": "Insults the meditating sage Samika by draping a dead snake on him; Samika's son Sringin curses him to die by Takshaka's bite.",
+   "key_sections": [
+    3,
+    40,
+    41,
+    42,
+    55,
+    95
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    40,
+    41,
+    42,
+    49,
+    50,
+    51,
+    53,
+    55,
+    56,
+    58,
+    62,
+    94,
+    95
+   ],
+   "mentions": 36,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "indra",
+   "name": "Indra",
+   "aliases": [
+    "Sakra",
+    "Purandara",
+    "Vasava",
+    "chief of the celestials"
+   ],
+   "respelling": "IN-druh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "King of the gods",
+   "kind": "divine",
+   "personality": [
+    "regal",
+    "proud",
+    "protective of his realm"
+   ],
+   "emotional_range": [
+    "commanding",
+    "anxious",
+    "gracious"
+   ],
+   "voice_brief": "The king of the gods, majestic booming baritone with a regal edge, clear Indian English accent",
+   "backstory": "Appears throughout: battles Garuda, shelters Takshaka, fathers Arjuna with Kunti, and fights Arjuna and Krishna at the burning of Khandava.",
+   "key_sections": [
+    2,
+    31,
+    56,
+    63,
+    88,
+    199
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    5,
+    18,
+    19,
+    23,
+    25,
+    26,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    53,
+    55,
+    56,
+    58,
+    60,
+    61,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    74,
+    75,
+    76,
+    77,
+    78,
+    80,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    105,
+    111,
+    112,
+    113,
+    121,
+    123,
+    124,
+    126,
+    130,
+    137,
+    138,
+    140,
+    148,
+    153,
+    155,
+    157,
+    172,
+    175,
+    176,
+    177,
+    179,
+    190,
+    191,
+    192,
+    195,
+    199,
+    201,
+    204,
+    209,
+    212,
+    213,
+    214,
+    216,
+    223,
+    225,
+    226,
+    228,
+    229,
+    230,
+    236
+   ],
+   "mentions": 289,
+   "speaking_lines": 5,
+   "count_notes": "includes epithets like 'Indra among men'",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "agni",
+   "name": "Agni",
+   "aliases": [
+    "Hutasana",
+    "god of fire",
+    "Pavaka"
+   ],
+   "respelling": "UG-nee",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "God of fire",
+   "kind": "divine",
+   "personality": [
+    "hungry",
+    "honest",
+    "persuasive"
+   ],
+   "emotional_range": [
+    "pleading",
+    "exultant"
+   ],
+   "voice_brief": "The god of fire, crackling energetic tenor, eager and fervent, clear Indian English accent",
+   "backstory": "Cursed by Bhrigu; in the Khandava-daha Parva, sated by the sacrifices, he asks Krishna and Arjuna to help him consume the Khandava forest.",
+   "key_sections": [
+    7,
+    225,
+    227,
+    230,
+    231,
+    234
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    15,
+    19,
+    20,
+    23,
+    28,
+    30,
+    37,
+    42,
+    47,
+    51,
+    52,
+    54,
+    55,
+    56,
+    58,
+    61,
+    63,
+    66,
+    67,
+    123,
+    139,
+    187,
+    213,
+    216,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    233,
+    234,
+    235,
+    236
+   ],
+   "mentions": 127,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "dushmanta",
+   "name": "Dushmanta",
+   "aliases": [
+    "Dushyanta"
+   ],
+   "respelling": "doosh-MUN-tuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Paurava king; husband of Sakuntala; father of Bharata",
+   "kind": "human",
+   "personality": [
+    "ardent",
+    "worldly",
+    "proud"
+   ],
+   "emotional_range": [
+    "amorous",
+    "dismissive",
+    "remorseful"
+   ],
+   "voice_brief": "A charismatic Indian king, warm assured baritone, ardent then haughty, clear Indian English accent",
+   "backstory": "Marries Sakuntala in the Gandharva form in Kanwa's hermitage, later denies her at court until a heavenly voice confirms Bharata as his son.",
+   "key_sections": [
+    69,
+    71,
+    73,
+    74,
+    94,
+    95
+   ],
+   "first_section": 68,
+   "sections": [
+    68,
+    69,
+    71,
+    73,
+    74,
+    94,
+    95
+   ],
+   "mentions": 38,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "sakuntala",
+   "name": "Sakuntala",
+   "aliases": [
+    "Shakuntala"
+   ],
+   "respelling": "shuh-KOON-tuh-laa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Daughter of Viswamitra and Menaka; wife of Dushmanta",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "virtuous",
+    "articulate"
+   ],
+   "emotional_range": [
+    "shy",
+    "indignant",
+    "eloquent anger"
+   ],
+   "voice_brief": "A young Indian woman raised in a hermitage, clear sweet soprano that grows fierce with dignity, clear Indian English accent",
+   "backstory": "Raised by the sage Kanwa; spurned at Dushmanta's court, she delivers a powerful speech on truth and the duties of a husband.",
+   "key_sections": [
+    69,
+    71,
+    72,
+    73,
+    74,
+    95
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    69,
+    71,
+    72,
+    73,
+    74,
+    94,
+    95
+   ],
+   "mentions": 34,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kanwa",
+   "name": "Kanwa",
+   "aliases": [
+    "Kanva"
+   ],
+   "respelling": "KUN-vuh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Hermit-sage; foster father of Sakuntala",
+   "kind": "human",
+   "personality": [
+    "gentle",
+    "wise"
+   ],
+   "emotional_range": [
+    "tender",
+    "blessing"
+   ],
+   "voice_brief": "A gentle elderly Indian hermit, soft warm voice, kindly and wise, clear Indian English accent",
+   "backstory": "Raises the abandoned Sakuntala and blesses her union with Dushmanta.",
+   "key_sections": [
+    2,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "mentions": 18,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "viswamitra",
+   "name": "Viswamitra",
+   "aliases": [
+    "Vishwamitra"
+   ],
+   "respelling": "vish-VAA-mi-truh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Kshatriya turned Brahmarshi; father of Sakuntala; rival of Vasishtha",
+   "kind": "human",
+   "personality": [
+    "ambitious",
+    "fierce",
+    "relentless"
+   ],
+   "emotional_range": [
+    "wrathful",
+    "proud"
+   ],
+   "voice_brief": "A formidable Indian sage-king, hard commanding baritone, relentless, clear Indian English accent",
+   "backstory": "His austerities alarm Indra, who sends Menaka to distract him; their daughter is Sakuntala. He feuds with Vasishtha over the cow Nandini.",
+   "key_sections": [
+    71,
+    72,
+    175,
+    176,
+    177,
+    178
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    71,
+    72,
+    74,
+    95,
+    123,
+    139,
+    175,
+    176,
+    177,
+    178,
+    183
+   ],
+   "mentions": 61,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "menaka",
+   "name": "Menaka",
+   "aliases": [],
+   "respelling": "MAY-nuh-kaa",
+   "gender": "female",
+   "era_age": "immortal",
+   "role": "Apsara; mother of Sakuntala",
+   "kind": "divine",
+   "personality": [
+    "alluring",
+    "anxious"
+   ],
+   "emotional_range": [
+    "playful",
+    "fear"
+   ],
+   "voice_brief": "A celestial nymph, light musical voice, alluring and lilting, clear Indian English accent",
+   "backstory": "Sent by Indra to break Viswamitra's austerities; leaves their infant daughter by the river Malini.",
+   "key_sections": [
+    8,
+    71,
+    72,
+    74,
+    123
+   ],
+   "first_section": 8,
+   "sections": [
+    8,
+    71,
+    72,
+    74,
+    123
+   ],
+   "mentions": 23,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "bharata",
+   "name": "Bharata",
+   "aliases": [
+    "Sarvadamana"
+   ],
+   "respelling": "BHUH-ruh-tuh",
+   "gender": "male",
+   "era_age": "boy→king",
+   "role": "Son of Dushmanta and Sakuntala; eponymous ancestor of the Bharatas",
+   "kind": "human",
+   "personality": [
+    "fearless",
+    "strong"
+   ],
+   "emotional_range": [
+    "bold"
+   ],
+   "voice_brief": "An Indian boy-prince, bright bold voice, fearless, clear Indian English accent",
+   "backstory": "As a child he tames lions in the hermitage; he becomes the emperor after whom the Bharata race is named.",
+   "key_sections": [
+    1,
+    2,
+    62,
+    74,
+    94,
+    95
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    5,
+    59,
+    61,
+    62,
+    63,
+    69,
+    74,
+    75,
+    94,
+    95,
+    100,
+    105,
+    113,
+    114,
+    121,
+    128,
+    133,
+    171,
+    204,
+    214,
+    223
+   ],
+   "mentions": 81,
+   "speaking_lines": 0,
+   "count_notes": "vocative 'O Bharata' and 'Bharata race' excluded; remaining counts still include epithets",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "yayati",
+   "name": "Yayati",
+   "aliases": [
+    "son of Nahusha"
+   ],
+   "respelling": "yuh-YAA-tee",
+   "gender": "male",
+   "era_age": "adult→old",
+   "role": "Lunar-dynasty king; husband of Devayani and Sarmishtha; father of Yadu and Puru",
+   "kind": "human",
+   "personality": [
+    "pleasure-seeking",
+    "reflective",
+    "proud"
+   ],
+   "emotional_range": [
+    "desire",
+    "regret",
+    "wisdom"
+   ],
+   "voice_brief": "An Indian king, rich vigorous baritone that later turns aged and reflective, clear Indian English accent",
+   "backstory": "Cursed by Sukra with premature old age, he exchanges it for his son Puru's youth; later, falling from heaven, he discourses with Ashtaka.",
+   "key_sections": [
+    81,
+    83,
+    84,
+    85,
+    86,
+    93
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    55,
+    75,
+    76,
+    78,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    95
+   ],
+   "mentions": 124,
+   "speaking_lines": 42,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "devayani",
+   "name": "Devayani",
+   "aliases": [],
+   "respelling": "day-VUH-yaa-nee",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Daughter of Sukra; wife of Yayati",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "passionate",
+    "jealous"
+   ],
+   "emotional_range": [
+    "wounded pride",
+    "anger",
+    "love"
+   ],
+   "voice_brief": "A proud young Indian brahmin woman, bright imperious soprano, passionate, clear Indian English accent",
+   "backstory": "Rejected by Kacha, humiliated by Sarmishtha, she marries Yayati with Sarmishtha as her servant, and invokes her father when Yayati is unfaithful.",
+   "key_sections": [
+    76,
+    78,
+    80,
+    81,
+    82,
+    83
+   ],
+   "first_section": 75,
+   "sections": [
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    85,
+    95
+   ],
+   "mentions": 97,
+   "speaking_lines": 13,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "sarmishtha",
+   "name": "Sarmishtha",
+   "aliases": [
+    "Sharmishtha"
+   ],
+   "respelling": "shur-MISH-thaa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Asura princess; daughter of Vrishaparvan; mother of Puru",
+   "kind": "asura",
+   "personality": [
+    "proud",
+    "sacrificing",
+    "resilient"
+   ],
+   "emotional_range": [
+    "defiant",
+    "humble",
+    "pleading"
+   ],
+   "voice_brief": "A young Asura princess, rich warm mezzo, proud yet graceful under humiliation, clear Indian English accent",
+   "backstory": "After quarrelling with Devayani she becomes her servant to save her people, and secretly bears Yayati three sons, including Puru.",
+   "key_sections": [
+    75,
+    78,
+    80,
+    81,
+    82,
+    83
+   ],
+   "first_section": 75,
+   "sections": [
+    75,
+    78,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    95
+   ],
+   "mentions": 55,
+   "speaking_lines": 8,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "sukra",
+   "name": "Sukra",
+   "aliases": [
+    "Usanas",
+    "Kavya",
+    "son of Bhrigu"
+   ],
+   "respelling": "SHOO-kruh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Preceptor of the Asuras; father of Devayani",
+   "kind": "human",
+   "personality": [
+    "powerful",
+    "doting father",
+    "hot-tempered"
+   ],
+   "emotional_range": [
+    "wrathful",
+    "tender",
+    "grave"
+   ],
+   "voice_brief": "An elderly Indian preceptor, deep gravelly voice of great authority, quick to anger, clear Indian English accent",
+   "backstory": "Knows the science of reviving the dead, which Kacha learns; he curses Yayati with old age for wronging Devayani.",
+   "key_sections": [
+    66,
+    76,
+    80,
+    81,
+    83,
+    84
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    5,
+    6,
+    8,
+    18,
+    46,
+    48,
+    65,
+    66,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    95,
+    100,
+    103,
+    131,
+    234
+   ],
+   "mentions": 93,
+   "speaking_lines": 9,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kacha",
+   "name": "Kacha",
+   "aliases": [
+    "son of Vrihaspati"
+   ],
+   "respelling": "KUH-chuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Son of Vrihaspati; disciple of Sukra",
+   "kind": "human",
+   "personality": [
+    "dutiful",
+    "steadfast"
+   ],
+   "emotional_range": [
+    "gentle",
+    "firm refusal"
+   ],
+   "voice_brief": "A young Indian scholar, clear earnest tenor, steadfast and courteous, clear Indian English accent",
+   "backstory": "Learns the revival lore from Sukra, survives murder three times by the Asuras, and refuses Devayani's love out of duty.",
+   "key_sections": [
+    76,
+    77,
+    78,
+    80
+   ],
+   "first_section": 76,
+   "sections": [
+    76,
+    77,
+    78,
+    80
+   ],
+   "mentions": 50,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vrishaparvan",
+   "name": "Vrishaparvan",
+   "aliases": [],
+   "respelling": "vrish-uh-PUR-vun",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "King of the Asuras; father of Sarmishtha",
+   "kind": "asura",
+   "personality": [
+    "pragmatic",
+    "anxious"
+   ],
+   "emotional_range": [
+    "fear",
+    "pleading"
+   ],
+   "voice_brief": "An Asura king, heavy dark baritone, anxious and conciliatory, clear Indian English accent",
+   "backstory": "Pleads with Sukra not to abandon the Asuras after Sarmishtha insults Devayani.",
+   "key_sections": [
+    67,
+    76,
+    78,
+    80,
+    81,
+    82
+   ],
+   "first_section": 65,
+   "sections": [
+    65,
+    67,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    95
+   ],
+   "mentions": 31,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "puru",
+   "name": "Puru",
+   "aliases": [],
+   "respelling": "POO-roo",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Youngest son of Yayati; ancestor of the Kurus",
+   "kind": "human",
+   "personality": [
+    "dutiful",
+    "selfless"
+   ],
+   "emotional_range": [
+    "willing sacrifice"
+   ],
+   "voice_brief": "A young Indian prince, gentle clear tenor, devoted and selfless, clear Indian English accent",
+   "backstory": "Alone among Yayati's sons he accepts his father's old age, and is made heir.",
+   "key_sections": [
+    74,
+    75,
+    84,
+    85,
+    94,
+    95
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    73,
+    74,
+    75,
+    83,
+    84,
+    85,
+    86,
+    87,
+    89,
+    93,
+    94,
+    95,
+    100,
+    121,
+    164,
+    188
+   ],
+   "mentions": 53,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ashtaka",
+   "name": "Ashtaka",
+   "aliases": [],
+   "respelling": "USH-tuh-kuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Royal sage, grandson of Yayati through Madhavi",
+   "kind": "human",
+   "personality": [
+    "inquiring",
+    "generous"
+   ],
+   "emotional_range": [
+    "curious",
+    "reverent"
+   ],
+   "voice_brief": "A thoughtful Indian royal sage, warm baritone, questioning and respectful, clear Indian English accent",
+   "backstory": "Questions the fallen Yayati about heaven, virtue and the fruits of deeds, and offers him his own merit.",
+   "key_sections": [
+    88,
+    89,
+    90,
+    91,
+    92,
+    93
+   ],
+   "first_section": 86,
+   "sections": [
+    86,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93
+   ],
+   "mentions": 29,
+   "speaking_lines": 17,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vasishtha",
+   "name": "Vasishtha",
+   "aliases": [
+    "Vasistha"
+   ],
+   "respelling": "vuh-SHISH-thuh",
+   "gender": "male",
+   "era_age": "ancient",
+   "role": "Great Rishi; priest of the Ikshvakus; rival of Viswamitra",
+   "kind": "human",
+   "personality": [
+    "forgiving",
+    "serene",
+    "grieving"
+   ],
+   "emotional_range": [
+    "serene",
+    "grief",
+    "forbearance"
+   ],
+   "voice_brief": "An ancient Indian sage, profound calm bass, forbearing and luminous, clear Indian English accent",
+   "backstory": "Owner of the wish-cow Nandini; he endures the slaughter of his sons by Kalmashapada and forgives; later priest of Samvarana.",
+   "key_sections": [
+    175,
+    176,
+    177,
+    178,
+    179,
+    180
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    55,
+    67,
+    71,
+    94,
+    96,
+    98,
+    99,
+    100,
+    122,
+    123,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    201,
+    217,
+    235
+   ],
+   "mentions": 107,
+   "speaking_lines": 10,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "pratipa",
+   "name": "Pratipa",
+   "aliases": [],
+   "respelling": "pruh-TEE-puh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Kuru king; father of Santanu",
+   "kind": "human",
+   "personality": [
+    "righteous"
+   ],
+   "emotional_range": [
+    "gentle"
+   ],
+   "voice_brief": "An elderly Indian king, dignified gentle baritone, clear Indian English accent",
+   "backstory": "Ganga sits on his right thigh; he accepts her as a future daughter-in-law for his son Santanu.",
+   "key_sections": [
+    94,
+    95,
+    96,
+    97,
+    130
+   ],
+   "first_section": 94,
+   "sections": [
+    94,
+    95,
+    96,
+    97,
+    130
+   ],
+   "mentions": 14,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "santanu",
+   "name": "Santanu",
+   "aliases": [
+    "Shantanu"
+   ],
+   "respelling": "SHUN-tuh-noo",
+   "gender": "male",
+   "era_age": "adult→elder",
+   "role": "Kuru king; husband of Ganga and Satyavati; father of Bhishma",
+   "kind": "human",
+   "personality": [
+    "noble",
+    "lovestruck",
+    "melancholic"
+   ],
+   "emotional_range": [
+    "tender",
+    "longing",
+    "grief"
+   ],
+   "voice_brief": "A mature Indian king in his forties, rich regal baritone, warm but lovestruck and gentle, unhurried, clear Indian English accent",
+   "backstory": "Marries Ganga, who drowns seven of their sons; the eighth is Devavrata. He later longs for Satyavati, and Devavrata's vow makes the marriage possible.",
+   "key_sections": [
+    95,
+    97,
+    98,
+    99,
+    100,
+    101
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    60,
+    63,
+    67,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    109,
+    113,
+    119,
+    130,
+    223
+   ],
+   "mentions": 68,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ganga",
+   "name": "Ganga",
+   "aliases": [
+    "Jahnavi"
+   ],
+   "respelling": "GUNG-gaa",
+   "gender": "female",
+   "era_age": "immortal",
+   "role": "River goddess; first wife of Santanu; mother of Bhishma",
+   "kind": "divine",
+   "personality": [
+    "mysterious",
+    "maternal",
+    "otherworldly"
+   ],
+   "emotional_range": [
+    "serene",
+    "sorrowful",
+    "loving"
+   ],
+   "voice_brief": "A river goddess, flowing luminous alto, serene and otherworldly with deep sorrow, clear Indian English accent",
+   "backstory": "Marries Santanu on condition he never questions her; drowns their first seven sons (the cursed Vasus) and leaves when he protests at the eighth.",
+   "key_sections": [
+    96,
+    98,
+    100,
+    128,
+    151,
+    172
+   ],
+   "first_section": 63,
+   "sections": [
+    63,
+    67,
+    70,
+    87,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    102,
+    104,
+    113,
+    114,
+    127,
+    128,
+    131,
+    135,
+    139,
+    140,
+    151,
+    152,
+    168,
+    169,
+    172,
+    199,
+    217
+   ],
+   "mentions": 54,
+   "speaking_lines": 3,
+   "count_notes": "river mentions included",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "bhishma",
+   "name": "Bhishma",
+   "aliases": [
+    "Devavrata",
+    "Gangeya",
+    "son of Ganga",
+    "son of Santanu",
+    "Santanava"
+   ],
+   "respelling": "BHEESH-muh",
+   "gender": "male",
+   "era_age": "young adult→elder",
+   "role": "Kuru patriarch; regent of Hastinapura",
+   "kind": "human",
+   "personality": [
+    "dutiful",
+    "resolute",
+    "self-sacrificing"
+   ],
+   "emotional_range": [
+    "calm authority",
+    "solemn resolve",
+    "tender",
+    "stern"
+   ],
+   "voice_brief": "A powerful Indian warrior prince in his prime, commanding low voice, noble and resolute, firm steady delivery, clear Indian English accent",
+   "backstory": "Son of Santanu and Ganga. His terrible vow of lifelong celibacy wins Satyavati for his father; he abducts the Kasi princesses for Vichitravirya and guards the Kuru line.",
+   "key_sections": [
+    1,
+    2,
+    100,
+    102,
+    105,
+    113
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    55,
+    61,
+    63,
+    67,
+    95,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    109,
+    110,
+    113,
+    114,
+    115,
+    119,
+    126,
+    127,
+    128,
+    131,
+    133,
+    134,
+    136,
+    138,
+    139,
+    143,
+    144,
+    145,
+    147,
+    148,
+    152,
+    168,
+    202,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    224
+   ],
+   "mentions": 200,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "satyavati",
+   "name": "Satyavati",
+   "aliases": [
+    "Gandhavati",
+    "Yojanagandha",
+    "daughter of the fisherman"
+   ],
+   "respelling": "SUT-yuh-vuh-tee",
+   "gender": "female",
+   "era_age": "young adult→elder",
+   "role": "Queen of Santanu; mother of Vyasa, Chitrangada and Vichitravirya",
+   "kind": "human",
+   "personality": [
+    "shrewd",
+    "ambitious",
+    "maternal"
+   ],
+   "emotional_range": [
+    "shy",
+    "determined",
+    "grief"
+   ],
+   "voice_brief": "A young Indian woman, a fisherman's daughter, bright clear female voice, modest and shy yet self-assured, soft and melodious, clear Indian English accent",
+   "backstory": "Fisherman's daughter who ferries Parasara and bears Vyasa; she marries Santanu, and after her sons die she summons Vyasa to continue the line.",
+   "key_sections": [
+    63,
+    100,
+    101,
+    103,
+    105,
+    106
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    55,
+    62,
+    63,
+    95,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106,
+    110,
+    114,
+    119,
+    126,
+    128,
+    158,
+    171,
+    199
+   ],
+   "mentions": 53,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "dasa",
+   "name": "Dasa (fisherman chief)",
+   "aliases": [
+    "chief of the fishermen",
+    "Dasaraja",
+    "the fisherman"
+   ],
+   "respelling": "DAA-shuh",
+   "gender": "male",
+   "era_age": "elder",
+   "role": "Chief of the fishermen; foster father of Satyavati",
+   "kind": "human",
+   "personality": [
+    "shrewd",
+    "protective"
+   ],
+   "emotional_range": [
+    "cautious",
+    "overjoyed"
+   ],
+   "voice_brief": "An older Indian fisherman chieftain, earthy slightly gravelly male voice, shrewd and cautious, then overjoyed, clear Indian English accent",
+   "backstory": "Demands that Satyavati's son inherit the throne, prompting Devavrata's vows.",
+   "key_sections": [
+    100
+   ],
+   "first_section": 100,
+   "sections": [
+    100
+   ],
+   "mentions": 9,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "parasara",
+   "name": "Parasara",
+   "aliases": [
+    "Parashara"
+   ],
+   "respelling": "PUH-raa-shuh-ruh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Rishi; father of Vyasa",
+   "kind": "human",
+   "personality": [
+    "powerful",
+    "passionate"
+   ],
+   "emotional_range": [
+    "persuasive"
+   ],
+   "voice_brief": "An Indian sage, smooth intense baritone, clear Indian English accent",
+   "backstory": "Meets Satyavati while crossing the Yamuna; their son is Krishna-Dwaipayana.",
+   "key_sections": [
+    1,
+    2,
+    63,
+    105,
+    180,
+    183
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    57,
+    60,
+    63,
+    95,
+    105,
+    180,
+    182,
+    183
+   ],
+   "mentions": 22,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vichitravirya",
+   "name": "Vichitravirya",
+   "aliases": [],
+   "respelling": "vi-CHI-truh-VEER-yuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Kuru king; husband of Ambika and Ambalika",
+   "kind": "human",
+   "personality": [
+    "youthful",
+    "pleasure-loving",
+    "frail"
+   ],
+   "emotional_range": [
+    "light"
+   ],
+   "voice_brief": "A youthful Indian king, light pleasant tenor, a little frail, clear Indian English accent",
+   "backstory": "Younger son of Santanu and Satyavati; dies childless of consumption.",
+   "key_sections": [
+    2,
+    95,
+    101,
+    102,
+    105,
+    106
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    63,
+    95,
+    101,
+    102,
+    105,
+    106,
+    147,
+    153,
+    194
+   ],
+   "mentions": 28,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "amba",
+   "name": "Amba",
+   "aliases": [],
+   "respelling": "UM-baa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Eldest princess of Kasi",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "wronged"
+   ],
+   "emotional_range": [
+    "pleading",
+    "indignant"
+   ],
+   "voice_brief": "A young Indian princess, clear proud voice with tremor of grievance, clear Indian English accent",
+   "backstory": "Abducted by Bhishma with her sisters; she declares her love for Salwa and is released.",
+   "key_sections": [
+    2,
+    102
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    102
+   ],
+   "mentions": 3,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ambika",
+   "name": "Ambika",
+   "aliases": [],
+   "respelling": "UM-bi-kaa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Princess of Kasi; widow of Vichitravirya; mother of Dhritarashtra",
+   "kind": "human",
+   "personality": [
+    "timid"
+   ],
+   "emotional_range": [
+    "fear"
+   ],
+   "voice_brief": "A young Indian princess, soft timid voice, clear Indian English accent",
+   "backstory": "Closes her eyes in fear before Vyasa; her son Dhritarashtra is born blind.",
+   "key_sections": [
+    102,
+    123,
+    128,
+    145,
+    152
+   ],
+   "first_section": 102,
+   "sections": [
+    102,
+    123,
+    128,
+    145,
+    152
+   ],
+   "mentions": 6,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ambalika",
+   "name": "Ambalika",
+   "aliases": [],
+   "respelling": "um-BAA-li-kaa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Princess of Kasi; widow of Vichitravirya; mother of Pandu",
+   "kind": "human",
+   "personality": [
+    "timid"
+   ],
+   "emotional_range": [
+    "fear"
+   ],
+   "voice_brief": "A young Indian princess, delicate breathy voice, clear Indian English accent",
+   "backstory": "Turns pale before Vyasa; her son Pandu is born pale.",
+   "key_sections": [
+    102,
+    106,
+    114
+   ],
+   "first_section": 102,
+   "sections": [
+    102,
+    106,
+    114
+   ],
+   "mentions": 5,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "dhritarashtra",
+   "name": "Dhritarashtra",
+   "aliases": [
+    "the blind king",
+    "son of Vichitravirya"
+   ],
+   "respelling": "dhri-tuh-RAASH-truh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Blind Kuru king; father of the Kauravas",
+   "kind": "human",
+   "personality": [
+    "insecure",
+    "doting",
+    "vacillating"
+   ],
+   "emotional_range": [
+    "anxious",
+    "grasping",
+    "remorseful"
+   ],
+   "voice_brief": "A middle-aged blind Indian king, deep but wavering voice, anxious and doting, clear Indian English accent",
+   "backstory": "Born blind to Ambika; passed over for the throne, he dotes on Duryodhana and permits the plot against the Pandavas.",
+   "key_sections": [
+    1,
+    2,
+    115,
+    143,
+    202,
+    209
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    35,
+    57,
+    60,
+    61,
+    62,
+    63,
+    65,
+    67,
+    94,
+    95,
+    106,
+    109,
+    110,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    123,
+    124,
+    126,
+    127,
+    128,
+    129,
+    130,
+    134,
+    136,
+    137,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    149,
+    150,
+    152,
+    153,
+    158,
+    159,
+    164,
+    188,
+    192,
+    197,
+    202,
+    203,
+    204,
+    205,
+    206,
+    208,
+    209,
+    210,
+    224
+   ],
+   "mentions": 176,
+   "speaking_lines": 4,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "pandu",
+   "name": "Pandu",
+   "aliases": [],
+   "respelling": "PAAN-doo",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Kuru king; nominal father of the Pandavas",
+   "kind": "human",
+   "personality": [
+    "valiant",
+    "melancholic"
+   ],
+   "emotional_range": [
+    "grief",
+    "longing",
+    "resignation"
+   ],
+   "voice_brief": "An Indian warrior king, clear noble baritone touched with melancholy, clear Indian English accent",
+   "backstory": "Conqueror who, cursed by the sage Kindama, retires to the forest; his sons are born to Kunti and Madri through the gods. He dies embracing Madri.",
+   "key_sections": [
+    1,
+    2,
+    95,
+    113,
+    123,
+    126
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    40,
+    49,
+    60,
+    61,
+    63,
+    67,
+    94,
+    95,
+    106,
+    109,
+    111,
+    112,
+    113,
+    114,
+    115,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    134,
+    136,
+    137,
+    141,
+    142,
+    143,
+    144,
+    145,
+    147,
+    148,
+    149,
+    150,
+    152,
+    153,
+    154,
+    164,
+    165,
+    172,
+    178,
+    187,
+    189,
+    191,
+    192,
+    193,
+    194,
+    195,
+    197,
+    199,
+    200,
+    201,
+    202,
+    205,
+    207,
+    208,
+    209,
+    210,
+    216,
+    217,
+    219,
+    223,
+    225,
+    229,
+    236
+   ],
+   "mentions": 231,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vidura",
+   "name": "Vidura",
+   "aliases": [
+    "Kshatta"
+   ],
+   "respelling": "VI-doo-ruh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Wise half-brother of Dhritarashtra and Pandu; counsellor",
+   "kind": "human",
+   "personality": [
+    "wise",
+    "righteous",
+    "discreet"
+   ],
+   "emotional_range": [
+    "calm",
+    "warning",
+    "concerned"
+   ],
+   "voice_brief": "A wise Indian counsellor, measured clear baritone, discreet and earnest, clear Indian English accent",
+   "backstory": "Born to a maidservant through Vyasa; an incarnation of Dharma, he warns the Pandavas of the lac house in a coded speech.",
+   "key_sections": [
+    2,
+    147,
+    149,
+    151,
+    202,
+    208
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    60,
+    61,
+    63,
+    67,
+    95,
+    106,
+    108,
+    109,
+    110,
+    114,
+    115,
+    119,
+    126,
+    127,
+    129,
+    136,
+    137,
+    138,
+    143,
+    144,
+    145,
+    147,
+    148,
+    149,
+    151,
+    152,
+    202,
+    203,
+    204,
+    207,
+    208,
+    209
+   ],
+   "mentions": 128,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "gandhari",
+   "name": "Gandhari",
+   "aliases": [
+    "daughter of Subala"
+   ],
+   "respelling": "gaan-DHAA-ree",
+   "gender": "female",
+   "era_age": "adult",
+   "role": "Queen of Dhritarashtra; mother of the hundred Kauravas",
+   "kind": "human",
+   "personality": [
+    "devoted",
+    "stern",
+    "anguished"
+   ],
+   "emotional_range": [
+    "resolve",
+    "envy",
+    "sorrow"
+   ],
+   "voice_brief": "A mature Indian queen, low controlled alto, austere and dignified, clear Indian English accent",
+   "backstory": "Blindfolds herself for life on marrying Dhritarashtra; her two-year pregnancy yields a mass that Vyasa divides into a hundred sons and a daughter.",
+   "key_sections": [
+    1,
+    2,
+    110,
+    115,
+    116,
+    205
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    63,
+    67,
+    95,
+    110,
+    115,
+    116,
+    123,
+    124,
+    126,
+    136,
+    145,
+    204,
+    205
+   ],
+   "mentions": 35,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kunti",
+   "name": "Kunti",
+   "aliases": [
+    "Pritha",
+    "daughter of Sura",
+    "daughter of Kuntibhoja"
+   ],
+   "respelling": "KOON-tee",
+   "gender": "female",
+   "era_age": "young adult→adult",
+   "role": "Queen of Pandu; mother of Karna, Yudhishthira, Bhima and Arjuna",
+   "kind": "human",
+   "personality": [
+    "dignified",
+    "resilient",
+    "secretive"
+   ],
+   "emotional_range": [
+    "tender",
+    "sorrow",
+    "steely resolve"
+   ],
+   "voice_brief": "A young Indian queen, gentle yet dignified female voice, graceful and composed, tender with a hint of sorrow, clear Indian English accent",
+   "backstory": "Receives a mantra from Durvasa, bears Karna to Surya and abandons him; later bears the three elder Pandavas through Dharma, Vayu and Indra.",
+   "key_sections": [
+    1,
+    95,
+    123,
+    124,
+    159,
+    197
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    62,
+    63,
+    67,
+    95,
+    111,
+    112,
+    114,
+    115,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    133,
+    134,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    143,
+    144,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    156,
+    157,
+    158,
+    159,
+    161,
+    162,
+    163,
+    164,
+    165,
+    167,
+    170,
+    171,
+    172,
+    173,
+    180,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    211,
+    215,
+    216,
+    217,
+    218,
+    220,
+    222,
+    223,
+    224,
+    227,
+    230
+   ],
+   "mentions": 266,
+   "speaking_lines": 8,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "madri",
+   "name": "Madri",
+   "aliases": [],
+   "respelling": "MAA-dree",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Second queen of Pandu; mother of Nakula and Sahadeva",
+   "kind": "human",
+   "personality": [
+    "loving",
+    "devoted"
+   ],
+   "emotional_range": [
+    "joy",
+    "guilt",
+    "grief"
+   ],
+   "voice_brief": "A young Indian queen, warm bright soprano, affectionate, clear Indian English accent",
+   "backstory": "Bears the twins through the Aswins; ascends Pandu's funeral pyre.",
+   "key_sections": [
+    1,
+    95,
+    113,
+    124,
+    125,
+    127
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    62,
+    67,
+    95,
+    113,
+    114,
+    115,
+    119,
+    124,
+    125,
+    126,
+    127,
+    140,
+    147,
+    158,
+    194,
+    203,
+    206
+   ],
+   "mentions": 48,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "karna",
+   "name": "Karna",
+   "aliases": [
+    "Vasusena",
+    "Radheya",
+    "son of Radha",
+    "son of the Suta",
+    "Vaikartana"
+   ],
+   "respelling": "KUR-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Son of Kunti and Surya, raised by a charioteer; ally of Duryodhana",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "generous",
+    "resentful"
+   ],
+   "emotional_range": [
+    "defiant",
+    "wounded pride",
+    "loyal"
+   ],
+   "voice_brief": "A proud young Indian warrior, strong resonant baritone with smouldering defiance, clear Indian English accent",
+   "backstory": "Born with armour and earrings; he challenges Arjuna at the tournament, is crowned king of Anga by Duryodhana, and is scorned at Draupadi's swayamvara.",
+   "key_sections": [
+    1,
+    2,
+    111,
+    138,
+    139,
+    192
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    67,
+    111,
+    115,
+    117,
+    129,
+    134,
+    138,
+    139,
+    140,
+    143,
+    144,
+    151,
+    153,
+    157,
+    188,
+    189,
+    192,
+    202,
+    203,
+    204,
+    206,
+    207
+   ],
+   "mentions": 120,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "yudhishthira",
+   "name": "Yudhishthira",
+   "aliases": [
+    "Dharmaraja",
+    "son of Dharma",
+    "Ajatasatru",
+    "the eldest Pandava"
+   ],
+   "respelling": "yoo-DHISH-thi-ruh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Eldest Pandava; son of Kunti by Dharma",
+   "kind": "human",
+   "personality": [
+    "righteous",
+    "calm",
+    "conciliatory"
+   ],
+   "emotional_range": [
+    "calm",
+    "thoughtful",
+    "grave"
+   ],
+   "voice_brief": "A young Indian prince, steady gentle baritone, righteous and measured, clear Indian English accent",
+   "backstory": "Eldest of the Pandavas, embodiment of righteousness; leads his brothers through the lac house escape and the years in disguise.",
+   "key_sections": [
+    1,
+    2,
+    134,
+    147,
+    197,
+    223
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    9,
+    44,
+    55,
+    61,
+    62,
+    63,
+    67,
+    95,
+    115,
+    123,
+    124,
+    126,
+    128,
+    129,
+    133,
+    134,
+    136,
+    139,
+    140,
+    141,
+    143,
+    144,
+    145,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    156,
+    157,
+    158,
+    164,
+    165,
+    166,
+    170,
+    172,
+    186,
+    189,
+    190,
+    191,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    200,
+    201,
+    203,
+    209,
+    210,
+    211,
+    215,
+    216,
+    221,
+    222,
+    223,
+    224
+   ],
+   "mentions": 208,
+   "speaking_lines": 7,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "bhima",
+   "name": "Bhima",
+   "aliases": [
+    "Bhimasena",
+    "Vrikodara",
+    "son of Vayu",
+    "son of the wind god"
+   ],
+   "respelling": "BHEE-muh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Second Pandava; son of Kunti by Vayu",
+   "kind": "human",
+   "personality": [
+    "mighty",
+    "impulsive",
+    "protective"
+   ],
+   "emotional_range": [
+    "rage",
+    "boisterous humour",
+    "tenderness"
+   ],
+   "voice_brief": "A huge young Indian warrior, booming hearty bass, impulsive and fierce, clear Indian English accent",
+   "backstory": "Poisoned and drowned by Duryodhana, he returns stronger; he carries his family from the burning lac house and slays Hidimba and Vaka.",
+   "key_sections": [
+    2,
+    128,
+    129,
+    153,
+    156,
+    165
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    61,
+    62,
+    63,
+    65,
+    67,
+    94,
+    95,
+    115,
+    117,
+    123,
+    124,
+    126,
+    128,
+    129,
+    134,
+    136,
+    137,
+    139,
+    140,
+    141,
+    143,
+    147,
+    148,
+    150,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    163,
+    164,
+    165,
+    166,
+    171,
+    189,
+    191,
+    192,
+    193,
+    194,
+    195,
+    197,
+    202,
+    203,
+    207,
+    209,
+    223
+   ],
+   "mentions": 280,
+   "speaking_lines": 2,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "arjuna",
+   "name": "Arjuna",
+   "aliases": [
+    "Dhananjaya",
+    "Phalguna",
+    "Kiritin",
+    "Savyasachin",
+    "Vibhatsu",
+    "son of Indra"
+   ],
+   "respelling": "UR-joo-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Third Pandava; son of Kunti by Indra; peerless archer",
+   "kind": "human",
+   "personality": [
+    "focused",
+    "valorous",
+    "chivalrous"
+   ],
+   "emotional_range": [
+    "confident",
+    "ardent",
+    "reverent"
+   ],
+   "voice_brief": "A heroic young Indian archer-prince, clear confident baritone, poised and ardent, clear Indian English accent",
+   "backstory": "Drona's finest pupil; he wins Draupadi at the swayamvara, marries Ulupi, Chitrangada and Subhadra in exile, and with Krishna burns the Khandava forest.",
+   "key_sections": [
+    1,
+    2,
+    134,
+    140,
+    223,
+    229
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    35,
+    61,
+    62,
+    63,
+    67,
+    95,
+    104,
+    111,
+    123,
+    124,
+    126,
+    128,
+    134,
+    135,
+    137,
+    138,
+    139,
+    140,
+    141,
+    143,
+    147,
+    150,
+    152,
+    153,
+    156,
+    158,
+    168,
+    171,
+    172,
+    173,
+    175,
+    176,
+    177,
+    180,
+    184,
+    185,
+    187,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    197,
+    199,
+    202,
+    203,
+    207,
+    209,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    236
+   ],
+   "mentions": 414,
+   "speaking_lines": 11,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "nakula",
+   "name": "Nakula",
+   "aliases": [],
+   "respelling": "NUH-koo-luh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Fourth Pandava; son of Madri by the Aswins",
+   "kind": "human",
+   "personality": [
+    "handsome",
+    "loyal"
+   ],
+   "emotional_range": [
+    "cheerful"
+   ],
+   "voice_brief": "A handsome young Indian prince, smooth light baritone, clear Indian English accent",
+   "backstory": "Elder of the twins born to Madri.",
+   "key_sections": [
+    1,
+    63,
+    67,
+    95,
+    124,
+    156
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    61,
+    62,
+    63,
+    67,
+    95,
+    124,
+    134,
+    140,
+    141,
+    150,
+    156,
+    193,
+    197,
+    223
+   ],
+   "mentions": 23,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "sahadeva",
+   "name": "Sahadeva",
+   "aliases": [],
+   "respelling": "suh-huh-DAY-vuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Fifth Pandava; son of Madri by the Aswins",
+   "kind": "human",
+   "personality": [
+    "wise",
+    "reserved"
+   ],
+   "emotional_range": [
+    "quiet"
+   ],
+   "voice_brief": "A reserved young Indian prince, soft thoughtful tenor, clear Indian English accent",
+   "backstory": "Younger of the twins; known for wisdom.",
+   "key_sections": [
+    1,
+    63,
+    95,
+    124,
+    156,
+    223
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    62,
+    63,
+    67,
+    95,
+    124,
+    134,
+    140,
+    141,
+    150,
+    156,
+    188,
+    193,
+    194,
+    197,
+    207,
+    223
+   ],
+   "mentions": 26,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "duryodhana",
+   "name": "Duryodhana",
+   "aliases": [
+    "Suyodhana",
+    "son of Dhritarashtra"
+   ],
+   "respelling": "door-YO-dhuh-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Eldest Kaurava",
+   "kind": "human",
+   "personality": [
+    "envious",
+    "proud",
+    "scheming"
+   ],
+   "emotional_range": [
+    "jealous rage",
+    "contempt",
+    "triumph"
+   ],
+   "voice_brief": "A proud young Indian prince, sharp forceful baritone edged with envy and contempt, clear Indian English accent",
+   "backstory": "Jealous of Bhima from childhood; poisons him, befriends Karna, and plots the lac house with Purochana.",
+   "key_sections": [
+    2,
+    61,
+    128,
+    129,
+    138,
+    148
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    63,
+    67,
+    95,
+    115,
+    117,
+    123,
+    128,
+    129,
+    134,
+    136,
+    137,
+    138,
+    139,
+    140,
+    143,
+    144,
+    145,
+    146,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    156,
+    158,
+    164,
+    187,
+    188,
+    189,
+    190,
+    192,
+    193,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207
+   ],
+   "mentions": 152,
+   "speaking_lines": 5,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "duhsasana",
+   "name": "Duhsasana",
+   "aliases": [
+    "Dussasana"
+   ],
+   "respelling": "doo-SHAA-suh-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Second Kaurava",
+   "kind": "human",
+   "personality": [
+    "brash",
+    "cruel"
+   ],
+   "emotional_range": [
+    "mocking"
+   ],
+   "voice_brief": "A brash young Indian prince, coarse loud tenor, mocking, clear Indian English accent",
+   "backstory": "Duryodhana's devoted brother and accomplice.",
+   "key_sections": [
+    1,
+    2,
+    61,
+    63,
+    67,
+    140
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    63,
+    67,
+    95,
+    117,
+    140,
+    143,
+    144,
+    188,
+    202,
+    206
+   ],
+   "mentions": 16,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "sakuni",
+   "name": "Sakuni",
+   "aliases": [
+    "Shakuni",
+    "son of Subala",
+    "king of Gandhara"
+   ],
+   "respelling": "SHUH-koo-nee",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Prince of Gandhara; brother of Gandhari; adviser of Duryodhana",
+   "kind": "human",
+   "personality": [
+    "cunning",
+    "manipulative"
+   ],
+   "emotional_range": [
+    "sly",
+    "insinuating"
+   ],
+   "voice_brief": "A cunning Indian prince, oily insinuating tenor, sly, clear Indian English accent",
+   "backstory": "Counsels Duryodhana in his schemes against the Pandavas.",
+   "key_sections": [
+    1,
+    2,
+    57,
+    67,
+    110,
+    143
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    57,
+    61,
+    63,
+    67,
+    110,
+    116,
+    129,
+    143,
+    144,
+    151,
+    153,
+    164,
+    188,
+    202,
+    207
+   ],
+   "mentions": 24,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kripa",
+   "name": "Kripa",
+   "aliases": [
+    "son of Saradwat"
+   ],
+   "respelling": "KRI-puh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "First preceptor of the Kuru princes",
+   "kind": "human",
+   "personality": [
+    "steady",
+    "fair"
+   ],
+   "emotional_range": [
+    "calm"
+   ],
+   "voice_brief": "An Indian preceptor, plain steady baritone, fair-minded, clear Indian English accent",
+   "backstory": "Born with his twin Kripi from Saradwat's seed; teaches the princes arms before Drona.",
+   "key_sections": [
+    1,
+    2,
+    130,
+    133,
+    138,
+    144
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    63,
+    67,
+    129,
+    130,
+    133,
+    136,
+    138,
+    139,
+    144,
+    145,
+    147,
+    152,
+    192,
+    202,
+    209
+   ],
+   "mentions": 35,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "drona",
+   "name": "Drona",
+   "aliases": [
+    "son of Bharadwaja",
+    "Bharadwaja's son"
+   ],
+   "respelling": "DRO-nuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Preceptor in arms of the Kurus and Pandavas",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "exacting",
+    "resentful toward Drupada"
+   ],
+   "emotional_range": [
+    "stern",
+    "proud",
+    "affectionate (Arjuna)"
+   ],
+   "voice_brief": "A formidable Indian brahmin weapons-master, hard precise baritone, exacting and proud, clear Indian English accent",
+   "backstory": "Humiliated by his boyhood friend Drupada, he becomes the Kuru teacher and takes Drupada's defeat as his fee; he demands Ekalavya's thumb.",
+   "key_sections": [
+    131,
+    133,
+    134,
+    140,
+    168,
+    169
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    63,
+    67,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    144,
+    145,
+    147,
+    152,
+    167,
+    168,
+    169,
+    172,
+    186,
+    192,
+    204,
+    206,
+    207,
+    208,
+    209,
+    232,
+    234,
+    235
+   ],
+   "mentions": 205,
+   "speaking_lines": 5,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "aswatthaman",
+   "name": "Aswatthaman",
+   "aliases": [
+    "Ashwatthama",
+    "son of Drona"
+   ],
+   "respelling": "ush-VUT-thaa-maa",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Son of Drona",
+   "kind": "human",
+   "personality": [
+    "proud"
+   ],
+   "emotional_range": [
+    "eager"
+   ],
+   "voice_brief": "A young Indian warrior, bright sharp tenor, clear Indian English accent",
+   "backstory": "Drona's beloved son, trained alongside the princes.",
+   "key_sections": [
+    1,
+    2,
+    131,
+    133,
+    134,
+    144
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    63,
+    67,
+    95,
+    131,
+    133,
+    134,
+    137,
+    144,
+    145,
+    188,
+    189,
+    202
+   ],
+   "mentions": 45,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "drupada",
+   "name": "Drupada",
+   "aliases": [
+    "Yajnasena",
+    "king of Panchala",
+    "son of Prishata"
+   ],
+   "respelling": "DROO-puh-duh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "King of Panchala; father of Draupadi and Dhrishtadyumna",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "vengeful",
+    "dignified"
+   ],
+   "emotional_range": [
+    "contempt",
+    "humiliation",
+    "joy"
+   ],
+   "voice_brief": "A mature Indian king, rich proud baritone, dignified with simmering grievance, clear Indian English accent",
+   "backstory": "Spurns Drona's claim of friendship, is defeated by Arjuna and halved of his kingdom, and performs a sacrifice for a son who will kill Drona.",
+   "key_sections": [
+    140,
+    168,
+    169,
+    187,
+    195,
+    197
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    63,
+    67,
+    131,
+    132,
+    133,
+    135,
+    140,
+    167,
+    168,
+    169,
+    170,
+    171,
+    186,
+    187,
+    190,
+    191,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    206,
+    207,
+    208,
+    209,
+    216
+   ],
+   "mentions": 173,
+   "speaking_lines": 3,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "dhrishtadyumna",
+   "name": "Dhrishtadyumna",
+   "aliases": [],
+   "respelling": "dhrish-tuh-DYOOM-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Prince of Panchala born from fire",
+   "kind": "human",
+   "personality": [
+    "fiery",
+    "loyal"
+   ],
+   "emotional_range": [
+    "proclaiming"
+   ],
+   "voice_brief": "A young Indian prince, bright ringing herald-like baritone, clear Indian English accent",
+   "backstory": "Rises from the sacrificial fire destined to slay Drona; announces the terms of Draupadi's swayamvara.",
+   "key_sections": [
+    2,
+    63,
+    67,
+    167,
+    197,
+    198
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    63,
+    67,
+    167,
+    169,
+    186,
+    187,
+    188,
+    194,
+    195,
+    197,
+    198,
+    202,
+    206
+   ],
+   "mentions": 20,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "draupadi",
+   "name": "Draupadi",
+   "aliases": [
+    "Krishnaa",
+    "Panchali",
+    "Yajnaseni",
+    "daughter of Drupada"
+   ],
+   "respelling": "DROW-puh-dee",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Princess of Panchala born from fire; wife of the five Pandavas",
+   "kind": "human",
+   "personality": [
+    "proud",
+    "spirited",
+    "intelligent"
+   ],
+   "emotional_range": [
+    "poise",
+    "scorn",
+    "warmth"
+   ],
+   "voice_brief": "A radiant young Indian princess, rich clear mezzo-soprano, poised and spirited, clear Indian English accent",
+   "backstory": "Born from Drupada's sacrificial fire; she rejects Karna at the swayamvara, is won by Arjuna, and marries all five brothers.",
+   "key_sections": [
+    1,
+    2,
+    189,
+    193,
+    202,
+    223
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    62,
+    63,
+    67,
+    95,
+    167,
+    169,
+    186,
+    187,
+    189,
+    190,
+    193,
+    194,
+    198,
+    199,
+    202,
+    206,
+    208,
+    209,
+    210,
+    214,
+    215,
+    216,
+    223,
+    224
+   ],
+   "mentions": 91,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ekalavya",
+   "name": "Ekalavya",
+   "aliases": [],
+   "respelling": "ay-kuh-LUV-yuh",
+   "gender": "male",
+   "era_age": "youth",
+   "role": "Nishada prince and self-taught archer",
+   "kind": "human",
+   "personality": [
+    "devoted",
+    "humble"
+   ],
+   "emotional_range": [
+    "reverent",
+    "unflinching sacrifice"
+   ],
+   "voice_brief": "A young Indian tribal prince, earnest humble tenor, devoted, clear Indian English accent",
+   "backstory": "Learns archery before a clay image of Drona and gives his right thumb as the fee Drona demands.",
+   "key_sections": [
+    67,
+    134
+   ],
+   "first_section": 67,
+   "sections": [
+    67,
+    134
+   ],
+   "mentions": 10,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "purochana",
+   "name": "Purochana",
+   "aliases": [],
+   "respelling": "poo-RO-chuh-nuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Duryodhana's minister; builder of the lac house",
+   "kind": "human",
+   "personality": [
+    "treacherous",
+    "obsequious"
+   ],
+   "emotional_range": [
+    "false warmth"
+   ],
+   "voice_brief": "An Indian courtier, ingratiating oily tenor, treacherous, clear Indian English accent",
+   "backstory": "Builds the house of lac at Varanavata and dies in its fire.",
+   "key_sections": [
+    61,
+    146,
+    148,
+    149,
+    150,
+    152
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    61,
+    143,
+    146,
+    148,
+    149,
+    150,
+    152,
+    164,
+    202,
+    205,
+    207,
+    208
+   ],
+   "mentions": 38,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "hidimba",
+   "name": "Hidimba",
+   "aliases": [
+    "Hidimva"
+   ],
+   "respelling": "hi-DIM-buh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Rakshasa chief slain by Bhima",
+   "kind": "rakshasa",
+   "personality": [
+    "savage",
+    "hungry"
+   ],
+   "emotional_range": [
+    "fury",
+    "menace"
+   ],
+   "voice_brief": "A man-eating forest demon, monstrous guttural bass, savage, clear Indian English accent",
+   "backstory": "Sends his sister to lure the Pandavas; Bhima kills him in combat.",
+   "key_sections": [
+    2,
+    95,
+    154,
+    155,
+    156,
+    157
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    61,
+    63,
+    95,
+    154,
+    155,
+    156,
+    157,
+    164
+   ],
+   "mentions": 39,
+   "speaking_lines": 1,
+   "count_notes": "KMG spells both Hidimba and his sister 'Hidimva'; counts merged",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "hidimbi",
+   "name": "Hidimbi",
+   "aliases": [
+    "Hidimva (sister)"
+   ],
+   "respelling": "hi-DIM-bee",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Rakshasi; wife of Bhima; mother of Ghatotkacha",
+   "kind": "rakshasa",
+   "personality": [
+    "passionate",
+    "loyal"
+   ],
+   "emotional_range": [
+    "desire",
+    "pleading",
+    "devotion"
+   ],
+   "voice_brief": "A Rakshasa woman in human guise, husky warm alto, passionate, clear Indian English accent",
+   "backstory": "Falls in love with Bhima instead of luring him; bears Ghatotkacha.",
+   "key_sections": [],
+   "first_section": null,
+   "sections": [],
+   "mentions": 0,
+   "speaking_lines": 0,
+   "count_notes": "see hidimba",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ghatotkacha",
+   "name": "Ghatotkacha",
+   "aliases": [],
+   "respelling": "guh-TOT-kuh-chuh",
+   "gender": "male",
+   "era_age": "child→youth",
+   "role": "Son of Bhima and Hidimbi",
+   "kind": "rakshasa",
+   "personality": [
+    "loyal",
+    "mighty"
+   ],
+   "emotional_range": [
+    "devoted"
+   ],
+   "voice_brief": "A young half-Rakshasa, deep booming youthful voice, clear Indian English accent",
+   "backstory": "Born and grown in a single day; promises to come whenever his father needs him.",
+   "key_sections": [
+    1,
+    2,
+    61,
+    63,
+    95,
+    157
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    63,
+    95,
+    157
+   ],
+   "mentions": 13,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "vaka",
+   "name": "Vaka",
+   "aliases": [
+    "Baka"
+   ],
+   "respelling": "BUH-kuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Rakshasa who terrorises Ekachakra",
+   "kind": "rakshasa",
+   "personality": [
+    "gluttonous",
+    "brutal"
+   ],
+   "emotional_range": [
+    "rage"
+   ],
+   "voice_brief": "A gluttonous demon, thick roaring bass, brutal, clear Indian English accent",
+   "backstory": "Demands a daily cart of food and a human; Bhima eats the food and kills him.",
+   "key_sections": [
+    2,
+    61,
+    95,
+    162,
+    166,
+    167
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    61,
+    95,
+    162,
+    165,
+    166,
+    167
+   ],
+   "mentions": 15,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "chitraratha",
+   "name": "Chitraratha",
+   "aliases": [
+    "Angaraparna",
+    "the Gandharva",
+    "Gandharva"
+   ],
+   "respelling": "chi-truh-RUH-tuh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "Gandharva king defeated by Arjuna",
+   "kind": "gandharva",
+   "personality": [
+    "boastful",
+    "then gracious"
+   ],
+   "emotional_range": [
+    "arrogance",
+    "gratitude"
+   ],
+   "voice_brief": "A celestial Gandharva king, musical baritone, boastful then gracious, clear Indian English accent",
+   "backstory": "Defeated by Arjuna at the Ganga, he befriends the Pandavas and narrates the tales of Tapati, Vasishtha and Aurva.",
+   "key_sections": [
+    2,
+    73,
+    172,
+    173,
+    174,
+    175
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    9,
+    65,
+    70,
+    73,
+    75,
+    78,
+    100,
+    101,
+    123,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    182,
+    183,
+    184,
+    185
+   ],
+   "mentions": 85,
+   "speaking_lines": 29,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "krishna",
+   "name": "Krishna",
+   "aliases": [
+    "Vasudeva",
+    "Kesava",
+    "Janardana",
+    "Govinda",
+    "Madhava",
+    "son of Devaki"
+   ],
+   "respelling": "KRISH-nuh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Yadava prince; Arjuna's friend and cousin",
+   "kind": "human",
+   "personality": [
+    "serene",
+    "playful",
+    "strategic"
+   ],
+   "emotional_range": [
+    "warm amusement",
+    "calm assurance",
+    "divine majesty"
+   ],
+   "voice_brief": "A charismatic young Indian prince, mellifluous warm baritone, serene, playful and wise, clear Indian English accent",
+   "backstory": "Recognises the disguised Pandavas at the swayamvara, helps Arjuna win Subhadra, and with him aids Agni in burning Khandava.",
+   "key_sections": [
+    1,
+    2,
+    193,
+    223,
+    224,
+    230
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    21,
+    49,
+    55,
+    60,
+    61,
+    62,
+    63,
+    67,
+    95,
+    105,
+    110,
+    111,
+    153,
+    167,
+    169,
+    171,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    203,
+    204,
+    207,
+    208,
+    209,
+    210,
+    215,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    236
+   ],
+   "mentions": 314,
+   "speaking_lines": 3,
+   "count_notes": "'Krishna' also used for Draupadi (Krishnaa) in KMG; counts are noisy",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "balarama",
+   "name": "Balarama",
+   "aliases": [
+    "Baladeva",
+    "Sankarshana"
+   ],
+   "respelling": "BUH-luh-raa-muh",
+   "gender": "male",
+   "era_age": "young adult",
+   "role": "Elder brother of Krishna",
+   "kind": "human",
+   "personality": [
+    "hot-tempered",
+    "honest"
+   ],
+   "emotional_range": [
+    "anger",
+    "mollified"
+   ],
+   "voice_brief": "A powerful Indian prince, loud hearty baritone, quick-tempered, clear Indian English accent",
+   "backstory": "Angered by Subhadra's abduction until Krishna pacifies him.",
+   "key_sections": [
+    1,
+    2,
+    141,
+    188,
+    191
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    141,
+    188,
+    191
+   ],
+   "mentions": 8,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "subhadra",
+   "name": "Subhadra",
+   "aliases": [],
+   "respelling": "soo-BHUD-raa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Sister of Krishna; wife of Arjuna; mother of Abhimanyu",
+   "kind": "human",
+   "personality": [
+    "graceful",
+    "brave"
+   ],
+   "emotional_range": [
+    "joy",
+    "shyness"
+   ],
+   "voice_brief": "A young Indian princess, sweet bright soprano, graceful, clear Indian English accent",
+   "backstory": "Carried off by Arjuna with Krishna's blessing; mother of Abhimanyu.",
+   "key_sections": [
+    1,
+    2,
+    61,
+    63,
+    222,
+    223
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    61,
+    63,
+    95,
+    222,
+    223,
+    224
+   ],
+   "mentions": 25,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "ulupi",
+   "name": "Ulupi",
+   "aliases": [],
+   "respelling": "OO-loo-pee",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Naga princess; wife of Arjuna",
+   "kind": "naga",
+   "personality": [
+    "bold",
+    "passionate"
+   ],
+   "emotional_range": [
+    "desire",
+    "pleading"
+   ],
+   "voice_brief": "A Naga princess, liquid sultry alto, bold, clear Indian English accent",
+   "backstory": "Draws Arjuna into the Naga realm during his exile and marries him.",
+   "key_sections": [
+    2,
+    216
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    216
+   ],
+   "mentions": 7,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "chitrangada",
+   "name": "Chitrangada (princess)",
+   "aliases": [
+    "princess of Manipura"
+   ],
+   "respelling": "chi-TRAANG-guh-daa",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Princess of Manipura; wife of Arjuna",
+   "kind": "human",
+   "personality": [
+    "dignified"
+   ],
+   "emotional_range": [
+    "warm"
+   ],
+   "voice_brief": "A young Indian princess, clear dignified voice, clear Indian English accent",
+   "backstory": "Marries Arjuna on condition their son stays to rule Manipura.",
+   "key_sections": [
+    2,
+    95,
+    101,
+    102,
+    217,
+    219
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    95,
+    101,
+    102,
+    188,
+    217,
+    219
+   ],
+   "mentions": 15,
+   "speaking_lines": 0,
+   "count_notes": "merged with Chitrangada son of Santanu (same spelling)",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "surya",
+   "name": "Surya",
+   "aliases": [
+    "the Sun",
+    "Arka",
+    "Vivaswat"
+   ],
+   "respelling": "SOOR-yuh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "Sun god; father of Karna",
+   "kind": "divine",
+   "personality": [
+    "radiant",
+    "insistent"
+   ],
+   "emotional_range": [
+    "persuasive",
+    "reassuring"
+   ],
+   "voice_brief": "The Sun god, radiant golden baritone, warm and insistent, clear Indian English accent",
+   "backstory": "Answers Kunti's mantra and fathers Karna, restoring her maidenhood.",
+   "key_sections": [
+    3,
+    24,
+    65,
+    111,
+    173,
+    175
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    16,
+    17,
+    19,
+    23,
+    24,
+    25,
+    26,
+    28,
+    30,
+    31,
+    32,
+    33,
+    43,
+    54,
+    61,
+    62,
+    63,
+    65,
+    66,
+    67,
+    69,
+    71,
+    74,
+    75,
+    83,
+    86,
+    88,
+    92,
+    93,
+    94,
+    95,
+    100,
+    104,
+    111,
+    115,
+    121,
+    123,
+    127,
+    133,
+    138,
+    139,
+    143,
+    173,
+    175,
+    179,
+    183,
+    189,
+    192,
+    195,
+    199,
+    213,
+    218,
+    229,
+    231
+   ],
+   "mentions": 131,
+   "speaking_lines": 0,
+   "count_notes": "alias 'the Sun' inflates counts",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "dharma_deva",
+   "name": "Dharma",
+   "aliases": [
+    "Yama",
+    "god of justice"
+   ],
+   "respelling": "DHUR-muh",
+   "gender": "male",
+   "era_age": "immortal",
+   "role": "God of righteousness; father of Yudhishthira",
+   "kind": "divine",
+   "personality": [
+    "just",
+    "solemn"
+   ],
+   "emotional_range": [
+    "solemn"
+   ],
+   "voice_brief": "The god of righteousness, grave measured bass, clear Indian English accent",
+   "backstory": "Fathers Yudhishthira through Kunti's mantra; incarnates as Vidura due to the curse of Mandavya.",
+   "key_sections": [
+    1,
+    2,
+    63,
+    66,
+    74,
+    108
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    9,
+    23,
+    28,
+    30,
+    36,
+    41,
+    42,
+    55,
+    62,
+    63,
+    65,
+    66,
+    67,
+    71,
+    74,
+    75,
+    82,
+    95,
+    100,
+    103,
+    106,
+    107,
+    108,
+    122,
+    123,
+    125,
+    126,
+    140,
+    153,
+    155,
+    165,
+    172,
+    175,
+    189,
+    191,
+    195,
+    199,
+    207,
+    212,
+    229
+   ],
+   "mentions": 97,
+   "speaking_lines": 0,
+   "count_notes": "'Dharma' as virtue inflates counts",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "samvarana",
+   "name": "Samvarana",
+   "aliases": [],
+   "respelling": "sum-VUH-ruh-nuh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Paurava king; husband of Tapati; father of Kuru",
+   "kind": "human",
+   "personality": [
+    "lovestruck"
+   ],
+   "emotional_range": [
+    "longing"
+   ],
+   "voice_brief": "An Indian king, warm yearning baritone, clear Indian English accent",
+   "backstory": "Falls in love with Tapati, daughter of the Sun; Vasishtha arranges their marriage; their son is Kuru.",
+   "key_sections": [
+    94,
+    95,
+    173,
+    175
+   ],
+   "first_section": 94,
+   "sections": [
+    94,
+    95,
+    173,
+    175
+   ],
+   "mentions": 31,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "tapati",
+   "name": "Tapati",
+   "aliases": [],
+   "respelling": "TUH-puh-tee",
+   "gender": "female",
+   "era_age": "young adult",
+   "role": "Daughter of the Sun; wife of Samvarana",
+   "kind": "divine",
+   "personality": [
+    "radiant",
+    "modest"
+   ],
+   "emotional_range": [
+    "shy"
+   ],
+   "voice_brief": "A radiant celestial maiden, glowing soft soprano, clear Indian English accent",
+   "backstory": "Heroine of the tale Chitraratha tells; the Pandavas are called Tapatya after her.",
+   "key_sections": [
+    2,
+    94,
+    172,
+    173,
+    174,
+    175
+   ],
+   "first_section": 2,
+   "sections": [
+    2,
+    94,
+    95,
+    172,
+    173,
+    174,
+    175
+   ],
+   "mentions": 24,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "kalmashapada",
+   "name": "Kalmashapada",
+   "aliases": [
+    "Saudasa",
+    "Mitrasaha"
+   ],
+   "respelling": "kul-maa-shuh-PAA-duh",
+   "gender": "male",
+   "era_age": "adult",
+   "role": "Ikshvaku king cursed to be a Rakshasa",
+   "kind": "human",
+   "personality": [
+    "tormented"
+   ],
+   "emotional_range": [
+    "rage",
+    "remorse"
+   ],
+   "voice_brief": "A cursed Indian king, ragged harsh baritone, tormented, clear Indian English accent",
+   "backstory": "Cursed by Vasishtha's son Saktri, he devours Vasishtha's sons before being freed by Vasishtha.",
+   "key_sections": [
+    122,
+    178,
+    179,
+    183,
+    184
+   ],
+   "first_section": 122,
+   "sections": [
+    122,
+    178,
+    179,
+    183,
+    184
+   ],
+   "mentions": 13,
+   "speaking_lines": 0,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  },
+  {
+   "id": "devas_chorus",
+   "name": "Devas (celestial chorus)",
+   "aliases": [
+    "the gods",
+    "the celestials",
+    "voice from the sky"
+   ],
+   "respelling": "DAY-vuhs",
+   "gender": "chorus",
+   "era_age": "immortal",
+   "role": "Generic celestial / heavenly-voice speaker for gods, Rishis in chorus and asariri lines",
+   "kind": "generic",
+   "personality": [
+    "majestic"
+   ],
+   "emotional_range": [
+    "awe",
+    "proclamation"
+   ],
+   "voice_brief": "A majestic divine voice from the heavens, deep resonant and awe-inspiring, booming yet serene, slow and ceremonial, clear Indian English accent",
+   "backstory": "Pooled voice used for collective divine proclamations, e.g. the gods naming Devavrata 'Bhishma' (1:100). Rendered with celestial reverb in assembly.",
+   "key_sections": [
+    1,
+    7,
+    18,
+    30,
+    64,
+    76
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    37,
+    38,
+    39,
+    41,
+    48,
+    51,
+    54,
+    55,
+    56,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    74,
+    75,
+    76,
+    77,
+    78,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    93,
+    94,
+    95,
+    96,
+    98,
+    99,
+    100,
+    102,
+    104,
+    105,
+    111,
+    112,
+    113,
+    115,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    126,
+    127,
+    130,
+    136,
+    145,
+    148,
+    153,
+    156,
+    157,
+    161,
+    169,
+    172,
+    173,
+    175,
+    176,
+    177,
+    181,
+    182,
+    183,
+    185,
+    186,
+    189,
+    190,
+    191,
+    194,
+    195,
+    199,
+    200,
+    201,
+    207,
+    209,
+    211,
+    212,
+    213,
+    214,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    236
+   ],
+   "mentions": 340,
+   "speaking_lines": 1,
+   "count_notes": "",
+   "provisional": true,
+   "source": "starter roster (hand-written) + regex alias counts over KMG text; review needed"
+  }
+ ],
+ "relationships": [
+  {
+   "source": "sauti",
+   "target": "saunaka",
+   "type": "narrates_to",
+   "provisional": true
+  },
+  {
+   "source": "vaisampayana",
+   "target": "janamejaya",
+   "type": "narrates_to",
+   "provisional": true
+  },
+  {
+   "source": "vyasa",
+   "target": "vaisampayana",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "parikshit",
+   "target": "janamejaya",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "takshaka",
+   "target": "parikshit",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "janamejaya",
+   "target": "takshaka",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "uttanka",
+   "target": "takshaka",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "bhrigu",
+   "target": "chyavana",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhrigu",
+   "target": "agni",
+   "type": "cursed",
+   "provisional": true
+  },
+  {
+   "source": "chyavana",
+   "target": "ruru",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kasyapa",
+   "target": "kadru",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "kasyapa",
+   "target": "vinata",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "kadru",
+   "target": "vinata",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "kadru",
+   "target": "vasuki",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kadru",
+   "target": "takshaka",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "vinata",
+   "target": "garuda",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "vinata",
+   "target": "aruna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kasyapa",
+   "target": "garuda",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "aruna",
+   "target": "garuda",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "garuda",
+   "target": "indra",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "vasuki",
+   "target": "jaratkaru_naga",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "vasuki",
+   "target": "takshaka",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "jaratkaru_rishi",
+   "target": "jaratkaru_naga",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "jaratkaru_rishi",
+   "target": "astika",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "jaratkaru_naga",
+   "target": "astika",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "astika",
+   "target": "janamejaya",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "kadru",
+   "target": "takshaka",
+   "type": "cursed",
+   "provisional": true
+  },
+  {
+   "source": "viswamitra",
+   "target": "menaka",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "viswamitra",
+   "target": "sakuntala",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "menaka",
+   "target": "sakuntala",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kanwa",
+   "target": "sakuntala",
+   "type": "foster_parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dushmanta",
+   "target": "sakuntala",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "dushmanta",
+   "target": "bharata",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "sakuntala",
+   "target": "bharata",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "viswamitra",
+   "target": "vasishtha",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "sukra",
+   "target": "devayani",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "sukra",
+   "target": "kacha",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "devayani",
+   "target": "sarmishtha",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "vrishaparvan",
+   "target": "sarmishtha",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "sukra",
+   "target": "vrishaparvan",
+   "type": "serves",
+   "provisional": true
+  },
+  {
+   "source": "yayati",
+   "target": "devayani",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "yayati",
+   "target": "sarmishtha",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "yayati",
+   "target": "puru",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "sarmishtha",
+   "target": "puru",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "sukra",
+   "target": "yayati",
+   "type": "cursed",
+   "provisional": true
+  },
+  {
+   "source": "ashtaka",
+   "target": "yayati",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "vasishtha",
+   "target": "samvarana",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "samvarana",
+   "target": "tapati",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "surya",
+   "target": "tapati",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kalmashapada",
+   "target": "vasishtha",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "pratipa",
+   "target": "santanu",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "santanu",
+   "target": "ganga",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "santanu",
+   "target": "satyavati",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "santanu",
+   "target": "bhishma",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "ganga",
+   "target": "bhishma",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dasa",
+   "target": "satyavati",
+   "type": "foster_parent_of",
+   "provisional": true
+  },
+  {
+   "source": "parasara",
+   "target": "satyavati",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "parasara",
+   "target": "vyasa",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "satyavati",
+   "target": "vyasa",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "santanu",
+   "target": "vichitravirya",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "satyavati",
+   "target": "vichitravirya",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "amba",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "amba",
+   "target": "ambika",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "ambika",
+   "target": "ambalika",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "vichitravirya",
+   "target": "ambika",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "vichitravirya",
+   "target": "ambalika",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "vyasa",
+   "target": "dhritarashtra",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "vyasa",
+   "target": "pandu",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "vyasa",
+   "target": "vidura",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "ambika",
+   "target": "dhritarashtra",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "ambalika",
+   "target": "pandu",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dhritarashtra",
+   "target": "pandu",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "pandu",
+   "target": "vidura",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "dharma_deva",
+   "target": "vidura",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dhritarashtra",
+   "target": "gandhari",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "gandhari",
+   "target": "sakuni",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "dhritarashtra",
+   "target": "duryodhana",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "gandhari",
+   "target": "duryodhana",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dhritarashtra",
+   "target": "duhsasana",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "duryodhana",
+   "target": "duhsasana",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "pandu",
+   "target": "kunti",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "pandu",
+   "target": "madri",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "surya",
+   "target": "karna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kunti",
+   "target": "karna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kunti",
+   "target": "yudhishthira",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kunti",
+   "target": "bhima",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "kunti",
+   "target": "arjuna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "madri",
+   "target": "nakula",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "madri",
+   "target": "sahadeva",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "dharma_deva",
+   "target": "yudhishthira",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "indra",
+   "target": "arjuna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "yudhishthira",
+   "target": "bhima",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "bhima",
+   "target": "arjuna",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "nakula",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "nakula",
+   "target": "sahadeva",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "duryodhana",
+   "target": "bhima",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "duryodhana",
+   "target": "karna",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "karna",
+   "target": "arjuna",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "sakuni",
+   "target": "duryodhana",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "purochana",
+   "target": "duryodhana",
+   "type": "serves",
+   "provisional": true
+  },
+  {
+   "source": "vidura",
+   "target": "yudhishthira",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "kripa",
+   "target": "arjuna",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "arjuna",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "duryodhana",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "yudhishthira",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "bhima",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "karna",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "aswatthaman",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "drupada",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "drona",
+   "target": "ekalavya",
+   "type": "teacher_of",
+   "provisional": true
+  },
+  {
+   "source": "drupada",
+   "target": "draupadi",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "drupada",
+   "target": "dhrishtadyumna",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "dhrishtadyumna",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "yudhishthira",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "bhima",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "arjuna",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "nakula",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "draupadi",
+   "target": "sahadeva",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "bhima",
+   "target": "hidimba",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "hidimba",
+   "target": "hidimbi",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "bhima",
+   "target": "hidimbi",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "bhima",
+   "target": "ghatotkacha",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "hidimbi",
+   "target": "ghatotkacha",
+   "type": "parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhima",
+   "target": "vaka",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "chitraratha",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "chitraratha",
+   "target": "arjuna",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "krishna",
+   "target": "arjuna",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "krishna",
+   "target": "balarama",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "krishna",
+   "target": "subhadra",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "subhadra",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "ulupi",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "dhritarashtra",
+   "type": "foster_parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "pandu",
+   "type": "foster_parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "vidura",
+   "type": "foster_parent_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "vichitravirya",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "vyasa",
+   "target": "vichitravirya",
+   "type": "sibling_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "drona",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "kripa",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "kunti",
+   "target": "madri",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "devas_chorus",
+   "target": "bhishma",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "dasa",
+   "target": "santanu",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "chitrangada",
+   "type": "spouse_of",
+   "provisional": true
+  },
+  {
+   "source": "agni",
+   "target": "arjuna",
+   "type": "ally_of",
+   "provisional": true
+  },
+  {
+   "source": "arjuna",
+   "target": "indra",
+   "type": "enemy_of",
+   "provisional": true
+  },
+  {
+   "source": "bhishma",
+   "target": "satyavati",
+   "type": "serves",
+   "provisional": true
+  }
+ ]
+}

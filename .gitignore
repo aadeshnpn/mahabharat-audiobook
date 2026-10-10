@@ -1,4 +1,5 @@
 # environments / caches
+build/
 .venv/
 proto/.venv-*/
 __pycache__/

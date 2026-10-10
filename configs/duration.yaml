@@ -1,8 +1,10 @@
-# Speech rate fitted to proto/excerpt_100.json rendered with VoxCPM2:
-# 250 words, 99 s of audio, 5.75 s of which are assemble gaps
-# (one same-speaker gap of 0.25 s and eleven speaker changes of 0.50 s).
-# 250 / ((99 - 5.75) / 60) = 160.9 words per minute.
-wpm: 160.9
+# Speech rate fitted to the full ep00 pilot render (2026-10-10, production pipeline:
+# instruction prefix, normalised voice refs, plain spoken forms): 34 lines, 734 words,
+# 318.9 s of speech -> 138.1 words per minute. Predicts the episode at 337.9 s
+# (actual 337.9 s); mean absolute line error 1.24 s.
+# History: the prototype excerpt (proto/excerpt_100.json, no instruction prefix) gave
+# 250 words / 93.25 s = 160.9 wpm; that under-predicted the pilot by 45 s.
+wpm: 138.1
 gaps:
   same_speaker_s: 0.25
   speaker_change_s: 0.50

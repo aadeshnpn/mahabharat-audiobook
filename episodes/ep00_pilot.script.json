@@ -3,9 +3,9 @@
  "title": "Pilot: Bhishma's Vow, and the Forest of Naimisha",
  "book": 1,
  "target_duration_s": 300.0,
- "estimated_duration_s": 292.71,
+ "estimated_duration_s": 337.899,
  "timing": {
-  "wpm": 160.9,
+  "wpm": 138.1,
   "gaps": {
    "same_speaker_s": 0.25,
    "speaker_change_s": 0.5,
@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-10T21:00:08+00:00",
+ "generated_at": "2026-10-10T21:44:47+00:00",
  "ending": {
   "section": 1,
   "paragraph": 5,
@@ -96,7 +96,7 @@
     "excerpt"
    ],
    "start_s": 0.0,
-   "duration_s": 0.746
+   "duration_s": 0.869
   },
   {
    "id": "ep00_pilot-0002",
@@ -127,8 +127,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 0.996,
-   "duration_s": 11.187
+   "start_s": 1.119,
+   "duration_s": 13.034
   },
   {
    "id": "ep00_pilot-0003",
@@ -159,8 +159,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 12.683,
-   "duration_s": 7.085
+   "start_s": 14.653,
+   "duration_s": 8.255
   },
   {
    "id": "ep00_pilot-0004",
@@ -191,8 +191,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 20.018,
-   "duration_s": 7.458
+   "start_s": 23.158,
+   "duration_s": 8.689
   },
   {
    "id": "ep00_pilot-0005",
@@ -225,8 +225,8 @@
     "excerpt",
     "override"
    ],
-   "start_s": 27.726,
-   "duration_s": 4.102
+   "start_s": 32.097,
+   "duration_s": 4.779
   },
   {
    "id": "ep00_pilot-0006",
@@ -257,8 +257,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 32.078,
-   "duration_s": 5.594
+   "start_s": 37.126,
+   "duration_s": 6.517
   },
   {
    "id": "ep00_pilot-0007",
@@ -289,8 +289,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 39.172,
-   "duration_s": 0.746
+   "start_s": 45.143,
+   "duration_s": 0.869
   },
   {
    "id": "ep00_pilot-0008",
@@ -321,8 +321,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 40.167,
-   "duration_s": 8.204
+   "start_s": 46.262,
+   "duration_s": 9.558
   },
   {
    "id": "ep00_pilot-0009",
@@ -353,8 +353,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 48.871,
-   "duration_s": 1.492
+   "start_s": 56.321,
+   "duration_s": 1.738
   },
   {
    "id": "ep00_pilot-0010",
@@ -385,8 +385,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 50.863,
-   "duration_s": 10.068
+   "start_s": 58.558,
+   "duration_s": 11.731
   },
   {
    "id": "ep00_pilot-0011",
@@ -419,8 +419,8 @@
     "excerpt",
     "override"
    ],
-   "start_s": 61.431,
-   "duration_s": 1.492
+   "start_s": 70.789,
+   "duration_s": 1.738
   },
   {
    "id": "ep00_pilot-0012",
@@ -451,8 +451,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 63.423,
-   "duration_s": 4.475
+   "start_s": 73.027,
+   "duration_s": 5.214
   },
   {
    "id": "ep00_pilot-0013",
@@ -483,8 +483,8 @@
    "flags": [
     "excerpt"
    ],
-   "start_s": 68.398,
-   "duration_s": 4.475
+   "start_s": 78.741,
+   "duration_s": 5.214
   },
   {
    "id": "ep00_pilot-0014",
@@ -512,8 +512,8 @@
    "flags": [
     "non_kmg"
    ],
-   "start_s": 74.372,
-   "duration_s": 2.237
+   "start_s": 85.454,
+   "duration_s": 2.607
   },
   {
    "id": "ep00_pilot-0015",
@@ -541,8 +541,8 @@
    "flags": [
     "non_kmg"
    ],
-   "start_s": 76.86,
-   "duration_s": 4.102
+   "start_s": 88.311,
+   "duration_s": 4.779
   },
   {
    "id": "ep00_pilot-0016",
@@ -571,8 +571,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 82.462,
-   "duration_s": 0.373
+   "start_s": 94.59,
+   "duration_s": 0.434
   },
   {
    "id": "ep00_pilot-0017",
@@ -601,8 +601,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 83.085,
-   "duration_s": 8.95
+   "start_s": 95.275,
+   "duration_s": 10.427
   },
   {
    "id": "ep00_pilot-0018",
@@ -631,8 +631,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 93.534,
-   "duration_s": 16.408
+   "start_s": 107.202,
+   "duration_s": 19.117
   },
   {
    "id": "ep00_pilot-0019",
@@ -661,8 +661,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 110.192,
-   "duration_s": 10.814
+   "start_s": 126.568,
+   "duration_s": 12.6
   },
   {
    "id": "ep00_pilot-0020",
@@ -693,8 +693,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 121.256,
-   "duration_s": 10.814
+   "start_s": 139.418,
+   "duration_s": 12.6
   },
   {
    "id": "ep00_pilot-0021",
@@ -723,8 +723,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 132.32,
-   "duration_s": 7.458
+   "start_s": 152.268,
+   "duration_s": 8.689
   },
   {
    "id": "ep00_pilot-0022",
@@ -753,8 +753,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 140.028,
-   "duration_s": 7.085
+   "start_s": 161.207,
+   "duration_s": 8.255
   },
   {
    "id": "ep00_pilot-0023",
@@ -783,8 +783,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 147.614,
-   "duration_s": 5.221
+   "start_s": 169.962,
+   "duration_s": 6.083
   },
   {
    "id": "ep00_pilot-0024",
@@ -813,8 +813,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 153.084,
-   "duration_s": 2.61
+   "start_s": 176.294,
+   "duration_s": 3.041
   },
   {
    "id": "ep00_pilot-0025",
@@ -843,8 +843,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 157.195,
-   "duration_s": 11.187
+   "start_s": 180.836,
+   "duration_s": 13.034
   },
   {
    "id": "ep00_pilot-0026",
@@ -873,8 +873,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 169.882,
-   "duration_s": 0.746
+   "start_s": 195.37,
+   "duration_s": 0.869
   },
   {
    "id": "ep00_pilot-0027",
@@ -905,8 +905,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 170.877,
-   "duration_s": 36.172
+   "start_s": 196.489,
+   "duration_s": 42.143
   },
   {
    "id": "ep00_pilot-0028",
@@ -935,8 +935,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 207.299,
-   "duration_s": 4.102
+   "start_s": 238.882,
+   "duration_s": 4.779
   },
   {
    "id": "ep00_pilot-0029",
@@ -967,8 +967,8 @@
    "flags": [
     "gloss_stripped"
    ],
-   "start_s": 211.651,
-   "duration_s": 31.324
+   "start_s": 243.911,
+   "duration_s": 36.495
   },
   {
    "id": "ep00_pilot-0030",
@@ -997,8 +997,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 244.475,
-   "duration_s": 1.119
+   "start_s": 281.906,
+   "duration_s": 1.303
   },
   {
    "id": "ep00_pilot-0031",
@@ -1027,8 +1027,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 246.093,
-   "duration_s": 19.391
+   "start_s": 283.71,
+   "duration_s": 22.592
   },
   {
    "id": "ep00_pilot-0032",
@@ -1057,8 +1057,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 265.734,
-   "duration_s": 4.102
+   "start_s": 306.552,
+   "duration_s": 4.779
   },
   {
    "id": "ep00_pilot-0033",
@@ -1087,8 +1087,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 270.086,
-   "duration_s": 5.221
+   "start_s": 311.581,
+   "duration_s": 6.083
   },
   {
    "id": "ep00_pilot-0034",
@@ -1117,8 +1117,8 @@
    "direction": null,
    "fx": null,
    "flags": [],
-   "start_s": 275.557,
-   "duration_s": 17.154
+   "start_s": 317.914,
+   "duration_s": 19.986
   }
  ]
 }

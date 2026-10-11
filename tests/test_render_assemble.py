@@ -108,3 +108,14 @@ def test_assemble_inserts_the_configured_gap(tmp_path: Path, monkeypatch: pytest
     assert got_rate == rate
     # 1.0 s + 0.50 s speaker-change gap + 0.5 s
     assert abs(len(samples) / rate - 2.0) < 0.02
+
+
+def test_voice_version_is_content_based(tmp_path: Path):
+    import os
+    ref = tmp_path / "ref.wav"
+    write_pcm16(ref, [0.1, -0.1] * 100, 8000)
+    before = voice_version(ref)
+    os.utime(ref, (1, 1))                      # a checkout/copy changes mtime only
+    assert voice_version(ref) == before
+    write_pcm16(ref, [0.2, -0.2] * 100, 8000)
+    assert voice_version(ref) != before

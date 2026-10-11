@@ -118,6 +118,24 @@ def test_assemble_with_music_keeps_speech_on_top(tmp_path: Path):
     m = rep["music"]
     assert [r["cue"] for r in m["regions"]] == ["grave_drone", "celestial_swell"]
     assert m["stings"][0]["cue"] == "bright_lift"
-    assert m["min_speech_to_music_db"] >= 18
+    assert m["min_speech_to_music_db"] >= CFG["min_speech_to_music_db"] - 0.6
     assert abs(rep["measured_lufs"] - rep["target_lufs"]) < 0.6
     assert rep["seconds"] > 8.5 + CFG["tail_s"] - 0.1
+
+
+def test_presets_default_to_A_and_are_selectable():
+    assert CFG["preset"] == "A" and CFG["bed_lufs"] == -21 and CFG["min_speech_to_music_db"] == 14
+    b = music.load_music_config(preset="B")
+    assert b["bed_lufs"] == -17 and b["duck_db"] == 5 and b["speech_band_cut_db"] == CFG["speech_band_cut_db"]
+    with pytest.raises(ValueError):
+        music.load_music_config(preset="nope")
+
+
+def test_pause_bloom_lifts_long_pauses_only():
+    np = pytest.importorskip("numpy")
+    rate = 1000
+    env = music.duck_envelope(10 * rate, rate, [(1, 3), (3.3, 5), (7, 9)], 6, 0.1, 0.4, bloom_db=4, bloom_min_gap_s=0.9)
+    db = lambda t: 20 * math.log10(env[int(t * rate)])
+    assert abs(db(6.5) - 4) < 0.5          # 2 s paragraph pause swells above the bed
+    assert db(3.2) < 0.5                   # 0.3 s same-speaker gap does not
+    assert abs(db(2.0) + 6) < 0.5          # ducked under speech

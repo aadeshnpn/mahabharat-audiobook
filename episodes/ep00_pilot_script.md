@@ -100,7 +100,7 @@ Book 1 §1 ¶1–5, Anukramanika Parva, read in order from the invocation.
 
 > Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Puranas, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of Saunaka, surnamed Kulapati, in the forest of Naimisha.
 
-*TTS:* Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Poorahnuhs, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of Shownuhkuh, surnamed Koolapati, in the forest of Naimisha.
+*TTS:* Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Puranas, bending with humility, one day approached the great sages of rigid vows, sitting at their ease, who had attended the twelve years' sacrifice of Shownuhkuh, surnamed Koolapati, in the forest of Naimisha.
 
 **02:06 · Sauti** · narration · warm · measured
 
@@ -152,7 +152,7 @@ Book 1 §1 ¶1–5, Anukramanika Parva, read in order from the invocation.
 
 > Ye reverend sages, all of whom are to me as Brahma; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye Dwijas (twice-born), shall I repeat, shall I recount the sacred stories collected in the Puranas containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?
 
-*TTS:* Ye reverend sages, all of whom are to me as Brahma; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye Dweejuhs, shall I repeat, shall I recount the sacred stories collected in the Poorahnuhs containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?
+*TTS:* Ye reverend sages, all of whom are to me as Brahma; ye greatly blessed who shine in this place of sacrifice with the splendour of the solar fire: ye who have concluded the silent meditations and have fed the holy fire; and yet who are sitting—without care, what, O ye Dweejuhs, shall I repeat, shall I recount the sacred stories collected in the Puranas containing precepts of religious duty and of worldly profit, or the acts of illustrious saints and sovereigns of mankind?
 
 **04:41 · Sauti** · narration · warm · measured
 

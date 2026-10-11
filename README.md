@@ -41,7 +41,17 @@ Dialogue protection is built in: beds duck 8 dB under every line (120 ms look-ah
     mbh episode assemble episodes/ep00_pilot.yaml --music [--music-stem stem.wav]
     python tools/qa_music.py SCRIPT.json REPORT.json MIX.wav DRY.mp3 [STEM.wav]   # A/B: WER and voice ID dry vs mixed
 
-Pilot with music: `samples/ep00_pilot_full_v1_music.mp3` (−15.9 LUFS, −1.7 dBTP); cue sheet `episodes/ep00_pilot.cues.txt`. Music is off unless `--music` or `music: true` in the episode YAML.
+Level presets live in `configs/music.yaml` (`preset: A` is the default; choose per episode with `music_preset:` or per run with `--music-preset`):
+
+| preset | bed | duck | speech-to-music floor | pause bloom | accent at key cues |
+|---|---|---|---|---|---|
+| quiet (v1) | −26 LUFS | 8 dB | 18 dB | 0 | 0 |
+| **A** (default) | −21 LUFS | 6 dB | 14 dB | +3 dB | +2.5 dB |
+| B | −17 LUFS | 5 dB | 12 dB | +4 dB | +3.5 dB |
+
+Pause bloom lifts the music in paragraph/segment pauses (≥ 0.9 s); `accent` (per cue) raises the vow drone, celestial swell, invocation and ending. The speech-band dip stays on in every preset. Pilot mixes: `samples/ep00_pilot_full_v2_music_A.mp3` and `_B.mp3` (−15.9 LUFS); cue sheet `episodes/ep00_pilot.cues.txt`. Music is off unless `--music` or `music: true` in the episode YAML.
+
+Render cache keys use a content hash of each voice reference (not its mtime), so checkouts do not trigger re-renders.
 
 ```bash
 PYTHONPATH=src python3 -m pytest -q tests/test_episode.py tests/test_lexicon.py tests/test_render_assemble.py tests/test_loudness.py tests/test_pronounce.py

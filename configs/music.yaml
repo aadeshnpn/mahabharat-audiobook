@@ -8,11 +8,22 @@
 # Music never competes with dialogue: beds duck under every spoken line, the speech band is carved
 # out of the music, and stings (one-shot accents) are placed in the pause after their line.
 
+# Level presets (pick with `preset:` here, `music_preset:` in the episode YAML, or --music-preset).
+# A preset's keys override the defaults below. "quiet" is the first pilot mix (user: too faint).
+preset: A
+presets:
+  quiet: {bed_lufs: -26, duck_db: 8, min_speech_to_music_db: 18, pause_bloom_db: 0, accent_db: 0}
+  A:     {bed_lufs: -21, duck_db: 6, min_speech_to_music_db: 14, pause_bloom_db: 3, accent_db: 2.5}
+  B:     {bed_lufs: -17, duck_db: 5, min_speech_to_music_db: 12, pause_bloom_db: 4, accent_db: 3.5}
+
 tonic_hz: 146.83          # Sa = D3; all cues share the tonic so changes stay consonant
 bed_lufs: -26             # an unducked bed at intensity 1.0 (speech is mastered at -16)
 duck_db: 8                # extra attenuation while anyone speaks
 duck_attack_s: 0.12       # bed starts dipping this long before a line
 duck_release_s: 0.45
+pause_bloom_db: 0         # extra lift in pauses >= bloom_min_gap_s (paragraph/segment breaks): the music swells there
+bloom_min_gap_s: 0.9
+accent_db: 0              # scaled by each cue's `accent` (0..1): key moments sit higher
 min_speech_to_music_db: 18  # hard floor per line: music is turned down locally wherever a line would fall below it
 crossfade_s: 2.0
 speech_band_cut_db: 8     # wide dip at 1.6 kHz in the music bus
@@ -23,15 +34,15 @@ tail_s: 4.0               # music rings on after the last line (the ending hook)
 
 cues:
   none:                  {kind: bed,   recipe: silence}
-  grave_drone:           {kind: bed,   recipe: grave_drone,     note: "solemn resolve: grave, sustained low Sa-Pa drone"}
+  grave_drone:           {kind: bed,   recipe: grave_drone, accent: 1.0,     note: "solemn resolve: grave, sustained low Sa-Pa drone"}
   royal_resolve:         {kind: bed,   recipe: grave_drone,     note: "commanding: the drone, lighter", brightness: 0.6}
-  bright_lift:           {kind: sting, recipe: bright_lift,     note: "joy: brief ascending santoor-like lift", length_s: 2.6}
-  celestial_swell:       {kind: bed,   recipe: celestial_swell, note: "awe / the heavens: high shimmering pad that swells"}
+  bright_lift:           {kind: sting, recipe: bright_lift, accent: 0.6,     note: "joy: brief ascending santoor-like lift", length_s: 2.6}
+  celestial_swell:       {kind: bed,   recipe: celestial_swell, accent: 1.0, note: "awe / the heavens: high shimmering pad that swells"}
   tender_resolve:        {kind: bed,   recipe: tender_pad,      note: "tenderness: soft Sa-Ga pad resolving to Sa"}
-  sacred_invocation:     {kind: bed,   recipe: sacred,          note: "Om / invocation: temple bell over tanpura"}
+  sacred_invocation:     {kind: bed,   recipe: sacred, accent: 0.6,          note: "Om / invocation: temple bell over tanpura"}
   forest_ashram:         {kind: bed,   recipe: forest,          note: "the ashram of Naimisha: soft tanpura, air, birds only in pauses"}
   narration_warm:        {kind: bed,   recipe: tanpura,         note: "warm narration: barely-there tanpura"}
-  reverent_anticipation: {kind: bed,   recipe: anticipation,    note: "reverent anticipation, building to the episode's ending hook"}
+  reverent_anticipation: {kind: bed,   recipe: anticipation, accent: 0.8,    note: "reverent anticipation, building to the episode's ending hook"}
   sacred_solemn:         {kind: bed,   recipe: tanpura,         note: "solemn: tanpura, a little fuller", brightness: 0.8}
 
 emotions:   # fallback for any line no rule claims

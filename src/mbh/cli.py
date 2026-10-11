@@ -55,6 +55,7 @@ def main(argv: list[str] | None = None) -> int:
                             help="mix line-driven music under the dialogue (default config configs/music.yaml)")
     assemble_p.add_argument("--no-music", dest="music", action="store_false")
     assemble_p.add_argument("--music-stem", type=Path, help="also write the music-only stem here")
+    assemble_p.add_argument("--music-preset", help="level preset from configs/music.yaml (default: its `preset:`)")
 
     cues_p = actions.add_parser("cues", help="print the per-line music cue sheet (no audio)")
     _spec_arg(cues_p)
@@ -154,7 +155,8 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     out = args.out or spec.path.with_name(f"{spec.id}.wav")
     try:
         report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro,
-                          music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem))
+                          music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem,
+                                               args.music_preset or spec.music_preset))
     except RuntimeError as exc:
         print(str(exc), file=sys.stderr)
         return 1
@@ -162,11 +164,11 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     return 0
 
 
-def _music_cfg(choice, stem: Path | None = None):
+def _music_cfg(choice, stem: Path | None = None, preset: str | None = None):
     if not choice:
         return None
     from mbh.episode.music import load_music_config
-    cfg = load_music_config(None if choice is True else Path(choice))
+    cfg = load_music_config(None if choice is True else Path(choice), preset)
     if stem:
         cfg["stem_path"] = stem
     return cfg

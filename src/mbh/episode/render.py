@@ -85,8 +85,9 @@ def cache_key(
 def voice_version(path: Path | None) -> str:
     if path is None or not path.exists():
         return "missing"
-    stat = path.stat()
-    return f"{stat.st_size}:{stat.st_mtime_ns}"
+    # content hash, not mtime: a git checkout or copy must not invalidate every cached line
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    return f"sha256:{digest}"
 
 
 def reference_wav(voice_id: str, voices_dir: Path | None = None) -> Path:

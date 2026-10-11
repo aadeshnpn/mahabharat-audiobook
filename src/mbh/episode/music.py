@@ -25,8 +25,16 @@ from mbh.episode.paths import repo_root
 
 # ---------------------------------------------------------------- cue resolution (pure Python)
 
-def load_music_config(path: Path | None = None) -> dict:
+def load_music_config(path: Path | None = None, preset: str | None = None) -> dict:
+    """Load the cue config and apply a level preset (``preset`` argument, else the file's ``preset:``)."""
     cfg = yaml.safe_load((path or repo_root() / "configs" / "music.yaml").read_text(encoding="utf-8"))
+    name = preset or cfg.get("preset")
+    if name:
+        presets = cfg.get("presets") or {}
+        if name not in presets:
+            raise ValueError(f"unknown music preset {name!r}; have {sorted(presets)}")
+        cfg.update(presets[name])
+        cfg["preset"] = name
     for name, rule in enumerate(cfg.get("rules", [])):
         if rule.get("cue") not in cfg["cues"]:
             raise ValueError(f"rule {rule.get('name', name)} uses unknown cue {rule.get('cue')!r}")
@@ -360,12 +368,19 @@ def _speech_band_dip(y, rate, cut_db, f0=1600.0, q=0.5):
     return lfilter([x / a[0] for x in b], [x / a[0] for x in a], y)
 
 
-def duck_envelope(n, rate, speech: list[tuple[float, float]], duck_db, attack_s, release_s):
-    """Gain curve: 1.0 in pauses, 10^(-duck/20) under speech, with look-ahead attack and slow release."""
+def duck_envelope(n, rate, speech: list[tuple[float, float]], duck_db, attack_s, release_s, bloom_db=0.0, bloom_min_gap_s=0.9):
+    """Gain curve: 1.0 in pauses (``bloom_db`` higher in long pauses), 10^(-duck/20) under speech,
+    with look-ahead attack and slower release."""
     np = _np()
     ctl_rate = 200
     m = int(n / rate * ctl_rate) + 2
     target = np.ones(m)
+    if bloom_db:
+        spans = sorted(speech)
+        edges = [0.0] + [x for a, b in spans for x in (a, b)] + [n / rate]
+        for g0, g1 in zip(edges[::2], edges[1::2]):
+            if g1 - g0 >= bloom_min_gap_s and g0 > 0:  # not before the first line
+                target[int(g0 * ctl_rate): int(g1 * ctl_rate)] = 10 ** (bloom_db / 20)
     low = 10 ** (-duck_db / 20)
     for a, b in speech:
         target[max(0, int((a - attack_s) * ctl_rate)): int(b * ctl_rate) + 1] = low
@@ -387,6 +402,7 @@ def render_music(regions: list[Region], stings: list[dict], speech: list[tuple[f
     sa = float(cfg.get("tonic_hz", 146.83))
     xf = float(cfg.get("crossfade_s", 2.0))
     bed = float(cfg.get("bed_lufs", -30))
+    accent = float(cfg.get("accent_db", 0))
     gaps = []
     prev = 0.0
     for a, b in sorted(speech):
@@ -403,7 +419,7 @@ def render_music(regions: list[Region], stings: list[dict], speech: list[tuple[f
             continue
         local_gaps = [(max(0, g0 - a), min(b, g1) - a) for g0, g1 in gaps if g1 > a and g0 < b]
         y = synth_cue(r.cue, spec["recipe"], s1 - s0, rate, sa, local_gaps, spec, (i, round(a, 2)))
-        y = _norm_to(y, rate, bed + 20 * math.log10(max(0.1, r.intensity)))
+        y = _norm_to(y, rate, bed + 20 * math.log10(max(0.1, r.intensity)) + accent * float(spec.get("accent", 0)))
         t = np.arange(s1 - s0) / rate
         if r.build_to_end:  # reverent anticipation: rises ~7 dB across the region toward the ending hook
             y *= 10 ** ((7.0 * np.clip(t / max(1e-3, t[-1]), 0, 1) - 3.0) / 20)
@@ -418,10 +434,11 @@ def render_music(regions: list[Region], stings: list[dict], speech: list[tuple[f
     for st in stings:
         spec = cfg["cues"][st["cue"]]
         y = synth_cue(st["cue"], spec["recipe"], 0, rate, sa, [], spec, st["line_id"])
-        y = _norm_to(y, rate, bed + 6 + 20 * math.log10(max(0.1, st["intensity"])))
+        y = _norm_to(y, rate, bed + 6 + 20 * math.log10(max(0.1, st["intensity"])) + accent * float(spec.get("accent", 0)))
         s0 = int(st["at_s"] * rate)
         y = y[: max(0, n - s0)]
         bus[s0:s0 + len(y)] += y
     bus = _speech_band_dip(bus, rate, float(cfg.get("speech_band_cut_db", 8)))
-    bus *= duck_envelope(n, rate, speech, float(cfg.get("duck_db", 10)), float(cfg.get("duck_attack_s", 0.12)), float(cfg.get("duck_release_s", 0.7)))
+    bus *= duck_envelope(n, rate, speech, float(cfg.get("duck_db", 10)), float(cfg.get("duck_attack_s", 0.12)), float(cfg.get("duck_release_s", 0.7)),
+                         float(cfg.get("pause_bloom_db", 0)), float(cfg.get("bloom_min_gap_s", 0.9)))
     return bus

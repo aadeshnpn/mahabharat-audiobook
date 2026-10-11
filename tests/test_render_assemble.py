@@ -119,3 +119,31 @@ def test_voice_version_is_content_based(tmp_path: Path):
     assert voice_version(ref) == before
     write_pcm16(ref, [0.2, -0.2] * 100, 8000)
     assert voice_version(ref) != before
+
+
+def test_take_is_a_reproducible_retake_that_leaves_default_keys_alone(tmp_path: Path):
+    import dataclasses
+    base = _line()
+    args = dict(voice_version="v1", engine="fake", params={"steps": 10})
+    retake = dataclasses.replace(base, take=2)
+    # take 0 must hash exactly like a line that predates the field, so caches survive the upgrade
+    assert "take" not in base.to_dict()
+    assert cache_key(retake, **args) != cache_key(base, **args)
+    assert cache_key(dataclasses.replace(base, take=0), **args) == cache_key(base, **args)
+    seen = []
+
+    class _Rec(_FakeEngine):
+        def synthesize(self, **kw):
+            seen.append(kw["params"]); super().synthesize(**kw)
+
+    voices = tmp_path / "voices"; (voices / "sauti").mkdir(parents=True)
+    write_pcm16(voices / "sauti" / "ref.wav", [0.1, -0.1], 8000)
+    render_script(_script(retake), _Rec(), EngineSettings(), cache_dir=tmp_path / "c", voices_dir=voices)
+    assert seen and seen[0]["seed"] == 2 and retake.to_dict()["take"] == 2
+
+
+def test_take_override_applies():
+    from mbh.episode.overrides import _apply_one
+    line = _line()
+    _apply_one(line, {"take": 3}, cast=None, respeak=None)
+    assert line.take == 3 and "override" in line.flags

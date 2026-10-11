@@ -39,3 +39,6 @@ episodes/*.render.json
 
 # music A/B scratch (large wavs)
 work/music/
+
+# run logs
+logs/

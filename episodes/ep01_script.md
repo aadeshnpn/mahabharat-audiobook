@@ -342,15 +342,15 @@ Vyasa has composed the poem but has no writer; Brahma visits and blesses it; Gan
 
 > Ganesa, upon hearing this address, thus answered,
 
-**14:23 · ganesa** · speech · warm · measured · override, unresolved speaker
+**14:23 · Ganesa** · speech · warm · moderate · override
 
 > I will become the writer of thy work, provided my pen do not for a moment cease writing.
 
-**14:32 · Sauti** · narration · warm · measured · override, unresolved speaker
+**14:32 · Sauti** · narration · warm · moderate · override
 
 > And Vyasa said unto that divinity,
 
-**14:35 · Vyasa** · speech · warm · measured · override, unresolved speaker
+**14:35 · Vyasa** · speech · warm · moderate · override
 
 > Wherever there be anything thou dost not comprehend, cease to continue writing.
 

@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-11T03:36:45+00:00",
+ "generated_at": "2026-10-11T23:12:17+00:00",
  "ending": {
   "section": 1,
   "paragraph": 17,
@@ -2214,8 +2214,8 @@
    "voice_id": "ganesa",
    "layer": 3,
    "emotion": "warm",
-   "pace": "measured",
-   "intensity": 0.5,
+   "pace": "moderate",
+   "intensity": 0.45,
    "text": "I will become the writer of thy work, provided my pen do not for a moment cease writing.",
    "tts_text": "I will become the writer of thy work, provided my pen do not for a moment cease writing.",
    "turn_id": "t20.0",
@@ -2233,7 +2233,6 @@
    "direction": "a playful divine condition, a smile in the voice",
    "fx": null,
    "flags": [
-    "unresolved_speaker",
     "override",
     "split"
    ],
@@ -2248,8 +2247,8 @@
    "voice_id": "sauti",
    "layer": 1,
    "emotion": "warm",
-   "pace": "measured",
-   "intensity": 0.5,
+   "pace": "moderate",
+   "intensity": 0.45,
    "text": "And Vyasa said unto that divinity,",
    "tts_text": "And Vyasa said unto that divinity,",
    "turn_id": "t20.1",
@@ -2267,7 +2266,6 @@
    "direction": null,
    "fx": null,
    "flags": [
-    "unresolved_speaker",
     "override",
     "split"
    ],
@@ -2282,8 +2280,8 @@
    "voice_id": "vyasa",
    "layer": 3,
    "emotion": "warm",
-   "pace": "measured",
-   "intensity": 0.5,
+   "pace": "moderate",
+   "intensity": 0.45,
    "text": "Wherever there be anything thou dost not comprehend, cease to continue writing.",
    "tts_text": "Wherever there be anything thou dost not comprehend, cease to continue writing.",
    "turn_id": "t20.2",
@@ -2301,7 +2299,6 @@
    "direction": "a sly counter-condition",
    "fx": null,
    "flags": [
-    "unresolved_speaker",
     "override",
     "split"
    ],

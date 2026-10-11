@@ -78,6 +78,8 @@ def cache_key(
         "params": params,
         "fx": line.fx,
     }
+    if line.take:  # only retakes change the key, so existing cached lines stay valid
+        payload["take"] = line.take
     raw = json.dumps(payload, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
@@ -130,7 +132,7 @@ def render_script(
             instruction=instruction_for(line),
             reference_wav=ref,
             out_wav=dest,
-            params=params,
+            params={**params, "seed": line.take} if line.take else params,
         )
         sidecar = dest.with_suffix(".json")
         sidecar.write_text(json.dumps({
@@ -162,6 +164,10 @@ class VoxCPM2Backend:
     def synthesize(self, *, text: str, instruction: str, reference_wav: Path, out_wav: Path, params: dict) -> None:
         del instruction  # already prefixed onto text by render_script
         model, sample_rate = self._load()
+        if params.get("seed"):  # retakes: reproducible alternative sample
+            import torch
+
+            torch.manual_seed(int(params["seed"]))
         wav = model.generate(
             text=text,
             reference_wav_path=str(reference_wav),

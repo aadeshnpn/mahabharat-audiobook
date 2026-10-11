@@ -1,6 +1,6 @@
 {
  "book": 1,
- "generated_at": "2026-10-10T11:36:11-0600",
+ "generated_at": "2026-10-10T21:47:33-0600",
  "method": "text-grounded extraction (LLM reading of KMG text) + computed counts",
  "skipped_sections": {
   "176": "duplicate of 177 in source; original §176 text missing"
@@ -3449,6 +3449,58 @@
    "provisional": false,
    "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
    "kind_detail": "priests"
+  },
+  {
+   "id": "ganesa",
+   "name": "Ganesa",
+   "aliases": [
+    "Ganesha",
+    "guide of the Ganas",
+    "obviator of obstacles"
+   ],
+   "respelling": "GUH-nay-shuh",
+   "gender": "male",
+   "kind": "deity",
+   "era_age": "ageless god; appears only in the frame of §1",
+   "role": "Divine scribe who writes down the Bharata at Vyasa's dictation",
+   "personality": [
+    "playful",
+    "clever",
+    "benevolent",
+    "dignified"
+   ],
+   "emotional_range": [
+    "bright good humour",
+    "wry challenge",
+    "gracious assent"
+   ],
+   "voice_brief": "The divine scribe Ganesa, bright warm youthful-sounding male voice, playful and quick-witted but dignified, smiling, crisp diction, clear Indian English accent",
+   "backstory": "At Brahma's word Vyasa calls Ganesa to mind, and 'obviator of obstacles, ready to fulfil the desires of his votaries', he comes at once (§1 ¶12–13). Asked to be the writer of the Bharata, he agrees on condition that his pen never stop; Vyasa answers that he must stop wherever he does not comprehend (§1 ¶14). Ganesa assents with 'Om' and writes; Vyasa knits the verses so close that 'even the omniscient Ganesa took a moment to consider', which lets Vyasa compose on (§1 ¶14–15).",
+   "key_sections": [
+    1
+   ],
+   "first_section": 1,
+   "sections": [
+    1
+   ],
+   "narrative_sections": [],
+   "summary_mentions": [
+    1
+   ],
+   "mentions": 8,
+   "speaking_lines": 1,
+   "speech_by_section": {
+    "1": 1
+   },
+   "flags": [
+    "single_section_speaker"
+   ],
+   "provenance": "text-extracted",
+   "voice_group": "",
+   "count_notes": "",
+   "provisional": false,
+   "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
+   "kind_detail": ""
   },
   {
    "id": "indra",
@@ -16837,6 +16889,16 @@
    "provisional": false,
    "provenance": "text-extracted",
    "section": 126
+  },
+  {
+   "source": "ganesa",
+   "target": "vyasa",
+   "type": "ally_of",
+   "label": "",
+   "notes": "§1: writes the Bharata at Vyasa's dictation (§1 ¶13–15)",
+   "provisional": false,
+   "provenance": "text-extracted",
+   "section": 1
   }
  ],
  "resolved_speakers": {

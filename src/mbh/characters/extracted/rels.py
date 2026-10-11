@@ -141,3 +141,4 @@ R(
 )
 R(("satasringa_rishis","ally_of","pandu","§120","Pandu lives among them; they foretell his progeny"),
   ("satasringa_rishis","guardian_of","yudhishthira","§126","escort Pandu's sons and Kunti to Hastinapura"))
+R(("ganesa","ally_of","vyasa","§1","writes the Bharata at Vyasa's dictation (§1 ¶13–15)"))

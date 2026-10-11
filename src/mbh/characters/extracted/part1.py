@@ -184,3 +184,10 @@ C("sacrificial_priests","Ritwiks and Sadasyas","the Ritwiks|the Sadasyas","RIT-v
   "Officiating priests and assessors at Janamejaya's snake sacrifice",
   "They conduct the snake sacrifice (§51–§53). They report that Takshaka is hiding with Indra (§56), and the Sadasyas advise Janamejaya to grant Astika's boon (§56).",
   "ritual|formal","solemn|urgent",f"A chorus of Indian priests chanting and speaking in formal unison, {A}","51 53 56","chorus")
+C("ganesa","Ganesa","Ganesha|guide of the Ganas|obviator of obstacles","GUH-nay-shuh","male","deity",
+  "ageless god; appears only in the frame of §1",
+  "Divine scribe who writes down the Bharata at Vyasa's dictation",
+  "At Brahma's word Vyasa calls Ganesa to mind, and 'obviator of obstacles, ready to fulfil the desires of his votaries', he comes at once (§1 ¶12–13). Asked to be the writer of the Bharata, he agrees on condition that his pen never stop; Vyasa answers that he must stop wherever he does not comprehend (§1 ¶14). Ganesa assents with 'Om' and writes; Vyasa knits the verses so close that 'even the omniscient Ganesa took a moment to consider', which lets Vyasa compose on (§1 ¶14–15).",
+  "playful|clever|benevolent|dignified","bright good humour|wry challenge|gracious assent",
+  f"The divine scribe Ganesa, bright warm youthful-sounding male voice, playful and quick-witted but dignified, smiling, crisp diction, {A}","1",
+  "single_section_speaker")

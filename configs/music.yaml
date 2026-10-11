@@ -64,4 +64,7 @@ rules:      # first match wins; all listed conditions must hold
   - {name: before_joy,      match: {emotion: awed, next_emotion: joyful},           cue: narration_warm,        intensity: 0.5}
   - {name: rishis_request,  match: {speaker: naimisha_rishis, last_paragraph: true}, cue: reverent_anticipation, intensity: 0.6, build_to_end: true}
   - {name: rishis_ask,      match: {speaker: naimisha_rishis},                       cue: forest_ashram,         intensity: 0.4}
+  - {name: divine_speaks,   match: {speaker: [brahma, devas_chorus]},              cue: celestial_swell,       intensity: 0.7}
   - {name: sauti_arrives,   match: {segment: opening, paragraph: [2, 3, 4, 5], emotion: [warm, solemn]}, cue: forest_ashram, intensity: 0.4}
+  - {name: ending_hook,     match: {last_paragraph: true},                         cue: reverent_anticipation, intensity: 0.5, build_to_end: true}
+# Episodes can prepend their own rules with `music_rules:` in the episode YAML (same format).

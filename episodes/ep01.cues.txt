@@ -1,0 +1,83 @@
+0001  sauti          solemn          -> sacred_invocation      0.80  [rule:om_invocation]  Om!
+0002  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  Having bowed down to Narayana and Nara, the most
+0003  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Ugrasrava, the son of Lomaharshana, surnamed Sau
+0004  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Those ascetics, wishing to hear his wonderful na
+0005  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Having been entertained with due respect by thos
+0006  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Then all the ascetics being again seated, the so
+0007  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Seeing that he was comfortably seated, and recov
+0008  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  Whence comest thou, O lotus-eyed Sauti, and wher
+0009  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  Tell me, who ask thee, in detail.
+0010  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Accomplished in speech, Sauti, thus questioned, 
+0011  sauti          warm            -> forest_ashram          0.40  [inherit:ep01-0012]  Sauti said,
+0012  sauti          solemn          -> forest_ashram          0.40  [rule:sauti_arrives]  Having heard the diverse sacred and wonderful st
+0013  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Thence, anxious to see you, I am come into your 
+0014  sauti          warm            -> forest_ashram          0.40  [rule:sauti_arrives]  Ye reverend sages, all of whom are to me as Brah
+0015  sauti          warm            -> forest_ashram          0.40  [inherit:ep01-0016]  The Rishi replied,
+0016  naimisha_rishi solemn          -> forest_ashram          0.40  [rule:rishis_ask]  The Purana, first promulgated by the great Rishi
+0017  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  Composed in elegant language, it includeth the s
+0018  naimisha_rishi solemn          -> forest_ashram          0.40  [rule:rishis_ask]  It is elucidated by other Shastras, and comprehe
+0019  naimisha_rishi warm            -> forest_ashram          0.40  [rule:rishis_ask]  We are desirous of hearing that history also cal
+0020  sauti          warm            -> sacred_solemn          0.50  [inherit:ep01-0021]  Sauti then said,
+0021  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  Having bowed down to the primordial being Isana,
+0022  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Some bards have already published this history, 
+0023  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It is a great source of knowledge, established t
+0024  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It is possessed by the twice-born both in detail
+0025  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It is the delight of the learned for being embel
+0026  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  In this world, when it was destitute of brightne
+0027  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  It is called Mahadivya, and was formed at the be
+0028  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  From this egg came out the lord Pitamaha Brahma,
+0029  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  Then appeared the twenty-one Prajapatis, viz., M
+0030  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  Then appeared the man of inconceivable nature wh
+0031  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  After these were produced the wise and most holy
+0032  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  So the water, the heavens, the earth, the air, t
+0033  sauti          warm            -> celestial_swell        0.60  [rule:cosmic_egg]  And thus were produced all things which are know
+0034  sauti          warm            -> grave_drone            0.50  [rule:wheel_of_yugas]  And what is seen in the universe, whether animat
+0035  sauti          warm            -> grave_drone            0.50  [rule:wheel_of_yugas]  And, at the commencement of other Yugas, all thi
+0036  sauti          warm            -> grave_drone            0.50  [rule:wheel_of_yugas]  Thus continueth perpetually to revolve in the wo
+0037  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The generation of Devas, in brief, was thirty-th
+0038  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The sons of Div were Brihadbhanu, Chakshus, Atma
+0039  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Of these Vivaswans of old, Mahya was the younges
+0040  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The latter had for his son, Su-vrata who, we lea
+0041  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The illustrious Dasa-jyoti had ten thousand, Sat
+0042  sauti          warm            -> narration_warm         0.35  [emotion:warm]  From these are descended the family of the Kurus
+0043  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Numerous also were the generations produced, and
+0044  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  The mystery which is threefold—the Vedas, Yoga, 
+0045  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The Rishi Vyasa published this mass of knowledge
+0046  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It is the wish of the learned in the world to po
+0047  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Some read the Bharata beginning with the initial
+0048  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Men of learning display their various knowledge 
+0049  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Some are skilful in explaining it, while others,
+0050  sauti          warm            -> sacred_solemn          0.55  [rule:brahma_arrives]  The son of Satyavati having, by penance and medi
+0051  sauti          warm            -> sacred_solemn          0.55  [rule:brahma_arrives]  And the possessor of the six attributes, Brahma,
+0052  sauti          warm            -> sacred_solemn          0.55  [rule:brahma_arrives]  And when Vyasa, surrounded by all the tribes of 
+0053  sauti          warm            -> sacred_solemn          0.55  [rule:brahma_arrives]  And Vyasa having gone round him who is called Hi
+0054  sauti          warm            -> sacred_solemn          0.55  [rule:brahma_arrives]  Then the greatly glorious Vyasa, addressing Brah
+0055  vyasa          warm            -> narration_warm         0.35  [emotion:warm]  O divine Brahma, by me a poem hath been composed
+0056  vyasa          solemn          -> sacred_solemn          0.50  [emotion:solemn]  The mystery of the Veda, and what other subjects
+0057  vyasa          pleading        -> tender_resolve         0.45  [emotion:pleading]  But, after all, no writer of this work is to be 
+0058  sauti          warm            -> celestial_swell        0.70  [inherit:ep01-0059]  Brahma said.
+0059  brahma         warm            -> celestial_swell        0.70  [rule:divine_speaks]  I esteem thee for thy knowledge of divine myster
+0060  brahma         warm            -> celestial_swell        0.70  [rule:divine_speaks]  I know thou hast revealed the divine word, even 
+0061  brahma         solemn          -> celestial_swell        0.70  [rule:divine_speaks]  Thou hast called thy present work a poem, wheref
+0062  brahma         warm            -> celestial_swell        0.70  [rule:divine_speaks]  There shall be no poets whose works may equal th
+0063  brahma         commanding      -> celestial_swell        0.70  [rule:divine_speaks]  Let Ganesa be thought of, O Muni, for the purpos
+0064  sauti          warm            -> narration_warm         0.35  [inherit:ep01-0065]  Sauti said,
+0065  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Brahma having thus spoken to Vyasa, retired to h
+0066  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Then Vyasa began to call to mind Ganesa.
+0067  sauti          warm            -> narration_warm         0.35  [emotion:warm]  And Ganesa, obviator of obstacles, ready to fulf
+0068  sauti          warm            -> narration_warm         0.35  [emotion:warm]  And when he had been saluted, and was seated, Vy
+0069  vyasa          pleading        -> tender_resolve         0.45  [emotion:pleading]  O guide of the Ganas! be thou the writer of the 
+0070  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Ganesa, upon hearing this address, thus answered
+0071  ganesa         warm            -> bright_lift            over narration_warm 0.50  [rule:ganesa_condition]  I will become the writer of thy work, provided m
+0072  sauti          warm            -> narration_warm         0.35  [emotion:warm]  And Vyasa said unto that divinity,
+0073  vyasa          warm            -> narration_warm         0.35  [emotion:warm]  Wherever there be anything thou dost not compreh
+0074  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Ganesa having signified his assent, by repeating
+0075  sauti          warm            -> narration_warm         0.35  [emotion:warm]  I am (continued Sauti) acquainted with eight tho
+0076  sauti          warm            -> narration_warm         0.35  [emotion:warm]  From the mysteriousness of their meaning, O Muni
+0077  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Even the omniscient Ganesa took a moment to cons
+0078  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  The wisdom of this work, like unto an instrument
+0079  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  As the sun dispelleth the darkness, so doth the 
+0080  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  As the full-moon by its mild light expandeth the
+0081  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  By the lamp of history, which destroyeth the dar
+0082  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  This work is a tree, of which the chapter of con
+0083  sauti          warm            -> reverent_anticipation  0.50  [rule:tree_of_bharata]  The tree of the Bharata, inexhaustible to mankin

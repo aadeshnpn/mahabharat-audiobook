@@ -25,9 +25,12 @@ from mbh.episode.paths import repo_root
 
 # ---------------------------------------------------------------- cue resolution (pure Python)
 
-def load_music_config(path: Path | None = None, preset: str | None = None) -> dict:
-    """Load the cue config and apply a level preset (``preset`` argument, else the file's ``preset:``)."""
+def load_music_config(path: Path | None = None, preset: str | None = None, episode_rules: list | None = None) -> dict:
+    """Load the cue config, apply a level preset (``preset`` argument, else the file's ``preset:``)
+    and prepend an episode's own ``music_rules`` (they win over the shared rules)."""
     cfg = yaml.safe_load((path or repo_root() / "configs" / "music.yaml").read_text(encoding="utf-8"))
+    if episode_rules:
+        cfg["rules"] = list(episode_rules) + list(cfg.get("rules") or [])
     name = preset or cfg.get("preset")
     if name:
         presets = cfg.get("presets") or {}
@@ -65,7 +68,7 @@ def _matches(match: dict, line, ctx: dict) -> bool:
         if key == "text":
             if not re.search(want, line.text):
                 return False
-        elif key in ("speaker", "segment", "emotion", "fx", "paragraph"):
+        elif key in ("speaker", "segment", "emotion", "fx", "paragraph", "section", "type"):
             have = {"segment": line.segment_id}.get(key, getattr(line, key, None))
             if have not in _as_list(want):
                 return False

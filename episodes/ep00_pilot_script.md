@@ -2,7 +2,7 @@
 
 Estimated duration **5 min 38 s** (338 s) at 138.1 words per minute. Target 5 min 0 s.
 
-Speech rate is the VoxCPM2 prototype fit (Book 1 §100 excerpt: 250 words, 99 s including assemble gaps). Pauses: 0.25 s inside a turn, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
+Speech rate is fitted to the full ep00 pilot render (734 words, 318.9 s of speech; configs/duration.yaml). Pauses: 0.25 s inside a turn, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
 
 **Where it ends:** §1 ¶5. The Rishi of Naimisha has finished asking for the Bharata, the history Vyasa composed and Vaisampayana recited at Janamejaya's snake sacrifice. The question is a complete speech turn, and it is the hook the rest of the telling answers. Sauti's reply begins at Book 1 §1 ¶6.
 

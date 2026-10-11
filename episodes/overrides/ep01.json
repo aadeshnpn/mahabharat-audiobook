@@ -1,0 +1,24 @@
+{
+  "overrides": [
+    {"section": 1, "paragraph": 11, "contains": "no writer of this work is to be found on earth",
+     "emotion": "pleading", "tts_text": "But, after all, no writer of this work is to be found on earth.",
+     "direction": "a poet with a finished masterpiece and no one to write it down"},
+    {"section": 1, "paragraph": 12, "contains": "Let Ganesa be thought of", "emotion": "commanding"},
+    {"section": 1, "paragraph": 12, "contains": "Thou hast called thy present work a poem", "emotion": "solemn"},
+    {"section": 1, "paragraph": 13, "contains": "Vyasa addressed him thus", "merge_next": true},
+    {"section": 1, "paragraph": 13, "contains": "O guide of the Ganas", "split": [
+      {"text": "And when he had been saluted, and was seated, Vyasa addressed him thus,", "type": "narration"},
+      {"text": "O guide of the Ganas! be thou the writer of the Bharata which I have formed in my imagination, and which I am about to repeat.",
+       "speaker": "vyasa", "type": "speech", "emotion": "pleading", "direction": "a respectful request to a god"}
+    ]},
+    {"section": 1, "paragraph": 14, "contains": "provided my pen do not for a moment cease", "split": [
+      {"text": "I will become the writer of thy work, provided my pen do not for a moment cease writing.",
+       "speaker": "ganesa", "type": "speech", "emotion": "warm", "direction": "a playful divine condition, a smile in the voice"},
+      {"text": "And Vyasa said unto that divinity,", "type": "narration", "speaker": "sauti"},
+      {"text": "Wherever there be anything thou dost not comprehend, cease to continue writing.",
+       "speaker": "vyasa", "type": "speech", "emotion": "warm", "direction": "a sly counter-condition"}
+    ]},
+    {"section": 1, "paragraph": 14, "contains": "by repeating the word Om!", "merge_next": true,
+     "tts_text": "Ganesa having signified his assent, by repeating the word Om, proceeded to write; and Vyasa began; and by way of diversion, he knit the knots of composition exceeding close; by doing which, he dictated this work according to his engagement."}
+  ]
+}

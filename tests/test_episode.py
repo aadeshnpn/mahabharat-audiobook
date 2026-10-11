@@ -271,3 +271,34 @@ def test_committed_pilot_matches_the_builder():
         return [(row["speaker"], row["type"], row["emotion"], row["text"], row["tts_text"], row["non_kmg"]) for row in rows]
     assert sig(line.to_dict() for line in fresh.lines) == sig(committed["lines"])
     assert abs(fresh.estimated_duration_s - committed["estimated_duration_s"]) < 0.05
+
+
+def test_split_and_merge_overrides_keep_kmg_text(tmp_path):
+    from mbh.episode.build import build_episode
+    from mbh.episode.spec import load_spec
+    spec = load_spec(ROOT / "episodes" / "ep01.yaml")
+    script = build_episode(spec)
+    by_text = {l.text: l for l in script.lines}
+    g = by_text["I will become the writer of thy work, provided my pen do not for a moment cease writing."]
+    assert g.speaker == "ganesa" and g.type == "speech" and "split" in g.flags
+    assert by_text["Wherever there be anything thou dost not comprehend, cease to continue writing."].speaker == "vyasa"
+    assert by_text["And Vyasa said unto that divinity,"].speaker == "sauti"
+    merged = [l for l in script.lines if l.text.startswith("Ganesa having signified his assent")]
+    assert len(merged) == 1 and "proceeded to write" in merged[0].text and "Om," in merged[0].tts_text
+    assert not any("speaker unresolved" in w for w in script.warnings)
+    ids = [l.id for l in script.lines]
+    assert ids == sorted(ids) and len(set(ids)) == len(ids)
+
+
+def test_split_must_rejoin_to_source(tmp_path):
+    from mbh.episode.overrides import apply_overrides
+    from mbh.episode.models import ScriptLine
+    line = ScriptLine(id="", segment_id="s", type="narration", speaker="sauti", voice_id="sauti", layer=1, emotion="warm",
+                      pace="measured", intensity=0.4, text="He said, 'Go now.'", tts_text="He said, 'Go now.'", turn_id="t", section=1, paragraph=1)
+    class FakeCast:
+        def voice_id(self, s): return s
+    lines = [line]
+    warn = apply_overrides(lines, [{"section": 1, "paragraph": 1, "contains": "Go now", "split": [{"text": "He said,"}, {"text": "Go later."}]}], FakeCast())
+    assert warn and len(lines) == 1
+    warn = apply_overrides(lines, [{"section": 1, "paragraph": 1, "contains": "Go now", "split": [{"text": "He said,"}, {"text": "Go now.", "speaker": "x"}]}], FakeCast())
+    assert not warn and [l.speaker for l in lines] == ["sauti", "x"]

@@ -156,7 +156,7 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     try:
         report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro,
                           music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem,
-                                               args.music_preset or spec.music_preset))
+                                               args.music_preset or spec.music_preset, spec.music_rules))
     except RuntimeError as exc:
         print(str(exc), file=sys.stderr)
         return 1
@@ -164,11 +164,11 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     return 0
 
 
-def _music_cfg(choice, stem: Path | None = None, preset: str | None = None):
+def _music_cfg(choice, stem: Path | None = None, preset: str | None = None, rules: list | None = None):
     if not choice:
         return None
     from mbh.episode.music import load_music_config
-    cfg = load_music_config(None if choice is True else Path(choice), preset)
+    cfg = load_music_config(None if choice is True else Path(choice), preset, rules)
     if stem:
         cfg["stem_path"] = stem
     return cfg
@@ -178,7 +178,7 @@ def cmd_cues(args: argparse.Namespace) -> int:
     from mbh.episode.music import cue_sheet, load_music_config, resolve_cues
     spec = load_spec(args.spec)
     script = build_episode(spec)
-    cfg = load_music_config(args.music or (spec.music if isinstance(spec.music, Path) else None))
+    cfg = load_music_config(args.music or (spec.music if isinstance(spec.music, Path) else None), spec.music_preset, spec.music_rules)
     for row in cue_sheet(script.lines, resolve_cues(script.lines, cfg)):
         under = f" over {row['bed']}" if row["kind"] == "sting" else ""
         print(f"{row['line_id'][-4:]}  {row['speaker'][:14]:14} {row['emotion'] or '':15} -> {row['cue']:22}{under} "

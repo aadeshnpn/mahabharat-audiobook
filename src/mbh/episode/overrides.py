@@ -2,11 +2,21 @@
 
 An override matches one line by section, paragraph, and a unique substring of
 the KMG text. ``apply_all`` is required when the substring hits more than one line.
+
+Two structural edits run first, in file order, before the field edits:
+- ``"merge_next": true`` joins the matched line with the following line (e.g. a sentence the
+  splitter broke at "Om!").
+- ``"split": [{"text": ..., "speaker": ..., ...}, ...]`` replaces the matched line with several
+  lines (e.g. a quotation nested inside narration). The parts must re-join to the original
+  KMG text (quote marks and whitespace ignored), so the source wording cannot drift; each part may
+  carry the usual field edits.
 """
 
 from __future__ import annotations
 
+import dataclasses
 import json
+import re
 from pathlib import Path
 
 from collections.abc import Callable
@@ -35,7 +45,16 @@ def apply_overrides(
     respeak: Respeak | None = None,
 ) -> list[str]:
     warnings: list[str] = []
+    field_rows = []
     for row in overrides:
+        if "split" in row or row.get("merge_next"):
+            warnings.extend(_structural(lines, row, cast, respeak))
+            rest = {k: v for k, v in row.items() if k not in ("split", "merge_next")}
+            if row.get("merge_next") and set(rest) - {"section", "paragraph", "segment_id", "contains", "match"}:
+                field_rows.append(rest)  # field edits on a merged line apply to the merged line
+        else:
+            field_rows.append(row)
+    for row in field_rows:
         matches = [line for line in lines if _matches(line, row)]
         label = row.get("contains") or row.get("match") or "?"
         if not matches:
@@ -47,6 +66,44 @@ def apply_overrides(
         for line in matches:
             _apply_one(line, row, cast, respeak)
     return warnings
+
+
+def _norm(text: str) -> str:
+    return re.sub(r"[\s\"'\u201c\u201d\u2018\u2019]", "", text)
+
+
+def _structural(lines: list[ScriptLine], row: dict, cast: Cast, respeak: Respeak | None) -> list[str]:
+    label = row.get("contains") or row.get("match") or "?"
+    idx = [i for i, line in enumerate(lines) if _matches(line, row)]
+    if len(idx) != 1:
+        return [f"structural override matched {len(idx)} lines and was not applied: {label!r}"]
+    i = idx[0]
+    line = lines[i]
+    if row.get("merge_next"):
+        if i + 1 >= len(lines):
+            return [f"merge_next on the last line: {label!r}"]
+        nxt = lines[i + 1]
+        line.text = f"{line.text} {nxt.text}"
+        line.tts_text = f"{line.tts_text} {nxt.tts_text}"
+        line.flags = sorted(set(line.flags) | set(nxt.flags) | {"override", "merged"})
+        line.attribution = "override"
+        del lines[i + 1]
+        return []
+    parts = row["split"]
+    if _norm("".join(p["text"] for p in parts)) != _norm(line.text):
+        return [f"split parts do not re-join to the KMG text, not applied: {label!r}"]
+    strip = "gloss_stripped" in line.flags or bool(row.get("strip_glosses", True))
+    new = []
+    for k, part in enumerate(parts):
+        piece = dataclasses.replace(line, text=part["text"].strip(), flags=[f for f in line.flags if f != "gloss_stripped"])
+        piece.turn_id = f"{line.turn_id}.{k}"
+        piece.tts_text = respeak(piece, strip) if respeak else piece.text
+        _apply_one(piece, {key: v for key, v in part.items() if key != "text"}, cast, respeak)
+        if "split" not in piece.flags:
+            piece.flags.append("split")
+        new.append(piece)
+    lines[i:i + 1] = new
+    return []
 
 
 def _matches(line: ScriptLine, row: dict) -> bool:

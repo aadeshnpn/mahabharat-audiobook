@@ -33,3 +33,9 @@ def test_roman_key_and_between_anchors():
     assert extract_between("Then Vaisampayana spoke again") == "Vaisampayana"
     assert extract_between("then brahmacarya softly") == "brahmacarya"
     assert extract_between("again, softly.") is None and extract_between("Then V") is None
+
+
+def test_blank_respelling_never_drops_the_name():
+    from mbh.episode.lexicon import Lexeme, tts_form
+    assert tts_form(Lexeme(term="Mahadivya", respelling="")) == "Mahadivya"
+    assert tts_form(Lexeme(term="Sata-jyoti", respelling="  ")) == "Sata jyoti"

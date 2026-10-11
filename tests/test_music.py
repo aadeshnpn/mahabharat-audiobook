@@ -44,6 +44,7 @@ def test_emotion_table_covers_new_episodes_and_overrides_win():
     for l in lines:
         l.segment_id, l.paragraph, l.fx = "elsewhere", 99, None
     lines[0].text, lines[0].emotion = "Long narration about grief in a far country here.", "grief"
+    lines[0].paragraph = 98  # not the episode's last paragraph (that one gets the ending hook)
     lines[1].music = "none"
     lines[2].music = {"cue": "celestial_swell", "intensity": 0.3}
     cues = music.resolve_cues(lines, CFG)
@@ -114,7 +115,9 @@ def test_assemble_with_music_keeps_speech_on_top(tmp_path: Path):
         results.append(RenderResult(f"l{i}", f"k{i}", "rendered", str(p), spk, spk))
     script = EpisodeScript(episode_id="ep", title="t", book=1, target_duration_s=10, estimated_duration_s=8, timing={}, lines=lines)
     timing = Timing(wpm=160, gap_same_speaker_s=0.25, gap_speaker_change_s=0.5, gap_paragraph_s=1.5, gap_segment_s=1.5)
-    rep = assemble(script, results, timing, EngineSettings(sample_rate=rate, true_peak_db=-1.5), tmp_path / "o.wav", music_cfg=CFG)
+    cfg = copy.deepcopy(CFG)
+    cfg["rules"] = [r for r in cfg["rules"] if r.get("name") != "ending_hook"]  # single-paragraph toy episode
+    rep = assemble(script, results, timing, EngineSettings(sample_rate=rate, true_peak_db=-1.5), tmp_path / "o.wav", music_cfg=cfg)
     m = rep["music"]
     assert [r["cue"] for r in m["regions"]] == ["grave_drone", "celestial_swell"]
     assert m["stings"][0]["cue"] == "bright_lift"
@@ -139,3 +142,17 @@ def test_pause_bloom_lifts_long_pauses_only():
     assert abs(db(6.5) - 4) < 0.5          # 2 s paragraph pause swells above the bed
     assert db(3.2) < 0.5                   # 0.3 s same-speaker gap does not
     assert abs(db(2.0) + 6) < 0.5          # ducked under speech
+
+
+def test_episode_music_rules_win_and_ep01_has_scene_cues():
+    from mbh.episode.build import build_episode
+    from mbh.episode.spec import load_spec
+    spec = load_spec(ROOT / "episodes" / "ep01.yaml")
+    lines = build_episode(spec).lines
+    cfg = music.load_music_config(None, None, spec.music_rules)
+    pairs = list(zip(lines, music.resolve_cues(lines, cfg)))
+    cue = lambda start: next(c for l, c in pairs if l.text.startswith(start))
+    assert cue("In this world, when it was").cue == "celestial_swell"
+    assert cue("I will become the writer").kind == "sting"
+    assert cue("The tree of the Bharata").build_to_end
+    assert music.resolve_cues(lines, CFG)[0].cue == "sacred_invocation"

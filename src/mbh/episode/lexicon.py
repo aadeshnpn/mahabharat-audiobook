@@ -142,7 +142,7 @@ def tts_form(row: Lexeme) -> str:
     """What the engine reads: the verified spoken form, else the fallback. Never a caps/hyphen guide."""
     if row.spoken:
         return row.spoken
-    form = row.respelling if is_tts_safe(row.respelling) else fallback_form(row)
+    form = row.respelling if row.respelling.strip() and is_tts_safe(row.respelling) else fallback_form(row)
     return form
 
 

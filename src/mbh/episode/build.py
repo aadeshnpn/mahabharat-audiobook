@@ -63,6 +63,9 @@ def build_episode(
         return tts
 
     warnings.extend(apply_overrides(lines, load_overrides(spec.overrides_path), cast, respeak))
+    # an override that assigned a speaker resolves the attribution warning for that text
+    fixed = [line.text for line in lines if line.attribution == "override" and line.speaker != spec.narrator_default]
+    warnings = [w for w in warnings if not ("speaker unresolved" in w and any(t.startswith(w.rsplit(": ", 1)[-1].strip()[:40]) for t in fixed))]
     _renumber(spec.id, lines)
     total = apply_timing(lines, timing)
     ending = _ending(spec, lines)

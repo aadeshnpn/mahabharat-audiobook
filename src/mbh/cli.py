@@ -1,4 +1,4 @@
-"""Command line: mbh episode build|estimate|breaks|render|assemble|export-script."""
+"""Command line: mbh episode build|estimate|breaks|render|assemble|cues|export-script."""
 
 from __future__ import annotations
 
@@ -51,6 +51,16 @@ def main(argv: list[str] | None = None) -> int:
     assemble_p = actions.add_parser("assemble", help="join rendered lines, add gaps, normalize loudness")
     _spec_arg(assemble_p)
     assemble_p.add_argument("--out", type=Path)
+    assemble_p.add_argument("--music", nargs="?", const=True, default=None, metavar="CUES_YAML",
+                            help="mix line-driven music under the dialogue (default config configs/music.yaml)")
+    assemble_p.add_argument("--no-music", dest="music", action="store_false")
+    assemble_p.add_argument("--music-stem", type=Path, help="also write the music-only stem here")
+    assemble_p.add_argument("--music-preset", help="level preset from configs/music.yaml (default: its `preset:`)")
+
+    cues_p = actions.add_parser("cues", help="print the per-line music cue sheet (no audio)")
+    _spec_arg(cues_p)
+    cues_p.add_argument("--music", type=Path, help="cue config (default configs/music.yaml)")
+    cues_p.set_defaults(func=cmd_cues)
     assemble_p.set_defaults(func=cmd_assemble)
 
     export = actions.add_parser("export-script", help="write the review Markdown")
@@ -144,11 +154,35 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     timing, settings = load_timing(spec.timing_path)
     out = args.out or spec.path.with_name(f"{spec.id}.wav")
     try:
-        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro)
+        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro,
+                          music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem,
+                                               args.music_preset or spec.music_preset))
     except RuntimeError as exc:
         print(str(exc), file=sys.stderr)
         return 1
     print(json.dumps(report, indent=1))
+    return 0
+
+
+def _music_cfg(choice, stem: Path | None = None, preset: str | None = None):
+    if not choice:
+        return None
+    from mbh.episode.music import load_music_config
+    cfg = load_music_config(None if choice is True else Path(choice), preset)
+    if stem:
+        cfg["stem_path"] = stem
+    return cfg
+
+
+def cmd_cues(args: argparse.Namespace) -> int:
+    from mbh.episode.music import cue_sheet, load_music_config, resolve_cues
+    spec = load_spec(args.spec)
+    script = build_episode(spec)
+    cfg = load_music_config(args.music or (spec.music if isinstance(spec.music, Path) else None))
+    for row in cue_sheet(script.lines, resolve_cues(script.lines, cfg)):
+        under = f" over {row['bed']}" if row["kind"] == "sting" else ""
+        print(f"{row['line_id'][-4:]}  {row['speaker'][:14]:14} {row['emotion'] or '':15} -> {row['cue']:22}{under} "
+              f"{row['intensity']:.2f}  [{row['source']}]  {row['text'][:48]}")
     return 0
 
 

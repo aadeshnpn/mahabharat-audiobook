@@ -51,6 +51,9 @@ class EpisodeSpec:
     notes: list[str] = field(default_factory=list)
     # None follows configs/duration.yaml. True/False is this episode's choice.
     strip_glosses: bool | None = None
+    # music bed: None/False = off, True = configs/music.yaml, or a path to another cue config
+    music: bool | Path | None = None
+    music_preset: str | None = None
 
 
 def load_spec(path: Path) -> EpisodeSpec:
@@ -82,6 +85,8 @@ def load_spec(path: Path) -> EpisodeSpec:
         outro=_opt_path(data.get("outro"), path),
         notes=[str(item) for item in (data.get("notes") or [])],
         strip_glosses=_opt_bool(data, "strip_glosses"),
+        music_preset=(str(data["music_preset"]) if data.get("music_preset") else None),
+        music=(data.get("music") if isinstance(data.get("music"), bool) or data.get("music") is None else _opt_path(data.get("music"), path)),
     )
 
 

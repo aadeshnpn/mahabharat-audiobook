@@ -26,10 +26,32 @@ PYTHONPATH=src python3 -m mbh.cli episode assemble episodes/ep00_pilot.yaml
 - **Lexicon** (`lexicon/book01.tsv`: `term`, `respelling`, `ipa`, `source`, `verified`, `notes`, `spoken`). Whole-word substitution, longest match first, including possessives and a trailing plural *s*. Applied only to TTS text. `respelling` is the human guide (stress in caps); the engine reads `spoken`, a harness-verified plain form (VoxCPM2 spells caps chunks out as letters). Rows without one fall back to the KMG spelling, never the guide. Refresh the character-registry rows with `PYTHONPATH=src python3 -m mbh.episode.lexicon` (hand-written rows and harness results are kept).
 - **Pronunciation harness** (`tools/pronunciation/`, see `REPORT.md`). Each candidate form in a carrier sentence on 2-3 cloned voices, Whisper ASR, phoneme + romanised-key similarity, letter spell-out detection; `select.py` writes verified forms. 40 of the pilot's 41 lexicon terms are verified (Sauti pending a listening check).
 - **Loudness** (`src/mbh/episode/loudness.py`, ITU-R BS.1770 / libebur128 K-weighting and gating, no dependencies). `assemble` brings every line to `loudness.integrated_lufs` (lines under 1.5 s use calibrated 100 ms gating), then masters the episode to the same target with a peak limiter at `true_peak_db` − 0.5 dB and re-measures until within 0.1 LU. The report lists per-line and per-speaker loudness before/after. `python -m mbh.voices.normalize_refs` levels the voice reference clips (−20 LUFS; VoxCPM2's clone level follows the reference), keeping `ref_replaced_*_prenorm.wav` backups.
-- **Duration** (`configs/duration.yaml`). 160.9 words per minute, calibrated from the Book 1 §100 prototype (250 words, 99 s of speech plus the prototype gaps). Gaps: 0.25 s for the same speaker, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
+- **Duration** (`configs/duration.yaml`). 138.1 words per minute, fitted on the full ep00 pilot render (34 lines, 734 words; predicts 337.9 s vs 337.9 s rendered). The earlier 160.9 came from the §100 prototype, rendered without the instruction prefix. Gaps: 0.25 s for the same speaker, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.
 - **Render cache** (`build/cache/voxcpm2/<hash>.wav`, gitignored). The key is the TTS text, the instruction, the voice file, and the engine settings, so a rebuild re-synthesizes only changed lines.
 
-The pilot (`episodes/ep00_pilot.yaml`) is text only. It cold-opens on Bhishma's vow (Book 1 §100 ¶10–11, unabridged inside that span), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5 from the invocation. Estimated length is **4 min 53 s** (292.7 s, 34 lines; it was 5 min 38 s while hyphenated caps respellings were counted as several words). Parenthetical glosses are not spoken. It ends when the Rishi of Naimisha finishes asking for the Bharata. Sauti's reply begins at §1 ¶6.
+The pilot (`episodes/ep00_pilot.yaml`) is text only. It cold-opens on Bhishma's vow (Book 1 §100 ¶10–11, unabridged inside that span), then a two-sentence non-KMG bridge in Sauti's voice, then §1 ¶1–5 from the invocation. Rendered length is **5 min 38 s** (337.9 s, 34 lines; `samples/ep00_pilot_full_v1.mp3`, −16 LUFS). QA: `python tools/qa_episode.py episodes/ep00_pilot.script.json episodes/ep00_pilot.render.json` (per-line Whisper WER, names, speaker identity, cut-offs, silences). Parenthetical glosses are not spoken. It ends when the Rishi of Naimisha finishes asking for the Bharata. Sauti's reply begins at §1 ¶6.
+
+### Music (line-driven, under the dialogue)
+
+Music cues are chosen **per line** from the script's own tags, so any new episode gets a score automatically: `configs/music.yaml` maps emotion → cue/intensity (e.g. `solemn_resolve` → grave low Sa–Pa drone, `joyful` → a brief santoor-like lift, `awed` → celestial swell, `tender` → soft Sa–Ga pad resolving to Sa), and ordered scene rules match text, speaker, segment, paragraph, fx or neighbouring emotions (Om → temple bell over tanpura; the gods' voice → full celestial swell; Sauti at Naimisha → forest ashram with birds only in pauses; the Rishis' request → reverent anticipation that rises into a 4 s tail as the ending hook). Speech tags ("Sauti said,") inherit the next line's cue. Per-line override: add `"music": "<cue>" | "none" | {"cue": ..., "intensity": ...}` to an overrides row. All cues are synthesised on CPU around one tonic (Sa = D3); no model or samples needed (`pip install .[music]` for numpy/scipy).
+
+Dialogue protection is built in: beds duck 8 dB under every line (120 ms look-ahead), the music bus has a wide −8 dB dip at 1.6 kHz, stings and birds sit in pauses, and a hard per-line floor (`min_speech_to_music_db: 18`) turns the music down locally if any line would come closer.
+
+    mbh episode cues episodes/ep00_pilot.yaml            # cue sheet: line -> cue, intensity, why (rule/emotion/override)
+    mbh episode assemble episodes/ep00_pilot.yaml --music [--music-stem stem.wav]
+    python tools/qa_music.py SCRIPT.json REPORT.json MIX.wav DRY.mp3 [STEM.wav]   # A/B: WER and voice ID dry vs mixed
+
+Level presets live in `configs/music.yaml` (`preset: A` is the default; choose per episode with `music_preset:` or per run with `--music-preset`):
+
+| preset | bed | duck | speech-to-music floor | pause bloom | accent at key cues |
+|---|---|---|---|---|---|
+| quiet (v1) | −26 LUFS | 8 dB | 18 dB | 0 | 0 |
+| **A** (default) | −21 LUFS | 6 dB | 14 dB | +3 dB | +2.5 dB |
+| B | −17 LUFS | 5 dB | 12 dB | +4 dB | +3.5 dB |
+
+Pause bloom lifts the music in paragraph/segment pauses (≥ 0.9 s); `accent` (per cue) raises the vow drone, celestial swell, invocation and ending. The speech-band dip stays on in every preset. Pilot mixes: `samples/ep00_pilot_full_v2_music_A.mp3` and `_B.mp3` (−15.9 LUFS); cue sheet `episodes/ep00_pilot.cues.txt`. Music is off unless `--music` or `music: true` in the episode YAML.
+
+Render cache keys use a content hash of each voice reference (not its mtime), so checkouts do not trigger re-renders.
 
 ```bash
 PYTHONPATH=src python3 -m pytest -q tests/test_episode.py tests/test_lexicon.py tests/test_render_assemble.py tests/test_loudness.py tests/test_pronounce.py

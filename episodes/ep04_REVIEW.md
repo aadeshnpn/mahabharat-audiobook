@@ -46,3 +46,12 @@ Rajadharmanusasana, Suka-prasna-abhigamana, Brahma-prasnanusana, Jatugrihadaha, 
 Akshauhini units (Patti, Sena-mukha, Gulma, Gana, Vahini, Pritana, Chamu, Anikini), Akshauhini, Dwapara, Treta,
 Jamadagnya, Shodasarajika, and Khilvansa. Before rendering, I propose a pronunciation harness pass on Sauti covering
 Akshauhini and the unit names, with plain-word respellings for ¶8 compounds that fail.
+
+## Pronunciation pass (2026-10-12, Sauti, harness)
+- 111 names without a lexicon entry. Round 1 (KMG spelling): 95/111 passed, 10 failed, 6 inconclusive (retakes).
+- Round 2 (retakes + plain-word candidates, no caps/hyphens): all inconclusive names passed as KMG. New spoken forms:
+  Aisika→Aishika, Jalapradana→Jalapradaana, Pritana→Pritanaa, Swayamvara→Svayamvara, Sheta/Sweta→Shwayta,
+  Sambhava→Sambhava (the Ep1 provisional 'Sumbhuvuh' failed).
+- Still failing: **Akshauhini** (every form heard as "Akshawini"; this is close, and probably an English-ASR limit;
+  needs a listening check). Khilvansa and Nivata-kavachas passed on retake as KMG (1 of 2 takes).
+- After: 110/111 pass. Shard plan: `episodes/ep04.shards.txt` (5 shards, ~4 min each).

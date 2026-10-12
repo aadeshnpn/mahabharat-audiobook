@@ -240,6 +240,8 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > One chariot, one elephant, five foot-soldiers, and three horses form one Patti; three pattis make one Sena-mukha; three sena-mukhas are called a Gulma; three gulmas, a Gana; three ganas, a Vahini; three vahinis together are called a Pritana; three pritanas form a Chamu; three chamus, one Anikini; and an anikini taken ten times forms, as it is styled by those who know, an Akshauhini.
 
+*TTS:* One chariot, one elephant, five foot-soldiers, and three horses form one Patti; three pattis make one Sena-mukha; three sena-mukhas are called a Gulma; three gulmas, a Gana; three ganas, a Vahini; three vahinis together are called a Pritanaa; three Pritanaas form a Chamu; three chamus, one Anikini; and an anikini taken ten times forms, as it is styled by those who know, an Akshauhini.
+
 **08:14 · Sauti** · narration · warm · measured
 
 > O ye best of Brahmanas, arithmeticians have calculated that the number of chariots in an Akshauhini is twenty-one thousand eight hundred and seventy.
@@ -346,8 +348,6 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Then comes the Sambhava of wonderful and thrilling incidents.
 
-*TTS:* Then comes the Sumbhuvuh of wonderful and thrilling incidents.
-
 **11:53 · Sauti** · narration · warm · measured · gloss not spoken
 
 > Then comes Jatugrihadaha (setting fire to the house of lac) and then Hidimbabadha (the killing of Hidimba) parvas; then comes Baka-badha (slaughter of Baka) and then Chitraratha.
@@ -358,7 +358,7 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > The next is called Swayamvara (selection of husband by Panchali), in which Arjuna by the exercise of Kshatriya virtues, won Draupadi for wife.
 
-*TTS:* The next is called Swayamvara, in which Arjoona by the exercise of Kshatriya virtues, won Drowpadee for wife.
+*TTS:* The next is called Svayamvara, in which Arjoona by the exercise of Kshatriya virtues, won Drowpadee for wife.
 
 **12:07 · Sauti** · narration · warm · measured · gloss not spoken
 
@@ -526,7 +526,7 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Then the muster of troops and the story of Sheta.
 
-*TTS:* Then the muster of troops and the story of Sweta.
+*TTS:* Then the muster of troops and the story of Shwayta.
 
 **14:27 · Sauti** · narration · warm · measured
 
@@ -610,9 +610,13 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Then comes the 'Aisika' of harrowing incidents.
 
+*TTS:* Then comes the 'Aishika' of harrowing incidents.
+
 **16:03 · Sauti** · narration · warm · measured
 
 > Then comes 'Jalapradana' oblations of water to the manes of the deceased, and then the wailings of the women.
+
+*TTS:* Then comes 'Jalapradaana' oblations of water to the manes of the deceased, and then the wailings of the women.
 
 **16:11 · Sauti** · narration · warm · measured
 

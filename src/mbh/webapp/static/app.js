@@ -20,7 +20,11 @@ async function init() {
   $("#kindFilter").innerHTML = `<option value="">All kinds</option>` + META.kinds.map(k => `<option>${k}</option>`).join("");
   buildLegend(); buildGraph(); await refresh();
   if (!META.voice_generation.available) { $("#btnGen").disabled = true; $("#btnGen").title = "VoxCPM2 environment not found"; }
-  const h = location.hash.slice(1); if (h) select(h);
+  const h = location.hash.slice(1);
+  if (h) {
+    const tab = new URLSearchParams(location.search).get("tab");
+    select(h).then(() => { if (tab) openTab(tab); });
+  }
 }
 
 function buildLegend() {
@@ -118,7 +122,13 @@ async function select(id) {
   if (n.nonempty()) { cy.$(":selected").unselect(); n.select(); const nb = n.closedNeighborhood(); cy.elements().not(nb).addClass("faded"); n.connectedEdges().addClass("hl"); cy.animate({ center: { eles: n }, duration: 250 }); }
 }
 
+function openTab(name) {
+  const button = document.querySelector(`.tabs button[data-tab="${name}"]`);
+  if (button) button.click();
+}
 function renderVoice(c) {
+  const link = $("#studioVoiceLink");
+  if (link) link.href = `/studio#/voices/${c.id}`;
   $("#vClip").innerHTML = c.voice_clip ? `<audio controls preload="none" src="/${c.voice_clip}?t=${Date.now()}"></audio><div class="note">${esc(c.voice_clip)} · ${esc(c.voice_engine)}</div>` : `<p class="note">No reference clip yet.</p>`;
   $("#vPrompt").value = c.voice_prompt || c.voice_brief || ""; $("#vLine").value = c.sample_line || "";
   const grp = c.voice_group ? chars.find(x => x.id === c.voice_group) : null;
@@ -133,7 +143,7 @@ async function loadCands() {
 }
 async function loadJobs() {
   const jobs = await api("GET", `/api/jobs?character=${current}`);
-  $("#vJobs").innerHTML = jobs.length ? jobs.slice(0, 6).map(j => `<div class="job ${j.status}">#${j.id} ${j.status} · ${new Date(j.created * 1000).toLocaleTimeString()}${j.output ? " · " + esc(j.output) : ""}${j.log ? `<details><summary>log</summary><pre>${esc(j.log.slice(-800))}</pre></details>` : ""}</div>`).join("") : `<p class="note">No jobs.</p>`;
+  $("#vJobs").innerHTML = jobs.length ? jobs.slice(0, 6).map(j => `<div class="job ${j.status}">#${j.id} ${esc(j.kind || "")} ${j.status}${j.progress ? " " + Math.round(j.progress * 100) + "%" : ""} · ${new Date(j.created * 1000).toLocaleTimeString()}${j.message ? " · " + esc(j.message) : ""}${j.output ? " · " + esc(j.output) : ""}${j.log ? `<details><summary>log</summary><pre>${esc(j.log.slice(-800))}</pre></details>` : ""}</div>`).join("") : `<p class="note">No jobs. Heavy work runs one at a time.</p>`;
   const active = jobs.some(j => j.status === "queued" || j.status === "running");
   clearTimeout(pollTimer); if (active) pollTimer = setTimeout(() => { loadJobs(); loadCands(); }, 4000);
 }

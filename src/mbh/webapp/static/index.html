@@ -8,7 +8,12 @@
 </head>
 <body>
 <header>
-  <div class="brand">ॐ Mahabharata <span>Book 1 · Adi Parva · Character Map</span></div>
+  <div class="brand"><a href="/">ॐ Mahabharata</a> <span>Book 1 · Character Map</span></div>
+  <nav class="appnav" aria-label="Sections">
+    <a href="/" class="on">Map</a>
+    <a href="/studio">Studio</a>
+    <a href="/docs" target="_blank">API</a>
+  </nav>
   <input id="search" placeholder="Search name / alias / role…" autocomplete="off">
   <select id="kindFilter"><option value="">All kinds</option></select>
   <button id="btnNew">+ Character</button>
@@ -66,6 +71,7 @@
         <div class="actions"><button type="submit" class="primary">Save</button><button type="button" id="btnDelete" class="danger">Delete character</button></div>
       </form>
       <div class="tab" data-tab="voice" hidden>
+        <p class="note"><a id="studioVoiceLink" href="/studio#/voices">Open this voice in Episode Studio</a></p>
         <h3>Reference clip</h3>
         <div id="vClip"></div>
         <div class="row">

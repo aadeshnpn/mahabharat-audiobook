@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahabharata · Episode Studio</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/studio.css">
+</head>
+<body class="studio">
+<header>
+  <div class="brand"><a href="/">ॐ Mahabharata</a> <span>Episode Studio</span></div>
+  <nav class="appnav" aria-label="Sections">
+    <a href="/">Map</a>
+    <a href="/studio" class="on" id="nav-studio">Studio</a>
+    <a href="/docs" target="_blank">API</a>
+  </nav>
+  <nav class="subnav" id="subnav" aria-label="Studio">
+    <a href="#/episodes" data-route="episodes">Episodes</a>
+    <a href="#/new" data-route="new">New</a>
+    <a href="#/lexicon" data-route="lexicon">Lexicon</a>
+    <a href="#/voices" data-route="voices">Voices</a>
+    <a href="#/jobs" data-route="jobs">Jobs</a>
+  </nav>
+  <a id="jobpill" href="#/jobs"></a>
+</header>
+<main id="view"></main>
+<dialog id="splitDlg"><form method="dialog" id="splitForm">
+  <h3>Split this line</h3>
+  <p class="note">The parts must re-join to the original KMG wording. Quotes and spaces can move; the words cannot.</p>
+  <div id="splitParts"></div>
+  <div class="row"><button type="button" id="splitAdd">Add part</button></div>
+  <div class="actions"><button value="cancel" formnovalidate>Cancel</button><button value="ok" class="primary">Save split</button></div>
+</form></dialog>
+<div id="toast"></div>
+<script src="/static/studio.js"></script>
+</body>
+</html>

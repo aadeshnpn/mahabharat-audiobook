@@ -72,6 +72,11 @@ def _norm(text: str) -> str:
     return re.sub(r"[\s\"'\u201c\u201d\u2018\u2019]", "", text)
 
 
+def parts_rejoin(original: str, parts: list[str]) -> bool:
+    """True when split parts reproduce the KMG line (quotes and whitespace ignored)."""
+    return _norm("".join(parts)) == _norm(original)
+
+
 def _structural(lines: list[ScriptLine], row: dict, cast: Cast, respeak: Respeak | None) -> list[str]:
     label = row.get("contains") or row.get("match") or "?"
     idx = [i for i, line in enumerate(lines) if _matches(line, row)]

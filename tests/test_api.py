@@ -1,7 +1,7 @@
 import os, json, io, pathlib, tempfile, importlib, sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-os.environ["MBH_DB"] = tempfile.mktemp(suffix=".sqlite3")
+os.environ.setdefault("MBH_DB", tempfile.mktemp(suffix=".sqlite3"))
 from fastapi.testclient import TestClient
 from mbh.webapp import app as appmod
 c = TestClient(appmod.app)

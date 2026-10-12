@@ -1,7 +1,11 @@
 :root{--bg:#faf7f0;--ink:#2b2118;--muted:#7a6a58;--line:#e4dccb;--acc:#b5651d;--panel:#fffdf8}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);height:100vh;display:flex;flex-direction:column}
 header{display:flex;gap:8px;align-items:center;padding:8px 12px;background:#3b2412;color:#fbe9d0;flex-wrap:wrap}
-.brand{font-weight:700;font-size:16px;margin-right:auto}.brand span{font-weight:400;opacity:.75;font-size:13px;margin-left:6px}
+.brand{font-weight:700;font-size:16px}.brand span{font-weight:400;opacity:.75;font-size:13px;margin-left:6px}
+.brand a{color:inherit;text-decoration:none}
+.appnav{display:flex;gap:4px;margin-right:auto}
+.appnav a{color:#fbe9d0;text-decoration:none;padding:4px 10px;border-radius:999px;border:1px solid transparent}
+.appnav a.on,.appnav a:hover{border-color:#7a5434;background:#5a3a20}
 header input,header select{width:auto;padding:6px 8px;border-radius:6px;border:1px solid #6b4a2f;background:#fffaf2}header #search{width:260px}
 button,.filebtn{cursor:pointer;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;display:inline-block}
 header button{background:#5a3a20;color:#fbe9d0;border-color:#7a5434}

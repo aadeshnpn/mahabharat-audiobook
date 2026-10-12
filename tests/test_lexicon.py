@@ -37,8 +37,10 @@ def test_draupadi_krishna_is_respelt_only_after_resolution():
     raw = load_section(197).raw
     spoken = speakable(197, raw)
     assert "Kunti and Draupadi and Bhima" in spoken
-    out = apply_lexicon(spoken, load_lexicon())
-    assert "Draupadi" in out
+    lex = load_lexicon()
+    out = apply_lexicon(spoken, lex)
+    draupadi = next(r for r in lex if r.term == "Draupadi")
+    assert (draupadi.spoken if draupadi.verified else "Draupadi") in out  # verified spoken form (harness: 'Drowpadee')
     # The compound in the opening is Vyasa, not Draupadi.
     opening = speakable(1, load_section(1).paragraphs[3].text)
     assert "Draupadi" not in opening

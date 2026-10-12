@@ -1,0 +1,148 @@
+{
+ "overrides": [
+  {
+   "section": 1,
+   "paragraph": 30,
+   "contains": "Duryodhana, Kama, and Sakuni",
+   "emotion": "solemn",
+   "tts_text": "And Dhritarashtra hearing the ill news of the success of the Pandavas and recollecting the resolutions of Duryodhana, Karna, and Sakuni, pondered for a while and addressed to Sanjaya the following speech:",
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 31,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "pleading",
+   "direction": "an old blind king justifying himself to his minister; defensive, bitter, weary",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 32,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "grief",
+   "direction": "the litany begins: bitter wonder at each success of the Pandavas",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "grief",
+   "direction": "the litany through exile and war: hope draining away line by line; vary the weight, never sing-song",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 34,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "grief",
+   "direction": "broken: pity for Gandhari",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 35,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "grief",
+   "direction": "broken, on the edge of fainting",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 37,
+   "apply_all": true,
+   "speaker": "dhritarashtra",
+   "emotion": "grief",
+   "direction": "flat despair; wishes to die",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "that Sakti was hurled against Ghatotkacha by Karna",
+   "merge_next": true,
+   "tts_text": "When I heard that in the encounter between Karna and Ghatotkacha, that Sakti was hurled against Ghatotkacha by Karna, the same which was certainly to have slain Arjuna in battle, then, O Sanjaya, I had no hope of success.",
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "When I heard that Nakula.",
+   "merge_next": true,
+   "tts_text": "When I heard that Nakula, the son of Madri, having in the presence of the whole army engaged in single combat with the son of Drona and showing himself equal to him drove his chariot in circles around, then, O Sanjaya, I had no hope of success.",
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 39,
+   "apply_all": true,
+   "speaker": "sanjaya",
+   "emotion": "solemn",
+   "direction": "a wise minister consoling a grieving king: steady, compassionate, unhurried",
+   "set_type": "speech"
+  },
+  {
+   "section": 1,
+   "paragraph": 39,
+   "contains": "Thou hast heard, O Raja",
+   "emotion": "tender"
+  },
+  {
+   "section": 1,
+   "paragraph": 39,
+   "contains": "it behoveth thee not to grieve",
+   "emotion": "tender"
+  },
+  {
+   "section": 1,
+   "paragraph": 39,
+   "contains": "it behoveth thee not to throw away thy reason",
+   "emotion": "tender",
+   "direction": "gentle, firm close of the consolation"
+  },
+  {
+   "section": 1,
+   "paragraph": 40,
+   "contains": "Dwaipayana composed a holy Upanishad",
+   "emotion": "solemn",
+   "direction": "closing the scene; reverent"
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "When I heard that Kama and Duryodhana resolved",
+   "tts_text": "When I heard that Karna and Duryodhana resolved upon imprisoning Krishna displayed in himself the whole universe, then, O Sanjaya, I had no hope of success.",
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "When Kama said unto Bhishma",
+   "tts_text": "When Karna said unto Bhishma—I will not fight when thou art fighting—and, quitting the army, went away, then, O Sanjaya, I had no hope of success.",
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 40,
+   "contains": "restored his mind to peace",
+   "emotion": "tender",
+   "direction": "the king's grief quieted; gentle resolution"
+  }
+ ]
+}

@@ -1,0 +1,230 @@
+{
+ "date": "2026-10-11",
+ "voices": [
+  "sauti",
+  "bhishma",
+  "vaisampayana (round 2)"
+ ],
+ "verified": {
+  "Arjuna": "Arjoona",
+  "Pandavas": "Pandavas",
+  "Krishna": "Krishna",
+  "Vasudeva": "Vasudeva",
+  "Yudhishthira": "Yudhishthira",
+  "Dhritarashtra": "Dhritarashtra",
+  "Sanjaya": "Sanjaya",
+  "Kunti": "Kunti",
+  "Narada": "Naaruda",
+  "Bhimasena": "Bhimasena",
+  "Bhima": "Bheema",
+  "Duryodhana": "Duryodhana",
+  "Vidura": "Vidura",
+  "Draupadi": "Drowpadee",
+  "Karna": "Karna",
+  "Drona": "Drona",
+  "Aswatthaman": "Aswatthaman",
+  "Gandharvas": "Gandharvas",
+  "Rajasuya": "Rajasuya",
+  "Subhadra": "Subhadra",
+  "Duhsasana": "Dushaasana",
+  "Saindhava": "Saindhava",
+  "Ghatotkacha": "Ghatotkacha",
+  "Gandhari": "Gandhari",
+  "Madri": "Madri",
+  "Kauravas": "Kauravas",
+  "Nakula": "Nakula",
+  "Sahadeva": "Sahadeva",
+  "Jarasandha": "Jarasandha",
+  "Magadha": "Mugudha",
+  "Kripa": "Kripaa",
+  "Vrishni": "Vrishni",
+  "Pritha": "Pritha",
+  "Uttara": "Uttara",
+  "Gavalgana": "Guvulgana",
+  "Sakuni": "Shakuni",
+  "Sakra": "Shakra",
+  "Sikhandin": "Sikhandin",
+  "Kritavarma": "Kritavarma",
+  "Rakshasas": "Rakshasas",
+  "Brahmacharis": "Brahmachaarees",
+  "Matsya": "Matsya",
+  "Dasaratha": "Dasaratha"
+ },
+ "pending": {
+  "Indra": {
+   "heard": [
+    "saut:Indra"
+   ],
+   "tried": [
+    "Indra",
+    "Indruh"
+   ]
+  },
+  "Kshatriyas": {
+   "heard": [
+    "vais:Kshatriya",
+    "bhis:Kishriya"
+   ],
+   "tried": [
+    "Kshatriyas",
+    "Kshuttriyas"
+   ]
+  },
+  "Madhu": {
+   "heard": [
+    "saut:Madhu"
+   ],
+   "tried": [
+    "Madhu",
+    "Mudhoo"
+   ]
+  },
+  "Panchalas": {
+   "heard": [
+    "saut:Panchala"
+   ],
+   "tried": [
+    "Panchalas",
+    "Paanchaalas"
+   ]
+  },
+  "Akshauhinis": {
+   "heard": [
+    "saut:Akshawini"
+   ],
+   "tried": [
+    "Akshauhinis",
+    "Akshowhinees"
+   ]
+  },
+  "Bharadwaja": {
+   "heard": [
+    "bhis:Bharudvaja"
+   ],
+   "tried": [
+    "Bharudvaaja",
+    "Bharadwaja"
+   ]
+  },
+  "Abhimanyu": {
+   "heard": [
+    "bhis:Abhimanyu"
+   ],
+   "tried": [
+    "Abhimanyu",
+    "Abhimunyu"
+   ]
+  },
+  "Sastras": {
+   "heard": [
+    "bhis:Sastra"
+   ],
+   "tried": [
+    "Sastras",
+    "Shaastras"
+   ]
+  },
+  "Indraprastha": {
+   "heard": [
+    "bhis:intrapasta"
+   ],
+   "tried": [
+    "Indraprastha",
+    "Indraprustha"
+   ]
+  },
+  "Dwaraka": {
+   "heard": [
+    "saut:Dwaraka"
+   ],
+   "tried": [
+    "Dwaraka",
+    "Dwaarakaa"
+   ]
+  },
+  "Khandava": {
+   "heard": [
+    "bhis:Kondava"
+   ],
+   "tried": [
+    "Khaandava",
+    "Khandava"
+   ]
+  },
+  "Dhristadyumna": {
+   "heard": [
+    "bhis:Drishtadyumna"
+   ],
+   "tried": [
+    "Dhrishtadyumna",
+    "Dhristadyumna"
+   ]
+  },
+  "Upanishad": {
+   "heard": [
+    "bhis:Upanishad"
+   ],
+   "tried": [
+    "Upanishad",
+    "Oopunishud"
+   ]
+  },
+  "Gandiva": {
+   "heard": [
+    "saut:Gundiva"
+   ],
+   "tried": [
+    "Gandiva",
+    "Gaandeeva"
+   ]
+  },
+  "Yuyudhana": {
+   "heard": [
+    "saut:Udana",
+    "bhis:Yuyudana"
+   ],
+   "tried": [
+    "Yuyudhana",
+    "Yuyudhaana"
+   ]
+  },
+  "Asuras": {
+   "heard": [
+    "saut:you sure",
+    "bhis:Usura"
+   ],
+   "tried": [
+    "Usuras",
+    "Asuras"
+   ]
+  },
+  "Santanu": {
+   "heard": [
+    "bhis:Santanu"
+   ],
+   "tried": [
+    "Santanu",
+    "Shantanu"
+   ]
+  },
+  "Rama": {
+   "heard": [
+    "saut:R Then Rama",
+    "bhis:Rama"
+   ],
+   "tried": [
+    "Raama",
+    "Rama"
+   ]
+  },
+  "Saivya": {
+   "heard": [
+    "bhis:Shivya"
+   ],
+   "tried": [
+    "Shaivya",
+    "Saivya"
+   ]
+  }
+ }
+}

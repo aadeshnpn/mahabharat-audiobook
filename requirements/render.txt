@@ -1,0 +1,14 @@
+# TTS render + assembly + music (venv: proto/.venv-vox). Python 3.12, CPU only.
+# Install with  --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match
+#   so torch resolves to the +cpu wheels (no 2 GB CUDA download).
+# Verified versions on the build box (Debian 13, x86-64); full lock: requirements/lock/render.linux-x86_64.txt
+torch==2.14.1
+torchaudio==2.11.0
+torchcodec==0.17.0
+voxcpm==2.0.3
+transformers==5.19.0
+soundfile==0.14.0
+numpy==2.5.3
+scipy==1.18.1
+pyyaml==6.0.3
+pytest

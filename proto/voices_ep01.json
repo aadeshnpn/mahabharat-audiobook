@@ -1,0 +1,56 @@
+[
+ {
+  "id": "vyasa-A_seer_poet",
+  "n": 2,
+  "prompt": "An ancient Indian seer-poet, deep dark weathered baritone, slow and oracular, profoundly wise, compassionate authority, kindly beneath the austerity, clear Indian English accent",
+  "line": "O divine Brahma, by me a poem hath been composed which is greatly respected. But, after all, no writer of this work is to be found on earth."
+ },
+ {
+  "id": "vyasa-B_forest_sage",
+  "n": 2,
+  "prompt": "A very old forest ascetic and great sage, low resonant voice with a gentle rasp, grave, measured and deliberate, warm compassion and quiet command, very clear diction, clear Indian English accent",
+  "line": "O divine Brahma, by me a poem hath been composed which is greatly respected. But, after all, no writer of this work is to be found on earth."
+ },
+ {
+  "id": "vyasa-C_mellow_rishi",
+  "n": 2,
+  "prompt": "A venerable dark-skinned rishi in his seventies, rich mellow bass-baritone, calm and deeply wise, gentle gravity and authority, unhurried, clear Indian English accent",
+  "line": "O divine Brahma, by me a poem hath been composed which is greatly respected. But, after all, no writer of this work is to be found on earth."
+ },
+ {
+  "id": "brahma-A_grandsire",
+  "n": 2,
+  "prompt": "The creator god Brahma, the ancient Grandsire, vast serene deep bass, warm cosmic resonance, unhurried and impartial, benevolent, very clear diction, clear Indian English accent",
+  "line": "I esteem thee for thy knowledge of divine mysteries, before the whole body of celebrated Munis. Thou hast called thy present work a poem, wherefore it shall be a poem."
+ },
+ {
+  "id": "brahma-B_heavens",
+  "n": 2,
+  "prompt": "An immense ancient divine being speaking calmly from the heavens, deep warm resonant voice with a soft spacious echo, serene, majestic and kind, clear and intelligible, clear Indian English accent",
+  "line": "I esteem thee for thy knowledge of divine mysteries, before the whole body of celebrated Munis. Thou hast called thy present work a poem, wherefore it shall be a poem."
+ },
+ {
+  "id": "brahma-C_creator",
+  "n": 2,
+  "prompt": "A timeless grandfatherly creator deity, deep smooth bass, slow and calm, gentle benevolent authority, round warm tone, crisp clear words, clear Indian English accent",
+  "line": "I esteem thee for thy knowledge of divine mysteries, before the whole body of celebrated Munis. Thou hast called thy present work a poem, wherefore it shall be a poem."
+ },
+ {
+  "id": "ganesa-A_scribe",
+  "n": 2,
+  "prompt": "The divine scribe Ganesa, bright warm youthful-sounding male voice, playful and quick-witted but dignified, smiling, crisp diction, clear Indian English accent",
+  "line": "Speak on, O Muni, and I shall write down every word of it. But mark this well: my pen does not wait for anyone."
+ },
+ {
+  "id": "ganesa-B_bright_tenor",
+  "n": 2,
+  "prompt": "A cheerful clever young Indian god, warm bright tenor, a smile in the voice, lively and confident yet gracious and dignified, crisp clear diction, clear Indian English accent",
+  "line": "Speak on, O Muni, and I shall write down every word of it. But mark this well: my pen does not wait for anyone."
+ },
+ {
+  "id": "ganesa-C_wise_wit",
+  "n": 2,
+  "prompt": "A benevolent god of wisdom and new beginnings, warm rounded mid-range voice, good-humoured and witty, gently teasing but noble, clear articulate speech, clear Indian English accent",
+  "line": "Speak on, O Muni, and I shall write down every word of it. But mark this well: my pen does not wait for anyone."
+ }
+]

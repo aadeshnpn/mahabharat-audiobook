@@ -1,0 +1,66 @@
+# Episode 1. Text only: `mbh episode build episodes/ep01.yaml`
+# ASSUMPTION (user to confirm): the pilot is a standalone trailer, so Episode 1 starts again from
+# Book 1 §1 ¶1 and repeats the pilot's ¶1–5. If the pilot is instead Episode 0 of the run, start at ¶6
+# (segment `opening` below would be dropped) and the end point moves later (see notes).
+id: ep01
+title: "Episode 1: The Tree of the Bharata"
+book: 1
+target_duration_s: 1050
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep01.json
+strip_glosses: true
+music: true
+# Episode-specific music (prepended to configs/music.yaml rules; per-line "music" overrides still win)
+music_rules:
+  - {name: cosmic_egg,      match: {section: 1, paragraph: 7},           cue: celestial_swell,       intensity: 0.6}
+  - {name: wheel_of_yugas,  match: {section: 1, paragraph: 8},           cue: grave_drone,           intensity: 0.5}
+  - {name: brahma_arrives,  match: {section: 1, paragraph: 11, type: narration}, cue: sacred_solemn, intensity: 0.55}
+  - {name: ganesa_condition, match: {speaker: ganesa},                   cue: bright_lift,           intensity: 0.5}
+  - {name: tree_of_bharata, match: {section: 1, paragraph: [16, 17]},    cue: reverent_anticipation, intensity: 0.5, build_to_end: true}
+summary: >
+  Sauti, the bard, arrives at the forest of Naimisha and, at the sages' request, begins the
+  Mahabharata: an invocation, the cosmic egg and the creation, how Vyasa composed the poem,
+  Brahma's blessing, Ganesa agreeing to write it down, and Sauti's image of the whole work as a tree.
+end_reason: >
+  Ends at §1 ¶17, the close of Sauti's first long discourse (the quotation that opens at ¶6
+  closes here) on the image of the Bharata as an inexhaustible tree "as a source of livelihood to
+  all distinguished poets". It is a narration boundary, not mid-dialogue. The next paragraph opens
+  "I will now speak of the undying flowery and fruitful productions of this tree" and turns to the
+  first people of the story (Vyasa fathering Dhritarashtra, Pandu and Vidura): a natural hook
+  for Episode 2.
+notes:
+  - Unabridged KMG, §1 ¶1–17 in order. The only text not spoken is parenthetical glosses (strip_glosses), as in the pilot.
+  - "Alternative ends (138 wpm model, incl. pauses): ¶15 ~15:24 (Ganesa takes a moment to consider while Vyasa composes on: the end of the Ganesa scene); ¶18 ~18:02 (Vyasa fathers Dhritarashtra, Pandu and Vidura: first story beat); ¶21 ~20:23 (Sauti: 'I have also repeated one hundred thousand verses'). ¶22 (the tree of Yudhishthira) is ~20:41; this edition has no matching 'Duryodhana is a tree of passion' line before it, so it ends on half a contrast."
+  - "List-like stretches inside this cut: ¶7 (the Prajapatis and classes of beings), ¶9 (the generations of the Devas: numbers and names, ~1.4 min), ¶11 (Vyasa's catalogue of the poem's subjects, ~1.5 min of a 2.8 min paragraph), ¶17 (the Parvas as parts of a tree). Kept unabridged; see the episode report."
+segments:
+  - id: opening
+    kind: section
+    section: 1
+    paragraphs: [1, 5]
+    narrator: sauti
+    label: "Sauti arrives at Naimisha"
+    note: "Invocation; Ugrasrava (Sauti) arrives at Saunaka's twelve-year sacrifice; the Rishis ask for the Bharata."
+  - id: creation
+    kind: section
+    section: 1
+    paragraphs: [6, 10]
+    narrator: sauti
+    label: "Invocation and the creation"
+    note: "Sauti's invocation of Isana/Vishnu; the cosmic egg, Brahma and the Prajapatis; the turning wheel of the Yugas; the generations of the Devas; how the Bharata is read."
+  - id: composition
+    kind: section
+    section: 1
+    paragraphs: [11, 15]
+    narrator: sauti
+    label: "Vyasa, Brahma and Ganesa"
+    note: "Vyasa has composed the poem but has no writer; Brahma visits and blesses it; Ganesa agrees to write on condition his pen never stops; Vyasa's knotted verses."
+  - id: tree
+    kind: section
+    section: 1
+    paragraphs: [16, 17]
+    narrator: sauti
+    label: "The tree of the Bharata"
+    note: "The work as collyrium, sun, moon and lamp; the Parvas as the parts of a tree."

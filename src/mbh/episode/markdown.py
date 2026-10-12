@@ -17,7 +17,7 @@ def render_markdown(script: EpisodeScript, cast: Cast | None = None) -> str:
     wpm = script.timing.get("wpm")
     lines.append(f"Estimated duration **{clock}** ({script.estimated_duration_s:.0f} s) at {wpm} words per minute. Target {target}.")
     lines.append("")
-    lines.append("Speech rate is the VoxCPM2 prototype fit (Book 1 §100 excerpt: 250 words, 99 s including assemble gaps). "
+    lines.append("Speech rate is fitted to the full ep00 pilot render (734 words, 318.9 s of speech; configs/duration.yaml). "
                  "Pauses: 0.25 s inside a turn, 0.50 s on a speaker change, 1.50 s at a paragraph or segment boundary.")
     lines.append("")
     if script.ending.get("reason"):

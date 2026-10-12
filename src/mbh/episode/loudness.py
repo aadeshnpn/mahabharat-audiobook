@@ -1,8 +1,9 @@
 """ITU-R BS.1770-4 loudness, per-line normalisation and episode mastering. No required dependencies.
 
 K-weighting and gating follow libebur128 (shelf + high-pass biquads re-derived for any sample rate,
-400 ms blocks with 75 % overlap, -70 LUFS absolute gate, -10 LU relative gate). scipy, when present,
-only accelerates the filters. Lines too short to gate reliably (< ``SHORT_S``) use the same gating on
+400 ms blocks with 75 % overlap, -70 LUFS absolute gate, -10 LU relative gate). numpy/scipy, when
+present, keep whole episodes as float arrays (a 17 min episode as Python lists needs several GB) and accelerate
+the filters; results match the pure-Python path to rounding. Lines too short to gate reliably (< ``SHORT_S``) use the same gating on
 100 ms blocks, offset to agree with integrated loudness on speech (``SHORT_OFFSET_DB``).
 """
 
@@ -55,7 +56,7 @@ def k_weighted_power(samples, rate: int) -> list[float]:
         y = _np.asarray(samples, dtype=float)
         for b, a in _coeffs(rate):
             y = _lfilter(b, a, y)
-        return (y * y).tolist()
+        return y * y
     y = list(samples)
     for b, a in _coeffs(rate):
         y = _biquad(y, b, a)
@@ -70,6 +71,28 @@ def _prefix(power: list[float]) -> list[float]:
     return out
 
 
+def _gate(power, block: int, step: int):
+    """Mean-square of each gating block (absolute gate applied); None when nothing passes."""
+    if _np is not None:
+        pre = _np.concatenate(([0.0], _np.cumsum(_np.asarray(power, dtype=float))))
+        starts = _np.arange(0, len(power) - block + 1, step)
+        z = (pre[starts + block] - pre[starts]) / block
+        z = z[z > 10 ** ((_FLOOR + 0.691) / 10)]
+        if not len(z):
+            return None
+        rel = _lufs(float(z.mean())) - 10
+        gated = z[z > 10 ** ((rel + 0.691) / 10)]
+        return float(gated.mean())
+    pre = _prefix(power)
+    z = [(pre[s + block] - pre[s]) / block for s in range(0, len(power) - block + 1, step)]
+    z = [v for v in z if _lufs(v) > _FLOOR]
+    if not z:
+        return None
+    rel = _lufs(sum(z) / len(z)) - 10
+    gated = [v for v in z if _lufs(v) > rel]
+    return sum(gated) / len(gated)
+
+
 def _lufs(ms: float) -> float:
     return -0.691 + 10 * math.log10(ms) if ms > 0 else float("-inf")
 
@@ -80,14 +103,8 @@ def integrated_lufs(samples, rate: int, power: list[float] | None = None) -> flo
     block, step = int(0.4 * rate), int(0.1 * rate)
     if len(power) < block:
         return None
-    pre = _prefix(power)
-    z = [(pre[s + block] - pre[s]) / block for s in range(0, len(power) - block + 1, step)]
-    z = [v for v in z if _lufs(v) > _FLOOR]
-    if not z:
-        return None
-    rel = _lufs(sum(z) / len(z)) - 10
-    gated = [v for v in z if _lufs(v) > rel]
-    return round(_lufs(sum(gated) / len(gated)), 2)
+    ms = _gate(power, block, step)
+    return None if ms is None else round(_lufs(ms), 2)
 
 
 SHORT_OFFSET_DB = -0.9  # calibrated on 26 rendered speech clips >= 2 s: short gating reads 0.92 dB above BS.1770
@@ -99,16 +116,10 @@ def short_lufs(samples, rate: int, power: list[float] | None = None) -> float | 
     block, step = max(1, int(0.1 * rate)), max(1, int(0.025 * rate))
     if len(power) < block:
         block = step = len(power)
-    if not power:
+    if not len(power):
         return None
-    pre = _prefix(power)
-    z = [(pre[s + block] - pre[s]) / block for s in range(0, len(power) - block + 1, step)]
-    z = [v for v in z if _lufs(v) > _FLOOR]
-    if not z:
-        return None
-    rel = _lufs(sum(z) / len(z)) - 10
-    gated = [v for v in z if _lufs(v) > rel]
-    return round(_lufs(sum(gated) / len(gated)) + SHORT_OFFSET_DB, 2)
+    ms = _gate(power, block, step)
+    return None if ms is None else round(_lufs(ms) + SHORT_OFFSET_DB, 2)
 
 
 def measure(samples, rate: int) -> tuple[float | None, str]:
@@ -121,8 +132,10 @@ def measure(samples, rate: int) -> tuple[float | None, str]:
     return short_lufs(samples, rate, power), "short"
 
 
-def gain(samples, db: float) -> list[float]:
+def gain(samples, db: float):
     g = 10 ** (db / 20)
+    if _np is not None:
+        return _np.asarray(samples, dtype=float) * g
     return [s * g for s in samples]
 
 
@@ -130,15 +143,33 @@ def normalize_line(samples, rate: int, target_lufs: float) -> tuple[list[float],
     """Bring one rendered line to the target loudness (gain clamped to +/-MAX_LINE_GAIN_DB)."""
     before, method = measure(samples, rate)
     if before is None:
-        return list(samples), {"before": None, "method": method, "gain_db": 0.0}
+        return _copy(samples), {"before": None, "method": method, "gain_db": 0.0}
     g = max(-MAX_LINE_GAIN_DB, min(MAX_LINE_GAIN_DB, target_lufs - before))
     return gain(samples, g), {"before": before, "method": method, "gain_db": round(g, 2)}
+
+
+def _copy(samples):
+    return _np.array(samples, dtype=float) if _np is not None else list(samples)
 
 
 def limit_peaks(samples, rate: int, ceiling_db: float, attack_ms: float = 5.0, release_ms: float = 60.0) -> tuple[list[float], int]:
     """Sparse look-ahead peak limiter: gain dips only around samples above the ceiling, with a linear
     attack before and release after each over. Returns (samples, number of overs)."""
     ceiling = 10 ** (ceiling_db / 20)
+    if _np is not None:
+        x = _np.asarray(samples, dtype=float)
+        idx = _np.flatnonzero(_np.abs(x) > ceiling)
+        if not len(idx):
+            return x.copy(), 0
+        att, rel = max(1, int(attack_ms / 1000 * rate)), max(1, int(release_ms / 1000 * rate))
+        g = _np.ones(len(x))
+        for i in idx:
+            need = ceiling / abs(x[i])
+            j0, j1 = max(0, i - att), min(len(x), i + rel + 1)
+            j = _np.arange(j0, j1)
+            w = _np.where(j <= i, need + (1 - need) * (i - j) / att, need + (1 - need) * (j - i) / rel)
+            g[j0:j1] = _np.minimum(g[j0:j1], w)
+        return x * g, int(len(idx))
     overs = [i for i, s in enumerate(samples) if abs(s) > ceiling]
     if not overs:
         return list(samples), 0
@@ -164,14 +195,14 @@ def master(samples, rate: int, target_lufs: float, true_peak_db: float, margin_d
     (margin covers inter-sample peaks and lossy encoding), and re-measure until within ``tolerance``."""
     before = integrated_lufs(samples, rate)
     if before is None:
-        return list(samples), {"before": None, "after": None, "iterations": 0}
-    g, out, overs, after = target_lufs - before, list(samples), 0, before
+        return _copy(samples), {"before": None, "after": None, "iterations": 0}
+    g, out, overs, after = target_lufs - before, _copy(samples), 0, before
     for it in range(1, 5):
         out, overs = limit_peaks(gain(samples, g), rate, true_peak_db - margin_db)
         after = integrated_lufs(out, rate)
         if after is None or abs(after - target_lufs) <= tolerance:
             break
         g += target_lufs - after
-    peak = max(abs(s) for s in out)
+    peak = float(_np.max(_np.abs(out))) if _np is not None and len(out) else max((abs(s) for s in out), default=0.0)
     return out, {"before": before, "after": after, "gain_db": round(g, 2), "iterations": it, "limited_samples": overs,
                  "sample_peak_db": round(20 * math.log10(peak), 2) if peak else None}

@@ -46,7 +46,7 @@ def assemble(
             continue
         gap = gap_before(line, prev, timing)
         if gap:
-            pieces.append(("gap", [0.0] * int(round(gap * rate))))
+            pieces.append(("gap", _zeros(int(round(gap * rate)))))
             cursor += len(pieces[-1][1])
         samples, src_rate = read_mono(Path(item.path))
         samples = resample(samples, src_rate, rate)
@@ -68,7 +68,7 @@ def assemble(
     if music_cfg:
         tail = float(music_cfg.get("tail_s", 4.0))
         if tail > 0 and not (outro and outro.exists()):
-            pieces.append(("gap", [0.0] * int(round(tail * rate))))
+            pieces.append(("gap", _zeros(int(round(tail * rate)))))
     mixed = _concat(pieces)
     if music_cfg:
         mixed, music_info = _add_music(script, mixed, rate, intervals, music_cfg)
@@ -166,12 +166,25 @@ def _add_music(script: EpisodeScript, mixed: list[float], rate: int, intervals, 
     }
     if cfg.get("stem_path"):  # music-only stem, pre-master, for review
         from mbh.episode.audioio import write_pcm16
-        write_pcm16(Path(cfg["stem_path"]), bus.tolist(), rate)
+        write_pcm16(Path(cfg["stem_path"]), bus, rate)
         info["stem_path"] = str(cfg["stem_path"])
-    return (speech + bus).tolist(), info
+    return speech + bus, info
 
 
-def _concat(pieces: list[tuple[str, list[float]]]) -> list[float]:
+def _zeros(n: int):
+    try:
+        import numpy as np
+        return np.zeros(n)
+    except ImportError:  # pragma: no cover
+        return [0.0] * n
+
+
+def _concat(pieces: list[tuple[str, list[float]]]):
+    try:
+        import numpy as np
+        return np.concatenate([np.asarray(p, dtype=float) for _n, p in pieces]) if pieces else np.zeros(0)
+    except ImportError:  # pragma: no cover
+        pass
     out: list[float] = []
     for _name, samples in pieces:
         out.extend(samples)

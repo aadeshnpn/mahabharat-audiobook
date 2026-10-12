@@ -63,6 +63,8 @@ class ScriptLine:
     duration_s: float = 0.0
     # music cue override: None (follow configs/music.yaml), a cue name, "none", or {cue, intensity}
     music: str | dict | None = None
+    # retake number: 0 = default render; N>0 seeds the TTS with N and gets its own cache entry
+    take: int = 0
 
     def to_dict(self) -> dict:
         return {
@@ -92,6 +94,7 @@ class ScriptLine:
             "start_s": round(self.start_s, 3),
             "duration_s": round(self.duration_s, 3),
             **({"music": self.music} if self.music is not None else {}),
+            **({"take": self.take} if self.take else {}),
         }
 
 

@@ -30,7 +30,7 @@ Devavrata	DAY-vuh-VRAH-tuh		curated	1	Bhishma's name before the vow; harness 202
 Gangeya	GAHN-gay-yuh		curated	0		
 Ganga	GUNG-gah		curated	1	harness 2026-10-10: 'Ganga' passed 3/3 takes on bhishma,sauti,vaisampayana	Ganga
 Yamuna	YUH-moo-nuh		curated	0		
-Isana	ee-SHAH-nuh		curated	0		
+Isana	ee-SHAH-nuh		curated	0	harness ep01 2026-10-10: 'Isana' passed (sauti, 1 take; provisional until a 2nd voice)	Isana
 Brahmarshi	brah-MAR-shee		curated	1	harness 2026-10-10: 'Brahmarshi' passed 3/3 takes on bhishma,sauti,vaisampayana	Brahmarshi
 Brahmarshis	brah-MAR-sheez		curated	1	harness 2026-10-10: 'Brahmarshis' passed 3/3 takes on bhishma,sauti,vaisampayana	Brahmarshis
 Shastra	SHAH-struh		curated	1	harness 2026-10-10: 'Shastra' passed 3/3 takes on sauti,vaisampayana	Shastra
@@ -44,24 +44,24 @@ Pauravas	POW-ruh-vuhs		curated	0
 Kshatriya	KSHA-tree-yuh		curated	0		
 Kshatriyas	KSHA-tree-yuhs		curated	0		
 Brahmana	BRAH-muh-nuh		curated	0		
-Brahmanas	BRAH-muh-nuhs		curated	0		
+Brahmanas	BRAH-muh-nuhs		curated	0	harness ep01 2026-10-10: 'Brahmanas' passed (sauti, 1 take; provisional until a 2nd voice)	Brahmanas
 Sudra	SHOO-druh		curated	0		
 Sudras	SHOO-druhs		curated	0		
 Vaisya	VYE-shyuh		curated	0		
 Vaisyas	VYE-shyuhs		curated	0		
 Soma	SOH-muh		curated	0		
-Prajapati	pruh-jah-PAH-tee		curated	0		
-Prajapatis	pruh-jah-PAH-teez		curated	0		
-Pitamaha	pit-ah-MAH-huh		curated	0		
-Hiranyagarbha	hir-UN-yuh-GAR-bhuh		curated	0		
-Parameshthi	puh-ruh-MAYSH-tee		curated	0		
+Prajapati	pruh-jah-PAH-tee		curated	0	harness ep01 2026-10-10: 'Prajapati' passed (sauti, 1 take; provisional until a 2nd voice)	Prajapati
+Prajapatis	pruh-jah-PAH-teez		curated	0	harness ep01 2026-10-10: 'Prajapatis' passed (sauti, 1 take; provisional until a 2nd voice)	Prajapatis
+Pitamaha	pit-ah-MAH-huh		curated	0	harness ep01 2026-10-10: 'Pitamaha' passed (sauti, 1 take; provisional until a 2nd voice)	Pitamaha
+Hiranyagarbha	hir-UN-yuh-GAR-bhuh		curated	0	harness ep01 2026-10-10: 'Hiranyagarbha' passed (sauti, 1 take; provisional until a 2nd voice)	Hiranyagarbha
+Parameshthi	puh-ruh-MAYSH-tee		curated	0	harness ep01 2026-10-10: 'Parameshthi' passed (sauti, 1 take; provisional until a 2nd voice)	Parameshthi
 Suta	SOO-tuh		curated	0		
 sloka	SHLOH-kuh		curated	0		
 slokas	SHLOH-kuhs		curated	0		
-Asrama	AA-shruh-muh		curated	0		
-Upanishads	oo-puh-ni-SHUDS		curated	0		
-Angas	UNG-uhs		curated	0		
-Adhyatma	uhd-YAH-tmuh		curated	0		
+Asrama	AA-shruh-muh		curated	0	harness ep01 2026-10-10: 'Asrama' passed (sauti, 1 take; provisional until a 2nd voice)	Asrama
+Upanishads	oo-puh-ni-SHUDS		curated	0	harness ep01 2026-10-10: 'Upanishads' passed (sauti, 1 take; provisional until a 2nd voice)	Upanishads
+Angas	UNG-uhs		curated	0	harness ep01 2026-10-10: 'Angas' passed (sauti, 1 take; provisional until a 2nd voice)	Angas
+Adhyatma	uhd-YAH-tmuh		curated	0	harness ep01 2026-10-10: 'Adhyatma' passed (sauti, 1 take; provisional until a 2nd voice)	Adhyatma
 Abhimanyu	uh-bhi-MUN-yoo		character-registry	0		
 Adhiratha	UDH-i-ruh-tuh		character-registry	0		
 Adrisyanti	uh-drish-YUN-tee		character-registry	0		
@@ -73,10 +73,10 @@ Arjuna	UR-joo-nuh		character-registry	0
 Aruna	UH-roo-nuh		character-registry	0		
 Aruni	AA-roo-nee		character-registry	0		
 Ashtaka	USH-tuh-kuh		character-registry	0		
-Astika	AAS-tee-kuh		character-registry	0		
+Astika	AAS-tee-kuh		character-registry	0	harness ep01 2026-10-10: 'Astika' passed (sauti, 1 take; provisional until a 2nd voice)	Astika
 Aswasena	USH-vuh-say-nuh		character-registry	0		
 Aswatthaman	ush-VUT-thaa-maa		character-registry	0		
-Aswins	USH-vinz		character-registry	0		
+Aswins	USH-vinz		character-registry	0	harness ep01 2026-10-10: 'Aswins' passed (sauti, 1 take; provisional until a 2nd voice)	Aswins
 Aurva	OUR-vuh		character-registry	0		
 Ayoda-Dhaumya	AA-yo-duh DHOW-myuh		character-registry	0		
 Balarama	BUH-luh-raa-muh		character-registry	0		
@@ -87,9 +87,9 @@ Brahma	BRUH-muh		character-registry	1	harness 2026-10-10: 'Brahma' passed 3/3 ta
 Chitraratha	CHIT-ruh-ruh-thuh		character-registry	0	CHIT-ruh-ruh-thuh (ung-guh-ruh-PUR-nuh)	
 Chitravahana	chi-truh-VAA-huh-nuh		character-registry	0		
 Chyavana	CHYUH-vuh-nuh		character-registry	0		
-Devas	DAY-vuhs		character-registry	0		
+Devas	DAY-vuhs		character-registry	0	harness ep01 2026-10-10: 'Devas' passed (sauti, 1 take; provisional until a 2nd voice)	Devas
 Devayani	day-VUH-yaa-nee		character-registry	0		
-Dharma	DHUR-muh		character-registry	0		
+Dharma	DHUR-muh		character-registry	0	harness ep01 2026-10-10: 'Dharma' passed (sauti, 1 take; provisional until a 2nd voice)	Dharma
 Dhrishtadyumna	dhrish-tuh-DYOOM-nuh		character-registry	0		
 Dirghatamas	deer-guh-TUH-mus		character-registry	0		
 Drahyu	DROOH-yoo		character-registry	0		
@@ -134,9 +134,9 @@ Menaka	MAY-nuh-kaa		character-registry	0
 Nakula	NUH-koo-luh		character-registry	0		
 Nandini	NUN-di-nee		character-registry	0		
 Narada	NAA-ruh-duh		character-registry	0		
-Parasara	PUH-raa-shuh-ruh		character-registry	0		
+Parasara	PUH-raa-shuh-ruh		character-registry	0	harness ep01 2026-10-10: 'Parasara' passed (sauti, 1 take; provisional until a 2nd voice)	Parasara
 Paushya	POWSH-yuh		character-registry	0		
-Pitris	PI-treez		character-registry	0		
+Pitris	PI-treez		character-registry	0	harness ep01 2026-10-10: pending (no form passed on sauti)	
 Pramadvara	pruh-MUD-vuh-raa		character-registry	0		
 Pratardana	pruh-TUR-duh-nuh		character-registry	0		
 Pratipa	pruh-TEE-puh		character-registry	0		
@@ -155,7 +155,7 @@ Santanu	SHUN-tuh-noo		character-registry	0
 Saradwat	shuh-RUD-vut		character-registry	0		
 Sarisrikka	shuh-ri-SRIK-kuh		character-registry	0		
 Sarmishtha	shur-MISH-thaa		character-registry	0		
-Satyavati	SUT-yuh-vuh-tee		character-registry	0		
+Satyavati	SUT-yuh-vuh-tee		character-registry	0	harness ep01 2026-10-10: 'Satyavati' passed (sauti, 1 take; provisional until a 2nd voice)	Satyavati
 Saunaka	SHOW-nuh-kuh		character-registry	1	harness 2026-10-10: 'Shownuhkuh' passed 3/3 takes on bhishma,sauti,vaisampayana	Shownuhkuh
 Sauti	SOW-tee		character-registry	0	SOW-tee (OOG-ruh-shruh-vuh); harness: no form verified; ASR hears 'Saudi'/'Sautee'/'Soty' (t heard as d); KMG spelling used, needs a listening check	Sauti
 Sesha	SHAY-shuh		character-registry	0		
@@ -179,21 +179,89 @@ Vaka	BUH-kuh		character-registry	0
 Valakhilyas	vaa-luh-KHIL-yuhz		character-registry	0		
 Varga	VUR-gaa		character-registry	0		
 Varuna	VUH-roo-nuh		character-registry	0		
-Vasishtha	vuh-SHISH-thuh		character-registry	0		
+Vasishtha	vuh-SHISH-thuh		character-registry	0	harness ep01 2026-10-10: 'Vasishtha' passed (sauti, 1 take; provisional until a 2nd voice)	Vasishtha
 Vasuki	VAA-soo-kee		character-registry	0		
 Vasumat	VUH-soo-mut		character-registry	0		
-Vasus	VUH-sooz		character-registry	0		
+Vasus	VUH-sooz		character-registry	0	harness ep01 2026-10-10: 'Vasus' passed (sauti, 1 take; provisional until a 2nd voice)	Vasus
 Vayu	VAA-yoo		character-registry	0		
 Vichitravirya	vi-CHI-truh-VEER-yuh		character-registry	0		
 Vidura	VI-doo-ruh		character-registry	0		
 Vikarna	vi-KUR-nuh		character-registry	0		
 Vinata	vi-NUH-taa		character-registry	0		
-Vishnu	VISH-noo		character-registry	0		
+Vishnu	VISH-noo		character-registry	0	harness ep01 2026-10-10: 'Vishnu' passed (sauti, 1 take; provisional until a 2nd voice)	Vishnu
 Viswamitra	vish-VAA-mi-truh		character-registry	0		
 Vrihaspati	vri-HUS-puh-tee		character-registry	0		
 Vrishaparvan	vrish-uh-PUR-vun		character-registry	0		
 Vyasa	VYAA-suh		character-registry	1	harness 2026-10-10: 'Vyasa' passed 2/2 takes on bhishma,sauti	Vyasa
 Yadu	YUH-doo		character-registry	0		
-Yayati	yuh-YAA-tee		character-registry	0		
+Yayati	yuh-YAA-tee		character-registry	0	harness ep01 2026-10-10: 'Yayati' passed (sauti, 1 take; provisional until a 2nd voice)	Yayati
 Yudhishthira	yoo-DHISH-thi-ruh		character-registry	0		
 Yuyutsu	yoo-YOOT-soo		character-registry	0		
+Ganesa	Ganesa		ep01-harness	0	harness ep01 2026-10-10: 'Ganesa' passed (sauti, 1 take; provisional until a 2nd voice)	Ganesa
+Sata-jyoti	Sata-jyoti		ep01-harness	0	harness ep01 2026-10-10: 'Sata jyoti' passed (sauti, 1 take; provisional until a 2nd voice)	Sata jyoti
+Yuga	Yuga		ep01-harness	0	harness ep01 2026-10-10: 'Yuga' passed (sauti, 1 take; provisional until a 2nd voice)	Yuga
+Daksha	Daksha		ep01-harness	0	harness ep01 2026-10-10: 'Daksha' passed (sauti, 1 take; provisional until a 2nd voice)	Daksha
+Rajarshis	Rajarshis		ep01-harness	0	harness ep01 2026-10-10: 'Rajarshis' passed (sauti, 1 take; provisional until a 2nd voice)	Rajarshis
+Dasa-jyoti	Dasa-jyoti		ep01-harness	0	harness ep01 2026-10-10: 'Dasa jyoti' passed (sauti, 1 take; provisional until a 2nd voice)	Dasa jyoti
+Sahasra-jyoti	Sahasra-jyoti		ep01-harness	0	harness ep01 2026-10-10: 'Sahasra jyoti' passed (sauti, 1 take; provisional until a 2nd voice)	Sahasra jyoti
+Artha	Artha		ep01-harness	0	harness ep01 2026-10-10: 'Artha' passed (sauti, 1 take; provisional until a 2nd voice)	Artha
+Kama	Kama		ep01-harness	0	harness ep01 2026-10-10: 'Kama' passed (sauti, 1 take; provisional until a 2nd voice)	Kama
+Raja	Raja		ep01-harness	0	harness ep01 2026-10-10: 'Raja' passed (sauti, 1 take; provisional until a 2nd voice)	Raja
+Hari	Hari		ep01-harness	0	harness ep01 2026-10-10: 'Hari' passed (sauti, 1 take; provisional until a 2nd voice)	Hari
+Mahadivya	Mahadivya		ep01-harness	0	harness ep01 2026-10-10: 'Mahadivya' passed (sauti, 1 take; provisional until a 2nd voice)	Mahadivya
+Suraguru	Suraguru		ep01-harness	0	harness ep01 2026-10-10: 'Suraguru' passed (sauti, 1 take; provisional until a 2nd voice)	Suraguru
+Sthanu	Sthanu		ep01-harness	0	harness ep01 2026-10-10: 'Sthanu' passed (sauti, 1 take; provisional until a 2nd voice)	Sthanu
+Manu	Manu		ep01-harness	0	harness ep01 2026-10-10: 'Manu' passed (sauti, 1 take; provisional until a 2nd voice)	Manu
+Prachetas	Prachetas		ep01-harness	0	harness ep01 2026-10-10: pending (no form passed on sauti)	
+Viswe-devas	Viswe-devas		ep01-harness	0	harness ep01 2026-10-10: 'Viswe devas' passed (sauti, 1 take; provisional until a 2nd voice)	Viswe devas
+Adityas	Adityas		ep01-harness	0	harness ep01 2026-10-10: 'Adityas' passed (sauti, 1 take; provisional until a 2nd voice)	Adityas
+Yakshas	Yakshas		ep01-harness	0	harness ep01 2026-10-10: 'Yakshas' passed (sauti, 1 take; provisional until a 2nd voice)	Yakshas
+Sadhyas	Sadhyas		ep01-harness	0	harness ep01 2026-10-10: 'Sadhyas' passed (sauti, 1 take; provisional until a 2nd voice)	Sadhyas
+Pisachas	Pisachas		ep01-harness	0	harness ep01 2026-10-10: 'Pisachas' passed (sauti, 1 take; provisional until a 2nd voice)	Pisachas
+Guhyakas	Guhyakas		ep01-harness	0	harness ep01 2026-10-10: 'Goohyakas' passed (sauti, 1 take; provisional until a 2nd voice)	Goohyakas
+Pakshas	Pakshas		ep01-harness	0	harness ep01 2026-10-10: 'Pakshas' passed (sauti, 1 take; provisional until a 2nd voice)	Pakshas
+Yugas	Yugas		ep01-harness	0	harness ep01 2026-10-10: 'Yugas' passed (sauti, 1 take; provisional until a 2nd voice)	Yugas
+Div	Div		ep01-harness	0	harness ep01 2026-10-10: 'Div' passed (sauti, 1 take; provisional until a 2nd voice)	Div
+Brihadbhanu	Brihadbhanu		ep01-harness	0	harness ep01 2026-10-10: 'Brihadbhanu' passed (sauti, 1 take; provisional until a 2nd voice)	Brihadbhanu
+Chakshus	Chakshus		ep01-harness	0	harness ep01 2026-10-10: 'Chakshus' passed (sauti, 1 take; provisional until a 2nd voice)	Chakshus
+Atma	Atma		ep01-harness	0	harness ep01 2026-10-10: 'Atma' passed (sauti, 1 take; provisional until a 2nd voice)	Atma
+Vibhavasu	Vibhavasu		ep01-harness	0	harness ep01 2026-10-10: 'Vibhavasu' passed (sauti, 1 take; provisional until a 2nd voice)	Vibhavasu
+Savita	Savita		ep01-harness	0	harness ep01 2026-10-10: 'Savita' passed (sauti, 1 take; provisional until a 2nd voice)	Savita
+Richika	Richika		ep01-harness	0	harness ep01 2026-10-10: 'Richika' passed (sauti, 1 take; provisional until a 2nd voice)	Richika
+Arka	Arka		ep01-harness	0	harness ep01 2026-10-10: 'Arka' passed (sauti, 1 take; provisional until a 2nd voice)	Arka
+Bhanu	Bhanu		ep01-harness	0	harness ep01 2026-10-10: 'Bhanu' passed (sauti, 1 take; provisional until a 2nd voice)	Bhanu
+Asavaha	Asavaha		ep01-harness	0	harness ep01 2026-10-10: 'Asavaha' passed (sauti, 1 take; provisional until a 2nd voice)	Asavaha
+Ravi	Ravi		ep01-harness	0	harness ep01 2026-10-10: 'Ravi' passed (sauti, 1 take; provisional until a 2nd voice)	Ravi
+Vivaswans	Vivaswans		ep01-harness	0	harness ep01 2026-10-10: 'Vivaswans' passed (sauti, 1 take; provisional until a 2nd voice)	Vivaswans
+Mahya	Mahya		ep01-harness	0	harness ep01 2026-10-10: 'Mahhya' passed (sauti, 1 take; provisional until a 2nd voice)	Mahhya
+Deva-vrata	Deva-vrata		ep01-harness	0	harness ep01 2026-10-10: 'Deva vrata' passed (sauti, 1 take; provisional until a 2nd voice)	Deva vrata
+Su-vrata	Su-vrata		ep01-harness	0	harness ep01 2026-10-10: 'Su vrata' passed (sauti, 1 take; provisional until a 2nd voice)	Su vrata
+Kurus	Kurus		ep01-harness	0	harness ep01 2026-10-10: 'Kurus' passed (sauti, 1 take; provisional until a 2nd voice)	Kurus
+Yadus	Yadus		ep01-harness	0	harness ep01 2026-10-10: 'Yadus' passed (sauti, 1 take; provisional until a 2nd voice)	Yadus
+Ikshwaku	Ikshwaku		ep01-harness	0	harness ep01 2026-10-10: 'Ikshwaku' passed (sauti, 1 take; provisional until a 2nd voice)	Ikshwaku
+Yoga	Yoga		ep01-harness	0	harness ep01 2026-10-10: 'Yoga' passed (sauti, 1 take; provisional until a 2nd voice)	Yoga
+Vijnana	Vijnana		ep01-harness	0	harness ep01 2026-10-10: 'Vijnana' passed (sauti, 1 take; provisional until a 2nd voice)	Vijnana
+Uparichara	Uparichara		ep01-harness	0	harness ep01 2026-10-10: 'Uparichara' passed (sauti, 1 take; provisional until a 2nd voice)	Uparichara
+Rik	Rik		ep01-harness	0	harness ep01 2026-10-10: 'Rik' passed (sauti, 1 take; provisional until a 2nd voice)	Rik
+Sama	Sama		ep01-harness	0	harness ep01 2026-10-10: 'Sama' passed (sauti, 1 take; provisional until a 2nd voice)	Sama
+Yajur	Yajur		ep01-harness	0	harness ep01 2026-10-10: 'Yajur' passed (sauti, 1 take; provisional until a 2nd voice)	Yajur
+Nyaya	Nyaya		ep01-harness	0	harness ep01 2026-10-10: 'Nyaya' passed (sauti, 1 take; provisional until a 2nd voice)	Nyaya
+Pasupatadharma	Pasupatadharma		ep01-harness	0	harness ep01 2026-10-10: 'Pasupatadharma' passed (sauti, 1 take; provisional until a 2nd voice)	Pasupatadharma
+Suka	Suka		ep01-harness	0	harness ep01 2026-10-10: 'Suka' passed (sauti, 1 take; provisional until a 2nd voice)	Suka
+Sanjaya	Sanjaya		ep01-harness	0	harness ep01 2026-10-10: 'Sanjaya' passed (sauti, 1 take; provisional until a 2nd voice)	Sanjaya
+Sruti	Sruti		ep01-harness	0	harness ep01 2026-10-10: 'Sruti' passed (sauti, 1 take; provisional until a 2nd voice)	Sruti
+Pauloma	Pauloma		ep01-harness	0	harness ep01 2026-10-10: 'Pauloma' passed (sauti, 1 take; provisional until a 2nd voice)	Pauloma
+Sambhava	Sambhava		ep01-harness	0	harness ep01 2026-10-10: 'Sumbhuvuh' passed (sauti, 1 take; provisional until a 2nd voice)	Sumbhuvuh
+Sabha	Sabha		ep01-harness	0	harness ep01 2026-10-10: 'Sabha' passed (sauti, 1 take; provisional until a 2nd voice)	Sabha
+Aranya	Aranya		ep01-harness	0	harness ep01 2026-10-10: 'Aranya' passed (sauti, 1 take; provisional until a 2nd voice)	Aranya
+Arani	Arani		ep01-harness	0	harness ep01 2026-10-10: 'Arani' passed (sauti, 1 take; provisional until a 2nd voice)	Arani
+Virata	Virata		ep01-harness	0	harness ep01 2026-10-10: 'Virata' passed (sauti, 1 take; provisional until a 2nd voice)	Virata
+Udyoga	Udyoga		ep01-harness	0	harness ep01 2026-10-10: 'Udyoga' passed (sauti, 1 take; provisional until a 2nd voice)	Udyoga
+Drona	Drona		ep01-harness	0	harness ep01 2026-10-10: 'Drona' passed (sauti, 1 take; provisional until a 2nd voice)	Drona
+Salya	Salya		ep01-harness	0	harness ep01 2026-10-10: 'Salya' passed (sauti, 1 take; provisional until a 2nd voice)	Salya
+Stri	Stri		ep01-harness	0	harness ep01 2026-10-10: 'Stri' passed (sauti, 1 take; provisional until a 2nd voice)	Stri
+Aishika	Aishika		ep01-harness	0	harness ep01 2026-10-10: 'Aishika' passed (sauti, 1 take; provisional until a 2nd voice)	Aishika
+Santi	Santi		ep01-harness	0	harness ep01 2026-10-10: 'Santi' passed (sauti, 1 take; provisional until a 2nd voice)	Santi
+Aswamedha	Aswamedha		ep01-harness	0	harness ep01 2026-10-10: 'Ushvumaydhuh' passed (sauti, 1 take; provisional until a 2nd voice)	Ushvumaydhuh
+Asramavasika	Asramavasika		ep01-harness	0	harness ep01 2026-10-10: 'Asramavasika' passed (sauti, 1 take; provisional until a 2nd voice)	Asramavasika
+Mausala	Mausala		ep01-harness	0	harness ep01 2026-10-10: 'Mausala' passed (sauti, 1 take; provisional until a 2nd voice)	Mausala

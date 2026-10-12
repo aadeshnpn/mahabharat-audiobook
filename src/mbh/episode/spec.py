@@ -54,6 +54,7 @@ class EpisodeSpec:
     # music bed: None/False = off, True = configs/music.yaml, or a path to another cue config
     music: bool | Path | None = None
     music_preset: str | None = None
+    music_rules: list[dict] = field(default_factory=list)
 
 
 def load_spec(path: Path) -> EpisodeSpec:
@@ -85,6 +86,7 @@ def load_spec(path: Path) -> EpisodeSpec:
         outro=_opt_path(data.get("outro"), path),
         notes=[str(item) for item in (data.get("notes") or [])],
         strip_glosses=_opt_bool(data, "strip_glosses"),
+        music_rules=list(data.get("music_rules") or []),
         music_preset=(str(data["music_preset"]) if data.get("music_preset") else None),
         music=(data.get("music") if isinstance(data.get("music"), bool) or data.get("music") is None else _opt_path(data.get("music"), path)),
     )

@@ -3,6 +3,10 @@
 A full-cast cinematic audiobook of the Mahabharata (KMG English translation), built with open-source TTS on CPU only. Book 1 (Adi Parva) is the first target.
 See `PLAN.md` for the spec and phases, `research-tts.md` for the model survey, and `proto/NOTES.md` for prototype results.
 
+> **Run it on your own machine:** [docs/LOCAL_SETUP.md](docs/LOCAL_SETUP.md) (Linux, CPU only: `scripts/setup.sh`, then
+> `scripts/smoke_test.sh`). **Make an episode:** [docs/EPISODE_WORKFLOW.md](docs/EPISODE_WORKFLOW.md)
+> (`scripts/render_episode.sh episodes/ep01.yaml --qa`). Approved voices: [voices/registry.json](voices/registry.json).
+
 ## Episodes
 
 An episode is a YAML spec. `mbh episode build` turns it into a line-level script: speaker, emotion, pace, the original KMG wording, and the TTS text after Krishna→Draupadi resolution and the pronunciation lexicon. The same command writes a Markdown script for review. Audio rendering is optional and is not run in tests.

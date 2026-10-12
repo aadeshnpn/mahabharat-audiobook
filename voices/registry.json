@@ -1,0 +1,128 @@
+{
+ "about": "Approved voices. Each ref.wav is a VoxCPM2 voice-design clip leveled to -20 LUFS; the renderer clones it. Design briefs/candidates: proto/voices*.json + tools/voice_design/. Characters with voice_group use that group's voice.",
+ "voices": {
+  "bhishma": {
+   "name": "Bhishma",
+   "ref": "voices/bhishma/ref.wav",
+   "ref_sha256": "8156a2c63336700c059b5a57b84a36cf16bb2ad348b68002cbd3131f80223dfc",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A powerful Indian warrior prince in his prime who ages into the patriarch, commanding low voice, noble and resolute, clear Indian English accent",
+   "sample_line": "Hear, O ye kings! From this day I adopt the vow of Brahmacharya. I shall never take a wife, nor shall I ever sit upon the throne.",
+   "notes": "Selected from proto candidates (bhishma_vox_s10_0.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "brahma": {
+   "name": "Brahma",
+   "ref": "voices/brahma/ref.wav",
+   "ref_sha256": "86c2f805221aa2ade8fc0ced45db0b0dca4e9243c6eba53c3e4a1ff6760efcf5",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "The creator god Brahma, the ancient Grandsire, vast serene deep bass, warm cosmic resonance, unhurried and impartial, benevolent, very clear diction, clear Indian English accent",
+   "sample_line": "",
+   "notes": "Selected brahma-A_grandsire_vox_s10_0 (3 briefs x2): design WER 0, F0 94 Hz; clone WER 0/0.14 on ep01-0062/0063; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
+   "shared_by": []
+  },
+  "dasa": {
+   "name": "Chief of the fishermen",
+   "ref": "voices/dasa/ref.wav",
+   "ref_sha256": "b18e910a62a874d9f0a73df9d1d50c9d669653b839e0c8ddfc4b4f25e1608948",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "An older Indian fisherman chieftain, earthy slightly gravelly voice, shrewd and deliberate, clear Indian English accent",
+   "sample_line": "O amiable one, there is something else to be said, something else to be reflected upon by thee. I have my doubts in respect of the children thou mayst beget.",
+   "notes": "Selected from proto candidates (dasa_vox_s10_1.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "devas_chorus": {
+   "name": "Devas (heavenly voice)",
+   "ref": "voices/devas_chorus/ref.wav",
+   "ref_sha256": "c30ff09b2f20408d5db751d4d877ddf5e0550d14a5542f99602e6ce72afb726a",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A majestic divine voice from the heavens, deep, resonant and echoing, clear Indian English accent",
+   "sample_line": "This one is Bhishma, the terrible! Let flowers rain upon the son of Ganga, for his vow shall echo through the worlds.",
+   "notes": "Selected from proto candidates (devas_chorus_vox_s10_1.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "ganesa": {
+   "name": "Ganesa",
+   "ref": "voices/ganesa/ref.wav",
+   "ref_sha256": "a81419800acd161697e90b2d65fe3f610a93ec1edd8c9fe1a2b79dbb0ed93e80",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "The divine scribe Ganesa, bright warm youthful-sounding male voice, playful and quick-witted but dignified, smiling, crisp diction, clear Indian English accent",
+   "sample_line": "",
+   "notes": "Selected ganesa-A_scribe_vox_s10_0 (3 briefs x2): design WER 0.08, F0 246 Hz; clone WER 0 on ep01-0071; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
+   "shared_by": []
+  },
+  "kunti": {
+   "name": "Kunti",
+   "ref": "voices/kunti/ref.wav",
+   "ref_sha256": "b0cda74d92ec7f8bf8d0ba793392fa04bdf36d6b38c7d9b33d75bc72d33ff6b3",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A young Indian queen who matures into a resilient mother, gentle yet dignified voice, clear Indian English accent",
+   "sample_line": "O sage, my father and mother and other superiors are alive. O thou foremost of the twice-born, I dare not grant thy request.",
+   "notes": "Selected from proto candidates (kunti_vox_s10_0.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "naimisha_rishis": {
+   "name": "Rishis of Naimisha",
+   "ref": "voices/naimisha_rishis/ref.wav",
+   "ref_sha256": "2ccd1916fc03ef5ec86f669194adc56cdb2510f1c014b1a7098da3b65e8aaca9",
+   "engine": "voxcpm2 (design, 10 steps)",
+   "prompt": "An elderly Indian forest ascetic speaking on behalf of an assembly of sages, warm and slightly resonant tenor-baritone, calm, reverent and unhurried, gentle and kindly, ancient-feeling yet very clear, clear Indian English accent",
+   "sample_line": "Whence comest thou, O lotus-eyed Sauti, and where hast thou spent the time? Tell us, who ask thee, in detail. We are desirous of hearing that history also called Bharata, the holy composition of the wonderful Vyasa.",
+   "notes": "Group voice (voice_group target for satasringa_rishis, valakhilyas). Selected 2026-10-10 from 8 VoxCPM2 designs (4 prompts x 2) + chorus variants: candidates/naimisha_rishis-A_aged_sage_vox_s10_0.wav. Single aged sage chosen over a baked-in chorus: cloned-line identity 0.96 vs 0.91 for the chorus ref, equal intelligibility. Narrator similarity 0.53-0.63 (Sauti/Vaisampayana/Bhishma). A subtle doubling chorus is better applied per line at assembly (fx). QA: proto/logs/qa_naimisha.json, proto/logs/qa_clone_naimisha.json. Pending Aadesh's listening approval.",
+   "shared_by": [
+    "satasringa_rishis",
+    "valakhilyas"
+   ]
+  },
+  "santanu": {
+   "name": "Santanu",
+   "ref": "voices/santanu/ref.wav",
+   "ref_sha256": "10584dd4d0601621c4e6f017d1c362542802850db02624fb4022486fac64faab",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A mature Indian king, rich regal baritone, warm but touched with melancholy, clear Indian English accent",
+   "sample_line": "Who art thou, and whose daughter? What dost thou do here, O timid one? Tell me truly, for my heart is drawn to thee.",
+   "notes": "Selected from proto candidates (santanu_vox_s10_0.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "satyavati": {
+   "name": "Satyavati",
+   "ref": "voices/satyavati/ref.wav",
+   "ref_sha256": "2ee39b9470e8122cbf973bc60189d0739a286b110fa969be9db6cd9f144004a6",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A fisherman's daughter who becomes queen-mother, bright clear voice maturing into a shrewd measured alto, clear Indian English accent",
+   "sample_line": "Blest be thou! I am the daughter of the chief of the fishermen. At his command, I am engaged in rowing passengers across this river in my boat.",
+   "notes": "Selected from proto candidates (satyavati_vox_s10_1.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "sauti": {
+   "name": "Sauti",
+   "ref": "voices/sauti/ref.wav",
+   "ref_sha256": "157c30ca6af1de12e23cc831d49d20879fd02aaea9c57e1d6aafb7b2507eb10b",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "A mature Indian bard and professional storyteller, warm resonant baritone, fluent and rhythmic, humble yet assured, clear Indian English accent",
+   "sample_line": "Ugrasrava, the son of Lomaharshana, surnamed Sauti, well-versed in the Puranas, bending with humility, one day approached the great sages of rigid vows.",
+   "notes": "Selected from proto candidates (sauti_vox_s10_0.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "vaisampayana": {
+   "name": "Vaisampayana",
+   "ref": "voices/vaisampayana/ref.wav",
+   "ref_sha256": "647adef6015f3709dc5e235f8fe300f1836197cb24faedfce377c526636d9306",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "An elderly Indian sage-reciter, deep calm wise voice, slow deliberate measured cadence, gravitas without coldness, clear Indian English accent",
+   "sample_line": "The monarch Santanu, the most adored of the gods and royal sages, was known in all the worlds for his wisdom, virtues, and truthfulness.",
+   "notes": "Selected from proto candidates (vaisampayana_vox_s10_1.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
+   "shared_by": []
+  },
+  "vyasa": {
+   "name": "Vyasa",
+   "ref": "voices/vyasa/ref.wav",
+   "ref_sha256": "cb3d98ce52314141990fd41e36b8b0fb4c4fc4f4a1579f6ebe66ef06c2e33bb3",
+   "engine": "voxcpm2 (proto, 10 steps)",
+   "prompt": "The great seer Vyasa, an old dark-skinned ascetic, low grave voice with a soft rasp and quiet intensity, slow measured cadence, compassionate authority, crisp clear diction, clear Indian English accent",
+   "sample_line": "",
+   "notes": "Selected vyasa-E_dark_ascetic_vox_s10_1 (round 2 of 5 briefs x2): design WER 0, F0 80 Hz; clone WER 0/0 on ep01-0069/0073; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
+   "shared_by": []
+  }
+ }
+}

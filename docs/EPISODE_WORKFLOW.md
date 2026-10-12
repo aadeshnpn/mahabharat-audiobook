@@ -231,3 +231,15 @@ re-assemble, and QA `--only <line_id>`. Note the timestamps of anything worth a 
   new `voices/<id>/ref.wav` + `voices/registry.json`, and code. **Not** committed: `samples/` (MP3s), `build/`,
   `data/mbh.sqlite3`, candidates, model weights. MP3s are published as GitHub release assets.
 * Bundle for hand-off without pushing: `git bundle create ../mahabharat-export/<branch>.bundle main..<branch>`.
+
+## Sharded rendering (standard for every episode)
+
+Episodes render in shards of a few minutes of speech each, split at line boundaries, and are assembled only after every shard is done. Short processes mean an interruption or hang loses at most one line.
+
+```bash
+mbh episode render --list-shards --shard-minutes 4 episodes/ep03.yaml   # print the shard plan
+mbh episode render --shard 3 --shard-minutes 4 episodes/ep03.yaml        # render one shard
+setsid nohup tools/render_sharded.sh episodes/ep03.yaml 4 > logs/render_ep03_sharded.log 2>&1 &
+```
+
+`tools/render_sharded.sh` runs each shard as its own process with retries, writes `build/shards/<episode>/shard_K.done`, then writes the full render manifest (all lines cached) and runs `assemble --music --music-preset A`. Lines share the per-line cache, so rerun the same command after a crash or VM restart and it resumes. A shard render never overwrites the full-episode manifest. Delete the `.done` markers if you change the script so shards are rechecked.

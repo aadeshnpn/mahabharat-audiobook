@@ -14,7 +14,7 @@ from mbh.episode.markdown import render_markdown
 from mbh.episode.models import EpisodeScript, ScriptLine
 from mbh.episode.render import RenderResult, VoxCPM2Backend, render_script
 from mbh.episode.spec import load_spec
-from mbh.episode.timing import format_duration, load_timing
+from mbh.episode.timing import format_duration, load_timing, speech_seconds
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -46,6 +46,9 @@ def main(argv: list[str] | None = None) -> int:
     _spec_arg(render)
     render.add_argument("--dry-run", action="store_true")
     render.add_argument("--limit", type=int)
+    render.add_argument("--shard", type=int, help="render only shard N (1-based) of the episode")
+    render.add_argument("--shard-minutes", type=float, default=4.0, help="estimated minutes of speech per shard")
+    render.add_argument("--list-shards", action="store_true", help="print the shard plan and exit")
     render.set_defaults(func=cmd_render)
 
     assemble_p = actions.add_parser("assemble", help="join rendered lines, add gaps, normalize loudness")
@@ -121,10 +124,23 @@ def cmd_breaks(args: argparse.Namespace) -> int:
 def cmd_render(args: argparse.Namespace) -> int:
     spec = load_spec(args.spec)
     script = build_episode(spec)
-    _timing, settings = load_timing(spec.timing_path)
+    timing, settings = load_timing(spec.timing_path)
+    shards = plan_shards(script, timing, args.shard_minutes)
+    if args.list_shards:
+        for i, ids in enumerate(shards, 1):
+            secs = sum(speech_seconds(_line_text(l), timing) for l in script.lines if l.id in set(ids))
+            print(f"shard {i}\t{len(ids)} lines\t~{format_duration(secs)}\t{ids[0]}..{ids[-1]}")
+        print(f"shards={len(shards)}")
+        return 0
+    only = None
+    if args.shard is not None:
+        if not 1 <= args.shard <= len(shards):
+            print(f"shard must be 1..{len(shards)}", file=sys.stderr)
+            return 2
+        only = set(shards[args.shard - 1])
     backend = VoxCPM2Backend()
     try:
-        results = render_script(script, backend, settings, dry_run=args.dry_run, limit=args.limit)
+        results = render_script(script, backend, settings, dry_run=args.dry_run, limit=args.limit, only=only)
     except ModuleNotFoundError as exc:
         print(f"VoxCPM2 is not installed in this interpreter ({exc}).", file=sys.stderr)
         print("Render with the prototype environment: MBH_VOX_PYTHON=proto/.venv-vox/bin/python", file=sys.stderr)
@@ -136,10 +152,29 @@ def cmd_render(args: argparse.Namespace) -> int:
             print(f"{item.status}\t{item.line_id}\t{item.voice_id}")
     print(" ".join(f"{key}={value}" for key, value in sorted(counts.items())))
     manifest = spec.path.with_name(f"{spec.id}.render.json")
-    if not args.dry_run:
+    if not args.dry_run and only is None:  # a shard never overwrites the full-episode manifest
         manifest.parent.mkdir(parents=True, exist_ok=True)
         manifest.write_text(json.dumps([item.to_dict() for item in results], indent=1), encoding="utf-8")
     return 0
+
+
+def _line_text(line) -> str:
+    return getattr(line, "tts_text", None) or getattr(line, "text", "") or ""
+
+
+def plan_shards(script: EpisodeScript, timing, minutes: float) -> list[list[str]]:
+    """Split the script at line boundaries into chunks of about ``minutes`` of estimated speech."""
+    limit = max(minutes, 0.5) * 60.0
+    shards: list[list[str]] = [[]]
+    acc = 0.0
+    for line in script.lines:
+        secs = speech_seconds(_line_text(line), timing)
+        if shards[-1] and acc + secs > limit:
+            shards.append([])
+            acc = 0.0
+        shards[-1].append(line.id)
+        acc += secs
+    return [s for s in shards if s]
 
 
 def cmd_assemble(args: argparse.Namespace) -> int:

@@ -1,6 +1,6 @@
 {
  "book": 1,
- "generated_at": "2026-10-10T21:47:33-0600",
+ "generated_at": "2026-10-11T21:33:54-0600",
  "method": "text-grounded extraction (LLM reading of KMG text) + computed counts",
  "skipped_sections": {
   "176": "duplicate of 177 in source; original §176 text missing"
@@ -3501,6 +3501,59 @@
    "provisional": false,
    "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
    "kind_detail": ""
+  },
+  {
+   "id": "sanjaya",
+   "name": "Sanjaya",
+   "aliases": [
+    "son of Gavalgana"
+   ],
+   "respelling": "SUN-juh-yuh",
+   "gender": "male",
+   "kind": "human",
+   "era_age": "adult; Dhritarashtra's minister and counsellor",
+   "role": "Dhritarashtra's minister: hears the blind king's lament and consoles him; later envoy and reporter of the war",
+   "personality": [
+    "wise",
+    "steady",
+    "compassionate",
+    "frank"
+   ],
+   "emotional_range": [
+    "consoling",
+    "grave",
+    "philosophical",
+    "gently admonishing"
+   ],
+   "voice_brief": "A wise, mature Indian royal minister and counsellor, calm, steady, measured baritone, compassionate yet frank, quietly philosophical, clear Indian English accent",
+   "backstory": "Dhritarashtra pours out to him the long lament 'When I heard..., then, O Sanjaya, I had no hope of success' (§1 ¶30–35). The 'wise son of Gavalgana' consoles the fainting king with the tale of the great kings of old who also died, and with the power of Time: 'Time createth all things and Time destroyeth all creatures' (§1 ¶38–40). The contents of the Parvas name him as Dhritarashtra's envoy to the Pandavas ('Sanjaya-yana', §2 ¶14), the narrator of the Bhishma Parva (§2 ¶15), and 'the foremost of ministers', who attains the blessed state in the Asramavasika (§2 ¶25).",
+   "key_sections": [
+    1,
+    2
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2
+   ],
+   "narrative_sections": [],
+   "summary_mentions": [
+    1,
+    2
+   ],
+   "mentions": 82,
+   "speaking_lines": 0,
+   "speech_by_section": {},
+   "flags": [
+    "single_section_speaker",
+    "non_speaking"
+   ],
+   "provenance": "text-extracted",
+   "voice_group": "",
+   "count_notes": "",
+   "provisional": false,
+   "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
+   "kind_detail": "Suta; minister"
   },
   {
    "id": "indra",
@@ -7686,7 +7739,7 @@
    "respelling": "dhri-tuh-RAASH-truh",
    "gender": "male",
    "kind": "human",
-   "era_age": "young prince→aging blind king",
+   "era_age": "young prince→aged blind king (old by his own account in the §1 lament: 'because I am old')",
    "role": "Blind elder son of Vyasa and Ambika; king of the Kurus; father of Duryodhana and ninety-nine others",
    "personality": [
     "conflicted",
@@ -7699,9 +7752,12 @@
     "longing",
     "veiled envy",
     "false cheer",
-    "regret"
+    "regret",
+    "grief",
+    "despair",
+    "self-justification"
    ],
-   "voice_brief": "A middle-aged blind Indian king, deep but wavering voice, anxious, emotional, clear Indian English accent",
+   "voice_brief": "An aged blind Indian king, deep resonant voice worn by age and sorrow with a faint tremor, bitter and self-justifying, breaking into grief, clear Indian English accent",
    "backstory": "Born blind because Ambika closed her eyes (§106). Passed over for the throne because of his blindness, he marries Gandhari (§109–§110). He fathers a hundred sons, Duhsala, and Yuyutsu by a Vaisya maid (§115–§116). He becomes ruler after Pandu (§126–§127). He grows jealous of the Pandavas, takes Kanika's crooked counsel (§142), and at Duryodhana's urging sends them to Varanavata (§143–§145). He outwardly mourns them (§152). On hearing of the swayamvara he first rejoices, thinking Duryodhana has won (§202). He later agrees to give the Pandavas half the kingdom at Khandavaprastha (§209).",
    "key_sections": [
     106,
@@ -16889,6 +16945,16 @@
    "provisional": false,
    "provenance": "text-extracted",
    "section": 126
+  },
+  {
+   "source": "sanjaya",
+   "target": "dhritarashtra",
+   "type": "serves",
+   "label": "",
+   "notes": "§1: his minister; consoles him in §1 ¶38–40",
+   "provisional": false,
+   "provenance": "text-extracted",
+   "section": 1
   },
   {
    "source": "ganesa",

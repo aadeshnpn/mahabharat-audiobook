@@ -302,3 +302,65 @@ def test_split_must_rejoin_to_source(tmp_path):
     assert warn and len(lines) == 1
     warn = apply_overrides(lines, [{"section": 1, "paragraph": 1, "contains": "Go now", "split": [{"text": "He said,"}, {"text": "Go now.", "speaker": "x"}]}], FakeCast())
     assert not warn and [l.speaker for l in lines] == ["sauti", "x"]
+
+
+def _section_spec(tmp_path: Path, section: int, paragraphs=None) -> Path:
+    import yaml
+    seg = {"id": "s", "kind": "section", "section": section, "narrator": "sauti"}
+    if paragraphs:
+        seg["paragraphs"] = list(paragraphs)
+    spec = {"id": "t", "title": "t", "book": 1, "target_duration_s": 60, "speech_tags": "keep", "narrator_default": "sauti",
+            "timing": str(ROOT / "configs" / "duration.yaml"), "lexicon": str(ROOT / "lexicon" / "book01.tsv"),
+            "strip_glosses": True, "segments": [seg]}
+    p = tmp_path / "t.yaml"
+    p.write_text(yaml.safe_dump(spec))
+    return p
+
+
+def test_quote_closed_inside_an_open_paragraph_keeps_the_rest(tmp_path: Path):
+    # §1 ¶23 opens inside Sauti's long quotation; "'These our pupils', said they, ..." once silently dropped the rest.
+    script = build_episode(load_spec(_section_spec(tmp_path, 1, (23, 23))))
+    joined = " ".join(line.text for line in script.lines)
+    assert "Saying this, the Munis disappeared." in joined
+    assert "are as your sons, your brothers, and your friends" in joined
+    assert not [w for w in script.warnings if "TEXT LOST" in w]
+
+
+def test_coverage_warning_fires_when_a_line_is_lost(tmp_path: Path, monkeypatch):
+    import mbh.episode.build as build_mod
+    real = build_mod._segment_lines
+
+    def lossy(*args, **kwargs):
+        made, warn = real(*args, **kwargs)
+        return made[:-1], warn
+
+    monkeypatch.setattr(build_mod, "_segment_lines", lossy)
+    script = build_episode(load_spec(_section_spec(tmp_path, 1, (23, 23))))
+    assert any("TEXT LOST" in w and "¶23" in w for w in script.warnings)
+
+
+def test_set_type_and_confirmed_narrator_overrides(tmp_path: Path):
+    import json as _json
+    ov = tmp_path / "o.json"
+    ov.write_text(_json.dumps({"overrides": [
+        {"section": 1, "paragraph": 31, "apply_all": True, "speaker": "dhritarashtra", "set_type": "speech"},
+        {"section": 1, "paragraph": 24, "contains": "They are on all accounts welcome!", "speaker": "sauti"},
+        {"section": 1, "paragraph": 24, "contains": "Through divine Providence", "speaker": "sauti"},
+        {"section": 1, "paragraph": 24, "contains": "Let their welcome be proclaimed!", "speaker": "sauti"},
+    ]}))
+    p = _section_spec(tmp_path, 1, (24, 31))
+    import yaml
+    d = yaml.safe_load(p.read_text()); d["overrides"] = str(ov); p.write_text(yaml.safe_dump(d))
+    script = build_episode(load_spec(p))
+    p31 = [l for l in script.lines if l.paragraph == 31]
+    assert p31 and all(l.speaker == "dhritarashtra" and l.type == "speech" for l in p31)
+    assert not [w for w in script.warnings if "unresolved" in w or "did not match" in w]
+
+
+def test_tts_replace_fixes_spoken_text_only(tmp_path: Path):
+    import json as _json, yaml
+    ov = tmp_path / "o.json"
+    ov.write_text(_json.dumps({"overrides": [{"section": 1, "paragraph": 29, "contains": "horried", "tts_replace": [["horried", "horrid"]]}]}))
+    p = _section_spec(tmp_path, 1, (29, 29)); d = yaml.safe_load(p.read_text()); d["overrides"] = str(ov); p.write_text(yaml.safe_dump(d))
+    line = next(l for l in build_episode(load_spec(p)).lines if "horried" in l.text)
+    assert "horrid unjustifiable" in line.tts_text and "horried" in line.text

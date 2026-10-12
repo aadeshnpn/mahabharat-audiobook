@@ -1,0 +1,44 @@
+0001  sauti          warm            -> forest_ashram          0.40  [inherit:ep02-0002]  Sauti continued,
+0002  sauti          warm            -> forest_ashram          0.40  [rule:naimisha_again]  I will now speak of the undying flowery and frui
+0003  sauti          warm            -> forest_ashram          0.40  [rule:naimisha_again]  Formerly, the spirited and virtuous Krishna-Dwai
+0004  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It was not till after these were born, grown up,
+0005  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Vyasa hath fully represented the greatness of th
+0006  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The noble Rishi hath also described the divinity
+0007  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Vyasa executed the compilation of the Bharata, e
+0008  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Afterwards, he composed an epitome in one hundre
+0009  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This he first taught to his son Suka; and afterw
+0010  sauti          warm            -> narration_warm         0.35  [emotion:warm]  After that he executed another compilation, cons
+0011  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Of those, thirty hundred thousand are known in t
+0012  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Narada recited them to the Devas, Devala to the 
+0013  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Know that I, Sauti, have also repeated one hundr
+0014  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Yudhishthira is a vast tree, formed of religion 
+0015  sauti          warm            -> grave_drone            0.35  [rule:pandu_misfortune]  Pandu, after having subdued many countries by hi
+0016  sauti          warm            -> sacred_solemn          0.45  [rule:divine_fathers]  Their mothers, in order that the ordinances of t
+0017  sauti          warm            -> narration_warm         0.35  [emotion:warm]  And when their offspring grew up, under the care
+0018  satasringa_ris tender          -> tender_resolve         0.55  [emotion:tender]  'These our pupils',
+0019  sauti          warm            -> narration_warm         0.35  [emotion:warm]  said they,
+0020  satasringa_ris solemn          -> sacred_solemn          0.50  [emotion:solemn]  'are as your sons, your brothers, and your frien
+0021  sauti          awed            -> celestial_swell        0.75  [emotion:awed]  Saying this, the Munis disappeared.
+0022  sauti          warm            -> narration_warm         0.35  [emotion:warm]  When the Kauravas saw them introduced as the son
+0023  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Some, however, said, they were not the sons of P
+0024  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Still on all sides voices were heard crying,
+0025  sauti          joyful          -> bright_lift            over narration_warm 0.60  [rule:citizens_welcome]  They are on all accounts welcome!
+0026  sauti          joyful          -> bright_lift            over narration_warm 0.60  [rule:citizens_welcome]  Through divine Providence we behold the family o
+0027  sauti          joyful          -> bright_lift            over narration_warm 0.60  [rule:citizens_welcome]  Let their welcome be proclaimed!
+0028  sauti          awed            -> celestial_swell        0.70  [rule:spirits_flowers]  As these acclamations ceased, the plaudits of in
+0029  sauti          awed            -> celestial_swell        0.70  [rule:spirits_flowers]  There were showers of sweet-scented flowers, and
+0030  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Such were the wonders that happened on the arriv
+0031  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The joyful noise of all the citizens, in express
+0032  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Having studied the whole of the Vedas and sundry
+0033  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The principal men were pleased with the purity o
+0034  sauti          warm            -> royal_resolve          0.45  [rule:pandava_glory]  After a while, Arjuna obtained the virgin Krishn
+0035  sauti          warm            -> royal_resolve          0.45  [rule:pandava_glory]  And from this time he became very much respected
+0036  sauti          warm            -> royal_resolve          0.45  [rule:pandava_glory]  And having vanquished all the neighbouring princ
+0037  sauti          warm            -> royal_resolve          0.45  [rule:rajasuya]  Yudhishthira, after having, through the wise cou
+0038  sauti          warm            -> grave_drone            0.45  [rule:envy_and_dice]  And Duryodhana came to this sacrifice; and when 
+0039  sauti          warm            -> grave_drone            0.45  [rule:envy_and_dice]  And when he beheld the hall of assembly elegantl
+0040  sauti          warm            -> grave_drone            0.45  [rule:envy_and_dice]  And having started in confusion at certain archi
+0041  sauti          warm            -> grave_drone            0.55  [rule:war_ensues]  And it was represented to Dhritarashtra that his
+0042  sauti          warm            -> grave_drone            0.55  [rule:war_ensues]  And Dhritarashtra, some time after, out of affec
+0043  sauti          angry           -> grave_drone            0.55  [rule:war_ensues]  And Vasudeva coming to know of this, became exce
+0044  sauti          solemn          -> grave_drone            0.55  [rule:war_ensues]  And being dissatisfied, he did nothing to preven

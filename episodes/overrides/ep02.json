@@ -1,0 +1,93 @@
+{
+ "overrides": [
+  {
+   "section": 1,
+   "paragraph": 23,
+   "contains": "'These our pupils",
+   "merge_next": true
+  },
+  {
+   "section": 1,
+   "paragraph": 23,
+   "contains": "These our pupils",
+   "split": [
+    {
+     "text": "'These our pupils',",
+     "speaker": "satasringa_rishis",
+     "type": "speech",
+     "emotion": "tender",
+     "direction": "the forest sages presenting their pupils to the Kuru court, gentle and grave"
+    },
+    {
+     "text": "said they,",
+     "type": "narration",
+     "speaker": "sauti"
+    },
+    {
+     "text": "'are as your sons, your brothers, and your friends; they are Pandavas.'",
+     "speaker": "satasringa_rishis",
+     "type": "speech",
+     "emotion": "solemn",
+     "direction": "a blessing and a charge to the court"
+    },
+    {
+     "text": "Saying this, the Munis disappeared.",
+     "type": "narration",
+     "speaker": "sauti",
+     "emotion": "awed"
+    }
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 24,
+   "contains": "They are on all accounts welcome!",
+   "speaker": "sauti",
+   "emotion": "joyful",
+   "direction": "the citizens' joyful cry, voiced by the narrator (no crowd voice yet)"
+  },
+  {
+   "section": 1,
+   "paragraph": 24,
+   "contains": "Through divine Providence we behold the family of Pandu!",
+   "speaker": "sauti",
+   "emotion": "joyful",
+   "direction": "the citizens' joyful cry, voiced by the narrator (no crowd voice yet)"
+  },
+  {
+   "section": 1,
+   "paragraph": 24,
+   "contains": "Let their welcome be proclaimed!",
+   "speaker": "sauti",
+   "emotion": "joyful",
+   "direction": "the citizens' joyful cry, voiced by the narrator (no crowd voice yet)"
+  },
+  {
+   "section": 1,
+   "paragraph": 24,
+   "contains": "plaudits of invisible spirits",
+   "emotion": "awed"
+  },
+  {
+   "section": 1,
+   "paragraph": 29,
+   "contains": "terrific war that ensued",
+   "emotion": "solemn",
+   "direction": "the shadow of the war falls; end of the story in brief"
+  },
+  {
+   "section": 1,
+   "paragraph": 29,
+   "contains": "sundry other horried",
+   "tts_replace": [
+    [
+     "horried",
+     "horrid"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  }
+ ]
+}

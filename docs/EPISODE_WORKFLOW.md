@@ -125,6 +125,21 @@ to the TTS instruction), `fx`, `strip_glosses`, `tts_text` (spoken words only; t
 reproducibly). Structural: `merge_next` joins a line with the next one; `split` replaces a line with parts that must
 re-join to the original text (the builder checks this). Use them for nested quotes and speech inside narration.
 
+Matching: a row matches on `section`, `paragraph`, `segment_id`, `type` and `contains`/`match`. A row with no
+`contains` matches the whole paragraph, and a row that matches several lines needs `"apply_all": true` (e.g. give a
+whole nested-quote speech to its speaker). In a field row `type` is a **filter**. Use `set_type`
+(`narration`/`speech`) to change a line's type. Setting `speaker` (even to the narrator) marks the line
+`speaker_confirmed` and clears the "speaker unresolved" warning.
+
+**Text coverage check:** every build compares each KMG paragraph of a `section` segment, letter by letter, with the
+script lines. A `§S ¶P: TEXT LOST?` warning means the attributer dropped words (an unabridged episode must never ship
+with one). Fixed in Ep2 work: an interrupted quote inside a paragraph that opened mid-quotation (`'These our pupils',
+said they, '...'`) used to drop the rest of the paragraph (16 paragraphs in Book 1).
+
+**Audition a new voice on real lines:** `PYTHONPATH=src proto/.venv-vox/bin/python tools/audition.py episodes/ep03.yaml
+samples/voices_ep03_audition.mp3 ep03-0007,ep03-0084 ep03-0105,ep03-0111` (each comma group is one speaker block;
+lines go through the episode renderer and cache, so the full render reuses them).
+
 ## 4. Names: lexicon + pronunciation harness
 
 `lexicon/book01.tsv` columns: `term, respelling (human guide), ipa, source, verified, notes, spoken`. Only `spoken`
@@ -216,3 +231,15 @@ re-assemble, and QA `--only <line_id>`. Note the timestamps of anything worth a 
   new `voices/<id>/ref.wav` + `voices/registry.json`, and code. **Not** committed: `samples/` (MP3s), `build/`,
   `data/mbh.sqlite3`, candidates, model weights. MP3s are published as GitHub release assets.
 * Bundle for hand-off without pushing: `git bundle create ../mahabharat-export/<branch>.bundle main..<branch>`.
+
+## Sharded rendering (standard for every episode)
+
+Episodes render in shards of a few minutes of speech each, split at line boundaries, and are assembled only after every shard is done. Short processes mean an interruption or hang loses at most one line.
+
+```bash
+mbh episode render --list-shards --shard-minutes 4 episodes/ep03.yaml   # print the shard plan
+mbh episode render --shard 3 --shard-minutes 4 episodes/ep03.yaml        # render one shard
+setsid nohup tools/render_sharded.sh episodes/ep03.yaml 4 > logs/render_ep03_sharded.log 2>&1 &
+```
+
+`tools/render_sharded.sh` runs each shard as its own process with retries, writes `build/shards/<episode>/shard_K.done`, then writes the full render manifest (all lines cached) and runs `assemble --music --music-preset A`. Lines share the per-line cache, so rerun the same command after a crash or VM restart and it resumes. A shard render never overwrites the full-episode manifest. Delete the `.done` markers if you change the script so shards are rechecked.

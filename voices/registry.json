@@ -41,6 +41,16 @@
    "notes": "Selected from proto candidates (devas_chorus_vox_s10_1.wav); approved by Aadesh 2026-10-10 (prototype feedback).",
    "shared_by": []
   },
+  "dhritarashtra": {
+   "name": "Dhritarashtra",
+   "ref": "voices/dhritarashtra/ref.wav",
+   "ref_sha256": "e86a3df0861b6554ba221af159761cb102a4a326d8ff52e364866e6feeb6cdea",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "An old Indian king, resonant but tired low voice with a faint tremor of age, bitter and self-justifying, on the edge of grief, very clear diction, measured pace, Indian English accent",
+   "sample_line": "",
+   "notes": "Ep3 design 2026-10-11: B_0 of 6 candidates; clone own 0.920/0.946 (defensive 0006, broken 0084), max other approved 0.70; 135 wpm",
+   "shared_by": []
+  },
   "ganesa": {
    "name": "Ganesa",
    "ref": "voices/ganesa/ref.wav",
@@ -73,6 +83,16 @@
     "satasringa_rishis",
     "valakhilyas"
    ]
+  },
+  "sanjaya": {
+   "name": "Sanjaya",
+   "ref": "voices/sanjaya/ref.wav",
+   "ref_sha256": "7e887fdcc3aebeac3e5a72f97531090b5748f22e2f24003094e28975e61a9b48",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "An elderly Indian royal counsellor in his sixties, deep soft low voice, slightly breathy and gentle, grave and compassionate, slow deliberate consoling speech, very clear Indian English accent",
+   "sample_line": "",
+   "notes": "Ep3 design 2026-10-11: C_1 of 6 candidates; clone own 0.917/0.924 (0105, 0111), max other approved 0.71; 0.50 to Sauti",
+   "shared_by": []
   },
   "santanu": {
    "name": "Santanu",

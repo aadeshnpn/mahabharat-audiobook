@@ -1,0 +1,114 @@
+0001  sauti          solemn          -> grave_drone            0.40  [rule:ill_news]  And Dhritarashtra hearing the ill news of the su
+0002  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  'Attend, O Sanjaya, to all I am about to say, an
+0003  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  Thou art well-versed in the shastras, intelligen
+0004  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  My inclination was never to war, not did I delig
+0005  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  I made no distinction between my own children an
+0006  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  My own sons were prone to wilfulness and despise
+0007  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  Blind as I am, because of my miserable plight an
+0008  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  I was foolish alter the thoughtless Duryodhana e
+0009  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  Having been a spectator of the riches of the mig
+0010  dhritarashtra  pleading        -> grave_drone            0.30  [rule:lament]  Unable to bear it all and unable himself to over
+0011  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  'Hear, O Sanjaya, all that happened thereupon an
+0012  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  And when thou hast heard all I say, recollecting
+0013  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, having bent the bow, h
+0014  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Subhadra of the race of Madhu 
+0015  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, by his celestial arrow
+0016  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the five Pandavas with their m
+0017  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, after having pierced t
+0018  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Jarasandha, the foremost of th
+0019  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that in their general campaign the 
+0020  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Draupadi, her voice choked wit
+0021  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that the wicked wretch Duhsasana, w
+0022  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Yudhishthira, beaten by Saubal
+0023  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the virtuous Pandavas weeping 
+0024  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  'When I heard that Yudhishthira had been followe
+0025  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, having, in combat, ple
+0026  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the just and renowned Arjuna a
+0027  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that afterwards Arjuna had vanquish
+0028  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, the chastiser of enemi
+0029  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Bhima and the other sons of Pr
+0030  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that my sons, guided by the counsel
+0031  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Dharma (the god of justice) ha
+0032  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that my sons had failed to discover
+0033  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the principal men of my side h
+0034  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Vasudeva of the race of Madhu,
+0035  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the king of Matsya, had offere
+0036  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Yudhishthira, beaten at dice, 
+0037  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard Narada, declare that Krishna and Ar
+0038  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Krishna, anxious to bring abou
+0039  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Kama and Duryodhana resolved u
+0040  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  Then I heard that at the time of his departure, 
+0041  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Vasudeva and Bhishma the son o
+0042  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When Kama said unto Bhishma—I will not fight whe
+0043  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Vasudeva and Arjuna and the bo
+0044  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that upon Arjuna having been seized
+0045  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Bhishma, the desolator of foes
+0046  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Bhishma, the righteous son of 
+0047  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna, having placed Sikhandi
+0048  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that the aged hero Bhishma, having 
+0049  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that upon Bhishma's lying on the gr
+0050  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When Bayu together with Indra and Suryya united 
+0051  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When the wonderful warrior Drona, displaying var
+0052  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the Maharatha Sansaptakas of o
+0053  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that our disposition of forces, imp
+0054  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that our Maharathas, unable to over
+0055  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the blind Kauravas were shouti
+0056  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Arjuna had vowed the death of 
+0057  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that upon the horses of Arjuna bein
+0058  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that while his horses were fatigued
+0059  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Yuyudhana of the race of Vrish
+0060  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Karna even though he had got B
+0061  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Drona, Kritavarma, Kripa, Karn
+0062  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the celestial Sakti given by I
+0063  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that in the encounter between Karna
+0064  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that Dhristadyumna, transgressing t
+0065  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Nakula. the son of Madri, havi
+0066  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When upon the death of Drona, his son misused th
+0067  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that Bhimasena drank the blood of h
+0068  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the infinitely brave Karna, in
+0069  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Yudhishthira, the Just, overca
+0070  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the brave king of Madra who ev
+0071  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the wicked Suvala of magic pow
+0072  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that Duryodhana, spent with fatigue
+0073  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that the Pandavas having gone to th
+0074  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that while, displaying in circles a
+0075  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard the son of Drona and others by slay
+0076  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that Aswatthaman while being pursue
+0077  dhritarashtra  grief           -> grave_drone            0.50  [rule:lament_peaks]  When I heard that the weapon Brahmashira (discha
+0078  dhritarashtra  grief           -> grave_drone            0.30  [rule:lament]  When I heard that upon the embryo in the womb of
+0079  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  'Alas!
+0080  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  Gandhari, destitute of children, grand-children,
+0081  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  Difficult is the task that hath been performed b
+0082  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  'Alas!
+0083  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  I have heard that the war hath left only ten ali
+0084  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  All around me is utter darkness, and a fit of sw
+0085  sauti          warm            -> grave_drone            0.40  [inherit:ep03-0086]  Sauti said,
+0086  sauti          warm            -> grave_drone            0.40  [rule:king_faints]  Dhritarashtra, bewailing his fate in these words
+0087  dhritarashtra  grief           -> grave_drone            0.55  [rule:lament_alas]  After what hath come to pass, O Sanjaya, I wish 
+0088  sauti          warm            -> grave_drone            0.40  [inherit:ep03-0089]  Sauti said,
+0089  sauti          warm            -> grave_drone            0.40  [rule:king_faints]  The wise son of Gavalgana (Sanjaya) then address
+0090  sanjaya        tender          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Thou hast heard, O Raja, of the greatly powerful
+0091  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Such were Saivya; the valiant Maharatha; Srinjay
+0092  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Suhotra; Rantideva, and Kakshivanta, great in gl
+0093  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  These twenty-four Rajas were formerly spoken of 
+0094  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Besides these, other Rajas had gone before, stil
+0095  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  These were Puru, Kuru, Yadu, Sura and Viswasrawa
+0096  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  These, O chief, and other Rajas, we hear enumera
+0097  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Their heavenly deeds, valour, and generosity, th
+0098  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Though endued with every noble virtue, these hav
+0099  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Thy sons were malevolent, inflamed with passion,
+0100  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Thou art versed in the Sastras, O Bharata, and a
+0101  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Thou art acquainted, O prince, with the lenity a
+0102  sanjaya        tender          -> tender_resolve         0.40  [rule:sanjaya_consoles]  Moreover, it behoveth thee not to grieve for tha
+0103  sanjaya        solemn          -> tender_resolve         0.40  [rule:sanjaya_consoles]  No one can leave the way marked out for him by P
+0104  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  Existence and non-existence, pleasure and pain a
+0105  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  Time createth all things and Time destroyeth all
+0106  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  It is Time that burneth creatures and it is Time
+0107  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  All states, the good and the evil, in the three 
+0108  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  Time cutteth short all things and createth them 
+0109  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  Time alone is awake when all things are asleep: 
+0110  sanjaya        solemn          -> sacred_solemn          0.50  [rule:time_meditation]  Time passeth over all things without being retar
+0111  sanjaya        tender          -> sacred_solemn          0.50  [rule:time_meditation]  Knowing, as thou dost, that all things past and 
+0112  sauti          warm            -> reverent_anticipation  0.50  [inherit:ep03-0113]  Sauti said,
+0113  sauti          tender          -> reverent_anticipation  0.50  [rule:ending_hook]  The son of Gavalgana having in this manner admin
+0114  sauti          solemn          -> reverent_anticipation  0.50  [rule:ending_hook]  Taking these facts for his subject, Dwaipayana c

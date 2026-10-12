@@ -219,3 +219,5 @@ PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_e2e_studio.py   # needs 
 ```
 
 `tests/test_studio.py` sets `MBH_STUDIO_MOCK=1` and points episodes, lexicon, and build at a temp directory, so the repo's `episodes/ep01.yaml` and `lexicon/book01.tsv` are not modified. The heavy backend is a tone generator.
+
+Studio render jobs render the whole episode in one worker job. For long unattended renders from the CLI, use the sharded script (`tools/render_sharded.sh`, see EPISODE_WORKFLOW.md); don't run it while a Studio job is running.

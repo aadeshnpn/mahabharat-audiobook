@@ -1,0 +1,48 @@
+# Episode 3. Text only (draft for review): `mbh episode build episodes/ep03.yaml`
+# User decision 2026-10-11 (option A1): §1 ¶30-40 unabridged: Dhritarashtra's lament and Sanjaya's consolation.
+id: ep03
+title: "Episode 3: The Blind King's Lament"
+book: 1
+target_duration_s: 1560
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep03.json
+strip_glosses: true
+music: true
+music_rules:
+  - {name: lament_peaks,      match: {speaker: dhritarashtra, text: 'single garment|bed of arrows|slain the boy Abhimanyu|slew Drona while alone|drank the blood of his brother|lying there alone|in their sleep|Brahmashira'}, cue: grave_drone, intensity: 0.5}
+  - {name: lament_alas,       match: {speaker: dhritarashtra, paragraph: [34, 35, 37]},       cue: grave_drone,       intensity: 0.55}
+  - {name: lament,            match: {speaker: dhritarashtra},                                cue: grave_drone,       intensity: 0.3}
+  - {name: ill_news,          match: {section: 1, paragraph: 30},                             cue: grave_drone,       intensity: 0.4}
+  - {name: king_faints,       match: {section: 1, paragraph: [36, 38]},                       cue: grave_drone,       intensity: 0.4}
+  - {name: time_meditation,   match: {speaker: sanjaya, text: '\bTime\b'},                    cue: sacred_solemn,     intensity: 0.5}
+  - {name: sanjaya_consoles,  match: {speaker: sanjaya},                                      cue: tender_resolve,    intensity: 0.4}
+summary: >
+  Hearing of the Pandavas' success, the blind king Dhritarashtra pours out his lament to his minister Sanjaya: his
+  self-justification, then the refrain "When I heard..., then, O Sanjaya, I had no hope of success" through every
+  turn of the story and the war, and "Alas!". He faints and wishes to die. Sanjaya consoles him with the great kings
+  of old, who also died, and with the power of Time; Sauti closes the scene.
+end_reason: >
+  Sauti closes the scene ("The son of Gavalgana having in this manner administered comfort to the royal
+  Dhritarashtra... then restored his mind to peace. Taking these facts for his subject, Dwaipayana composed a holy
+  Upanishad"). It is the end of the Dhritarashtra–Sanjaya dialogue; ¶41 turns to the merits of reading the Bharata.
+notes:
+  - "Unabridged KMG, §1 ¶30–40 in order; only parenthetical glosses are not spoken (strip_glosses)."
+  - "Long by design (user choice A1): ¶31–35 is one unbroken ~20 min speech; there is no clean break inside it."
+segments:
+  - id: lament
+    kind: section
+    section: 1
+    paragraphs: [30, 36]
+    narrator: sauti
+    label: "Dhritarashtra's lament"
+    note: "The blind king to Sanjaya: his self-justification (¶31), then 'When I heard..., then, O Sanjaya, I had no hope of success' through every turn of the story and the war (¶32–33), 'Alas!' (¶34–35); he faints (¶36)."
+  - id: consolation
+    kind: section
+    section: 1
+    paragraphs: [37, 40]
+    narrator: sauti
+    label: "Sanjaya consoles the king"
+    note: "Dhritarashtra wishes to die (¶37); Sanjaya recounts the great kings of old who also died, and the power of Time (¶38–39); Sauti closes the scene (¶40)."

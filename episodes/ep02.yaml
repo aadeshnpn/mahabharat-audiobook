@@ -1,0 +1,42 @@
+# Episode 2. Text only (draft for review): `mbh episode build episodes/ep02.yaml`
+# User decision 2026-10-11 (option A1): Ep 2 = §1 ¶18-29 unabridged (short, ~9 min); Ep 3 = ¶30-40 (the lament).
+id: ep02
+title: "Episode 2: The Fruit of the Tree"
+book: 1
+target_duration_s: 540
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep02.json
+strip_glosses: true
+music: true
+music_rules:
+  - {name: naimisha_again,    match: {section: 1, paragraph: 18},                             cue: forest_ashram,     intensity: 0.4}
+  - {name: pandu_misfortune,  match: {section: 1, paragraph: 23, text: 'killed a stag'},      cue: grave_drone,       intensity: 0.35}
+  - {name: divine_fathers,    match: {section: 1, paragraph: 23, text: 'the gods Dharma'},    cue: sacred_solemn,     intensity: 0.45}
+  - {name: pandava_glory,     match: {section: 1, paragraph: 27},                             cue: royal_resolve,     intensity: 0.45}
+  - {name: rajasuya,          match: {section: 1, paragraph: 28, text: '^Yudhishthira, after having'}, cue: royal_resolve, intensity: 0.45}
+  - {name: citizens_welcome,  match: {section: 1, paragraph: 24, emotion: joyful},            cue: bright_lift,       intensity: 0.6}
+  - {name: spirits_flowers,   match: {section: 1, paragraph: 24, emotion: awed},              cue: celestial_swell,   intensity: 0.7}
+  - {name: envy_and_dice,     match: {section: 1, paragraph: 28},                             cue: grave_drone,       intensity: 0.45}
+  - {name: war_ensues,        match: {section: 1, paragraph: 29, last_paragraph: true},       cue: grave_drone,       intensity: 0.55, build_to_end: true}
+summary: >
+  Sauti tells the story of the Bharata in brief: Vyasa fathers Dhritarashtra, Pandu and Vidura; how the Bharata was
+  compiled and handed down; Pandu's misfortune in the forest and the birth of the five Pandavas; the Munis present
+  them at Hastinapura to the citizens' joy and a rain of flowers; Arjuna wins Draupadi; Indraprastha and the
+  Rajasuya; Duryodhana's envy, the game of dice, and the war.
+end_reason: >
+  Sauti's story in brief closes on the war ("...he made the Kshatriyas kill each other in the terrific war that
+  ensued."). It is a narration boundary; ¶30 turns to Dhritarashtra's lament (Episode 3).
+notes:
+  - "Unabridged KMG, §1 ¶18–29 in order; only parenthetical glosses are not spoken (strip_glosses)."
+  - "Short by design (user choice A1): the next clean break is ¶40, after a ~20 min monologue, which becomes Episode 3."
+segments:
+  - id: story
+    kind: section
+    section: 1
+    paragraphs: [18, 29]
+    narrator: sauti
+    label: "The fruit of the tree: the story in brief"
+    note: "Vyasa fathers the three princes; how the Bharata was compiled and handed down; Pandu's misfortune and the birth of the Pandavas; their welcome at Hastinapura; Draupadi; Indraprastha, the Rajasuya and Duryodhana's envy; the dice and the war."

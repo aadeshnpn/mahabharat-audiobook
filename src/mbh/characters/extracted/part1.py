@@ -191,3 +191,10 @@ C("ganesa","Ganesa","Ganesha|guide of the Ganas|obviator of obstacles","GUH-nay-
   "playful|clever|benevolent|dignified","bright good humour|wry challenge|gracious assent",
   f"The divine scribe Ganesa, bright warm youthful-sounding male voice, playful and quick-witted but dignified, smiling, crisp diction, {A}","1",
   "single_section_speaker")
+C("sanjaya","Sanjaya","son of Gavalgana","SUN-juh-yuh","male","human (Suta; minister)",
+  "adult; Dhritarashtra's minister and counsellor",
+  "Dhritarashtra's minister: hears the blind king's lament and consoles him; later envoy and reporter of the war",
+  "Dhritarashtra pours out to him the long lament 'When I heard..., then, O Sanjaya, I had no hope of success' (§1 ¶30–35). The 'wise son of Gavalgana' consoles the fainting king with the tale of the great kings of old who also died, and with the power of Time: 'Time createth all things and Time destroyeth all creatures' (§1 ¶38–40). The contents of the Parvas name him as Dhritarashtra's envoy to the Pandavas ('Sanjaya-yana', §2 ¶14), the narrator of the Bhishma Parva (§2 ¶15), and 'the foremost of ministers', who attains the blessed state in the Asramavasika (§2 ¶25).",
+  "wise|steady|compassionate|frank","consoling|grave|philosophical|gently admonishing",
+  f"A wise, mature Indian royal minister and counsellor, calm, steady, measured baritone, compassionate yet frank, quietly philosophical, {A}","1 2",
+  "single_section_speaker")

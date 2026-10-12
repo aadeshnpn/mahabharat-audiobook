@@ -11,7 +11,7 @@ VOX=proto/.venv-vox/bin/python; QA_PY=proto/.venv-pocket/bin/python
 export PYTHONPATH=src MBH_VOX_PYTHON=$VOX
 mkdir -p samples logs build
 echo "== build $(date +%T)"; $VOX -m mbh.cli episode build "$spec"
-echo "== render $(date +%T)"; tools/render_resumable.sh "$spec" 4
+echo "== render $(date +%T)"; tools/render_resumable.sh "$spec" "${MBH_RENDER_PASSES:-20}"   # each pass reloads the model; OOM-killed passes just resume
 echo "== assemble dry $(date +%T)"
 $VOX -m mbh.cli episode assemble "$spec" --no-music --out "build/$name.wav" > "build/$name.report.json"
 echo "== assemble music ${preset:-(configs/music.yaml default)} $(date +%T)"

@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-11T23:12:17+00:00",
+ "generated_at": "2026-10-12T00:18:21+00:00",
  "ending": {
   "section": 1,
   "paragraph": 17,
@@ -464,7 +464,7 @@
    "non_kmg": false,
    "abridged": false,
    "excerpt": false,
-   "attribution": "rule",
+   "attribution": "override",
    "section": 1,
    "paragraph": 4,
    "src_span": [
@@ -474,9 +474,12 @@
    "addressee": null,
    "direction": null,
    "fx": null,
-   "flags": [],
+   "flags": [
+    "override"
+   ],
    "start_s": 144.292,
-   "duration_s": 4.779
+   "duration_s": 4.779,
+   "take": 1
   },
   {
    "id": "ep01-0014",
@@ -1486,7 +1489,7 @@
    "non_kmg": false,
    "abridged": false,
    "excerpt": false,
-   "attribution": "rule",
+   "attribution": "override",
    "section": 1,
    "paragraph": 10,
    "src_span": [
@@ -1497,10 +1500,12 @@
    "direction": null,
    "fx": null,
    "flags": [
-    "gloss_stripped"
+    "gloss_stripped",
+    "override"
    ],
    "start_s": 577.631,
-   "duration_s": 10.427
+   "duration_s": 10.427,
+   "take": 1
   },
   {
    "id": "ep01-0048",

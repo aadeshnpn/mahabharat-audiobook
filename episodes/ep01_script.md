@@ -70,7 +70,7 @@ Invocation; Ugrasrava (Sauti) arrives at Saunaka's twelve-year sacrifice; the Ri
 
 *TTS:* Having heard the diverse sacred and wonderful stories which were composed in his Mahabharata by Krishna Dwaipayana, and which were recited in full by Vaisampayana at the Snake-sacrifice of the high-souled royal sage Janamejaya and in the presence also of that chief of Princes, the son of Puhrikshit, and having wandered about, visiting many sacred waters and holy shrines, I journeyed to the country venerated by the Dweejuhs and called Samantapanchaka where formerly was fought the battle between the children of Kuru and Pandu, and all the chiefs of the land ranged on either side.
 
-**02:24 · Sauti** · speech · warm · measured
+**02:24 · Sauti** · speech · warm · measured · override
 
 > Thence, anxious to see you, I am come into your presence.
 
@@ -230,7 +230,7 @@ Sauti's invocation of Isana/Vishnu; the cosmic egg, Brahma and the Prajapatis; t
 
 > It is the wish of the learned in the world to possess the details and the abridgement.
 
-**09:37 · Sauti** · speech · warm · measured · gloss not spoken
+**09:37 · Sauti** · speech · warm · measured · override, gloss not spoken
 
 > Some read the Bharata beginning with the initial mantra (invocation), others with the story of Astika, others with Uparichara, while some Brahmanas study the whole.
 

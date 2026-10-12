@@ -2,7 +2,7 @@
 # Render one short line end to end and (if the QA venv exists) check it with ASR. Exit 0 = pipeline works.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-proto/.venv-vox/bin/python scripts/smoke_test.py
+proto/.venv-vox/bin/python scripts/smoke_render.py
 if [ -x proto/.venv-pocket/bin/python ]; then
   proto/.venv-pocket/bin/python - <<'P'
 import json, re

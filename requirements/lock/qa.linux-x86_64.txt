@@ -67,7 +67,7 @@ safetensors==0.8.0
 scikit-learn==1.9.1
 scipy==1.18.1
 sentencepiece==0.2.2
-setuptools==69.5.1
+setuptools==80.9.0
 shellingham==1.5.4
 soundfile==0.14.0
 soxr==1.1.0

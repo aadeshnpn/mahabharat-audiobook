@@ -1,5 +1,5 @@
 """Smoke test: render ONE short real line through the full pipeline (build -> VoxCPM2 render -> -16 LUFS assemble).
-Run with the render venv:  proto/.venv-vox/bin/python scripts/smoke_test.py   (or scripts/smoke_test.sh)
+Run with the render venv:  proto/.venv-vox/bin/python scripts/smoke_render.py   (or scripts/smoke_test.sh)
 Uses a throwaway cache, so it always really synthesizes (~10 GB peak RAM during model load, ~1-3 min on 8 cores).
 If the QA venv exists, the shell wrapper also transcribes the clip and checks the words."""
 import json, sys, tempfile, time

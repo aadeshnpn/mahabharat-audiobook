@@ -53,11 +53,11 @@ C("mandavya","Mandavya","Animandavya","MAAN-duh-vyuh","male","sage","old ascetic
   "Rishi impaled though innocent; curses Dharma to be born as Vidura",
   "Under a vow of silence he is impaled after thieves hide stolen goods in his hermitage, and survives on the stake (§107). Told he was punished for piercing insects with grass as a child, he curses Dharma to be born of a Sudra woman, and sets the age of responsibility at fourteen (§108).",
   "stoic|just|wrathful when wronged","silent endurance|righteous wrath",f"A gaunt old Indian ascetic, low stoic voice, {A}","106 107 108","single_section_speaker")
-C("dhritarashtra","Dhritarashtra","son of Ambika|son of Vichitravirya","dhri-tuh-RAASH-truh","male","human (Kuru king)","young prince→aging blind king",
+C("dhritarashtra","Dhritarashtra","son of Ambika|son of Vichitravirya","dhri-tuh-RAASH-truh","male","human (Kuru king)","young prince→aged blind king (old by his own account in the §1 lament: 'because I am old')",
   "Blind elder son of Vyasa and Ambika; king of the Kurus; father of Duryodhana and ninety-nine others",
   "Born blind because Ambika closed her eyes (§106). Passed over for the throne because of his blindness, he marries Gandhari (§109–§110). He fathers a hundred sons, Duhsala, and Yuyutsu by a Vaisya maid (§115–§116). He becomes ruler after Pandu (§126–§127). He grows jealous of the Pandavas, takes Kanika's crooked counsel (§142), and at Duryodhana's urging sends them to Varanavata (§143–§145). He outwardly mourns them (§152). On hearing of the swayamvara he first rejoices, thinking Duryodhana has won (§202). He later agrees to give the Pandavas half the kingdom at Khandavaprastha (§209).",
-  "conflicted|weak-willed|loving father|envious","anxiety|longing|veiled envy|false cheer|regret",
-  f"A middle-aged blind Indian king, deep but wavering voice, anxious, emotional, {A}","106 110 115 142 143 144 152 202 209")
+  "conflicted|weak-willed|loving father|envious","anxiety|longing|veiled envy|false cheer|regret|grief|despair|self-justification",
+  f"An aged blind Indian king, deep resonant voice worn by age and sorrow with a faint tremor, bitter and self-justifying, breaking into grief, {A}","106 110 115 142 143 144 152 202 209")
 C("pandu","Pandu","","PAAN-doo","male","human (Kuru king)","young king",
   "Pale son of Vyasa and Ambalika; conquering king cursed by Kindama; father (by gods) of the Pandavas",
   "Born pale because Ambalika paled (§106). He marries Kunti at her swayamvara (§112), and Bhishma buys Madri for him (§113). He conquers many kingdoms (§113–§114) and retires to the forest (§114). He shoots the Rishi Kindama mating in deer form and is cursed to die if he touches a woman in passion (§118). He renounces the world (§119), sets out with the Rishis (§120), and asks Kunti to bear sons by the gods (§120–§123). He dies in Madri's embrace (§125).",

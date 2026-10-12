@@ -1,0 +1,56 @@
+{
+ "date": "2026-10-11",
+ "voices": [
+  "dhritarashtra",
+  "sanjaya"
+ ],
+ "verified": {
+  "Indra": "Indra",
+  "Virata": "Virata",
+  "Madhu": "Madhu",
+  "Panchalas": "Panchalas",
+  "Bharadwaja": "Bharadwaja",
+  "Maharatha": "Maharatha",
+  "Abhimanyu": "Abhimunyu",
+  "Madra": "Madra",
+  "Sakti": "Sakti",
+  "Subala": "Subala",
+  "Saivya": "Saivya",
+  "Nala": "Nala",
+  "Sastras": "Sastras",
+  "Gandhara": "Gandhara",
+  "Dwaraka": "Dwaraka",
+  "Indraprastha": "Indraprastha",
+  "Agni": "Agni",
+  "Khandava": "Khandava",
+  "Saubala": "Saubala",
+  "Santanu": "Shantanu",
+  "Gandiva": "Gandiva",
+  "Somaka": "Somaka",
+  "Dhrishtadyumna": "Dhrishtadyumna",
+  "Upanishad": "Upanishad",
+  "Kritavarman": "Kritavarman"
+ },
+ "pending": {
+  "Kshatriyas": [
+   "vais:Kshatriya",
+   "bhis:Kishriya",
+   "dhri:Kautriya",
+   "sanj:Kshatriya"
+  ],
+  "Akshauhinis": [
+   "saut:Akshawini",
+   "dhri:Akshayi Nis",
+   "sanj:Akshuhini"
+  ],
+  "Asuras": [
+   "dhri:Asura"
+  ],
+  "Yuyudhana": [
+   "saut:Udana",
+   "bhis:Yuyudana",
+   "dhri:Yudhana",
+   "sanj:you Idana"
+  ]
+ }
+}

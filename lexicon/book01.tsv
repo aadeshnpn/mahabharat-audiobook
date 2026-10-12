@@ -62,10 +62,10 @@ Asrama	AA-shruh-muh		curated	0	harness ep01 2026-10-10: 'Asrama' passed (sauti, 
 Upanishads	oo-puh-ni-SHUDS		curated	0	harness ep01 2026-10-10: 'Upanishads' passed (sauti, 1 take; provisional until a 2nd voice)	Upanishads
 Angas	UNG-uhs		curated	0	harness ep01 2026-10-10: 'Angas' passed (sauti, 1 take; provisional until a 2nd voice)	Angas
 Adhyatma	uhd-YAH-tmuh		curated	0	harness ep01 2026-10-10: 'Adhyatma' passed (sauti, 1 take; provisional until a 2nd voice)	Adhyatma
-Abhimanyu	uh-bhi-MUN-yoo		character-registry	0		
+Abhimanyu	uh-bhi-MUN-yoo		character-registry	1	harness 2026-10-11 (ep03): 'Abhimunyu' passed 3 takes on bhishma,dhritarashtra,sanjaya	Abhimunyu
 Adhiratha	UDH-i-ruh-tuh		character-registry	0		
 Adrisyanti	uh-drish-YUN-tee		character-registry	0		
-Agni	UG-nee		character-registry	0		
+Agni	UG-nee		character-registry	1	harness 2026-10-11 (ep03): 'Agni' passed 2 takes on dhritarashtra,sanjaya	Agni
 Ambalika	um-BAA-li-kaa		character-registry	0		
 Ambika	UM-bi-kaa		character-registry	0		
 Anu	UH-noo		character-registry	0		
@@ -80,7 +80,7 @@ Aswins	USH-vinz		character-registry	0	harness ep01 2026-10-10: 'Aswins' passed (
 Aurva	OUR-vuh		character-registry	0		
 Ayoda-Dhaumya	AA-yo-duh DHOW-myuh		character-registry	0		
 Balarama	BUH-luh-raa-muh		character-registry	0		
-Bharadwaja	bhuh-RUD-vaa-juh		character-registry	0		
+Bharadwaja	bhuh-RUD-vaa-juh		character-registry	1	harness 2026-10-11 (ep03): 'Bharadwaja' passed 2 takes on dhritarashtra,sanjaya	Bharadwaja
 Bhishma	BHEESH-muh		character-registry	1	harness 2026-10-10: 'Bhishma' passed 3/3 takes on bhishma,sauti,vaisampayana	Bhishma
 Bhrigu	BHRI-goo		character-registry	0		
 Brahma	BRUH-muh		character-registry	1	harness 2026-10-10: 'Brahma' passed 3/3 takes on bhishma,sauti,vaisampayana	Brahma
@@ -90,7 +90,7 @@ Chyavana	CHYUH-vuh-nuh		character-registry	0
 Devas	DAY-vuhs		character-registry	0	harness ep01 2026-10-10: 'Devas' passed (sauti, 1 take; provisional until a 2nd voice)	Devas
 Devayani	day-VUH-yaa-nee		character-registry	0		
 Dharma	DHUR-muh		character-registry	0	harness ep01 2026-10-10: 'Dharma' passed (sauti, 1 take; provisional until a 2nd voice)	Dharma
-Dhrishtadyumna	dhrish-tuh-DYOOM-nuh		character-registry	0		
+Dhrishtadyumna	dhrish-tuh-DYOOM-nuh		character-registry	1	harness 2026-10-11 (ep03): 'Dhrishtadyumna' passed 2 takes on dhritarashtra,sanjaya	Dhrishtadyumna
 Dirghatamas	deer-guh-TUH-mus		character-registry	0		
 Drahyu	DROOH-yoo		character-registry	0		
 Draupadi	DROW-puh-dee		character-registry	1	harness 2026-10-11: 'Drowpadee' passed 2 takes on bhishma,sauti	Drowpadee
@@ -106,7 +106,7 @@ Gandhari	gaan-DHAA-ree		character-registry	1	harness 2026-10-11: 'Gandhari' pass
 Garuda	GUH-roo-duh		character-registry	0		
 Gaurmukha	gour-MOO-khuh		character-registry	0		
 Ghatotkacha	guh-TOT-kuh-chuh		character-registry	1	harness 2026-10-11: 'Ghatotkacha' passed 2 takes on bhishma,sauti	Ghatotkacha
-Indra	IN-druh		character-registry	0		
+Indra	IN-druh		character-registry	1	harness 2026-10-11 (ep03): 'Indra' passed 3 takes on dhritarashtra,sanjaya,sauti	Indra
 Janamejaya	juh-nuh-MAY-juh-yuh		character-registry	1	harness 2026-10-10: 'Janamejaya' passed 2/3 takes on sauti,vaisampayana	Janamejaya
 Jarita	juh-RI-taa		character-registry	0		
 Jaritari	juh-ri-TAA-ree		character-registry	0		
@@ -151,7 +151,7 @@ Sakuni	SHUH-koo-nee		character-registry	1	harness 2026-10-11: 'Shakuni' passed 2
 Sakuntala	shuh-KOON-tuh-laa		character-registry	0		
 Samika	SHUH-mee-kuh		character-registry	0		
 Samvarana	sum-VUH-ruh-nuh		character-registry	0		
-Santanu	SHUN-tuh-noo		character-registry	0		
+Santanu	SHUN-tuh-noo		character-registry	1	harness 2026-10-11 (ep03): 'Shantanu' passed 3 takes on bhishma,dhritarashtra,sanjaya	Shantanu
 Saradwat	shuh-RUD-vut		character-registry	0		
 Sarisrikka	shuh-ri-SRIK-kuh		character-registry	0		
 Sarmishtha	shur-MISH-thaa		character-registry	0		
@@ -255,7 +255,7 @@ Sambhava	Sambhava		ep01-harness	0	harness ep01 2026-10-10: 'Sumbhuvuh' passed (s
 Sabha	Sabha		ep01-harness	0	harness ep01 2026-10-10: 'Sabha' passed (sauti, 1 take; provisional until a 2nd voice)	Sabha
 Aranya	Aranya		ep01-harness	0	harness ep01 2026-10-10: 'Aranya' passed (sauti, 1 take; provisional until a 2nd voice)	Aranya
 Arani	Arani		ep01-harness	0	harness ep01 2026-10-10: 'Arani' passed (sauti, 1 take; provisional until a 2nd voice)	Arani
-Virata	Virata		ep01-harness	0	harness ep01 2026-10-10: 'Virata' passed (sauti, 1 take; provisional until a 2nd voice)	Virata
+Virata	Virata		ep01-harness	1	harness ep01 2026-10-10: 'Virata' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-11 (ep03): 'Virata' passed 5 takes on dhritarashtra,sanjaya,sauti	Virata
 Udyoga	Udyoga		ep01-harness	0	harness ep01 2026-10-10: 'Udyoga' passed (sauti, 1 take; provisional until a 2nd voice)	Udyoga
 Drona	Drona		ep01-harness	1	harness ep01 2026-10-10: 'Drona' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-11: 'Drona' passed 4 takes on bhishma,sauti	Drona
 Salya	Salya		ep01-harness	0	harness ep01 2026-10-10: 'Salya' passed (sauti, 1 take; provisional until a 2nd voice)	Salya
@@ -288,3 +288,21 @@ Rakshasas	Rakshasas		harness	1	harness 2026-10-11: 'Rakshasas' passed 2 takes on
 Brahmacharis	Brahmachaarees		harness	1	harness 2026-10-11: 'Brahmachaarees' passed 2 takes on bhishma,sauti	Brahmachaarees
 Matsya	Matsya		harness	1	harness 2026-10-11: 'Matsya' passed 2 takes on bhishma,sauti	Matsya
 Dasaratha	Dasaratha		harness	1	harness 2026-10-11: 'Dasaratha' passed 2 takes on bhishma,sauti	Dasaratha
+Madhu	Madhu		harness	1	harness 2026-10-11 (ep03): 'Madhu' passed 2 takes on sanjaya,sauti	Madhu
+Panchalas	Panchalas		harness	1	harness 2026-10-11 (ep03): 'Panchalas' passed 3 takes on dhritarashtra,sanjaya,sauti	Panchalas
+Maharatha	Maharatha		harness	1	harness 2026-10-11 (ep03): 'Maharatha' passed 2 takes on dhritarashtra,sanjaya	Maharatha
+Madra	Madra		harness	1	harness 2026-10-11 (ep03): 'Madra' passed 2 takes on dhritarashtra,sanjaya	Madra
+Sakti	Sakti		harness	1	harness 2026-10-11 (ep03): 'Sakti' passed 2 takes on dhritarashtra,sanjaya	Sakti
+Subala	Subala		harness	1	harness 2026-10-11 (ep03): 'Subala' passed 2 takes on dhritarashtra,sanjaya	Subala
+Saivya	Saivya		harness	1	harness 2026-10-11 (ep03): 'Saivya' passed 3 takes on dhritarashtra,sanjaya,sauti	Saivya
+Nala	Nala		harness	1	harness 2026-10-11 (ep03): 'Nala' passed 2 takes on dhritarashtra,sanjaya	Nala
+Sastras	Sastras		harness	1	harness 2026-10-11 (ep03): 'Sastras' passed 3 takes on bhishma,dhritarashtra,sanjaya	Sastras
+Gandhara	Gandhara		harness	1	harness 2026-10-11 (ep03): 'Gandhara' passed 2 takes on dhritarashtra,sanjaya	Gandhara
+Dwaraka	Dwaraka		harness	1	harness 2026-10-11 (ep03): 'Dwaraka' passed 3 takes on dhritarashtra,sanjaya,sauti	Dwaraka
+Indraprastha	Indraprastha		harness	1	harness 2026-10-11 (ep03): 'Indraprastha' passed 3 takes on bhishma,dhritarashtra,sanjaya	Indraprastha
+Khandava	Khandava		harness	1	harness 2026-10-11 (ep03): 'Khandava' passed 3 takes on dhritarashtra,sanjaya,sauti	Khandava
+Saubala	Saubala		harness	1	harness 2026-10-11 (ep03): 'Saubala' passed 2 takes on dhritarashtra,sanjaya	Saubala
+Gandiva	Gandiva		harness	1	harness 2026-10-11 (ep03): 'Gandiva' passed 3 takes on dhritarashtra,sanjaya,sauti	Gandiva
+Somaka	Somaka		harness	1	harness 2026-10-11 (ep03): 'Somaka' passed 2 takes on dhritarashtra,sanjaya	Somaka
+Upanishad	Upanishad		harness	1	harness 2026-10-11 (ep03): 'Upanishad' passed 3 takes on bhishma,dhritarashtra,sanjaya	Upanishad
+Kritavarman	Kritavarman		harness	1	harness 2026-10-11 (ep03): 'Kritavarman' passed 2 takes on dhritarashtra,sanjaya	Kritavarman

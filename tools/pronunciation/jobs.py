@@ -9,7 +9,7 @@ from mbh.episode.pronounce import CARRIER, speakable_respelling
 KEY = {"Vaisampayana": "Vaishampayana", "Saunaka": "Shaunaka", "Ugrasrava": "Ugrashrava", "Krishna-Dwaipayana": "Krishna Dwaipayana",
        # Episode 2: KMG writes the sh-sound as s
        "Duhsasana": "Duhshasana", "Sakuni": "Shakuni", "Sakra": "Shakra", "Sastras": "Shastras", "Sikhandin": "Shikhandin",
-       "Aswatthaman": "Ashvatthaman", "Dhristadyumna": "Dhrishtadyumna", "Santanu": "Shantanu", "Saivya": "Shaivya", "Dasaratha": "Dasharatha"}
+       "Aswatthaman": "Ashvatthaman", "Dhristadyumna": "Dhrishtadyumna", "Santanu": "Shantanu", "Saivya": "Shaivya", "Dasaratha": "Dasharatha", "Sakti": "Shakti"}
 
 def words():
     rows = {}

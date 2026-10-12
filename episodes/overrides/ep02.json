@@ -74,6 +74,20 @@
    "contains": "terrific war that ensued",
    "emotion": "solemn",
    "direction": "the shadow of the war falls; end of the story in brief"
+  },
+  {
+   "section": 1,
+   "paragraph": 29,
+   "contains": "sundry other horried",
+   "tts_replace": [
+    [
+     "horried",
+     "horrid"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
   }
  ]
 }

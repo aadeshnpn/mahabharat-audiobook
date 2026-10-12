@@ -220,4 +220,4 @@ Vyasa fathers the three princes; how the Bharata was compiled and handed down; P
 
 > And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horried unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'
 
-*TTS:* And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horried unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripaa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'
+*TTS:* And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horrid unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripaa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'

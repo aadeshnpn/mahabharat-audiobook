@@ -32,6 +32,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 
 > My inclination was never to war, not did I delight in the destruction of my race.
 
+*TTS:* My inclination was never to war, nor did I delight in the destruction of my race.
+
 **00:37 · Dhritarashtra** · speech · pleading · measured · override
 
 > I made no distinction between my own children and the children of Pandu.
@@ -47,6 +49,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 **00:57 · Dhritarashtra** · speech · pleading · measured · override
 
 > I was foolish alter the thoughtless Duryodhana ever growing in folly.
+
+*TTS:* I was foolish after the thoughtless Duryodhana ever growing in folly.
 
 **01:02 · Dhritarashtra** · speech · pleading · measured · override
 
@@ -220,6 +224,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 
 > When I heard that Vasudeva and Bhishma the son of Santanu were the counsellors of the Pandavas and Drona the son of Bharadwaja pronounced blessings on them, then, O Sanjaya, I had no hope of success.
 
+*TTS:* When I heard that Vasudeva and Bhishma the son of Shantanu were the counsellors of the Pandavas and Drona the son of Bharadwaja pronounced blessings on them, then, O Sanjaya, I had no hope of success.
+
 **09:46 · Dhritarashtra** · speech · grief · measured · override
 
 > When Kama said unto Bhishma—I will not fight when thou art fighting—and, quitting the army, went away, then, O Sanjaya, I had no hope of success.
@@ -256,6 +262,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 
 > When I heard that the aged hero Bhishma, having reduced the numbers of the race of shomaka to a few, overcome with various wounds was lying on a bed of arrows, then, O Sanjaya, I had no hope of success.
 
+*TTS:* When I heard that the aged hero Bhishma, having reduced the numbers of the race of Somaka to a few, overcome with various wounds was lying on a bed of arrows, then, O Sanjaya, I had no hope of success.
+
 **11:34 · Dhritarashtra** · speech · grief · measured · override
 
 > When I heard that upon Bhishma's lying on the ground with thirst for water, Arjuna, being requested, had pierced the ground and allayed his thirst, then, O Sanjaya, I had no hope of success.
@@ -286,13 +294,13 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 
 > When I heard that our Maharathas, unable to overcome Arjuna, with jubilant faces after having jointly surrounded and slain the boy Abhimanyu, then, O Sanjaya, I had no hope of success.
 
-*TTS:* When I heard that our Maharathas, unable to overcome Arjoona, with jubilant faces after having jointly surrounded and slain the boy Abhimanyu, then, O Sanjaya, I had no hope of success.
+*TTS:* When I heard that our Maharathas, unable to overcome Arjoona, with jubilant faces after having jointly surrounded and slain the boy Abhimunyu, then, O Sanjaya, I had no hope of success.
 
 **13:04 · Dhritarashtra** · speech · grief · moderate · override
 
 > When I heard that the blind Kauravas were shouting for joy after having slain Abhimanyu and that thereupon Arjuna in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.
 
-*TTS:* When I heard that the blind Kauravas were shouting for joy after having slain Abhimanyu and that thereupon Arjoona in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.
+*TTS:* When I heard that the blind Kauravas were shouting for joy after having slain Abhimunyu and that thereupon Arjoona in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.
 
 **13:20 · Dhritarashtra** · speech · grief · measured · override
 
@@ -346,6 +354,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 
 > When I heard that Dhristadyumna, transgressing the laws of battle, slew Drona while alone in his chariot and resolved on death, then, O Sanjaya, I had no hope of success.
 
+*TTS:* When I heard that Dhrishtadyumna, transgressing the laws of battle, slew Drona while alone in his chariot and resolved on death, then, O Sanjaya, I had no hope of success.
+
 **15:41 · Dhritarashtra** · speech · grief · measured · override
 
 > When I heard that Nakula. the son of Madri, having in the presence of the whole army engaged in single combat with the son of Drona and showing himself equal to him drove his chariot in circles around, then, O Sanjaya, I had no hope of success.
@@ -383,6 +393,8 @@ The blind king to Sanjaya: his self-justification (¶31), then 'When I heard...,
 **17:09 · Dhritarashtra** · speech · grief · measured · override
 
 > When I heard that the wicked Suvala of magic power, the root of the gaming and the feud, was slain in battle by Sahadeva, the son of Pandu, then, O Sanjaya, I had no hope of success.
+
+*TTS:* When I heard that the wicked Subala of magic power, the root of the gaming and the feud, was slain in battle by Sahadeva, the son of Pandu, then, O Sanjaya, I had no hope of success.
 
 **17:25 · Dhritarashtra** · speech · grief · measured · override
 
@@ -464,11 +476,11 @@ Dhritarashtra wishes to die (¶37); Sanjaya recounts the great kings of old who 
 
 > Sauti said,
 
-**20:42 · Sauti** · speech · warm · measured · gloss not spoken
+**20:42 · Sauti** · speech · warm · measured · override, gloss not spoken
 
 > The wise son of Gavalgana (Sanjaya) then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly tainting, in words of deep import.
 
-*TTS:* The wise son of Guvulgana then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly tainting, in words of deep import.
+*TTS:* The wise son of Guvulgana then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly fainting, in words of deep import.
 
 **20:56 · Sanjaya** · speech · tender · measured · override, gloss not spoken
 

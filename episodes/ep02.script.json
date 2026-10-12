@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-12T03:03:49+00:00",
+ "generated_at": "2026-10-12T04:04:52+00:00",
  "ending": {
   "section": 1,
   "paragraph": 29,
@@ -1379,7 +1379,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horried unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'",
-   "tts_text": "And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horried unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripaa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'",
+   "tts_text": "And being dissatisfied, he did nothing to prevent the disputes, but overlooked the gaming and sundry other horrid unjustifiable transactions arising therefrom: and in spite of Vidura, Bhishma, Drona, and Kripaa, the son of Saradwan, he made the Kshatriyas kill each other in the terrific war that ensued.'",
    "turn_id": "t12",
    "non_kmg": false,
    "abridged": false,
@@ -1395,7 +1395,8 @@
    "direction": "the shadow of the war falls; end of the story in brief",
    "fx": null,
    "flags": [
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 516.014,
    "duration_s": 20.854

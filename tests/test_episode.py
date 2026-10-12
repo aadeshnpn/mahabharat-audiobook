@@ -355,3 +355,12 @@ def test_set_type_and_confirmed_narrator_overrides(tmp_path: Path):
     p31 = [l for l in script.lines if l.paragraph == 31]
     assert p31 and all(l.speaker == "dhritarashtra" and l.type == "speech" for l in p31)
     assert not [w for w in script.warnings if "unresolved" in w or "did not match" in w]
+
+
+def test_tts_replace_fixes_spoken_text_only(tmp_path: Path):
+    import json as _json, yaml
+    ov = tmp_path / "o.json"
+    ov.write_text(_json.dumps({"overrides": [{"section": 1, "paragraph": 29, "contains": "horried", "tts_replace": [["horried", "horrid"]]}]}))
+    p = _section_spec(tmp_path, 1, (29, 29)); d = yaml.safe_load(p.read_text()); d["overrides"] = str(ov); p.write_text(yaml.safe_dump(d))
+    line = next(l for l in build_episode(load_spec(p)).lines if "horried" in l.text)
+    assert "horrid unjustifiable" in line.tts_text and "horried" in line.text

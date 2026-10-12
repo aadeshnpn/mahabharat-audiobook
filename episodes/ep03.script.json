@@ -13,7 +13,7 @@
    "segment_s": 1.5
   }
  },
- "generated_at": "2026-10-12T03:03:49+00:00",
+ "generated_at": "2026-10-12T04:04:53+00:00",
  "ending": {
   "section": 1,
   "paragraph": 40,
@@ -164,7 +164,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "My inclination was never to war, not did I delight in the destruction of my race.",
-   "tts_text": "My inclination was never to war, not did I delight in the destruction of my race.",
+   "tts_text": "My inclination was never to war, nor did I delight in the destruction of my race.",
    "turn_id": "t2",
    "non_kmg": false,
    "abridged": false,
@@ -181,7 +181,8 @@
    "fx": null,
    "flags": [
     "speaker_confirmed",
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 30.24,
    "duration_s": 6.951
@@ -296,7 +297,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "I was foolish alter the thoughtless Duryodhana ever growing in folly.",
-   "tts_text": "I was foolish alter the thoughtless Duryodhana ever growing in folly.",
+   "tts_text": "I was foolish after the thoughtless Duryodhana ever growing in folly.",
    "turn_id": "t2",
    "non_kmg": false,
    "abridged": false,
@@ -313,7 +314,8 @@
    "fx": null,
    "flags": [
     "speaker_confirmed",
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 57.308,
    "duration_s": 4.779
@@ -1392,7 +1394,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "When I heard that Vasudeva and Bhishma the son of Santanu were the counsellors of the Pandavas and Drona the son of Bharadwaja pronounced blessings on them, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that Vasudeva and Bhishma the son of Santanu were the counsellors of the Pandavas and Drona the son of Bharadwaja pronounced blessings on them, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that Vasudeva and Bhishma the son of Shantanu were the counsellors of the Pandavas and Drona the son of Bharadwaja pronounced blessings on them, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -1624,7 +1626,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "When I heard that the aged hero Bhishma, having reduced the numbers of the race of shomaka to a few, overcome with various wounds was lying on a bed of arrows, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that the aged hero Bhishma, having reduced the numbers of the race of shomaka to a few, overcome with various wounds was lying on a bed of arrows, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that the aged hero Bhishma, having reduced the numbers of the race of Somaka to a few, overcome with various wounds was lying on a bed of arrows, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -1641,7 +1643,8 @@
    "fx": null,
    "flags": [
     "speaker_confirmed",
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 677.194,
    "duration_s": 17.379
@@ -1823,7 +1826,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "When I heard that our Maharathas, unable to overcome Arjuna, with jubilant faces after having jointly surrounded and slain the boy Abhimanyu, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that our Maharathas, unable to overcome Arjoona, with jubilant faces after having jointly surrounded and slain the boy Abhimanyu, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that our Maharathas, unable to overcome Arjoona, with jubilant faces after having jointly surrounded and slain the boy Abhimunyu, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -1856,7 +1859,7 @@
    "pace": "moderate",
    "intensity": 0.65,
    "text": "When I heard that the blind Kauravas were shouting for joy after having slain Abhimanyu and that thereupon Arjuna in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that the blind Kauravas were shouting for joy after having slain Abhimanyu and that thereupon Arjoona in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that the blind Kauravas were shouting for joy after having slain Abhimunyu and that thereupon Arjoona in anger made his celebrated speech referring to Saindhava, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -2157,7 +2160,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "When I heard that Dhristadyumna, transgressing the laws of battle, slew Drona while alone in his chariot and resolved on death, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that Dhristadyumna, transgressing the laws of battle, slew Drona while alone in his chariot and resolved on death, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that Dhrishtadyumna, transgressing the laws of battle, slew Drona while alone in his chariot and resolved on death, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -2174,7 +2177,8 @@
    "fx": null,
    "flags": [
     "speaker_confirmed",
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 927.972,
    "duration_s": 13.034
@@ -2390,7 +2394,7 @@
    "pace": "measured",
    "intensity": 0.4,
    "text": "When I heard that the wicked Suvala of magic power, the root of the gaming and the feud, was slain in battle by Sahadeva, the son of Pandu, then, O Sanjaya, I had no hope of success.",
-   "tts_text": "When I heard that the wicked Suvala of magic power, the root of the gaming and the feud, was slain in battle by Sahadeva, the son of Pandu, then, O Sanjaya, I had no hope of success.",
+   "tts_text": "When I heard that the wicked Subala of magic power, the root of the gaming and the feud, was slain in battle by Sahadeva, the son of Pandu, then, O Sanjaya, I had no hope of success.",
    "turn_id": "t4",
    "non_kmg": false,
    "abridged": false,
@@ -2407,7 +2411,8 @@
    "fx": null,
    "flags": [
     "speaker_confirmed",
-    "override"
+    "override",
+    "ocr_fix"
    ],
    "start_s": 1029.65,
    "duration_s": 16.075
@@ -2978,12 +2983,12 @@
    "pace": "measured",
    "intensity": 0.5,
    "text": "The wise son of Gavalgana (Sanjaya) then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly tainting, in words of deep import.",
-   "tts_text": "The wise son of Guvulgana then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly tainting, in words of deep import.",
+   "tts_text": "The wise son of Guvulgana then addressed the distressed lord of Earth while thus talking and bewailing, sighing like a serpent and repeatedly fainting, in words of deep import.",
    "turn_id": "t11",
    "non_kmg": false,
    "abridged": false,
    "excerpt": false,
-   "attribution": "rule",
+   "attribution": "override",
    "section": 1,
    "paragraph": 38,
    "src_span": [
@@ -2994,7 +2999,9 @@
    "direction": null,
    "fx": null,
    "flags": [
-    "gloss_stripped"
+    "gloss_stripped",
+    "ocr_fix",
+    "override"
    ],
    "start_s": 1242.862,
    "duration_s": 12.6

@@ -143,6 +143,90 @@
    "contains": "restored his mind to peace",
    "emotion": "tender",
    "direction": "the king's grief quieted; gentle resolution"
+  },
+  {
+   "section": 1,
+   "paragraph": 31,
+   "contains": "not did I delight",
+   "tts_replace": [
+    [
+     "not did I",
+     "nor did I"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 31,
+   "contains": "foolish alter the",
+   "tts_replace": [
+    [
+     "alter the",
+     "after the"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "race of shomaka",
+   "tts_replace": [
+    [
+     "shomaka",
+     "Somaka"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "Dhristadyumna, transgressing",
+   "tts_replace": [
+    [
+     "Dhristadyumna",
+     "Dhrishtadyumna"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 33,
+   "contains": "wicked Suvala",
+   "tts_replace": [
+    [
+     "Suvala",
+     "Subala"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 38,
+   "contains": "repeatedly tainting",
+   "tts_replace": [
+    [
+     "tainting",
+     "fainting"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
   }
  ]
 }

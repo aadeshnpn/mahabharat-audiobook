@@ -1,6 +1,6 @@
 {
  "book": 1,
- "generated_at": "2026-10-11T19:18:55-0600",
+ "generated_at": "2026-10-11T21:33:54-0600",
  "method": "text-grounded extraction (LLM reading of KMG text) + computed counts",
  "skipped_sections": {
   "176": "duplicate of 177 in source; original §176 text missing"
@@ -7739,7 +7739,7 @@
    "respelling": "dhri-tuh-RAASH-truh",
    "gender": "male",
    "kind": "human",
-   "era_age": "young prince→aging blind king",
+   "era_age": "young prince→aged blind king (old by his own account in the §1 lament: 'because I am old')",
    "role": "Blind elder son of Vyasa and Ambika; king of the Kurus; father of Duryodhana and ninety-nine others",
    "personality": [
     "conflicted",
@@ -7752,9 +7752,12 @@
     "longing",
     "veiled envy",
     "false cheer",
-    "regret"
+    "regret",
+    "grief",
+    "despair",
+    "self-justification"
    ],
-   "voice_brief": "A middle-aged blind Indian king, deep but wavering voice, anxious, emotional, clear Indian English accent",
+   "voice_brief": "An aged blind Indian king, deep resonant voice worn by age and sorrow with a faint tremor, bitter and self-justifying, breaking into grief, clear Indian English accent",
    "backstory": "Born blind because Ambika closed her eyes (§106). Passed over for the throne because of his blindness, he marries Gandhari (§109–§110). He fathers a hundred sons, Duhsala, and Yuyutsu by a Vaisya maid (§115–§116). He becomes ruler after Pandu (§126–§127). He grows jealous of the Pandavas, takes Kanika's crooked counsel (§142), and at Duryodhana's urging sends them to Varanavata (§143–§145). He outwardly mourns them (§152). On hearing of the swayamvara he first rejoices, thinking Duryodhana has won (§202). He later agrees to give the Pandavas half the kingdom at Khandavaprastha (§209).",
    "key_sections": [
     106,

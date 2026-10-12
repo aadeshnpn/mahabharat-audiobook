@@ -155,6 +155,10 @@ def _apply_one(line: ScriptLine, row: dict, cast: Cast, respeak: Respeak | None)
     if "tts_text" in row:
         line.tts_text = row["tts_text"]
         line.flags = [flag for flag in line.flags if flag != "gloss_stripped"]
+    for bad, good in row.get("tts_replace") or []:  # surgical spoken-text fix (e.g. OCR typos); KMG text untouched
+        if bad not in line.tts_text:
+            raise ValueError(f"tts_replace: {bad!r} not in the spoken text of {line.id or line.text[:40]!r}")
+        line.tts_text = line.tts_text.replace(bad, good)
     if "addressee" in row:
         line.addressee = row["addressee"]
     if "type" in row:

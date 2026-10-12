@@ -136,6 +136,10 @@ script lines. A `§S ¶P: TEXT LOST?` warning means the attributer dropped words
 with one). Fixed in Ep2 work: an interrupted quote inside a paragraph that opened mid-quotation (`'These our pupils',
 said they, '...'`) used to drop the rest of the paragraph (16 paragraphs in Book 1).
 
+**Audition a new voice on real lines:** `PYTHONPATH=src proto/.venv-vox/bin/python tools/audition.py episodes/ep03.yaml
+samples/voices_ep03_audition.mp3 ep03-0007,ep03-0084 ep03-0105,ep03-0111` (each comma group is one speaker block;
+lines go through the episode renderer and cache, so the full render reuses them).
+
 ## 4. Names: lexicon + pronunciation harness
 
 `lexicon/book01.tsv` columns: `term, respelling (human guide), ipa, source, verified, notes, spoken`. Only `spoken`

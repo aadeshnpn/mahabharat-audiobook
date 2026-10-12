@@ -42,3 +42,5 @@ work/music/
 
 # run logs
 logs/
+data/*.sqlite3-wal
+data/*.sqlite3-shm

@@ -46,9 +46,11 @@ points. The Dhritarashtra voice was designed specifically to carry this length.
 ## Voices
 | Speaker | Lines | Time | Voice |
 |---|---|---|---|
-| Dhritarashtra | 84 | 19:43 | VOICE_DHR |
-| Sanjaya | 22 | 4:19 | VOICE_SAN |
+| Dhritarashtra | 84 | 19:43 | ✓ designed 2026-10-11 (`voices/dhritarashtra/ref.wav`, candidate B_0) |
+| Sanjaya | 22 | 4:19 | ✓ designed 2026-10-11 (`voices/sanjaya/ref.wav`, candidate C_1) |
 | Sauti | 8 | 1:45 | ✓ |
+
+Audition (2 real Ep 3 lines each, via the episode renderer): `samples/voices_ep03_audition.mp3`.
 
 ## Music (preset A, per-episode cues in `ep03.yaml`)
 | Moment | Time | Cue |

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "dhritarashtra-A",
+  "n": 2,
+  "prompt": "An aged blind Indian king in his seventies, deep rich baritone worn by age and sorrow, slightly husky, grieving yet regal, warm and expressive so that long speeches stay engaging, unhurried, clear Indian English accent",
+  "line": "I made no distinction between my own children and the children of Pandu."
+ },
+ {
+  "id": "dhritarashtra-B",
+  "n": 2,
+  "prompt": "An old Indian king, resonant but tired low voice with a faint tremor of age, bitter and self-justifying, on the edge of grief, very clear diction, measured pace, Indian English accent",
+  "line": "I made no distinction between my own children and the children of Pandu."
+ },
+ {
+  "id": "sanjaya-A",
+  "n": 2,
+  "prompt": "A wise mature Indian royal minister in his fifties, calm warm baritone, steady and consoling, gently philosophical, crisp clear diction, measured pace, Indian English accent",
+  "line": "Moreover, it behoveth thee not to grieve for that which must happen."
+ },
+ {
+  "id": "sanjaya-B",
+  "n": 2,
+  "prompt": "A thoughtful middle-aged Indian court bard and royal charioteer, smooth clear mid-range voice with quiet authority and compassion, speaks softly but firmly, Indian English accent",
+  "line": "Moreover, it behoveth thee not to grieve for that which must happen."
+ },
+ {
+  "id": "sanjaya-C",
+  "n": 2,
+  "prompt": "An elderly Indian royal counsellor in his sixties, deep soft low voice, slightly breathy and gentle, grave and compassionate, slow deliberate consoling speech, very clear Indian English accent",
+  "line": "Moreover, it behoveth thee not to grieve for that which must happen."
+ }
+]

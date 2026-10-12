@@ -41,19 +41,21 @@ def lyrics_for(spec, line_ids: list[str] | None, script: str = "devanagari", rep
 
 def generate(spec, out: Path, *, line_ids=None, seed: int = 0, mode: str = "text2music", src: Path | None = None,
              duration: float | None = None, cover_strength: float | None = None, script: str | None = None,
-             prompt: str | None = None, track: str | None = None) -> dict:
+             prompt: str | None = None, track: str | None = None, lyrics: str | None = None,
+             bpm: int | None = None, keyscale: str | None = None, steps: int | None = None,
+             repaint: tuple[float, float] | None = None) -> dict:
     import soundfile as sf
     import torch
 
     cfg = dict(spec.raw.get("ace") or {})
     pipe = pipeline(cfg.get("threads"))
     kwargs = dict(prompt=prompt or cfg.get("prompt", ""),
-                  lyrics=lyrics_for(spec, line_ids, script or cfg.get("script", "devanagari"), int(cfg.get("repeat", 1))),
+                  lyrics=lyrics or lyrics_for(spec, line_ids, script or cfg.get("script", "devanagari"), int(cfg.get("repeat", 1))),
                   audio_duration=float(duration or cfg.get("duration", 30)), vocal_language=cfg.get("language", "hi"),
-                  num_inference_steps=int(cfg.get("steps", 8)), bpm=int(cfg.get("bpm", round(spec.tempo_bpm))),
-                  keyscale=cfg.get("keyscale"), timesignature=str(cfg.get("timesignature", "4")),
+                  num_inference_steps=int(steps or cfg.get("steps", 8)), bpm=int(bpm or cfg.get("bpm", round(spec.tempo_bpm))),
+                  keyscale=keyscale or cfg.get("keyscale"), timesignature=str(cfg.get("timesignature", "4")),
                   generator=torch.Generator().manual_seed(seed))
-    if mode in ("cover", "complete", "lego"):
+    if mode in ("cover", "complete", "lego", "repaint"):
         y, sr = sf.read(src, always_2d=True)
         if sr != pipe.sample_rate:
             import librosa
@@ -65,6 +67,8 @@ def generate(spec, out: Path, *, line_ids=None, seed: int = 0, mode: str = "text
         if mode == "lego":
             kwargs["track_name"] = track or "vocals"
             kwargs["repainting_start"], kwargs["repainting_end"] = 0.0, -1
+        if mode == "repaint":   # regenerate only [start, end) s, e.g. a weak syllable; the rest is kept
+            kwargs["repainting_start"], kwargs["repainting_end"] = repaint
         if mode == "complete":
             kwargs["complete_track_classes"] = cfg.get("complete_tracks", ["strings", "percussion", "keyboard"])
     t = time.time()
@@ -77,3 +81,16 @@ def generate(spec, out: Path, *, line_ids=None, seed: int = 0, mode: str = "text
             "src": str(src) if src else None}
     Path(out).with_suffix(".json").write_text(json.dumps(info, ensure_ascii=False, indent=1))
     return info
+
+
+def lyrics_format(spec, line_ids, fmt: str) -> str:
+    """Lyric layouts that change phrasing/diction. ``half``: one half-line (pada) per lyric line, so the model breathes at
+    each caesura; ``roman``: plain ASCII; ``verse``: the config default (one line per half-verse)."""
+    from mbh.song.translit import to_ascii
+    lines = [l for l in spec.lines if not line_ids or l.id in line_ids]
+    padas = [p.strip(" ।") for l in lines for p in l.text.replace("।", "").split(",")]
+    if fmt == "roman":
+        padas = [" ".join(to_ascii(w) for w in p.split()) for p in padas]
+    if fmt == "verse":
+        return lyrics_for(spec, line_ids)
+    return "[intro]\n\n[verse]\n" + "\n".join(padas) + "\n\n[outro]"

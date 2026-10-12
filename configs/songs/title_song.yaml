@@ -58,3 +58,13 @@ ace:                     # ACE-Step 1.5 XL turbo (MIT), CPU; `mbh song ace`
   steps: 8
   duration: 30
   cover_strength: 0.6
+epic:                     # grand/solemn variant (tools/song/epic_sweep.py); original composition by the model, no reference audio
+  lines: ["2.62a", "2.62b"]
+  bpm: 64
+  keyscale: "D minor"
+  duration: 42
+  steps: 8
+  formats: [half, roman]
+  prompts:
+    e1: "epic Indian mythological television title song, grand solemn and majestic, powerful resonant open-throated male playback singer, classically trained Hindustani voice, bold full-chested delivery, long sustained held notes, slow majestic tempo, dramatic orchestral swells, shankh conch blast, heavy dhol and pakhawaj, timpani, deep male choir, strings and brass, building intensity, Sanskrit shloka"
+    e2: "cinematic Indian devotional epic, 1980s Bollywood playback baritone singing a Sanskrit shloka with gravitas, slow and solemn, long held vowels, conch shell intro, thunderous pakhawaj and timpani, choir answering, sweeping string orchestra, harmonium, tanpura drone, crescendo, powerful and dramatic"

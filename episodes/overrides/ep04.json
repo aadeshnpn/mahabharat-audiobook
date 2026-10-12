@@ -1,0 +1,240 @@
+{
+ "overrides": [
+  {
+   "section": 2,
+   "paragraph": 1,
+   "contains": "Samanta-panchaya",
+   "tts_replace": [
+    [
+     "Samanta-panchaya",
+     "Samantapanchaka"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 44,
+   "contains": "lest he should it",
+   "tts_replace": [
+    [
+     "lest he should it",
+     "lest he should injure it"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 1,
+   "paragraph": 44,
+   "contains": "recites to other this",
+   "tts_replace": [
+    [
+     "recites to other this",
+     "recites to others this"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 5,
+   "contains": "Kama the desolator",
+   "tts_replace": [
+    [
+     "Kama the",
+     "Karna the"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 5,
+   "contains": "army of Yudishthira",
+   "tts_replace": [
+    [
+     "Yudishthira",
+     "Yudhishthira"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "Krimira-badha",
+   "tts_replace": [
+    [
+     "Krimira",
+     "Kirmira"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "Mirga-Swapna",
+   "tts_replace": [
+    [
+     "Mirga",
+     "Mriga"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "Aindradrumna",
+   "tts_replace": [
+    [
+     "Aindradrumna",
+     "Aindradyumna"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "'Yanasaddhi'",
+   "tts_replace": [
+    [
+     "Yanasaddhi",
+     "Yanasandhi"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "story of Sheta",
+   "tts_replace": [
+    [
+     "Sheta",
+     "Sweta"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 8,
+   "contains": "Bidulaputrasasana",
+   "tts_replace": [
+    [
+     "Bidulaputrasasana",
+     "Vidulaputrasasana"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 3,
+   "contains": "So shall it be",
+   "speaker": "sauti",
+   "emotion": "solemn",
+   "direction": "the ancestors' answer, voiced by the narrator (no crowd voice)"
+  },
+  {
+   "section": 2,
+   "paragraph": 3,
+   "contains": "But be thou pacified",
+   "speaker": "sauti",
+   "emotion": "solemn",
+   "direction": "the ancestors' answer, voiced by the narrator (no crowd voice)"
+  },
+  {
+   "section": 2,
+   "paragraph": 2,
+   "contains": "O blessed Rama",
+   "emotion": "solemn",
+   "direction": "Sauti quoting the ancestors' blessing; grave and warm"
+  },
+  {
+   "section": 2,
+   "paragraph": 3,
+   "contains": "If, O fathers",
+   "emotion": "pleading",
+   "direction": "the warrior-sage, spent after his vengeance, asking to be absolved; grave, remorseful, still mighty"
+  },
+  {
+   "section": 2,
+   "paragraph": 5,
+   "contains": "One chariot, one elephant",
+   "set_type": "speech",
+   "emotion": "neutral",
+   "direction": "a measured, almost counting cadence"
+  },
+  {
+   "section": 2,
+   "paragraph": 2,
+   "contains": "deserve to hear of the place",
+   "tts_replace": [
+    [
+     "Samanta-panchaka",
+     "Samantapanchaka"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 2,
+   "contains": "five lakes of blood",
+   "tts_replace": [
+    [
+     "Samanta-panchaka",
+     "Samantapanchaka"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 3,
+   "contains": "celebrated as Samanta-panchaka",
+   "tts_replace": [
+    [
+     "Samanta-panchaka",
+     "Samantapanchaka"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 3,
+   "contains": "there happened at Samanta-panchaka",
+   "tts_replace": [
+    [
+     "Samanta-panchaka",
+     "Samantapanchaka"
+    ]
+   ]
+  }
+ ]
+}

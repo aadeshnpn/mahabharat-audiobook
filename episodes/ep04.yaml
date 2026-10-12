@@ -1,0 +1,52 @@
+# Episode 4. Text only (draft for review): `mbh episode build episodes/ep04.yaml`
+id: ep04
+title: "Episode 4: The Weight of the Bharata"
+book: 1
+target_duration_s: 1080
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep04.json
+strip_glosses: true
+music: true
+music_rules:
+  - {name: weighed_in_balance,match: {section: 1, paragraph: 45, text: 'weighed'},          cue: celestial_swell,   intensity: 0.5}
+  - {name: merits_of_bharata, match: {section: 1, paragraph: [41, 45]},                    cue: sacred_solemn,     intensity: 0.4}
+  - {name: lakes_of_blood,    match: {section: 2, paragraph: 2, text: 'smote|lakes of blood|oblations of blood'}, cue: grave_drone, intensity: 0.5}
+  - {name: ancestors_bless,   match: {section: 2, paragraph: 2, text: 'Rama|Blessings|boon'}, cue: sacred_solemn,   intensity: 0.45}
+  - {name: kurukshetra_dead,  match: {section: 2, paragraph: 3, text: 'Akshauhinis|slain'}, cue: grave_drone,       intensity: 0.45}
+  - {name: rama_absolved,     match: {section: 2, paragraph: 3, text: 'fathers|So shall|pacified|holy'}, cue: tender_resolve, intensity: 0.4}
+  - {name: naimisha_question, match: {section: 2, paragraph: [1, 4]},                       cue: forest_ashram,     intensity: 0.35}
+  - {name: akshauhini_count,  match: {section: 2, paragraph: 5, text: 'Patti|chariots|elephants|foot-soldiers|Akshauhini'}, cue: royal_resolve, intensity: 0.35}
+  - {name: war_and_time,      match: {section: 2, paragraph: 5},                            cue: grave_drone,       intensity: 0.45}
+  - {name: bharata_praise,    match: {section: 2, paragraph: [6, 7]},                       cue: reverent_anticipation, intensity: 0.4}
+  - {name: parva_gita,        match: {section: 2, paragraph: 8, text: 'Bhagavat-gita|Anugita|Sanatsujata|ascension'}, cue: sacred_solemn, intensity: 0.45}
+  - {name: parva_war,         match: {section: 2, paragraph: 8, text: 'Bhishma|Drona|Abhimunyu|Jayadratha|Karna|Salya|clubs|Sauptika|Aisika|wailings'}, cue: grave_drone, intensity: 0.4}
+  - {name: parva_catalogue,   match: {section: 2, paragraph: 8},                            cue: narration_warm,    intensity: 0.35}
+summary: >
+  Sauti closes the Introduction with the merits of hearing the Bharata and how it outweighed the four Vedas, hence
+  "Mahabharata". The Naimisha Rishis ask about Samanta-panchaka: Parasurama's five lakes of blood, his ancestors'
+  boon, and the eighteen Akshauhinis who later died there. Sauti defines an Akshauhini, then lists the hundred parvas.
+end_reason: >
+  §2 ¶8 ends the full list of the hundred parvas ("...the very wonderful Bhavishyaparva"); ¶9 is a bridge ("as
+  follows:") into the eighteen-parva summary, which begins a new long catalogue.
+segments:
+  - id: merits
+    kind: section
+    section: 1
+    paragraphs: [41, 46]
+    narrator: sauti
+    label: "The merits of the Bharata"
+  - id: samanta
+    kind: section
+    section: 2
+    paragraphs: [1, 5]
+    narrator: sauti
+    label: "Samanta-panchaka and the Akshauhini"
+  - id: parvas
+    kind: section
+    section: 2
+    paragraphs: [6, 8]
+    narrator: sauti
+    label: "The hundred parvas"

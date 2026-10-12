@@ -41,6 +41,19 @@ def master_file(src: Path, out: Path, lufs: float = -16.0, true_peak_db: float =
         info = {"lufs": round(prog, 2), "sample_peak_db": round(20 * np.log10(np.abs(y).max()), 2)}
         if abs(prog - lufs) < 0.1:
             break
+    # final safety: the last gain step can push peaks back over the ceiling (MP3 adds ~0.3 dB more)
+    ceiling = 10 ** ((true_peak_db - 0.8) / 20)
+    env = np.maximum(np.abs(y).max(axis=1), 1e-9)
+    g = np.minimum(1.0, ceiling / env)
+    k = int(0.003 * sr)
+    g = _min_filter(g, k)
+    y = y * g[:, None]
+    info["sample_peak_db"] = round(20 * np.log10(np.abs(y).max()), 2)
     out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(out, y, sr, subtype="PCM_16")
     return {"out": str(out), "seconds": round(n / sr, 2), **info}
+
+
+def _min_filter(g: np.ndarray, k: int) -> np.ndarray:
+    from scipy.ndimage import minimum_filter1d, uniform_filter1d
+    return uniform_filter1d(minimum_filter1d(g, 2 * k + 1), 2 * k + 1)

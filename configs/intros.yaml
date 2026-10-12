@@ -1,0 +1,5 @@
+# Named intros for episode specs: `intro: title_song` in episodes/epNN.yaml.
+# crossfade_s: the intro's tail (drone fade) overlaps the episode's first line/music by this many seconds.
+title_song:
+  path: assets/intro/title_song_v1.wav
+  crossfade_s: 2.5

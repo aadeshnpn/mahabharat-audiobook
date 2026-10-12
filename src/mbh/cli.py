@@ -189,7 +189,7 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     timing, settings = load_timing(spec.timing_path)
     out = args.out or spec.path.with_name(f"{spec.id}.wav")
     try:
-        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro,
+        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro, intro_crossfade_s=spec.intro_crossfade_s,
                           music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem,
                                                args.music_preset or spec.music_preset, spec.music_rules))
     except RuntimeError as exc:

@@ -47,6 +47,8 @@ class EpisodeSpec:
     end_reason: str = ""
     summary: str = ""
     intro: Path | None = None
+    # seconds the intro's tail overlaps the first line (named intros in configs/intros.yaml set it)
+    intro_crossfade_s: float = 0.0
     outro: Path | None = None
     notes: list[str] = field(default_factory=list)
     # None follows configs/duration.yaml. True/False is this episode's choice.
@@ -82,7 +84,8 @@ def load_spec(path: Path) -> EpisodeSpec:
         lexicon_path=_opt_path(data.get("lexicon"), path),
         end_reason=str(data.get("end_reason") or "").strip(),
         summary=str(data.get("summary") or "").strip(),
-        intro=_opt_path(data.get("intro"), path),
+        intro=_intro(data, path)[0],
+        intro_crossfade_s=_intro(data, path)[1],
         outro=_opt_path(data.get("outro"), path),
         notes=[str(item) for item in (data.get("notes") or [])],
         strip_glosses=_opt_bool(data, "strip_glosses"),
@@ -153,3 +156,19 @@ def _opt_path(value: str | None, spec_path: Path) -> Path | None:
         return beside
     rooted = repo_root() / raw
     return rooted
+
+
+def _intro(data: dict, spec_path: Path) -> tuple[Path | None, float]:
+    """``intro:`` is a path, or a name from configs/intros.yaml (e.g. ``intro: title_song``)."""
+    value = data.get("intro")
+    xf = data.get("intro_crossfade_s")
+    if not value:
+        return None, 0.0
+    import yaml
+
+    named = repo_root() / "configs" / "intros.yaml"
+    table = (yaml.safe_load(named.read_text(encoding="utf-8")) or {}) if named.exists() else {}
+    if str(value) in table:
+        row = table[str(value)]
+        return repo_root() / row["path"], float(xf if xf is not None else row.get("crossfade_s", 0.0))
+    return _opt_path(str(value), spec_path), float(xf or 0.0)

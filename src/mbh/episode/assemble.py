@@ -20,6 +20,7 @@ def assemble(
     *,
     intro: Path | None = None,
     outro: Path | None = None,
+    intro_crossfade_s: float = 0.0,
     normalize_lines: bool = True,
     music_cfg: dict | None = None,
 ) -> dict:
@@ -34,10 +35,10 @@ def assemble(
     prev: ScriptLine | None = None
     intervals: list[tuple[str, float, float]] = []
     cursor = 0
-    if intro and intro.exists():
+    intro_samples = None
+    if intro and intro.exists():  # prepended after the music bed, crossfaded into the first line
         samples, src_rate = read_mono(intro)
-        pieces.append(("intro", resample(samples, src_rate, rate)))
-        cursor += len(pieces[-1][1])
+        intro_samples = resample(samples, src_rate, rate)
     for line in script.lines:
         item = by_id.get(line.id)
         if item is None or not item.path or item.status in {"missing_voice", "would_render"}:
@@ -72,6 +73,9 @@ def assemble(
     mixed = _concat(pieces)
     if music_cfg:
         mixed, music_info = _add_music(script, mixed, rate, intervals, music_cfg)
+    offset_s = 0.0
+    if intro_samples is not None:
+        mixed, offset_s = _prepend_intro(intro_samples, mixed, rate, intro_crossfade_s)
     mastered, master_info = loudness.master(mixed, rate, target, settings.true_peak_db)
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     write_pcm16(out_wav, mastered, rate)
@@ -89,9 +93,11 @@ def assemble(
         "lines": per_line,
         "missing_lines": missing,
         "pieces": len(pieces),
+        "intro": {"path": str(intro), "seconds": round(len(intro_samples) / rate, 2), "crossfade_s": intro_crossfade_s,
+                  "episode_starts_s": round(offset_s, 3)} if intro_samples is not None else None,
         "music": music_info,
         "timeline": [
-            {"line_id": line_id, "start_s": round(start, 3), "end_s": round(end, 3)}
+            {"line_id": line_id, "start_s": round(start + offset_s, 3), "end_s": round(end + offset_s, 3)}
             for line_id, start, end in intervals
         ],
     }
@@ -181,6 +187,23 @@ def _zeros(n: int):
         return np.zeros(n)
     except ImportError:  # pragma: no cover
         return [0.0] * n
+
+
+def _prepend_intro(intro, body, rate: int, crossfade_s: float):
+    """Intro, then the episode; the last ``crossfade_s`` of the intro fades out (equal-power) over the start of the body."""
+    import math
+
+    intro = [float(x) for x in intro]
+    body = list(body)
+    xf = min(int(round(max(0.0, crossfade_s) * rate)), len(intro), len(body))
+    if xf == 0:
+        return _concat([("intro", intro), ("body", body)]), len(intro) / rate
+    head = intro[:len(intro) - xf]
+    overlap = []
+    for i in range(xf):
+        t = i / (xf - 1) if xf > 1 else 1.0
+        overlap.append(intro[len(intro) - xf + i] * math.cos(t * math.pi / 2) + float(body[i]) * math.sin(t * math.pi / 2))
+    return _concat([("intro", head), ("xf", overlap), ("body", body[xf:])]), (len(intro) - xf) / rate
 
 
 def _concat(pieces: list[tuple[str, list[float]]]):

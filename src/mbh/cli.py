@@ -71,6 +71,10 @@ def main(argv: list[str] | None = None) -> int:
     export.add_argument("--out", type=Path)
     export.set_defaults(func=cmd_export)
 
+    from mbh.song.cli import add_song_commands
+
+    add_song_commands(sub)
+
     args = parser.parse_args(argv)
     return args.func(args)
 

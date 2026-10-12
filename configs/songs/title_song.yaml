@@ -1,0 +1,60 @@
+# Opening title song: Bhagavad Gita 2.62-63, sung in an original melody in raga Yaman (devotional, sweeping).
+# Render: see docs/SONGS.md.  `mbh song takes` -> `mbh song score` -> `mbh song render`.
+id: title_song
+title: "Dhyayato vishayan (Gita 2.62-63)"
+raga: yaman
+sa_hz: 146.83            # D3 for a male voice (singer_f sings an octave up: voice.octave)
+tempo_bpm: 76
+voice:
+  id: singer_m           # voices/<id>/ref.wav (or voices/<id>/candidates/<file> via voice.ref)
+  octave: 0
+  prompt: "a warm, sweet, melodious devotional singer, singing slowly and tenderly, long sustained vowels"
+  seeds: [11, 23, 37, 41]
+  vibrato_cents: 28
+  vibrato_hz: 5.2
+  glide_s: 0.09
+arrangement:
+  preset: devotional_title
+  intro_beats: 8         # instrumental before the first sung line
+  outro_beats: 6
+  tabla: keherwa
+master: {lufs: -16.0, true_peak_db: -2.0}
+lines:
+  - id: "2.62a"
+    text: "ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।"
+    syllables: "ध्या य तो वि ष यान् पुं सः सङ् गस् ते षू प जा य ते"
+    # one entry per syllable: "swara:beats" (several = melisma). Original composition (not from any film/TV song).
+    melody: ["N.:0.5 R:1", "G:0.5", "R:1", "G:0.5", "M:0.5", "D:0.5 P:1", "M:0.5 G:0.5", "G:0.5 R:1.5",
+             {rest: 0.5},
+             "G:0.5 M:0.5", "D:1", "N:0.5", "N:0.5 S':1", "N:0.5", "D:0.5 P:0.5", "M:0.5", "G:0.5 R:0.5 S:2"]
+  - id: "2.62b"
+    text: "सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते।"
+    syllables: "सङ् गात् सञ् जा य ते का मः का मात् क्रो धो ऽभि जा य ते"
+    melody: ["P:0.5", "P:0.5 M:0.5", "D:1", "N:0.5", "D:0.5", "P:1", "M:0.5 G:0.5", "R:1.5",
+             {rest: 0.5},
+             "G:0.5", "M:0.5 P:0.5", "D:0.5 N:0.5", "S':1.5", "N:0.5 D:0.5", "P:0.5", "M:0.5 G:0.5", "R:0.5 S:2"]
+  - id: "2.63a"
+    text: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः।"
+    context: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    syllables: "क्रो धाद् भ व ति सम् मो हः सम् मो हात् स्मृ ति वि भ्र मः"
+    melody: ["N:0.5 S':1", "N:0.5", "D:0.5", "P:0.5", "M:0.5", "G:0.5", "M:0.5 D:0.5", "P:1.5",
+             {rest: 0.5},
+             "G:0.5", "M:0.5", "D:1", "N:0.5", "D:0.5", "P:0.5", "M:0.5 G:0.5", "R:1.5"]
+  - id: "2.63b"
+    text: "स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    context: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    syllables: "स्मृ ति भ्रं शाद् बुद् धि ना शो बुद् धि ना शात् प्र ण श्य ति"
+    melody: ["G:0.5", "M:0.5", "D:1", "N:0.5 D:0.5", "P:0.5", "M:0.5", "G:1", "R:1",
+             {rest: 0.5},
+             "N.:0.5", "R:0.5", "G:1", "M:0.5 G:0.5", "R:0.5", "G:0.5", "R:0.5 N.:0.5", "S:3"]
+structure:
+  - {line: "2.62a"}
+ace:                     # ACE-Step 1.5 XL turbo (MIT), CPU; `mbh song ace`
+  prompt: "Indian devotional mythological epic title song, 1980s Doordarshan television style, male playback singer with a sweet, warm, melodious voice singing a Sanskrit shloka slowly and majestically, harmonium, sweeping string orchestra, tabla, tanpura drone, temple bells, raga Yaman, grand, serene, reverent"
+  language: hi
+  bpm: 76
+  keyscale: "D major"
+  timesignature: "4"
+  steps: 8
+  duration: 30
+  cover_strength: 0.6

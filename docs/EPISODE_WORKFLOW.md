@@ -125,6 +125,17 @@ to the TTS instruction), `fx`, `strip_glosses`, `tts_text` (spoken words only; t
 reproducibly). Structural: `merge_next` joins a line with the next one; `split` replaces a line with parts that must
 re-join to the original text (the builder checks this). Use them for nested quotes and speech inside narration.
 
+Matching: a row matches on `section`, `paragraph`, `segment_id`, `type` and `contains`/`match`. A row with no
+`contains` matches the whole paragraph, and a row that matches several lines needs `"apply_all": true` (e.g. give a
+whole nested-quote speech to its speaker). In a field row `type` is a **filter**. Use `set_type`
+(`narration`/`speech`) to change a line's type. Setting `speaker` (even to the narrator) marks the line
+`speaker_confirmed` and clears the "speaker unresolved" warning.
+
+**Text coverage check:** every build compares each KMG paragraph of a `section` segment, letter by letter, with the
+script lines. A `§S ¶P: TEXT LOST?` warning means the attributer dropped words (an unabridged episode must never ship
+with one). Fixed in Ep2 work: an interrupted quote inside a paragraph that opened mid-quotation (`'These our pupils',
+said they, '...'`) used to drop the rest of the paragraph (16 paragraphs in Book 1).
+
 ## 4. Names: lexicon + pronunciation harness
 
 `lexicon/book01.tsv` columns: `term, respelling (human guide), ipa, source, verified, notes, spoken`. Only `spoken`

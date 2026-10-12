@@ -6,7 +6,10 @@ ROOT = Path(__file__).resolve().parents[2]; sys.path.insert(0, str(ROOT / "src")
 from mbh.episode.pronounce import CARRIER, speakable_respelling
 
 # Sound key for the romanised-spelling score: the intended sound where KMG's spelling hides it (s = sh).
-KEY = {"Vaisampayana": "Vaishampayana", "Saunaka": "Shaunaka", "Ugrasrava": "Ugrashrava", "Krishna-Dwaipayana": "Krishna Dwaipayana"}
+KEY = {"Vaisampayana": "Vaishampayana", "Saunaka": "Shaunaka", "Ugrasrava": "Ugrashrava", "Krishna-Dwaipayana": "Krishna Dwaipayana",
+       # Episode 2: KMG writes the sh-sound as s
+       "Duhsasana": "Duhshasana", "Sakuni": "Shakuni", "Sakra": "Shakra", "Sastras": "Shastras", "Sikhandin": "Shikhandin",
+       "Aswatthaman": "Ashvatthaman", "Dhristadyumna": "Dhrishtadyumna", "Santanu": "Shantanu", "Saivya": "Shaivya", "Dasaratha": "Dasharatha"}
 
 def words():
     rows = {}

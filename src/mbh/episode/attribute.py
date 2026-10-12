@@ -108,12 +108,14 @@ class RuleAttributor:
         if state.open:
             head_end = intros[0].tag_start if intros else len(text)
             head = _strip_leading_wrapper(text[:head_end])
-            speech, _trailing, closed = split_speech(head, "'")
+            speech, trailing, closed = split_speech(head, "'")
             if speech:
                 lines.extend(self._block(
                     speech, state.kind or "narration", state.speaker or narrator,
                     section, paragraph, file_start, state.turn_id, [],
                 ))
+            if trailing:  # text after the closing quote is still KMG text: never drop it (e.g. §1 ¶23 "'These our pupils', said they, ...")
+                self._emit_narration(lines, trailing, narrator, section, paragraph, file_start)
             if closed:
                 state = QuoteState()
             cursor = head_end

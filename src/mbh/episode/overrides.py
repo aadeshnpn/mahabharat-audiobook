@@ -131,6 +131,9 @@ def _apply_one(line: ScriptLine, row: dict, cast: Cast, respeak: Respeak | None)
         line.speaker = row["speaker"]
         line.voice_id = cast.voice_id(line.speaker)
         line.layer = narrative_layer(line.speaker)
+        line.flags = [f for f in line.flags if f != "unresolved_speaker"]
+        if "speaker_confirmed" not in line.flags:  # an explicit choice, even when it is the narrator
+            line.flags.append("speaker_confirmed")
     if "emotion" in row:
         line.emotion = check_emotion(row["emotion"])
     if "pace" in row:
@@ -156,6 +159,10 @@ def _apply_one(line: ScriptLine, row: dict, cast: Cast, respeak: Respeak | None)
         line.addressee = row["addressee"]
     if "type" in row:
         line.type = row["type"]
+    if "set_type" in row:  # in field rows `type` is a match filter; `set_type` changes it (e.g. narration -> speech)
+        if row["set_type"] not in ("narration", "speech"):
+            raise ValueError(f"unknown set_type {row['set_type']!r}")
+        line.type = row["set_type"]
     for flag in row.get("flags_add") or []:
         if flag not in line.flags:
             line.flags.append(flag)

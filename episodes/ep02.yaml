@@ -1,0 +1,67 @@
+# Episode 2. Text only (draft for review): `mbh episode build episodes/ep02.yaml`
+# DRAFT ASSUMPTION (user to decide, see episodes/ep02_REVIEW.md): unabridged §1 ¶18-40 runs ~34:30, about twice the
+# 15-20 min target, because ¶31-35 is one unbroken ~20 min monologue (Dhritarashtra's lament to Sanjaya) and the only
+# clean break before it is ¶29 (~8:50). Change the last segment / paragraphs here once an option is chosen.
+id: ep02
+title: "Episode 2: The Blind King's Lament"
+book: 1
+target_duration_s: 1050
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep02.json
+strip_glosses: true
+music: true
+music_rules:
+  - {name: naimisha_again,    match: {section: 1, paragraph: 18},                             cue: forest_ashram,     intensity: 0.4}
+  - {name: pandu_misfortune,  match: {section: 1, paragraph: 23, text: 'killed a stag'},      cue: grave_drone,       intensity: 0.35}
+  - {name: divine_fathers,    match: {section: 1, paragraph: 23, text: 'the gods Dharma'},    cue: sacred_solemn,     intensity: 0.45}
+  - {name: pandava_glory,     match: {section: 1, paragraph: 27},                             cue: royal_resolve,     intensity: 0.45}
+  - {name: rajasuya,          match: {section: 1, paragraph: 28, text: '^Yudhishthira, after having'}, cue: royal_resolve, intensity: 0.45}
+  - {name: lament_peaks,      match: {speaker: dhritarashtra, text: 'single garment|bed of arrows|slain the boy Abhimanyu|slew Drona while alone|drank the blood of his brother|lying there alone|in their sleep|Brahmashira'}, cue: grave_drone, intensity: 0.5}
+  - {name: citizens_welcome,  match: {section: 1, paragraph: 24, emotion: joyful},            cue: bright_lift,       intensity: 0.6}
+  - {name: spirits_flowers,   match: {section: 1, paragraph: 24, emotion: awed},              cue: celestial_swell,   intensity: 0.7}
+  - {name: envy_and_dice,     match: {section: 1, paragraph: [28, 29]},                       cue: grave_drone,       intensity: 0.45, build_to_end: false}
+  - {name: lament_alas,       match: {speaker: dhritarashtra, paragraph: [34, 35, 37]},       cue: grave_drone,       intensity: 0.55}
+  - {name: lament,            match: {speaker: dhritarashtra},                                cue: grave_drone,       intensity: 0.3}
+  - {name: king_faints,       match: {section: 1, paragraph: [36, 38]},                       cue: grave_drone,       intensity: 0.4}
+  - {name: time_meditation,   match: {speaker: sanjaya, text: '\bTime\b'},                    cue: sacred_solemn,     intensity: 0.5}
+  - {name: sanjaya_consoles,  match: {speaker: sanjaya},                                      cue: tender_resolve,    intensity: 0.4}
+summary: >
+  Sauti tells the story of the Bharata in brief: Vyasa fathers Dhritarashtra, Pandu and Vidura; Pandu's curse in the
+  forest and the birth of the five Pandavas; their welcome at Hastinapura; Draupadi; Indraprastha and the Rajasuya;
+  Duryodhana's envy and the game of dice that led to the war. Then the blind king Dhritarashtra, hearing of the
+  Pandavas' success, pours out his lament to Sanjaya ("When I heard..., then, O Sanjaya, I had no hope of success"),
+  faints, and is consoled by Sanjaya with the deaths of the great kings of old and the power of Time.
+end_reason: >
+  Sauti closes the scene ("The son of Gavalgana having in this manner administered comfort to the royal
+  Dhritarashtra... then restored his mind to peace. Taking these facts for his subject, Dwaipayana composed a holy
+  Upanishad"). It is the end of the Dhritarashtra–Sanjaya dialogue and a narration boundary. ¶41 turns to the merits of
+  reading the Bharata.
+notes:
+  - "Unabridged KMG, §1 ¶18–40 in order; only parenthetical glosses are not spoken (strip_glosses)."
+  - "Clean breaks (not mid-dialogue): ¶29 (~8:50, end of the story summary: '...the terrific war that ensued') and ¶40 (~34:30). ¶30–39 is one dialogue: ¶30 leads into Dhritarashtra's speech (¶31–35), ¶36 into his ¶37, ¶38 into Sanjaya's ¶39."
+  - "Abridgement and ending options with durations: episodes/ep02_REVIEW.md. Nothing is abridged until the user approves."
+segments:
+  - id: story
+    kind: section
+    section: 1
+    paragraphs: [18, 29]
+    narrator: sauti
+    label: "The fruit of the tree: the story in brief"
+    note: "Vyasa fathers the three princes; how the Bharata was compiled and handed down; Pandu's misfortune and the birth of the Pandavas; their welcome at Hastinapura; Draupadi; Indraprastha, the Rajasuya and Duryodhana's envy; the dice and the war."
+  - id: lament
+    kind: section
+    section: 1
+    paragraphs: [30, 36]
+    narrator: sauti
+    label: "Dhritarashtra's lament"
+    note: "The blind king to Sanjaya: his self-justification (¶31), then 'When I heard..., then, O Sanjaya, I had no hope of success' through every turn of the story and the war (¶32–33), 'Alas!' (¶34–35); he faints (¶36)."
+  - id: consolation
+    kind: section
+    section: 1
+    paragraphs: [37, 40]
+    narrator: sauti
+    label: "Sanjaya consoles the king"
+    note: "Dhritarashtra wishes to die (¶37); Sanjaya recounts the great kings of old who also died, and the power of Time (¶38–39); Sauti closes the scene (¶40)."

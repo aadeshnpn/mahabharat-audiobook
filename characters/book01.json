@@ -1,6 +1,6 @@
 {
  "book": 1,
- "generated_at": "2026-10-10T21:47:33-0600",
+ "generated_at": "2026-10-11T19:18:55-0600",
  "method": "text-grounded extraction (LLM reading of KMG text) + computed counts",
  "skipped_sections": {
   "176": "duplicate of 177 in source; original §176 text missing"
@@ -3501,6 +3501,59 @@
    "provisional": false,
    "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
    "kind_detail": ""
+  },
+  {
+   "id": "sanjaya",
+   "name": "Sanjaya",
+   "aliases": [
+    "son of Gavalgana"
+   ],
+   "respelling": "SUN-juh-yuh",
+   "gender": "male",
+   "kind": "human",
+   "era_age": "adult; Dhritarashtra's minister and counsellor",
+   "role": "Dhritarashtra's minister: hears the blind king's lament and consoles him; later envoy and reporter of the war",
+   "personality": [
+    "wise",
+    "steady",
+    "compassionate",
+    "frank"
+   ],
+   "emotional_range": [
+    "consoling",
+    "grave",
+    "philosophical",
+    "gently admonishing"
+   ],
+   "voice_brief": "A wise, mature Indian royal minister and counsellor, calm, steady, measured baritone, compassionate yet frank, quietly philosophical, clear Indian English accent",
+   "backstory": "Dhritarashtra pours out to him the long lament 'When I heard..., then, O Sanjaya, I had no hope of success' (§1 ¶30–35). The 'wise son of Gavalgana' consoles the fainting king with the tale of the great kings of old who also died, and with the power of Time: 'Time createth all things and Time destroyeth all creatures' (§1 ¶38–40). The contents of the Parvas name him as Dhritarashtra's envoy to the Pandavas ('Sanjaya-yana', §2 ¶14), the narrator of the Bhishma Parva (§2 ¶15), and 'the foremost of ministers', who attains the blessed state in the Asramavasika (§2 ¶25).",
+   "key_sections": [
+    1,
+    2
+   ],
+   "first_section": 1,
+   "sections": [
+    1,
+    2
+   ],
+   "narrative_sections": [],
+   "summary_mentions": [
+    1,
+    2
+   ],
+   "mentions": 82,
+   "speaking_lines": 0,
+   "speech_by_section": {},
+   "flags": [
+    "single_section_speaker",
+    "non_speaking"
+   ],
+   "provenance": "text-extracted",
+   "voice_group": "",
+   "count_notes": "",
+   "provisional": false,
+   "source": "text-extracted: profile written from a reading of the KMG Book 1 text with § citations; counts computed by build_extracted.py",
+   "kind_detail": "Suta; minister"
   },
   {
    "id": "indra",
@@ -16889,6 +16942,16 @@
    "provisional": false,
    "provenance": "text-extracted",
    "section": 126
+  },
+  {
+   "source": "sanjaya",
+   "target": "dhritarashtra",
+   "type": "serves",
+   "label": "",
+   "notes": "§1: his minister; consoles him in §1 ¶38–40",
+   "provisional": false,
+   "provenance": "text-extracted",
+   "section": 1
   },
   {
    "source": "ganesa",

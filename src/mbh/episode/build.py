@@ -41,6 +41,7 @@ def build_episode(
         before = len(lines)
         made, warn = _segment_lines(spec, segment, cast, attributer, lexemes)
         warnings.extend(warn)
+        warnings.extend(_coverage_warnings(segment, made))
         lines.extend(made)
         segment_meta.append({
             "id": segment.id,
@@ -64,8 +65,12 @@ def build_episode(
 
     warnings.extend(apply_overrides(lines, load_overrides(spec.overrides_path), cast, respeak))
     # an override that assigned a speaker resolves the attribution warning for that text
-    fixed = [line.text for line in lines if line.attribution == "override" and line.speaker != spec.narrator_default]
-    warnings = [w for w in warnings if not ("speaker unresolved" in w and any(t.startswith(w.rsplit(": ", 1)[-1].strip()[:40]) for t in fixed))]
+    fixed = [line.text for line in lines if line.attribution == "override"
+             and (line.speaker != spec.narrator_default or "speaker_confirmed" in line.flags)]
+    def _fixed_by_override(w: str) -> bool:  # the warning quotes the pre-split turn; a fixed line may be its first sentence
+        head = w.rsplit(": ", 1)[-1].strip()[:40]
+        return any(t.startswith(head) or (t and head.startswith(t[:40])) for t in fixed)
+    warnings = [w for w in warnings if not ("speaker unresolved" in w and _fixed_by_override(w))]
     _renumber(spec.id, lines)
     total = apply_timing(lines, timing)
     ending = _ending(spec, lines)
@@ -286,6 +291,24 @@ def _ending(spec: EpisodeSpec, lines: list[ScriptLine]) -> dict:
         "line_id": last.id if last else None,
         "reason": spec.end_reason,
     }
+
+
+def _letters(text: str) -> str:
+    return re.sub(r"[^0-9A-Za-z]", "", text)
+
+
+def _coverage_warnings(segment, made: list[ScriptLine]) -> list[str]:
+    """Unabridged means unabridged: every letter of each KMG paragraph in a section segment must be in the script."""
+    if segment.kind != "section" or segment.section is None:
+        return []
+    section_text = load_section(segment.section)
+    out = []
+    for para in _select_paragraphs(section_text, tuple(segment.paragraphs) if segment.paragraphs else None):
+        src = _letters(para.text)
+        got = _letters("".join(line.text for line in made if line.paragraph == para.number))
+        if src != got:
+            out.append(f"§{segment.section} ¶{para.number}: TEXT LOST? script has {len(got)} of {len(src)} letters of the KMG paragraph")
+    return out
 
 
 def _norm(text: str) -> str:

@@ -22,7 +22,9 @@ REL_TYPES = {  # type: (directed, colour, label)
 }
 MIGRATIONS = [("characters", "narrative_sections", "TEXT DEFAULT '[]'"), ("characters", "speech_by_section", "TEXT DEFAULT '{}'"),
               ("characters", "flags", "TEXT DEFAULT '[]'"), ("characters", "provenance", "TEXT DEFAULT 'hand'"),
-              ("characters", "kind_detail", "TEXT DEFAULT ''"), ("characters", "voice_group", "TEXT DEFAULT ''"), ("relationships", "section", "INTEGER"), ("relationships", "provenance", "TEXT DEFAULT 'hand'")]
+              ("characters", "kind_detail", "TEXT DEFAULT ''"), ("characters", "voice_group", "TEXT DEFAULT ''"), ("relationships", "section", "INTEGER"), ("relationships", "provenance", "TEXT DEFAULT 'hand'"),
+              ("jobs", "progress", "REAL DEFAULT 0"), ("jobs", "message", "TEXT DEFAULT ''"),
+              ("jobs", "cancel", "INTEGER DEFAULT 0"), ("jobs", "episode_id", "TEXT")]
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS characters (
   id TEXT PRIMARY KEY, name TEXT NOT NULL, aliases TEXT DEFAULT '[]', respelling TEXT DEFAULT '', gender TEXT DEFAULT '',
@@ -38,14 +40,16 @@ CREATE TABLE IF NOT EXISTS relationships (
   notes TEXT DEFAULT '', provisional INTEGER DEFAULT 1, UNIQUE(source, target, type));
 CREATE TABLE IF NOT EXISTS jobs (
   id INTEGER PRIMARY KEY AUTOINCREMENT, character_id TEXT, kind TEXT, status TEXT, params TEXT, output TEXT,
-  log TEXT DEFAULT '', created REAL, started REAL, finished REAL);
+  log TEXT DEFAULT '', created REAL, started REAL, finished REAL,
+  progress REAL DEFAULT 0, message TEXT DEFAULT '', cancel INTEGER DEFAULT 0, episode_id TEXT);
 """
 _lock = threading.RLock()
 
 def connect(path=None):
     path = pathlib.Path(path or DB_PATH); path.parent.mkdir(parents=True, exist_ok=True)
-    con = sqlite3.connect(path, check_same_thread=False); con.row_factory = sqlite3.Row
-    con.execute("PRAGMA foreign_keys=ON"); con.executescript(SCHEMA)
+    con = sqlite3.connect(path, check_same_thread=False, timeout=30); con.row_factory = sqlite3.Row
+    con.execute("PRAGMA foreign_keys=ON"); con.execute("PRAGMA journal_mode=WAL"); con.execute("PRAGMA busy_timeout=5000")
+    con.executescript(SCHEMA)
     for table, col, decl in MIGRATIONS:
         if col not in {r[1] for r in con.execute(f"PRAGMA table_info({table})")}:
             con.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
@@ -68,14 +72,30 @@ def _char_params(d):
             out[f] = v
     out["updated_at"] = time.time(); return out
 
+def _job_row(r):
+    d = dict(r)
+    d["params"] = json.loads(d.get("params") or "{}")
+    d["progress"] = float(d.get("progress") or 0)
+    d["cancel"] = int(d.get("cancel") or 0)
+    d["message"] = d.get("message") or ""
+    return d
+
 class Store:
     def __init__(self, path=None): self.con = connect(path)
 
+    def _all(self, sql, args=()):
+        with _lock:
+            return self.con.execute(sql, args).fetchall()
+
+    def _one(self, sql, args=()):
+        with _lock:
+            return self.con.execute(sql, args).fetchone()
+
     # characters
     def list_characters(self):
-        return [_row_to_char(r) for r in self.con.execute("SELECT * FROM characters ORDER BY name COLLATE NOCASE")]
+        return [_row_to_char(r) for r in self._all("SELECT * FROM characters ORDER BY name COLLATE NOCASE")]
     def get_character(self, cid):
-        r = self.con.execute("SELECT * FROM characters WHERE id=?", (cid,)).fetchone(); return _row_to_char(r) if r else None
+        r = self._one("SELECT * FROM characters WHERE id=?", (cid,)); return _row_to_char(r) if r else None
     def upsert_character(self, d):
         p = _char_params(d)
         with _lock, self.con:
@@ -95,12 +115,12 @@ class Store:
     # relationships
     def list_relationships(self, cid=None):
         if cid:
-            rows = self.con.execute("SELECT * FROM relationships WHERE source=? OR target=? ORDER BY type", (cid, cid))
+            rows = self._all("SELECT * FROM relationships WHERE source=? OR target=? ORDER BY type", (cid, cid))
         else:
-            rows = self.con.execute("SELECT * FROM relationships ORDER BY id")
+            rows = self._all("SELECT * FROM relationships ORDER BY id")
         return [dict(r, provisional=bool(r["provisional"])) for r in rows]
     def get_relationship(self, rid):
-        r = self.con.execute("SELECT * FROM relationships WHERE id=?", (rid,)).fetchone(); return dict(r, provisional=bool(r["provisional"])) if r else None
+        r = self._one("SELECT * FROM relationships WHERE id=?", (rid,)); return dict(r, provisional=bool(r["provisional"])) if r else None
     def add_relationship(self, d):
         with _lock, self.con:
             cur = self.con.execute("INSERT INTO relationships (source,target,type,label,notes,provisional,section,provenance) VALUES (?,?,?,?,?,?,?,?)",
@@ -118,18 +138,74 @@ class Store:
         return n > 0
 
     # jobs
-    def add_job(self, cid, kind, params):
+    def add_job(self, cid, kind, params, episode_id=None):
         with _lock, self.con:
-            cur = self.con.execute("INSERT INTO jobs (character_id,kind,status,params,created) VALUES (?,?,?,?,?)", (cid, kind, "queued", json.dumps(params), time.time()))
+            cur = self.con.execute(
+                "INSERT INTO jobs (character_id,kind,status,params,created,episode_id,progress,message,cancel) VALUES (?,?,?,?,?,?,?,?,?)",
+                (cid, kind, "queued", json.dumps(params), time.time(), episode_id, 0, "", 0))
         return self.get_job(cur.lastrowid)
     def update_job(self, jid, **kw):
         with _lock, self.con: self.con.execute(f"UPDATE jobs SET {','.join(f'{k}=?' for k in kw)} WHERE id=?", [*kw.values(), jid])
+    def append_log(self, jid, text, progress=None, message=None):
+        with _lock, self.con:
+            row = self.con.execute("SELECT log FROM jobs WHERE id=?", (jid,)).fetchone()
+            if not row:
+                return
+            log = ((row["log"] or "") + text)[-20000:]
+            sets, vals = ["log=?"], [log]
+            if progress is not None:
+                sets.append("progress=?"); vals.append(float(progress))
+            if message is not None:
+                sets.append("message=?"); vals.append(message)
+            vals.append(jid)
+            self.con.execute(f"UPDATE jobs SET {','.join(sets)} WHERE id=?", vals)
     def get_job(self, jid):
-        r = self.con.execute("SELECT * FROM jobs WHERE id=?", (jid,)).fetchone()
-        return dict(r, params=json.loads(r["params"] or "{}")) if r else None
-    def list_jobs(self, cid=None):
-        q = "SELECT * FROM jobs" + (" WHERE character_id=?" if cid else "") + " ORDER BY id DESC LIMIT 50"
-        return [dict(r, params=json.loads(r["params"] or "{}")) for r in self.con.execute(q, (cid,) if cid else ())]
+        r = self._one("SELECT * FROM jobs WHERE id=?", (jid,))
+        return _job_row(r) if r else None
+    def list_jobs(self, cid=None, *, episode_id=None, kind=None, limit=100):
+        clauses, args = [], []
+        if cid:
+            clauses.append("character_id=?"); args.append(cid)
+        if episode_id:
+            clauses.append("episode_id=?"); args.append(episode_id)
+        if kind:
+            clauses.append("kind=?"); args.append(kind)
+        where = (" WHERE " + " AND ".join(clauses)) if clauses else ""
+        args.append(max(1, min(int(limit), 500)))
+        q = f"SELECT * FROM jobs{where} ORDER BY id DESC LIMIT ?"
+        return [_job_row(r) for r in self._all(q, args)]
+    def claim_next_job(self):
+        """Mark the oldest queued job running. Queued jobs that were cancelled never start."""
+        now = time.time()
+        with _lock, self.con:
+            self.con.execute(
+                "UPDATE jobs SET status='cancelled', finished=?, message='cancelled before start' WHERE status='queued' AND cancel=1",
+                (now,))
+            row = self.con.execute("SELECT id FROM jobs WHERE status='queued' ORDER BY id LIMIT 1").fetchone()
+            if not row:
+                return None
+            self.con.execute("UPDATE jobs SET status='running', started=?, progress=0 WHERE id=?", (now, row["id"]))
+            jid = row["id"]
+        return self.get_job(jid)
+    def recover_jobs(self):
+        """Requeue jobs left 'running' by a dead process. Render/synth resume from the per-line cache."""
+        with _lock, self.con:
+            cur = self.con.execute(
+                "UPDATE jobs SET status='queued', message='requeued after restart' WHERE status='running'")
+            return cur.rowcount
+    def request_cancel(self, jid):
+        now = time.time()
+        with _lock, self.con:
+            row = self.con.execute("SELECT status FROM jobs WHERE id=?", (jid,)).fetchone()
+            if not row or row["status"] not in ("queued", "running"):
+                return False
+            if row["status"] == "queued":
+                self.con.execute(
+                    "UPDATE jobs SET cancel=1, status='cancelled', finished=?, message='cancelled before start' WHERE id=?",
+                    (now, jid))
+            else:
+                self.con.execute("UPDATE jobs SET cancel=1, message='cancel requested' WHERE id=?", (jid,))
+            return True
 
     # import / export
     def import_data(self, data, mode="merge"):

@@ -5,7 +5,9 @@ See `PLAN.md` for the spec and phases, `research-tts.md` for the model survey, a
 
 > **Run it on your own machine:** [docs/LOCAL_SETUP.md](docs/LOCAL_SETUP.md) (Linux, CPU only: `scripts/setup.sh`, then
 > `scripts/smoke_test.sh`). **Make an episode:** [docs/EPISODE_WORKFLOW.md](docs/EPISODE_WORKFLOW.md)
-> (`scripts/render_episode.sh episodes/ep01.yaml --qa`). Approved voices: [voices/registry.json](voices/registry.json).
+> (`scripts/render_episode.sh episodes/ep01.yaml --qa`), or in the browser via
+> [Episode Studio](docs/STUDIO.md) at http://127.0.0.1:8765/studio.
+> Approved voices: [voices/registry.json](voices/registry.json).
 
 ## Episodes
 
@@ -78,14 +80,16 @@ PYTHONPATH=src .venv/bin/python -m mbh.characters.build_extracted --write
 PYTHONPATH=src .venv/bin/python -m mbh.webapp.seed
 # 2b) afterwards: re-seed while keeping voices, prompts and UI edits (stop the server first)
 PYTHONPATH=src .venv/bin/python -m mbh.webapp.reseed
-# 3) serve
-PYTHONPATH=src .venv/bin/uvicorn mbh.webapp.app:app --app-dir src --host 0.0.0.0 --port 8765
+# 3) serve (localhost only; there is no authentication)
+PYTHONPATH=src .venv/bin/python -m mbh.webapp
 ```
-Open http://localhost:8765 (the REST API docs are at http://localhost:8765/docs).
+Open http://127.0.0.1:8765 for the character map, http://127.0.0.1:8765/studio for Episode Studio, and http://127.0.0.1:8765/docs for the API. `MBH_HOST` defaults to `127.0.0.1`. Set it to another address only when a trusted proxy is in front; the process will warn, and it still will not ask for a password.
 
-"Generate candidate" needs the VoxCPM2 environment. It defaults to `proto/.venv-vox/bin/python`; point `MBH_VOX_PYTHON` elsewhere to override. A job takes about 1–2 minutes on an 8-core CPU, including ~20 s of model load, and uses ~7 GB of RAM. Jobs run one at a time.
+Episode Studio is the browser and JSON API over the episode CLI: create a span, estimate it, pick an ending, edit lines through the overrides file, render, assemble, and QA. One heavy job runs at a time. See [docs/STUDIO.md](docs/STUDIO.md) for the agent curl flow.
 
-Environment variables: `MBH_DB` (SQLite path, default `data/mbh.sqlite3`), `MBH_VOX_PYTHON`.
+"Generate candidate" needs the VoxCPM2 environment. It defaults to `proto/.venv-vox/bin/python`; point `MBH_VOX_PYTHON` elsewhere to override. A job takes about 1–2 minutes on an 8-core CPU, including ~20 s of model load, and uses ~7 GB of RAM. Render, assemble, QA, pronunciation, and voice design share that single worker, and the queue is stored in SQLite so a restart resumes from the per-line cache.
+
+Environment variables: `MBH_DB` (SQLite path, default `data/mbh.sqlite3`), `MBH_VOX_PYTHON`, `MBH_QA_PYTHON`, `MBH_HOST`, `MBH_PORT`, `MBH_EPISODES`, `MBH_LEXICON`, `MBH_BUILD`. `MBH_STUDIO_MOCK=1` runs the studio jobs with a tone instead of VoxCPM2.
 
 ### REST API (summary)
 | Method | Path | |
@@ -100,7 +104,10 @@ Environment variables: `MBH_DB` (SQLite path, default `data/mbh.sqlite3`), `MBH_
 | GET | `/api/characters/{id}/voice/candidates` | candidate clips |
 | POST | `/api/characters/{id}/voice/select` | `{file}`: make a candidate the reference |
 | POST | `/api/characters/{id}/voice/generate` | `{prompt?, text?, steps?}`: queue a VoxCPM2 design job (202) |
-| GET | `/api/jobs?character=`, `/api/jobs/{jid}` | job status |
+| GET | `/api/jobs?character=&episode=&kind=` | job list (newest first) |
+| GET | `/api/jobs/{jid}`, `/api/jobs/{jid}/log` | status, or the plain-text log |
+| POST | `/api/jobs/{jid}/cancel` | cancel a queued or running job |
+| GET/POST | `/api/studio/…` | Episode Studio: episodes, script edits, lexicon, voices, playback. See [docs/STUDIO.md](docs/STUDIO.md) |
 | POST | `/api/import?mode=merge\|replace` | import a JSON body `{characters:[...], relationships:[...]}` |
 | POST | `/api/import/seed?mode=merge\|replace` | re-import `characters/book01.json` |
 | GET | `/api/export[?save=true]` | export JSON (download, or save to `characters/book01.export.<ts>.json`) |
@@ -119,8 +126,9 @@ An explicit baseline can be passed as the first argument; it must be the exact f
 ### Tests
 ```bash
 VIRTUAL_ENV=.venv uv pip install pytest httpx playwright
-.venv/bin/python -m pytest -q tests          # API: CRUD, cascade, voice upload/replace, import/export, extracted fields, reseed preservation (temp DB)
-.venv/bin/python tests/e2e_ui.py              # headless UI CRUD + graph checks against a running server; writes screens/*.png
+.venv/bin/python -m pytest -q tests --ignore=tests/test_e2e_studio.py
+.venv/bin/python -m pytest -q tests/test_e2e_studio.py   # headless Studio UI; needs Playwright + Chrome, else skipped
+.venv/bin/python tests/e2e_ui.py              # headless character-map CRUD + graph checks against a running server; writes screens/*.png
 ```
 
 ## Where the character data comes from
@@ -141,7 +149,8 @@ VIRTUAL_ENV=.venv uv pip install pytest httpx playwright
 src/mbh/characters/   extracted/ profiles + build_extracted.py (counts, citation checks); legacy starter + harvest
 src/mbh/episode/      spec, attribution, lexicon apply, duration, breaks, render, assemble
 src/mbh/cli.py        `mbh episode build|estimate|breaks|render|assemble|export-script`
-src/mbh/webapp/       FastAPI app, SQLite store, seed + reseed, static UI (vendored Cytoscape.js)
+src/mbh/studio/        Episode Studio library (catalog, script edits, playback, job runners)
+src/mbh/webapp/       FastAPI app, SQLite job queue, seed + reseed, character map + /studio UI
 src/mbh/voices/       design_one.py (VoxCPM2 CPU voice design, used by the web app jobs)
 episodes/             episode YAML, overrides, generated script JSON and review Markdown
 lexicon/              book01.tsv (respellings applied only to TTS text)

@@ -90,6 +90,10 @@ def assemble(
         "missing_lines": missing,
         "pieces": len(pieces),
         "music": music_info,
+        "timeline": [
+            {"line_id": line_id, "start_s": round(start, 3), "end_s": round(end, 3)}
+            for line_id, start, end in intervals
+        ],
     }
 
 

@@ -62,8 +62,11 @@ exhaust 16 GB.
    ```
    Resemblyzer's speaker encoder ships inside the pip package. Both models also download lazily on first use.
 4. **Database**: `.venv/bin/python -m mbh.webapp.seed` builds `data/mbh.sqlite3` (gitignored) from
-   `characters/book01.json` and attaches all approved voices from `voices/registry.json`. Web app:
-   `PYTHONPATH=src .venv/bin/uvicorn mbh.webapp.app:app --app-dir src --port 8765` and open http://localhost:8765.
+   `characters/book01.json` and attaches all approved voices from `voices/registry.json`. Web app
+   (character map and Episode Studio), bound to localhost with no login:
+   `PYTHONPATH=src .venv/bin/python -m mbh.webapp` and open http://127.0.0.1:8765/ (studio at `/studio`,
+   API docs at `/docs`). `MBH_HOST` defaults to `127.0.0.1`; set it only behind a trusted proxy.
+   See [STUDIO.md](STUDIO.md).
 5. **Tests**: `proto/.venv-vox/bin/python -m pytest -q --ignore=tests/e2e_ui.py` (no model needed, ~10 s).
    The UI test needs Playwright: `VIRTUAL_ENV=.venv uv pip install playwright && .venv/bin/playwright install chromium`.
 

@@ -10,6 +10,23 @@ APP=.venv/bin/python; VOX=proto/.venv-vox/bin/python; QA=proto/.venv-pocket/bin/
 The whole render half is one command: `scripts/render_episode.sh episodes/epNN.yaml --name epNN_full_v1 --qa`.
 The steps below explain each stage and the review loop around it.
 
+The same stages are in Episode Studio, on the character-map server: [STUDIO.md](STUDIO.md).
+
+```bash
+PYTHONPATH=src .venv/bin/python -m mbh.webapp    # http://127.0.0.1:8765/studio  (binds to localhost, no login)
+```
+
+| Step below | Studio |
+|---|---|
+| 1. Pick the span | New episode: section, paragraph range, target, music preset. Estimate and Suggest endings call the same duration model and break suggester. |
+| 2. Build and review | Creating the episode builds the script. The line table is the Markdown review, one row per line. |
+| 3. Overrides | Save on a row writes `episodes/overrides/<id>.json` and rebuilds. Split and merge are on the row. |
+| 4. Lexicon | Lexicon page: edit `spoken`, queue a pronunciation test, play it, mark verified. |
+| 5. Voices | Voices page, or the map's Voice tab: design candidates from the brief, audition, pick the reference. WER and clone tests stay on the command line. |
+| 6–8. Render, assemble, QA | Script page buttons. One job at a time. The player seeks by line; QA flags show on the timeline. |
+
+An agent uses the same routes with curl. The full create → build → review → render → assemble → QA sequence is in [STUDIO.md](STUDIO.md#agent-usage). OpenAPI is at `/docs`.
+
 ## House style (decisions already made, apply to every episode)
 
 * **Text:** unabridged KMG (Kisari Mohan Ganguli), in order. Text is never paraphrased. Added narrator text is only

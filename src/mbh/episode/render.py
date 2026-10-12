@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
@@ -106,45 +107,68 @@ def render_script(
     voices_dir: Path | None = None,
     dry_run: bool = False,
     limit: int | None = None,
+    only: set[str] | None = None,
+    should_stop: Callable[[], bool] | None = None,
+    on_line: Callable[[int, int, RenderResult], None] | None = None,
 ) -> list[RenderResult]:
+    """Synthesize ``script`` line by line.
+
+    ``only`` limits the work to those line ids (a re-render of a selection).
+    ``should_stop`` is checked before each line so a cancel finishes the current
+    line and returns what is already done. Cached lines are skipped. Audio is
+    written to a ``.partial.wav`` and renamed into place, so a killed process
+    does not leave a truncated file that would look like a cache hit.
+    """
     cache = cache_dir or (repo_root() / "build" / "cache" / backend.engine)
     cache.mkdir(parents=True, exist_ok=True)
     params = {"steps": settings.steps, "cfg_value": settings.cfg_value}
     results: list[RenderResult] = []
-    lines = script.lines if limit is None else script.lines[:limit]
-    for line in lines:
+    lines = [line for line in script.lines if only is None or line.id in only]
+    if limit is not None:
+        lines = lines[:limit]
+    total = len(lines)
+    for index, line in enumerate(lines):
+        if should_stop is not None and should_stop():
+            break
         ref = reference_wav(line.voice_id, voices_dir)
         version = voice_version(ref if ref.exists() else None)
         key = cache_key(line, voice_version=version, engine=backend.engine, params=params)
         dest = cache / f"{key}.wav"
         if not ref.exists():
-            results.append(RenderResult(line.id, key, "missing_voice", None, line.speaker, line.voice_id))
-            continue
-        if dest.exists() and dest.stat().st_size > 0:
-            results.append(RenderResult(line.id, key, "cached", str(dest), line.speaker, line.voice_id))
-            continue
-        if dry_run:
-            results.append(RenderResult(line.id, key, "would_render", str(dest), line.speaker, line.voice_id))
-            continue
-        spoken = f"{instruction_for(line)} {line.tts_text}"
-        backend.synthesize(
-            text=spoken,
-            instruction=instruction_for(line),
-            reference_wav=ref,
-            out_wav=dest,
-            params={**params, "seed": line.take} if line.take else params,
-        )
-        sidecar = dest.with_suffix(".json")
-        sidecar.write_text(json.dumps({
-            "line_id": line.id,
-            "speaker": line.speaker,
-            "voice_id": line.voice_id,
-            "instruction": instruction_for(line),
-            "tts_text": line.tts_text,
-            "engine": backend.engine,
-            "params": params,
-        }, ensure_ascii=False, indent=1), encoding="utf-8")
-        results.append(RenderResult(line.id, key, "rendered", str(dest), line.speaker, line.voice_id))
+            result = RenderResult(line.id, key, "missing_voice", None, line.speaker, line.voice_id)
+        elif dest.exists() and dest.stat().st_size > 0:
+            result = RenderResult(line.id, key, "cached", str(dest), line.speaker, line.voice_id)
+        elif dry_run:
+            result = RenderResult(line.id, key, "would_render", str(dest), line.speaker, line.voice_id)
+        else:
+            partial = dest.with_suffix(".partial.wav")
+            spoken = f"{instruction_for(line)} {line.tts_text}"
+            try:
+                backend.synthesize(
+                    text=spoken,
+                    instruction=instruction_for(line),
+                    reference_wav=ref,
+                    out_wav=partial,
+                    params={**params, "seed": line.take} if line.take else params,
+                )
+                partial.replace(dest)
+            finally:
+                if partial.exists():
+                    partial.unlink()
+            sidecar = dest.with_suffix(".json")
+            sidecar.write_text(json.dumps({
+                "line_id": line.id,
+                "speaker": line.speaker,
+                "voice_id": line.voice_id,
+                "instruction": instruction_for(line),
+                "tts_text": line.tts_text,
+                "engine": backend.engine,
+                "params": params,
+            }, ensure_ascii=False, indent=1), encoding="utf-8")
+            result = RenderResult(line.id, key, "rendered", str(dest), line.speaker, line.voice_id)
+        results.append(result)
+        if on_line is not None:
+            on_line(index, total, result)
     return results
 
 

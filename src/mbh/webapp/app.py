@@ -1,11 +1,18 @@
-"""Mahabharata character mapper: FastAPI app (REST API + static single-page UI).
-Run:  uvicorn mbh.webapp.app:app --app-dir src --host 0.0.0.0 --port 8765"""
-import json, os, pathlib, queue, re, shutil, subprocess, threading, time
+"""Mahabharata audiobook: character map and Episode Studio (REST + static UI).
+
+Run (localhost only, no authentication):
+  PYTHONPATH=src python -m mbh.webapp
+Set MBH_HOST=0.0.0.0 only when you have put something else in front of it.
+"""
+import json, os, pathlib, re, shutil, time
 from typing import Optional
 from fastapi import FastAPI, HTTPException, UploadFile, File, Body, Query
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from mbh.studio.runtime import mock_enabled
+from mbh.webapp import jobs as jobq
+from mbh.webapp.studio_routes import job_router, router as studio_router
 from .db import Store, REL_TYPES, ROOT
 
 STATIC = pathlib.Path(__file__).parent / "static"
@@ -13,7 +20,16 @@ VOICES = ROOT / "voices"; VOICES.mkdir(exist_ok=True)
 SEED = ROOT / "characters" / "book01.json"
 VOX_PY = os.environ.get("MBH_VOX_PYTHON", str(ROOT / "proto/.venv-vox/bin/python"))
 store = Store(os.environ.get("MBH_DB"))
-app = FastAPI(title="Mahabharata Character Mapper", version="0.1")
+app = FastAPI(
+    title="Mahabharata Audiobook",
+    version="0.2",
+    description=(
+        "Character map and Episode Studio for the KMG audiobook. "
+        "The studio API is the same surface the browser uses: JSON in, JSON out, job ids for anything that synthesizes audio. "
+        "There is no authentication. Bind to 127.0.0.1 (the default of `python -m mbh.webapp`) unless a trusted proxy is in front. "
+        "See docs/STUDIO.md for the create → build → review → render → assemble → QA flow."
+    ),
+)
 
 class Character(BaseModel):
     id: Optional[str] = None
@@ -143,35 +159,21 @@ def select_candidate(cid: str, body: dict = Body(...)):
     return store.update_character(cid, {"voice_clip": str(dest.relative_to(ROOT)), "voice_engine": "voxcpm2",
                                         "voice_prompt": body.get("prompt") or store.get_character(cid)["voice_prompt"]})
 
-_jobs: "queue.Queue[int]" = queue.Queue()
-def _worker():
-    while True:
-        jid = _jobs.get(); job = store.get_job(jid); p = job["params"]
-        store.update_job(jid, status="running", started=time.time())
-        cmd = [VOX_PY, str(ROOT / "src/mbh/voices/design_one.py"), "--prompt", p["prompt"], "--text", p["text"], "--out", p["out"], "--steps", str(p.get("steps", 10))]
-        try:
-            r = subprocess.run(cmd, capture_output=True, text=True, timeout=3600, cwd=ROOT)
-            last = (r.stdout.strip().splitlines() or [""])[-1]
-            ok = r.returncode == 0 and (ROOT / p["out"]).exists()
-            store.update_job(jid, status="done" if ok else "failed", finished=time.time(), output=last if ok else "",
-                             log=(r.stderr[-3000:] if not ok else "") + (f"\nexit={r.returncode}" if not ok else ""))
-        except Exception as e:
-            store.update_job(jid, status="failed", finished=time.time(), log=str(e))
-threading.Thread(target=_worker, daemon=True).start()
-
 @app.post("/api/characters/{cid}/voice/generate", status_code=202)
 def generate_voice(cid: str, body: dict = Body(default={})):
     c = need_char(cid)
-    if not pathlib.Path(VOX_PY).exists(): raise HTTPException(503, f"VoxCPM2 python not found at {VOX_PY}; set MBH_VOX_PYTHON")
+    if not mock_enabled() and not pathlib.Path(VOX_PY).exists():
+        raise HTTPException(503, f"VoxCPM2 python not found at {VOX_PY}; set MBH_VOX_PYTHON")
     prompt = body.get("prompt") or c["voice_prompt"] or c["voice_brief"]
     text = body.get("text") or c["sample_line"] or (c["backstory"].split(". ")[0] + ".")
     if not prompt: raise HTTPException(422, "no prompt/voice brief")
     out = str((_voice_dir(cid) / "candidates" / f"cand_{time.strftime('%Y%m%d_%H%M%S')}.wav").relative_to(ROOT))
-    job = store.add_job(cid, "design_voice", {"prompt": prompt, "text": text, "out": out, "steps": int(body.get("steps", 10))})
-    _jobs.put(job["id"]); return job
+    return jobq.enqueue(store, kind="design_voice", character_id=cid,
+                        params={"prompt": prompt, "text": text, "out": out, "steps": int(body.get("steps", 10))})
 
 @app.get("/api/jobs")
-def list_jobs(character: str = ""): return store.list_jobs(character or None)
+def list_jobs(character: str = "", episode: str = "", kind: str = "", limit: int = 100):
+    return store.list_jobs(character or None, episode_id=episode or None, kind=kind or None, limit=limit)
 @app.get("/api/jobs/{jid}")
 def get_job(jid: int):
     j = store.get_job(jid)
@@ -196,8 +198,23 @@ def export_data(save: bool = False):
         data["saved_to"] = str(p.relative_to(ROOT))
     return JSONResponse(data, headers={"Content-Disposition": "attachment; filename=characters.export.json"} if not save else {})
 
+# ---------- studio ----------
+app.include_router(studio_router)
+app.include_router(job_router)
+
+@app.on_event("startup")
+def _start_jobs():
+    host = os.environ.get("MBH_HOST", "127.0.0.1")
+    if host not in {"127.0.0.1", "localhost", "::1"}:
+        print(f"WARNING: MBH_HOST={host}. Episode Studio has no authentication.", flush=True)
+    jobq.start(store)
+
+jobq.start(store)
+
 # ---------- static ----------
 app.mount("/voices", StaticFiles(directory=VOICES), name="voices")
 app.mount("/static", StaticFiles(directory=STATIC), name="static")
 @app.get("/")
 def index(): return FileResponse(STATIC / "index.html")
+@app.get("/studio")
+def studio_page(): return FileResponse(STATIC / "studio.html")

@@ -21,6 +21,7 @@ def assemble(
     intro: Path | None = None,
     outro: Path | None = None,
     intro_crossfade_s: float = 0.0,
+    outro_crossfade_s: float = 0.0,
     normalize_lines: bool = True,
     music_cfg: dict | None = None,
 ) -> dict:
@@ -60,19 +61,22 @@ def assemble(
         intervals.append((line.id, cursor / rate, (cursor + len(samples)) / rate))
         cursor += len(samples)
         prev = line
-    if outro and outro.exists():
-        samples, src_rate = read_mono(outro)
-        pieces.append(("outro", resample(samples, src_rate, rate)))
     if not any(name not in {"gap", "intro", "outro"} for name, _samples in pieces):
         raise RuntimeError("no rendered lines to assemble; run `mbh episode render` first")
     music_info = None
     if music_cfg:
         tail = float(music_cfg.get("tail_s", 4.0))
-        if tail > 0 and not (outro and outro.exists()):
+        if tail > 0:
             pieces.append(("gap", _zeros(int(round(tail * rate)))))
     mixed = _concat(pieces)
     if music_cfg:
         mixed, music_info = _add_music(script, mixed, rate, intervals, music_cfg)
+    outro_info = None
+    if outro and outro.exists():  # after the music tail; the tail crossfades into the outro
+        samples, src_rate = read_mono(outro)
+        o = resample(samples, src_rate, rate)
+        mixed, at = _append_outro(mixed, o, rate, outro_crossfade_s)
+        outro_info = {"path": str(outro), "seconds": round(len(o) / rate, 2), "crossfade_s": outro_crossfade_s, "body_s": at}
     offset_s = 0.0
     if intro_samples is not None:
         mixed, offset_s = _prepend_intro(intro_samples, mixed, rate, intro_crossfade_s)
@@ -95,6 +99,7 @@ def assemble(
         "pieces": len(pieces),
         "intro": {"path": str(intro), "seconds": round(len(intro_samples) / rate, 2), "crossfade_s": intro_crossfade_s,
                   "episode_starts_s": round(offset_s, 3)} if intro_samples is not None else None,
+        "outro": outro_info,
         "music": music_info,
         "timeline": [
             {"line_id": line_id, "start_s": round(start + offset_s, 3), "end_s": round(end + offset_s, 3)}
@@ -216,3 +221,18 @@ def _concat(pieces: list[tuple[str, list[float]]]):
     for _name, samples in pieces:
         out.extend(samples)
     return out
+
+
+def _append_outro(body, outro, rate: int, crossfade_s: float):
+    """Episode, then the outro; the last ``crossfade_s`` of the episode fades out (equal-power) over the outro start.
+    Returns (mixed, outro_start_s before any intro offset)."""
+    import math
+    body = [float(x) for x in body]
+    outro = [float(x) for x in outro]
+    xf = min(int(round(max(0.0, crossfade_s) * rate)), len(outro), len(body))
+    head = body[:len(body) - xf]
+    overlap = []
+    for i in range(xf):
+        t = (i + 0.5) / xf
+        overlap.append(body[len(body) - xf + i] * math.cos(t * math.pi / 2) + outro[i] * math.sin(t * math.pi / 2))
+    return _concat([("body", head), ("xf", overlap), ("outro", outro[xf:])]), round(len(head) / rate, 3)

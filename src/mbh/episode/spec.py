@@ -50,6 +50,8 @@ class EpisodeSpec:
     # seconds the intro's tail overlaps the first line (named intros in configs/intros.yaml set it)
     intro_crossfade_s: float = 0.0
     outro: Path | None = None
+    # seconds the episode tail (music fade) overlaps the outro start (named outros in configs/outros.yaml set it)
+    outro_crossfade_s: float = 0.0
     notes: list[str] = field(default_factory=list)
     # None follows configs/duration.yaml. True/False is this episode's choice.
     strip_glosses: bool | None = None
@@ -86,7 +88,8 @@ def load_spec(path: Path) -> EpisodeSpec:
         summary=str(data.get("summary") or "").strip(),
         intro=_intro(data, path)[0],
         intro_crossfade_s=_intro(data, path)[1],
-        outro=_opt_path(data.get("outro"), path),
+        outro=_intro(data, path, "outro")[0],
+        outro_crossfade_s=_intro(data, path, "outro")[1],
         notes=[str(item) for item in (data.get("notes") or [])],
         strip_glosses=_opt_bool(data, "strip_glosses"),
         music_rules=list(data.get("music_rules") or []),
@@ -158,15 +161,15 @@ def _opt_path(value: str | None, spec_path: Path) -> Path | None:
     return rooted
 
 
-def _intro(data: dict, spec_path: Path) -> tuple[Path | None, float]:
-    """``intro:`` is a path, or a name from configs/intros.yaml (e.g. ``intro: title_song``)."""
-    value = data.get("intro")
-    xf = data.get("intro_crossfade_s")
+def _intro(data: dict, spec_path: Path, key: str = "intro") -> tuple[Path | None, float]:
+    """``intro:``/``outro:`` is a path, or a name from configs/intros.yaml / configs/outros.yaml (``intro: title_song``)."""
+    value = data.get(key)
+    xf = data.get(f"{key}_crossfade_s")
     if not value:
         return None, 0.0
     import yaml
 
-    named = repo_root() / "configs" / "intros.yaml"
+    named = repo_root() / "configs" / f"{key}s.yaml"
     table = (yaml.safe_load(named.read_text(encoding="utf-8")) or {}) if named.exists() else {}
     if str(value) in table:
         row = table[str(value)]

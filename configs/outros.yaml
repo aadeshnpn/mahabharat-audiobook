@@ -1,0 +1,5 @@
+# Named outros for episode specs: `outro: ending_song` in episodes/epNN.yaml.
+# crossfade_s: the episode's music tail fades out (equal-power) over the outro's first seconds.
+ending_song:
+  path: assets/outro/ending_song_v1.wav
+  crossfade_s: 2.5

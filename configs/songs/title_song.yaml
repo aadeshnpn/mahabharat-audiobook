@@ -1,0 +1,92 @@
+# Opening title song: Bhagavad Gita 2.62-63, sung in an original melody in raga Yaman (devotional, sweeping).
+# Render: see docs/SONGS.md.  `mbh song takes` -> `mbh song score` -> `mbh song render`.
+id: title_song
+title: "Dhyayato vishayan (Gita 2.62-63)"
+raga: yaman
+sa_hz: 146.83            # D3 for a male voice (singer_f sings an octave up: voice.octave)
+tempo_bpm: 70
+voice:
+  id: singer_m           # voices/<id>/ref.wav (or voices/<id>/candidates/<file> via voice.ref)
+  octave: 0
+  ref: voices/singer_m/candidates/singer_m-A_vox_s10_0.wav   # the chosen singer_m design (2026-10-12)
+  prompt: "a warm, sweet, melodious devotional singer, singing slowly and tenderly, long sustained vowels"
+  seeds: [11, 23, 37, 41]
+  vibrato_cents: 28
+  vibrato_hz: 5.2
+  glide_s: 0.09
+arrangement:
+  preset: devotional_title
+  intro_beats: 12        # instrumental before the first sung line
+  outro_beats: 8
+  tabla: keherwa
+master: {lufs: -16.0, true_peak_db: -2.0}
+lines:
+  - id: "2.62a"
+    text: "ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।"
+    syllables: "ध्या य तो वि ष यान् पुं सः सङ् गस् ते षू प जा य ते"
+    # one entry per syllable: "swara:beats" (several = melisma). Original composition (not from any film/TV song).
+    melody: ["N.:0.5 R:1", "G:0.5", "R:1", "G:0.5", "M:0.5", "D:0.5 P:1", "M:0.5 G:0.5", "G:0.5 R:1.5",
+             {rest: 0.5},
+             "G:0.5 M:0.5", "D:1", "N:0.5", "N:0.5 S':1", "N:0.5", "D:0.5 P:0.5", "M:0.5", "G:0.5 R:0.5 S:2"]
+  - id: "2.62b"
+    text: "सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते।"
+    syllables: "सङ् गात् सञ् जा य ते का मः का मात् क्रो धो ऽभि जा य ते"
+    melody: ["P:0.5", "P:0.5 M:0.5", "D:1", "N:0.5", "D:0.5", "P:1", "M:0.5 G:0.5", "R:1.5",
+             {rest: 0.5},
+             "G:0.5", "M:0.5 P:0.5", "D:0.5 N:1.5", "S':2", "N:0.5 D:0.5", "P:0.5", "M:0.5 G:0.5", "R:0.5 S:2"]
+  - id: "2.63a"
+    text: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः।"
+    context: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    syllables: "क्रो धाद् भ व ति सम् मो हः सम् मो हात् स्मृ ति वि भ्र मः"
+    melody: ["N:0.5 S':2.5", "N:1.5", "D:0.5", "P:0.5", "M:0.5", "G:0.5", "M:0.5 D:0.5", "P:1.5",
+             {rest: 0.5},
+             "G:0.5", "M:0.5", "D:1", "N:0.5", "D:0.5", "P:0.5", "M:0.5 G:0.5", "R:1.5"]
+  - id: "2.63b"
+    text: "स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    context: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    syllables: "स्मृ ति भ्रं शाद् बुद् धि ना शो बुद् धि ना शात् प्र ण श्य ति"
+    melody: ["G:0.5", "M:0.5", "D:1", "N:0.5 D:0.5", "P:0.5", "M:0.5", "G:1", "R:1",
+             {rest: 0.5},
+             "N.:0.5", "R:0.5", "G:1", "M:0.5 G:0.5", "R:1", "G:1.5", "R:0.5 N.:0.5", "S:5"]
+structure:
+  - {line: "2.62a"}
+  - {line: "2.62b"}
+  - {line: "2.63a"}
+  - {line: "2.63b"}
+ace:                     # ACE-Step 1.5 XL turbo (MIT), CPU; `mbh song ace`
+  prompt: "Indian devotional mythological epic title song, 1980s Doordarshan television style, male playback singer with a sweet, warm, melodious voice singing a Sanskrit shloka slowly and majestically, harmonium, sweeping string orchestra, tabla, tanpura drone, temple bells, raga Yaman, grand, serene, reverent"
+  language: hi
+  bpm: 76
+  keyscale: "D major"
+  timesignature: "4"
+  steps: 8
+  duration: 30
+  cover_strength: 0.6
+epic:                     # grand/solemn variant (tools/song/epic_sweep.py); original composition by the model, no reference audio
+  lines: ["2.62a", "2.62b"]
+  bpm: 64
+  keyscale: "D minor"
+  duration: 42
+  steps: 8
+  formats: [half, roman]
+  prompts:
+    e1: "epic Indian mythological television title song, grand solemn and majestic, powerful resonant open-throated male playback singer, classically trained Hindustani voice, bold full-chested delivery, long sustained held notes, slow majestic tempo, dramatic orchestral swells, shankh conch blast, heavy dhol and pakhawaj, timpani, deep male choir, strings and brass, building intensity, Sanskrit shloka"
+    e2: "cinematic Indian devotional epic, 1980s Bollywood playback baritone singing a Sanskrit shloka with gravitas, slow and solemn, long held vowels, conch shell intro, thunderous pakhawaj and timpani, choir answering, sweeping string orchestra, harmonium, tanpura drone, crescendo, powerful and dramatic"
+    epic_band: "epic Indian mythological television title music, grand solemn and majestic, slow, dramatic orchestral swells, heavy dhol and pakhawaj, timpani, deep male choir, strings and brass, tanpura drone, building intensity toward the end, powerful climax"
+f:                        # preset F (chosen 2026-10-12): WORLD vocal + ACE epic band + conch; src/mbh/song/epic.py
+  band_prompt_key: epic_band
+  band_seeds: [0, 1, 2]
+  double_cents: 9
+  double_ms: 24
+  double_db: -8
+  octave_db: -16
+  low_shelf_db: 3
+  high_shelf_db: -1.5
+  reverb: 0.3
+  vocal_build_db: [-1.5, 0, 1.5, 3]      # per line (2.62a, 2.62b, 2.63a, 2.63b): build toward pranashyati
+  band_build_db: [-3, -1, 1, 3]
+  band_db: -4
+  duck: 0.25
+  conch_db: 2
+  conch_at_s: [0.3, -7.5]               # opening blast and one in the outro (negative = from the end)
+  fade_out_s: 4.0

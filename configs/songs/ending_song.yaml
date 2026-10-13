@@ -1,0 +1,51 @@
+# Ending piece (outro): a slow sung reprise of Gita 2.63b over an epic band, preset F. Original melody (the title song's
+# 2.63b phrase, final "ti" held longer). Build: SONG=configs/songs/ending_song.yaml tools/song/full_F.sh 0  (docs/SONGS.md).
+id: ending_song
+title: "Reprise: buddhinashat pranashyati (Gita 2.63b)"
+raga: yaman
+sa_hz: 146.83
+tempo_bpm: 62
+voice:
+  id: singer_m
+  octave: 0
+  ref: voices/singer_m/candidates/singer_m-A_vox_s10_0.wav
+  seeds: [11, 23, 37, 41]
+  vibrato_cents: 28
+  vibrato_hz: 5.2
+  glide_s: 0.09
+arrangement:
+  preset: devotional_title
+  intro_beats: 6
+  outro_beats: 12
+  tabla: keherwa
+master: {lufs: -16.0, true_peak_db: -2.0}
+lines:
+  - id: "2.63b"
+    text: "स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    context: "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+    syllables: "स्मृ ति भ्रं शाद् बुद् धि ना शो बुद् धि ना शात् प्र ण श्य ति"
+    melody: ["G:0.5", "M:0.5", "D:1", "N:0.5 D:0.5", "P:0.5", "M:0.5", "G:1", "R:1",
+             {rest: 0.5},
+             "N.:0.5", "R:0.5", "G:1", "M:0.5 G:0.5", "R:1", "G:1.5", "R:0.5 N.:0.5", "S:6"]
+structure:
+  - {line: "2.63b"}
+epic:
+  prompts:
+    epic_band: "epic Indian mythological television closing music, solemn and majestic, slow, deep male choir, sweeping strings and brass, heavy pakhawaj and timpani, tanpura drone, grand final cadence, fading to a quiet drone"
+f:
+  band_prompt_key: epic_band
+  double_cents: 9
+  double_ms: 24
+  double_db: -8
+  octave_db: -16
+  low_shelf_db: 3
+  high_shelf_db: -1.5
+  reverb: 0.35
+  vocal_build_db: [0]
+  band_build_db: [0]
+  band_db: -4
+  duck: 0.25
+  conch_db: 0
+  conch_at_s: [-9.0]
+  fade_out_s: 5.0
+  end_s: 39.5                           # trim to <= 40 s

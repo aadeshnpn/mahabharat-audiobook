@@ -153,6 +153,16 @@
    "sample_line": "If, O fathers, ye are favourably disposed towards me, the boon I ask is that I may be absolved from the sins born of my having annihilated the Kshatriyas in anger.",
    "notes": "Ep4 design 2026-10-12: A_0 of 4 candidates (user pick), leveled to -20 LUFS",
    "shared_by": []
+  },
+  "krishna": {
+   "name": "Krishna (title/ending chant)",
+   "ref": "voices/krishna/ref.wav",
+   "ref_sha256": "01e55d11aad215dc131fbdfa12739c38b827ae81444c4995143cf2f78568b787",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "Lord Krishna, a divine Indian man's voice, warm, deep and serene yet commanding, compassionate and authoritative, slow measured Sanskrit chant",
+   "sample_line": "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "notes": "Title v5 design 2026-10-13: A of 4 (best ASR on 2.62a, 0.72); chant only so far, pending user approval",
+   "shared_by": []
   }
  }
 }

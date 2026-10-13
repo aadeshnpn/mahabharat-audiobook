@@ -114,7 +114,7 @@ def run_assemble(store, job, ctx) -> None:
     ctx.log(f"assembling {len(script.lines)} lines, music={bool(music)} preset={preset or 'default'}\n", progress=0.1)
     report = assemble(
         script, results, timing, settings, out,
-        intro=spec.intro, outro=spec.outro,
+        intro=spec.intro, outro=spec.outro, intro_crossfade_s=spec.intro_crossfade_s,
         music_cfg=_music(spec, bool(music), preset, playback_dir(episode_id) / "music.wav" if music else None),
     )
     playback.report_path(episode_id).write_text(json.dumps(report, indent=1, default=str), encoding="utf-8")

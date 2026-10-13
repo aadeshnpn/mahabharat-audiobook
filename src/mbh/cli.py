@@ -71,6 +71,10 @@ def main(argv: list[str] | None = None) -> int:
     export.add_argument("--out", type=Path)
     export.set_defaults(func=cmd_export)
 
+    from mbh.song.cli import add_song_commands
+
+    add_song_commands(sub)
+
     args = parser.parse_args(argv)
     return args.func(args)
 
@@ -189,7 +193,8 @@ def cmd_assemble(args: argparse.Namespace) -> int:
     timing, settings = load_timing(spec.timing_path)
     out = args.out or spec.path.with_name(f"{spec.id}.wav")
     try:
-        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro,
+        report = assemble(script, results, timing, settings, out, intro=spec.intro, outro=spec.outro, intro_crossfade_s=spec.intro_crossfade_s,
+                          outro_crossfade_s=spec.outro_crossfade_s,
                           music_cfg=_music_cfg(args.music if args.music is not None else spec.music, args.music_stem,
                                                args.music_preset or spec.music_preset, spec.music_rules))
     except RuntimeError as exc:

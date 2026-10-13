@@ -48,3 +48,4 @@ f:
   conch_db: 0
   conch_at_s: [-9.0]
   fade_out_s: 5.0
+  end_s: 39.5                           # trim to <= 40 s

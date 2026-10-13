@@ -3,6 +3,8 @@ shankh (conch). Steps (each in its own venv, see docs/SONGS.md "Preset F"):
   1. ``mbh song render`` -> F_world.wav + F_world.dry.wav (dry sung vocal) + F_world.json (line timeline)
   2. ``mbh song ace --mode complete --src F_world.vocal.wav --prompt-key epic`` -> band take (ACE re-sings too)
   3. demucs two-stem split of the band take -> keep ``no_vocals`` (the band), drop ACE's vocal
+     (or keep ACE's full take, which re-sings our melody with its own clearer vocal: ``--band band_sN.wav`` with
+     ``f.vocal_db`` ~ -6 so our WORLD vocal only thickens it; this is what sample F was)
   4. ``mbh song finish`` (this module): deepen the dry vocal, build dynamics, add conch, mix, master."""
 from __future__ import annotations
 
@@ -74,7 +76,7 @@ def finish(spec, world_json: Path, band_wav: Path, out: Path) -> dict:
     t = np.arange(n) / SR
     vgain = 10 ** (np.interp(t, starts, vg) / 20); bgain = 10 ** (np.interp(t, [0] + starts, [bg[0] - 2] + bg) / 20)
     voc = deepen(dry / (np.sqrt(np.mean(dry[np.abs(dry) > 1e-4] ** 2)) + 1e-9) * 0.1, SR, cfg) * vgain
-    voc = hall(voc, SR, cfg.get("reverb", 0.3))
+    voc = hall(voc, SR, cfg.get("reverb", 0.3)) * 10 ** (cfg.get("vocal_db", 0) / 20)
     band = band / (np.sqrt(np.mean(band ** 2)) + 1e-9) * 0.1 * 10 ** (cfg.get("band_db", -4) / 20) * bgain
     env = np.convolve(np.abs(voc[0]), np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same")
     band = band * (1 - cfg.get("duck", 0.25) * np.clip(env / (env.max() + 1e-9) * 4, 0, 1))

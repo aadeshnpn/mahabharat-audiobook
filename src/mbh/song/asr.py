@@ -63,13 +63,14 @@ def score_takes(spec) -> dict:
     return scores
 
 
-def score_render(spec, report_path: Path) -> list[dict]:
+def score_render(spec, report_path: Path, mixes=()) -> list[dict]:
     """Score each sung line inside a rendered mix (and its dry vocal stem)."""
     import librosa
     report = json.loads(Path(report_path).read_text())
     rows = []
-    for stem in ("out", "vocal_stem"):
-        y = librosa.load(report[stem], sr=16000)[0]
+    paths = {"out": report["out"], "vocal_stem": report["vocal_stem"], **{Path(m).stem: str(m) for m in mixes}}
+    for stem, path in paths.items():
+        y = librosa.load(path, sr=16000)[0]
         for row in report["lines"]:
             line = spec.line(row["line"])
             dur = sum(n.beats for n in line.notes) * spec.beat_s

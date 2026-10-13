@@ -58,6 +58,7 @@ def add_song_commands(sub) -> None:
     fin.add_argument("--world", type=Path, required=True, help="the .json from `mbh song render`")
     fin.add_argument("--band", type=Path, required=True, help="band-only wav (demucs no_vocals of the ACE take)")
     fin.add_argument("--out", type=Path, required=True)
+    fin.add_argument("--vocal-db", type=float, help="override f.vocal_db (our vocal level over the band)")
     fin.set_defaults(func=cmd_finish)
     mst = acts.add_parser("master", help="master a file to the song's LUFS / true-peak target, with trim and fades")
     mst.add_argument("spec", type=Path)
@@ -72,6 +73,7 @@ def add_song_commands(sub) -> None:
     verify = acts.add_parser("verify", help="ASR-score a rendered song (mix and dry vocal; pocket venv)")
     verify.add_argument("spec", type=Path)
     verify.add_argument("report", type=Path, help="the .json written next to the rendered wav")
+    verify.add_argument("--mix", type=Path, nargs="*", default=[], help="also score these mixes (same timeline as the report)")
     verify.set_defaults(func=cmd_verify)
 
 
@@ -160,7 +162,10 @@ def _prompt(spec, key):
 
 def cmd_finish(args: argparse.Namespace) -> int:
     from mbh.song.epic import finish
-    print(json.dumps(finish(_spec(args.spec), args.world, args.band, args.out)))
+    spec = _spec(args.spec)
+    if args.vocal_db is not None:
+        spec.raw.setdefault("f", {})["vocal_db"] = args.vocal_db
+    print(json.dumps(finish(spec, args.world, args.band, args.out)))
     return 0
 
 
@@ -174,6 +179,6 @@ def cmd_master(args: argparse.Namespace) -> int:
 
 def cmd_verify(args: argparse.Namespace) -> int:
     from mbh.song.asr import score_render
-    for row in score_render(_spec(args.spec), args.report):
+    for row in score_render(_spec(args.spec), args.report, args.mix):
         print(f"{row['stem']:10s} {row['line']:6s} {row['score']:.2f} {row['asr']}")
     return 0

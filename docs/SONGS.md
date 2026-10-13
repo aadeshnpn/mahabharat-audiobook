@@ -61,3 +61,25 @@ PYTHONPATH=src proto/.venv-pocket/bin/python -m mbh.cli song asr $S samples/x.wa
 ## Copyright
 
 Melodies in `configs/songs/` are original compositions. ACE-Step outputs are newly generated: the prompt names a style (devotional TV epic title song, harmonium, strings, tabla), never a specific song. Do not transcribe or prompt for an existing film or TV melody.
+
+## Preset F: WORLD vocal + ACE-Step epic band + conch (chosen title-song approach, 2026-10-12)
+
+The vocal is our own composition sung by WORLD from VoxCPM2 Devanagari takes (clear diction, ASR-checked); ACE-Step
+only supplies the band. Config: the `f:` section (vocal depth, build, conch) and `epic.prompts.<band_prompt_key>`.
+
+1. `mbh song takes` + `mbh song score`: spoken takes per line, best ASR take chosen automatically.
+2. `mbh song render` -> `F_world.wav`, `F_world.dry.wav` (dry sung vocal), `F_world.json` (line timeline).
+3. `mbh song ace --mode complete --src F_world.vocal.wav --prompt-key epic_band` -> an epic band built around our vocal.
+4. demucs two-stem split; keep `no_vocals` (ACE's re-sung vocal is discarded, it blurs the Sanskrit).
+5. `mbh song finish --world F_world.json --band no_vocals.wav --out F_full.wav` (`src/mbh/song/epic.py`): detuned
+   delayed double, quiet octave-below shadow, warmth EQ, hall reverb, per-line build (`vocal_build_db`, `band_build_db`),
+   ducking, code-synthesized shankh at `conch_at_s`, master to -16 LUFS / -2 dBTP. Also writes `.vox.wav` for ASR.
+
+One command (resumable, each step in its venv):
+```
+setsid nohup tools/song/full_F.sh 0 > logs/song_F.log 2>&1 &                                        # title song
+SONG=configs/songs/ending_song.yaml setsid nohup tools/song/full_F.sh 0 > logs/song_ending.log 2>&1 &   # ending
+```
+Long held notes are written into the melody (e.g. `S':2.5` on krodhaat, `S:5` on the last syllable of pranashyati).
+The episode hooks: `intro: title_song` (configs/intros.yaml) and `outro: ending_song` (configs/outros.yaml), each
+crossfaded; the outro follows the episode's music tail.

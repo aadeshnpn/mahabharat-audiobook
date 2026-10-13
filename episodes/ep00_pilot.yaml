@@ -49,3 +49,6 @@ segments:
     narrator: sauti
     label: "Sauti arrives at Naimisha"
     note: "Book 1 §1 ¶1–5, Anukramanika Parva, read in order from the invocation."
+
+intro: title_song      # Krishna chant, Gita 2.62-63 (configs/intros.yaml)
+outro: ending_song     # Krishna chant, Gita 2.63b (configs/outros.yaml)

@@ -50,3 +50,6 @@ segments:
     paragraphs: [6, 8]
     narrator: sauti
     label: "The hundred parvas"
+
+intro: title_song      # Krishna chant, Gita 2.62-63 (configs/intros.yaml)
+outro: ending_song     # Krishna chant, Gita 2.63b (configs/outros.yaml)

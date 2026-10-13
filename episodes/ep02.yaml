@@ -40,3 +40,6 @@ segments:
     narrator: sauti
     label: "The fruit of the tree: the story in brief"
     note: "Vyasa fathers the three princes; how the Bharata was compiled and handed down; Pandu's misfortune and the birth of the Pandavas; their welcome at Hastinapura; Draupadi; Indraprastha, the Rajasuya and Duryodhana's envy; the dice and the war."
+
+intro: title_song      # Krishna chant, Gita 2.62-63 (configs/intros.yaml)
+outro: ending_song     # Krishna chant, Gita 2.63b (configs/outros.yaml)

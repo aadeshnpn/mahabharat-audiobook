@@ -64,3 +64,6 @@ segments:
     narrator: sauti
     label: "The tree of the Bharata"
     note: "The work as collyrium, sun, moon and lamp; the Parvas as the parts of a tree."
+
+intro: title_song      # Krishna chant, Gita 2.62-63 (configs/intros.yaml)
+outro: ending_song     # Krishna chant, Gita 2.63b (configs/outros.yaml)

@@ -46,3 +46,6 @@ segments:
     narrator: sauti
     label: "Sanjaya consoles the king"
     note: "Dhritarashtra wishes to die (¶37); Sanjaya recounts the great kings of old who also died, and the power of Time (¶38–39); Sauti closes the scene (¶40)."
+
+intro: title_song      # Krishna chant, Gita 2.62-63 (configs/intros.yaml)
+outro: ending_song     # Krishna chant, Gita 2.63b (configs/outros.yaml)

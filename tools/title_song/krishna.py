@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]; sys.path.insert(0, str(ROOT / "src")
 CFG = json.loads((ROOT / "configs/title_song_krishna.json").read_text())
 B = ROOT / "build/title_song_v5"; CAND = ROOT / "voices/krishna/candidates"
 SCORES = B / "scores.json"
-ap = argparse.ArgumentParser(); ap.add_argument("step"); ap.add_argument("--voice"); ap.add_argument("--out")
+ap = argparse.ArgumentParser(); ap.add_argument("step"); ap.add_argument("--voice"); ap.add_argument("--out"); ap.add_argument("--piece", default="title", choices=["title", "ending"])
 a = ap.parse_args()
 
 def scores():
@@ -72,10 +72,11 @@ elif a.step == "score":
         print(k, S[k], flush=True); SCORES.write_text(json.dumps(S, ensure_ascii=False, indent=1))
     for f in sorted((B / "takes").glob("*.wav")):
         if f.name in S: continue
-        y = librosa.load(f, sr=16000)[0]; halves = split_verse(y); refs = CFG["verses"][f.stem.split("_")[0]]["halves"]
+        refs = CFG["verses"][f.stem.split("_")[0]]["halves"]
+        y = librosa.load(f, sr=16000)[0]; halves = split_verse(y) if len(refs) == 2 else [librosa.effects.trim(y, top_db=35)[0]]
         rows = [transcribe(h) for h in halves]
         sc = [round(best_window_similarity(h, r), 3) for h, r in zip(rows, refs)]
-        S[f.name] = {"score": round(sum(sc) / 2, 3), "halves": sc, "asr": rows, "seconds": round(len(y) / 16000, 1)}
+        S[f.name] = {"score": round(sum(sc) / len(sc), 3), "halves": sc, "asr": rows, "seconds": round(len(y) / 16000, 1)}
         print(f.name, S[f.name], flush=True); SCORES.write_text(json.dumps(S, ensure_ascii=False, indent=1))
 elif a.step == "mix":
     import librosa, numpy as np, soundfile as sf
@@ -83,14 +84,15 @@ elif a.step == "mix":
     from mbh.song.epic import conch, hall
     from mbh.song.master import master_file
     from mbh.episode import loudness
-    SR = 48000; M = CFG["mix"]; S = scores(); v = best_voice()
+    SR = 48000; M = {**CFG["mix"], **(CFG["ending"] if a.piece == "ending" else {})}; S = scores(); v = best_voice()
     ranked = {vid: sorted([k for k in S if k.startswith(f"{vid}_{v}_")], key=lambda k: -S[k]["score"]) for vid in CFG["verses"]}
-    pick = {"v62": ranked["v62"][0], "v63": ranked["v63"][0], "v63b": (ranked["v63"][1:] or ranked["v63"])[0]}
-    pick.update(CFG.get("takes", {}))
+    pick = {vid: r[0] for vid, r in ranked.items() if r and vid in {row[0] for row in M["sequence"]}}
+    pick.update({k: v2 for k, v2 in CFG.get("takes", {}).items() if k in pick})
     halves = {}
     for key, name in pick.items():
         y = librosa.load(B / "takes" / name, sr=SR)[0]
-        halves[key] = [loudness.normalize_line(h, SR, -18.0)[0] for h in split_verse(y)]
+        parts = split_verse(y) if len(CFG["verses"][key]["halves"]) == 2 else [librosa.effects.trim(y, top_db=35)[0]]
+        halves[key] = [loudness.normalize_line(h, SR, -18.0)[0] for h in parts]
     t, place = M["lead_s"], []
     for key, i, gap in M["sequence"]:
         h = np.asarray(halves[key][i]); place.append((t, h, key, i)); t += len(h) / SR + gap
@@ -105,10 +107,9 @@ elif a.step == "mix":
     def add(sig, at, gain):
         k = int(at * SR); s = np.asarray(sig)[: n - k] * gain
         bed[:, k:k + len(s)] += s
-    verse2 = next(st for st, h, key, i in place if key == "v63" and i == 0)
-    repeat = next(st for st, h, key, i in place if key == "v63b" and i == 0)
-    for at, g in [(verse2 - 4.0, 0.02), (repeat - 4.0, 0.02)]:
-        add(swell(4.0, SR), at, g)
+    verse2 = next((st for st, h, key, i in place if key == "v63" and i == 0), M["lead_s"])
+    if a.piece == "title":
+        add(swell(3.5, SR), verse2 - 3.5, 0.02)
     for at in [M["lead_s"] - 2.5, verse2 - 1.0, total - M["tail_s"] + 1.0]:
         add(bell(2 * M["sa_hz"] * 2, SR), at, 0.012)
     if M.get("conch"):

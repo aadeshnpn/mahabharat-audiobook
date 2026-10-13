@@ -150,11 +150,13 @@ def render(spec: SongSpec, out: Path, *, line_ids: list[str] | None = None, voic
         t += info["beats"] * beat + gap_s
     total = t - gap_s + outro_s + 4.0
     n = int(total * SR)
+    out.parent.mkdir(parents=True, exist_ok=True)
     vocal = np.zeros(n)
     for start, sung in vocal_parts:
         k = int(start * SR); seg = sung[:n - k]; vocal[k:k + len(seg)] += seg
     cfg = {**PRESETS[spec.arrangement.get("preset", "devotional_title")], **spec.arrangement.get("mix", {})}
     vr = np.sqrt(np.mean(vocal[np.abs(vocal) > 1e-4] ** 2)) + 1e-9
+    sf.write(out.with_suffix(".dry.wav"), vocal / (np.abs(vocal).max() + 1e-9) * 0.9, SR, subtype="PCM_16")
     vocal = reverb(vocal / vr * 0.1, cfg["vocal_reverb"], SR)
     stems = arrangement(spec, timeline, total, SR, intro_s)
     bed = sum(stems.values())
@@ -167,7 +169,6 @@ def render(spec: SongSpec, out: Path, *, line_ids: list[str] | None = None, voic
     mix[:int(fi * SR)] *= np.linspace(0, 1, int(fi * SR)) ** 2
     mix[-int(fo * SR):] *= np.linspace(1, 0, int(fo * SR)) ** 2
     mastered, master = loudness.master(mix, SR, float(spec.master.get("lufs", -16)), float(spec.master.get("true_peak_db", -2)))
-    out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(out, np.asarray(mastered), SR, subtype="PCM_16")
     sf.write(out.with_suffix(".vocal.wav"), vocal / (np.abs(vocal).max() + 1e-9) * 0.9, SR, subtype="PCM_16")
     report = {"out": str(out), "seconds": round(total, 2), "voice": voice["id"], "lines": used, "master": master,

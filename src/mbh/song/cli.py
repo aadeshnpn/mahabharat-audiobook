@@ -46,12 +46,19 @@ def add_song_commands(sub) -> None:
     ace.add_argument("--out", type=Path, required=True)
     ace.add_argument("--lines", help="comma-separated line ids (default: all)")
     ace.add_argument("--seed", type=int, default=0)
-    ace.add_argument("--mode", choices=["text2music", "cover"], default="text2music")
+    ace.add_argument("--mode", choices=["text2music", "cover", "complete", "repaint"], default="text2music")
     ace.add_argument("--src", type=Path, help="cover mode: our WORLD-sung render to re-sing")
     ace.add_argument("--cover-strength", type=float)
     ace.add_argument("--duration", type=float)
+    ace.add_argument("--prompt-key", help="use ace.prompts or epic.prompts entry with this key as the style prompt")
     ace.set_defaults(func=cmd_ace)
 
+    fin = acts.add_parser("finish", help="preset F: deepen the WORLD vocal, mix over a separated ACE band + conch, master (render venv)")
+    fin.add_argument("spec", type=Path)
+    fin.add_argument("--world", type=Path, required=True, help="the .json from `mbh song render`")
+    fin.add_argument("--band", type=Path, required=True, help="band-only wav (demucs no_vocals of the ACE take)")
+    fin.add_argument("--out", type=Path, required=True)
+    fin.set_defaults(func=cmd_finish)
     mst = acts.add_parser("master", help="master a file to the song's LUFS / true-peak target, with trim and fades")
     mst.add_argument("spec", type=Path)
     mst.add_argument("src", type=Path)
@@ -134,8 +141,25 @@ def cmd_ace(args: argparse.Namespace) -> int:
     from mbh.song.ace import generate
     spec = _spec(args.spec)
     info = generate(spec, args.out, line_ids=args.lines.split(",") if args.lines else None, seed=args.seed,
-                    mode=args.mode, src=args.src, duration=args.duration, cover_strength=args.cover_strength)
+                    mode=args.mode, src=args.src, duration=args.duration, cover_strength=args.cover_strength,
+                    prompt=_prompt(spec, args.prompt_key))
     print(json.dumps({k: info[k] for k in ("out", "mode", "seed", "seconds", "gen_s")}))
+    return 0
+
+
+def _prompt(spec, key):
+    if not key:
+        return None
+    for sec in ("ace", "epic"):
+        p = (spec.raw.get(sec) or {}).get("prompts", {})
+        if key in p:
+            return p[key]
+    raise SystemExit(f"no prompt {key!r} in ace.prompts / epic.prompts")
+
+
+def cmd_finish(args: argparse.Namespace) -> int:
+    from mbh.song.epic import finish
+    print(json.dumps(finish(_spec(args.spec), args.world, args.band, args.out)))
     return 0
 
 

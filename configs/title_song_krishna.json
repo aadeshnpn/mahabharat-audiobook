@@ -92,8 +92,8 @@
   "true_peak_db": -2.0
  },
  "ending": {
-  "lead_s": 2.5,
-  "tail_s": 6.0,
+  "lead_s": 4.5,
+  "tail_s": 8.5,
   "conch": false,
   "sequence": [
    [
@@ -103,5 +103,6 @@
    ]
   ],
   "bells_at_end": true
- }
+ },
+ "voice": "A"
 }

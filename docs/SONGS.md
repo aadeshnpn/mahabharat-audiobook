@@ -83,3 +83,13 @@ SONG=configs/songs/ending_song.yaml setsid nohup tools/song/full_F.sh 0 > logs/s
 Long held notes are written into the melody (e.g. `S':2.5` on krodhaat, `S:5` on the last syllable of pranashyati).
 The episode hooks: `intro: title_song` (configs/intros.yaml) and `outro: ending_song` (configs/outros.yaml), each
 crossfaded; the outro follows the episode's music tail.
+
+## Title v5 / ending v2: Krishna chant (2026-10-13; replaces the sung tracks)
+Gita 2.62-63 chanted once (no singing, no repeats) by a VoxCPM2-designed Krishna voice over a soft tanpura bed with a
+swell before 2.63, bells and an opening conch; the ending is 2.63b alone, sorrowful. Whole-verse Devanagari takes with a
+leading pause ("… ध्यायतो"), per-verse emotion instructions (2.62 calm teaching, 2.63 intensifying warning, e63b
+sorrowful), split at the caesura, long natural pauses instead of time-stretching; best take per verse by ASR.
+Config: `configs/title_song_krishna.json`. Tool: `tools/title_song/krishna.py design|score|takes|mix [--piece ending]`;
+end to end: `setsid nohup tools/title_song/krishna_all.sh > logs/title_v5.log 2>&1 &`, then
+`PYTHONPATH=src proto/.venv-vox/bin/python tools/title_song/krishna.py mix --piece ending --out build/title_song_v5/ending_v2_krishna.wav`.
+Hooks: `intro: title_song` -> assets/intro/title_song_v5_krishna.wav, `outro: ending_song` -> assets/outro/ending_v2_krishna.wav.

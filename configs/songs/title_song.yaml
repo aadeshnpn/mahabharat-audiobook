@@ -8,6 +8,7 @@ tempo_bpm: 70
 voice:
   id: singer_m           # voices/<id>/ref.wav (or voices/<id>/candidates/<file> via voice.ref)
   octave: 0
+  ref: voices/singer_m/candidates/singer_m-A_vox_s10_0.wav   # the chosen singer_m design (2026-10-12)
   prompt: "a warm, sweet, melodious devotional singer, singing slowly and tenderly, long sustained vowels"
   seeds: [11, 23, 37, 41]
   vibrato_cents: 28

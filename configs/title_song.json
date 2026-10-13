@@ -1,0 +1,120 @@
+{
+ "verse": "Bhagavad Gita 2.62-63",
+ "iast": [
+  "dhyāyato viṣayān puṃsaḥ saṅgas teṣūpajāyate",
+  "saṅgāt sañjāyate kāmaḥ kāmāt krodho 'bhijāyate",
+  "krodhād bhavati sammohaḥ sammohāt smṛti-vibhramaḥ",
+  "smṛti-bhraṃśād buddhi-nāśo buddhi-nāśāt praṇaśyati"
+ ],
+ "devanagari": [
+  "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते",
+  "सङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते",
+  "क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः",
+  "स्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति"
+ ],
+ "steps": 10,
+ "ref": "A",
+ "designs": [
+  {
+   "id": "A",
+   "seed": 7,
+   "prompt": "a deep, resonant, elderly Indian priest chanting slowly and meditatively, calm, sustained vowels, temple reverb",
+   "line": "Om. Dhyaayato vishayaan pumsah, sangas teshoopajaayate."
+  }
+ ],
+ "spellings": {
+  "r1": [
+   "Dhyaayato vishayaan pumsah, sangas teshoopajaayate.",
+   "Sangaat sanjaayate kaamah, kaamaat krodho bhijaayate.",
+   "Krodhaad bhavati sammohah, sammohaat smriti vibhramah.",
+   "Smriti bhramshaad buddhi naasho, buddhi naashaat pranashyati."
+  ],
+  "r2": [
+   "Dhyah yuh toh, vishuh yahn, poom suh. Sung gus, tay shoo puh jah yuh tay.",
+   "Sung gaht, sun jah yuh tay, kah muh. Kah maht, kroh doh, bee jah yuh tay.",
+   "Kroh dahd, buh vuh tee, sum moh huh. Sum moh haht, smree tee, vib ruh muh.",
+   "Smree tee, bruhm shahd, boo dee nah shoh. Boo dee nah shaht, pruh nush yuh tee."
+  ],
+  "r3": [
+   "Dhyaayato vishayaan pumsaha, sangas teshoopajaayate.",
+   "Sangaat sanjaayate kaamaha, kaamaat krodho bhijaayate.",
+   "Krodhaad bhavati sammohaha, sammohaat smriti vibhramaha.",
+   "Smriti bhramshaad buddhi naasho, buddhi naashaat pranashyati."
+  ],
+  "r4": [
+   "ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते।",
+   "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः।",
+   "स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+  ],
+  "r5": [
+   "ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते।",
+   "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्म्रितिविभ्रमः।",
+   "स्म्रितिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+  ],
+  "r6": [
+   "",
+   "",
+   "",
+   "… स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+  ],
+  "r7": [
+   "",
+   "",
+   "",
+   "क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः। स्मृतिभ्रंशाद्बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति।"
+  ],
+  "r8": [
+   "",
+   "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते। सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते।",
+   "",
+   ""
+  ],
+  "r9": [
+   "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "",
+   "",
+   ""
+  ]
+ },
+ "styles": {
+  "chant": "slow meditative Vedic recitation by a deep resonant male voice, even measured syllables, long held vowels, calm and reverent",
+  "melodic": "a deep male voice softly singing a slow devotional Sanskrit chant, gentle rising and falling melody, long sustained vowels, peaceful"
+ },
+ "seeds": [
+  11,
+  23,
+  37,
+  41,
+  53
+ ],
+ "mixes": {
+  "v1": {
+   "style": "chant",
+   "clips": "chant_r9_h1_s37,chant_r8t_h2_s11,chant_r7a_h3_s11,chant_r7t_h4_s41,chant_r4_h3_s23,chant_r7t_h4_s37",
+   "note": "recommended; 2.62 once, 2.63 twice; 67.3 s; intro asset"
+  },
+  "v1_long": {
+   "style": "chant",
+   "clips": "chant_r9_h1_s37,chant_r8t_h2_s11,chant_r7a_h3_s11,chant_r7t_h4_s41,chant_r4_h1_s23,chant_r8t_h2_s23,chant_r4_h3_s23,chant_r7t_h4_s37",
+   "note": "both verses twice; 84.4 s"
+  },
+  "v1_melodic": {
+   "style": "melodic",
+   "clips": "melodic_r1_h1_s11,melodic_r1_h2_s11,melodic_r1_h3_s23,melodic_r1_h4_s11,melodic_r1_h3_s11,melodic_r1_h4_s23",
+   "note": "sung; weaker pronunciation (Latin respelling r1); 71.5 s"
+  }
+ },
+ "spelling_notes": {
+  "r1": "Latin plain-word respelling",
+  "r2": "English-syllable respelling (worst)",
+  "r3": "r1 + visarga echo (-aha)",
+  "r4": "Devanagari (best)",
+  "r5": "Devanagari, smriti written स्म्रिति",
+  "r6": "r4 h4 with a leading pause",
+  "r7": "whole verse 2.63 in one take, split at the caesura (fixes the smriti onset)",
+  "r8": "whole verse 2.62 in one take, split",
+  "r9": "r4 h1 with a leading pause (best dhyaayato onset)"
+ }
+}

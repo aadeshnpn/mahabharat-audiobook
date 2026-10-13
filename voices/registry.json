@@ -143,6 +143,26 @@
    "sample_line": "",
    "notes": "Selected vyasa-E_dark_ascetic_vox_s10_1 (round 2 of 5 briefs x2): design WER 0, F0 80 Hz; clone WER 0/0 on ep01-0069/0073; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
    "shared_by": []
+  },
+  "parasurama": {
+   "name": "Parasurama (Rama, son of Jamadagni)",
+   "ref": "voices/parasurama/ref.wav",
+   "ref_sha256": "513692864e4c6227109822f866459779db6974df89b49e4266945b929cb34f51",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "a powerful middle-aged Indian warrior-sage, deep resonant baritone, grave and remorseful after great slaughter, slow and dignified, clear Indian English accent",
+   "sample_line": "If, O fathers, ye are favourably disposed towards me, the boon I ask is that I may be absolved from the sins born of my having annihilated the Kshatriyas in anger.",
+   "notes": "Ep4 design 2026-10-12: A_0 of 4 candidates (user pick), leveled to -20 LUFS",
+   "shared_by": []
+  },
+  "krishna": {
+   "name": "Krishna (title/ending chant)",
+   "ref": "voices/krishna/ref.wav",
+   "ref_sha256": "01e55d11aad215dc131fbdfa12739c38b827ae81444c4995143cf2f78568b787",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "Lord Krishna, a divine Indian man's voice, warm, deep and serene yet commanding, compassionate and authoritative, slow measured Sanskrit chant",
+   "sample_line": "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "notes": "Title v5 design 2026-10-13: A of 4 (best ASR on 2.62a, 0.72); chant only so far, pending user approval",
+   "shared_by": []
   }
  }
 }

@@ -251,7 +251,6 @@ Suka	Suka		ep01-harness	0	harness ep01 2026-10-10: 'Suka' passed (sauti, 1 take;
 Sanjaya	Sanjaya		ep01-harness	1	harness ep01 2026-10-10: 'Sanjaya' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-11: 'Sanjaya' passed 4 takes on bhishma,sauti	Sanjaya
 Sruti	Sruti		ep01-harness	0	harness ep01 2026-10-10: 'Sruti' passed (sauti, 1 take; provisional until a 2nd voice)	Sruti
 Pauloma	Pauloma		ep01-harness	0	harness ep01 2026-10-10: 'Pauloma' passed (sauti, 1 take; provisional until a 2nd voice)	Pauloma
-Sambhava	Sambhava		ep01-harness	0	harness ep01 2026-10-10: 'Sumbhuvuh' passed (sauti, 1 take; provisional until a 2nd voice)	Sumbhuvuh
 Sabha	Sabha		ep01-harness	0	harness ep01 2026-10-10: 'Sabha' passed (sauti, 1 take; provisional until a 2nd voice)	Sabha
 Aranya	Aranya		ep01-harness	0	harness ep01 2026-10-10: 'Aranya' passed (sauti, 1 take; provisional until a 2nd voice)	Aranya
 Arani	Arani		ep01-harness	0	harness ep01 2026-10-10: 'Arani' passed (sauti, 1 take; provisional until a 2nd voice)	Arani
@@ -306,3 +305,10 @@ Gandiva	Gandiva		harness	1	harness 2026-10-11 (ep03): 'Gandiva' passed 3 takes o
 Somaka	Somaka		harness	1	harness 2026-10-11 (ep03): 'Somaka' passed 2 takes on dhritarashtra,sanjaya	Somaka
 Upanishad	Upanishad		harness	1	harness 2026-10-11 (ep03): 'Upanishad' passed 3 takes on bhishma,dhritarashtra,sanjaya	Upanishad
 Kritavarman	Kritavarman		harness	1	harness 2026-10-11 (ep03): 'Kritavarman' passed 2 takes on dhritarashtra,sanjaya	Kritavarman
+Sambhava	Sambhava		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Sumbhuvuh' failed; 'Sambhava' passed	Sambhava
+Aisika	Aisika		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Aisika' failed; 'Aishika' passed	Aishika
+Jalapradana	Jalapradana		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Jalapradana' failed; 'Jalapradaana' passed	Jalapradaana
+Pritana	Pritana		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Pritana' failed; 'Pritanaa' passed	Pritanaa
+Swayamvara	Swayamvara		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Swayamvara' failed; 'Svayamvara' passed	Svayamvara
+Sweta	Sweta		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Sweta' failed; 'Shwayta' passed	Shwayta
+Akshauhini	Akshauhini		ep04-harness	0	harness 2026-10-12 (ep04, sauti): KMG and Akshowhinee/Akshauhinee heard as 'Akshawini'; KMG kept, needs a listening check	Akshauhini

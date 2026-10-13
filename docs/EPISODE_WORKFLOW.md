@@ -243,3 +243,16 @@ setsid nohup tools/render_sharded.sh episodes/ep03.yaml 4 > logs/render_ep03_sha
 ```
 
 `tools/render_sharded.sh` runs each shard as its own process with retries, writes `build/shards/<episode>/shard_K.done`, then writes the full render manifest (all lines cached) and runs `assemble --music --music-preset A`. Lines share the per-line cache, so rerun the same command after a crash or VM restart and it resumes. A shard render never overwrites the full-episode manifest. Delete the `.done` markers if you change the script so shards are rechecked.
+
+## Title song (opening intro)
+
+The opening title song is Bhagavad Gita 2.62–63, chanted over a code-generated tanpura drone. To use it, add one line to an episode spec:
+
+```yaml
+intro: title_song          # named intro from configs/intros.yaml
+# intro_crossfade_s: 2.5   # optional override (default from configs/intros.yaml)
+```
+
+`mbh episode assemble` (and Studio) mixes the episode body with its music bed, then prepends the intro. The intro's last `crossfade_s` seconds (its drone fade-out) overlap the start of the episode with an equal-power crossfade, and the whole episode is mastered to -16 LUFS together. `intro:` still accepts a plain WAV path (no crossfade unless `intro_crossfade_s` is set). Line timestamps in the assemble report are shifted by the intro's length.
+
+Rebuilding the title song (CPU): `STYLES=chant SPELLINGS=r4,r7,r8,r9 proto/.venv-vox/bin/python tools/title_song/chant.py`, then `proto/.venv-vox/bin/python tools/title_song/split_r7.py` (splits the whole-verse takes), `proto/.venv-pocket/bin/python tools/title_song/score.py` (per-clip ASR vs Devanagari), `proto/.venv-vox/bin/python tools/title_song/mix.py chant r4 build/title_song/v1.wav --clips <mixes.v1.clips>`, and `tools/title_song/verify.py build/title_song/v1` (ASR on the finished mix). Copy the chosen WAV to `assets/intro/title_song_v1.wav`. The text, respellings, styles, and seeds are in `configs/title_song.json`.

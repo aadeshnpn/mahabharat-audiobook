@@ -1,0 +1,141 @@
+0001  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  The study of the Bharata is an act of piety.
+0002  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  He that readeth even one foot, with belief, hath
+0003  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  Herein Devas, Devarshis, and immaculate Brahmars
+0004  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  Herein also hath been described the eternal Vasu
+0005  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  He is the true and just, the pure and holy, the 
+0006  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  That also hath been treated of which is called A
+0007  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  That also hath been described who is purusha bei
+0008  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The man of faith, devoted to piety, and constant
+0009  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The believer that constantly heareth recited thi
+0010  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The man repeating any part of the introduction i
+0011  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This section, the body of the Bharata, is truth 
+0012  sauti          warm            -> narration_warm         0.35  [emotion:warm]  As butter is in curd, Brahmana among bipeds, the
+0013  sauti          warm            -> narration_warm         0.35  [emotion:warm]  He that causeth it, even a single foot thereof, 
+0014  sauti          warm            -> narration_warm         0.35  [emotion:warm]  By the aid of history and the Puranas, the Veda 
+0015  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The learned man who recites to other this Veda o
+0016  sauti          warm            -> narration_warm         0.35  [emotion:warm]  It may without doubt destroy even the sin of kil
+0017  sauti          warm            -> narration_warm         0.35  [emotion:warm]  He that readeth this holy chapter of the moon, r
+0018  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The man who with reverence daily listeneth to th
+0019  sauti          warm            -> celestial_swell        0.50  [rule:weighed_in_balance]  In former days, having placed the four Vedas on 
+0020  sauti          warm            -> celestial_swell        0.50  [rule:weighed_in_balance]  And as the latter weighed heavier than the four 
+0021  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  Being esteemed superior both in substance and gr
+0022  sauti          warm            -> sacred_solemn          0.40  [rule:merits_of_bharata]  He that knoweth its meaning is saved from all hi
+0023  sauti          warm            -> narration_warm         0.35  [emotion:warm]  'Tapa is innocent, study is harmless, the ordina
+0024  sauti          warm            -> forest_ashram          0.35  [inherit:ep04-0025]  The Rishis said,
+0025  naimisha_rishi warm            -> forest_ashram          0.35  [rule:naimisha_question]  O son of Suta, we wish to hear a full and circum
+0026  sauti          warm            -> royal_resolve          0.60  [inherit:ep04-0027]  Sauti said,
+0027  sauti          commanding      -> royal_resolve          0.60  [emotion:commanding]  Listen, O ye Brahmanas, to the sacred descriptio
+0028  sauti          warm            -> grave_drone            0.50  [rule:lakes_of_blood]  In the interval between the Treta and Dwapara Yu
+0029  sauti          warm            -> grave_drone            0.50  [rule:lakes_of_blood]  And when that fiery meteor, by his own valour, a
+0030  sauti          angry           -> grave_drone            0.50  [rule:lakes_of_blood]  We are told that his reason being overpowered by
+0031  sauti          solemn          -> sacred_solemn          0.45  [rule:ancestors_bless]  It was then that his forefathers of whom Richika
+0032  sauti          warm            -> sacred_solemn          0.45  [rule:ancestors_bless]  Blessings be upon thee.
+0033  sauti          warm            -> sacred_solemn          0.45  [rule:ancestors_bless]  O thou illustrious one, ask the boon that thou m
+0034  sauti          warm            -> tender_resolve         0.40  [inherit:ep04-0035]  Rama said,
+0035  parasurama     pleading        -> tender_resolve         0.40  [rule:rama_absolved]  If, O fathers, ye are favourably disposed toward
+0036  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The Pitris then said,
+0037  sauti          solemn          -> tender_resolve         0.40  [rule:rama_absolved]  So shall it be.
+0038  sauti          solemn          -> tender_resolve         0.40  [rule:rama_absolved]  But be thou pacified.
+0039  sauti          warm            -> tender_resolve         0.40  [rule:rama_absolved]  And Rama was pacified accordingly.
+0040  sauti          warm            -> tender_resolve         0.40  [rule:rama_absolved]  The region that lieth near unto those lakes of g
+0041  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The wise have declared that every country should
+0042  sauti          warm            -> narration_warm         0.35  [emotion:warm]  In the interval between the Dwapara and the Kali
+0043  sauti          warm            -> grave_drone            0.45  [rule:kurukshetra_dead]  In that holy region, without ruggedness of any k
+0044  sauti          warm            -> grave_drone            0.45  [rule:kurukshetra_dead]  And, O Brahmanas, having come thereto, they were
+0045  sauti          warm            -> narration_warm         0.35  [emotion:warm]  Thus the name of that region, O Brahmanas, hath 
+0046  sauti          warm            -> narration_warm         0.35  [emotion:warm]  I have mentioned the whole of what relateth to i
+0047  sauti          warm            -> forest_ashram          0.35  [inherit:ep04-0048]  The Rishis said,
+0048  naimisha_rishi warm            -> forest_ashram          0.35  [rule:naimisha_question]  We have a desire to know, O son of Suta, what is
+0049  naimisha_rishi warm            -> forest_ashram          0.35  [rule:naimisha_question]  Tell us in full what is the number of horse and 
+0050  sauti          warm            -> royal_resolve          0.35  [inherit:ep04-0051]  Sauti said,
+0051  sauti          neutral         -> royal_resolve          0.35  [rule:akshauhini_count]  One chariot, one elephant, five foot-soldiers, a
+0052  sauti          warm            -> royal_resolve          0.35  [rule:akshauhini_count]  O ye best of Brahmanas, arithmeticians have calc
+0053  sauti          warm            -> royal_resolve          0.35  [rule:akshauhini_count]  The measure of elephants must be fixed at the sa
+0054  sauti          warm            -> royal_resolve          0.35  [rule:akshauhini_count]  O ye pure, you must know that the number of foot
+0055  sauti          warm            -> royal_resolve          0.35  [rule:akshauhini_count]  These, O Brahmanas, as fully explained by me, ar
+0056  sauti          warm            -> royal_resolve          0.35  [rule:akshauhini_count]  O best of Brahmanas, according to this calculati
+0057  sauti          warm            -> grave_drone            0.45  [rule:war_and_time]  Time, whose acts are wonderful assembled them on
+0058  sauti          warm            -> grave_drone            0.45  [rule:war_and_time]  Bhishma acquainted with choice of weapons, fough
+0059  sauti          warm            -> grave_drone            0.45  [rule:war_and_time]  Drona protected the Kaurava Vahinis for five day
+0060  sauti          warm            -> grave_drone            0.45  [rule:war_and_time]  Kama the desolator of hostile armies fought for 
+0061  sauti          warm            -> grave_drone            0.45  [rule:war_and_time]  After that lasted for half a day the encounter w
+0062  sauti          angry           -> grave_drone            0.45  [rule:war_and_time]  At the close of that day, Aswatthaman and Kripa 
+0063  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  'O Saunaka, this best of narrations called Bhara
+0064  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  It is divided into several sections; in the begi
+0065  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  It is a work whose description, diction, and sen
+0066  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  It contains an account of various manners and ri
+0067  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  It is accepted by the wise, as the state called 
+0068  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  As Self among things to be known, as life among 
+0069  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  There is not a story current in this world but d
+0070  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  As masters of good lineage are ever attended upo
+0071  sauti          warm            -> reverent_anticipation  0.40  [rule:bharata_praise]  As the words constituting the several branches o
+0072  sauti          commanding      -> reverent_anticipation  0.40  [rule:bharata_praise]  'Listen, O ye ascetics, to the outlines of the s
+0073  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  'The first parva is called Anukramanika; the sec
+0074  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes the Sambhava of wonderful and thrilli
+0075  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes Jatugrihadaha (setting fire to the ho
+0076  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is called Swayamvara (selection of husb
+0077  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes Vaivahika (marriage).
+0078  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes Viduragamana (advent of Vidura), Rajy
+0079  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After these come Harana-harika, Khandava-daha (t
+0080  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then come Sabha, Mantra, Jarasandha, Digvijaya (
+0081  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After Digvijaya come Raja-suyaka, Arghyaviharana
+0082  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After these, Dyuta (gambling), Anudyuta (subsequ
+0083  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The Arjuna-vigamana (the travels of Arjuna), Kai
+0084  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  In the last hath been described the battle betwe
+0085  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After this Indra-lokavigamana (the journey to th
+0086  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After this last, Tirtha-yatra or the pilgrimage 
+0087  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the battle with the Nivata-kavachas, Ajagar
+0088  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the meeting of Draupadi and Satyabhama, Gho
+0089  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the story of Brihadaranyaka and then Aindra
+0090  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then Draupadi-harana (the abduction of Draupadi)
+0091  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the story of 'Savitri' illustrating the gre
+0092  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  After this last, the story of 'Rama'.
+0093  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The parva that comes next is called 'Kundala-har
+0094  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  That which comes next is 'Aranya' and then 'Vair
+0095  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the entry of the Pandavas and the fulfilmen
+0096  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the destruction of the 'Kichakas', then the
+0097  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is called the marriage of Abhimanyu wit
+0098  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next you must know is the most wonderful par
+0099  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next must be known by the name of 'Sanjaya-y
+0100  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes 'Prajagara' (the sleeplessness of Dhr
+0101  sauti          warm            -> sacred_solemn          0.45  [rule:parva_gita]  Then Sanatsujata, in which are the mysteries of 
+0102  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then 'Yanasaddhi', and then the arrival of Krish
+0103  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the story of 'Matali' and then of 'Galava'.
+0104  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the stories of 'Savitri', 'Vamadeva', and '
+0105  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the story of 'Jamadagnya and Shodasarajika'
+0106  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the arrival of Krishna at the court, and th
+0107  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the muster of troops and the story of Sheta
+0108  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then, must you know, comes the quarrel of the hi
+0109  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the march to the field of the troops of bot
+0110  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next hath been called numbering the Rathis a
+0111  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes the arrival of the messenger Uluka wh
+0112  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next that comes, you must know, is the story
+0113  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then comes the thrilling story of the installati
+0114  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is called the creation of the insular r
+0115  sauti          warm            -> sacred_solemn          0.45  [rule:parva_gita]  Then comes the 'Bhagavat-gita'; and then the dea
+0116  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then the installation of Drona; then the destruc
+0117  sauti          solemn_resolve  -> grave_drone            0.40  [rule:parva_war]  Then the death of Abhimanyu; and then the vow of
+0118  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then the death of Jayadratha, and then of Ghatot
+0119  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then, must you know, comes the story of the deat
+0120  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next that comes is called the discharge of t
+0121  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then, you know, is Karna, and then Salya.
+0122  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then comes the immersion in the lake, and then t
+0123  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes Saraswata, and then the descriptions 
+0124  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then comes Sauptika describing incidents disgrac
+0125  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then comes the 'Aisika' of harrowing incidents.
+0126  sauti          warm            -> grave_drone            0.40  [rule:parva_war]  Then comes 'Jalapradana' oblations of water to t
+0127  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next must be known as 'Sraddha' describing t
+0128  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes the destruction of the Rakshasa Charv
+0129  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the coronation of the wise Yudhishthira.
+0130  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is called the 'Grihapravibhaga'.
+0131  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes 'Santi', then 'Rajadharmanusasana', t
+0132  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Those that follow are called respectively 'Suka-
+0133  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is to be known as 'Anusasanika'.
+0134  sauti          warm            -> sacred_solemn          0.45  [rule:parva_gita]  Then the ascension of Bhishma to heaven.
+0135  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then the horse-sacrifice, which when read purget
+0136  sauti          warm            -> sacred_solemn          0.45  [rule:parva_gita]  The next must be known as the 'Anugita' in which
+0137  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Those that follow are called 'Asramvasa', 'Puttr
+0138  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The next is called 'Mausala' which abounds with 
+0139  sauti          warm            -> sacred_solemn          0.45  [rule:parva_gita]  Then comes 'Mahaprasthanika' and ascension to he
+0140  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  Then comes the Purana which is called Khilvansa.
+0141  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  In this last are contained 'Vishnuparva', Vishnu

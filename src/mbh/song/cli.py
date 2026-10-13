@@ -38,7 +38,7 @@ def add_song_commands(sub) -> None:
     asr = acts.add_parser("asr", help="ASR-score any audio file against line text(s) (pocket venv)")
     asr.add_argument("spec", type=Path)
     asr.add_argument("files", nargs="+", type=Path)
-    asr.add_argument("--lines", required=True, help="comma-separated line ids the audio should contain")
+    asr.add_argument("--lines", help="comma-separated line ids the audio should contain (default: the structure)")
     asr.set_defaults(func=cmd_asr)
 
     ace = acts.add_parser("ace", help="ACE-Step 1.5 sung + arranged rendition (text2music or cover; ace venv)")
@@ -130,7 +130,8 @@ def cmd_render(args: argparse.Namespace) -> int:
 def cmd_asr(args: argparse.Namespace) -> int:
     from mbh.song.asr import score_file
     spec = _spec(args.spec)
-    ref = " ".join(spec.line(i).text for i in args.lines.split(","))
+    ids = args.lines.split(",") if args.lines else [row["line"] for row in spec.structure]
+    ref = " ".join(spec.line(i).text for i in ids)
     for f in args.files:
         r = score_file(f, ref)
         print(f"{r['score']:.2f} {f.name} {r['asr']}", flush=True)

@@ -21,6 +21,8 @@ def pipeline(threads: int | None = None):
         if threads:
             torch.set_num_threads(threads)
         _PIPE = AceStepPipeline.from_pretrained(REPO, torch_dtype=torch.bfloat16).to("cpu")
+        if hasattr(_PIPE.vae, "use_tiling"):
+            _PIPE.vae.use_tiling = True   # tiled VAE encode/decode: long (60-90 s) sources otherwise need ~17 GB
     return _PIPE
 
 

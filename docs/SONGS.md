@@ -92,7 +92,7 @@ sorrowful), split at the caesura, long natural pauses instead of time-stretching
 Config: `configs/title_song_krishna.json`. Tool: `tools/title_song/krishna.py design|score|takes|mix [--piece ending]`;
 end to end: `setsid nohup tools/title_song/krishna_all.sh > logs/title_v5.log 2>&1 &`, then
 `PYTHONPATH=src proto/.venv-vox/bin/python tools/title_song/krishna.py mix --piece ending --out build/title_song_v5/ending_v2_krishna.wav`.
-Hooks: `intro: title_song` -> assets/intro/title_song_v5_krishna.wav, `outro: ending_song` -> assets/outro/ending_v2_krishna.wav.
+Hooks (v5, superseded by v6 sting): `intro: title_song` -> assets/intro/title_song_v5_krishna.wav, `outro: ending_song` -> assets/outro/ending_v2_krishna.wav.
 
 ## Title v6 (2026-10-20): spoken Krishna verse + sung leitmotif hook
 Research and brief: docs/TITLE_TRACK_RESEARCH.md. The hook is प्रणश्यति sung on the falling Bhairav motif m G r S
@@ -101,3 +101,13 @@ spoken (approved Krishna takes from `tools/title_song/krishna.py`). Orchestra: `
 strings, ostinato, bansuri, brass, choir). Concepts: `src/mbh/song/title6.py` (`sting`, `motif`, `coldopen`, `ending`),
 settings `configs/title_v6.yaml`. One command: `setsid nohup tools/song/title_v6.sh > logs/title_v6.log 2>&1 &`
 -> build/title_v6/<concept>.wav/.json (timeline, takes, per-segment ASR).
+
+### Final (approved 2026-10-20): v6 sting
+The user picked the **sting** concept. The masters from `tools/song/title_v6.sh` (build/title_v6/sting.wav, ending.wav; 48 kHz,
+-16 LUFS, -2.8 dBFS peak) are promoted unchanged, so they are the exact audio of samples/title_v6_sting.mp3 and
+samples/title_v6_ending_sting.mp3:
+- `assets/intro/title_song_v6_sting.wav` (45.2 s) <- `intro: title_song` (configs/intros.yaml, 2.5 s crossfade)
+- `assets/outro/ending_v6_sting.wav` (17.9 s) <- `outro: ending_song` (configs/outros.yaml, after the music tail, 2.5 s crossfade)
+
+Already-assembled episodes get the new title/ending without any TTS via `tools/swap_intro_outro.py`
+(docs/EPISODE_WORKFLOW.md, "Swapping the title and ending").

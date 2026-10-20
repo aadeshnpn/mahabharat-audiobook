@@ -282,3 +282,21 @@ intro: title_song          # named intro from configs/intros.yaml
 `mbh episode assemble` (and Studio) mixes the episode body with its music bed, then prepends the intro. The intro's last `crossfade_s` seconds (its drone fade-out) overlap the start of the episode with an equal-power crossfade, and the whole episode is mastered to -16 LUFS together. `intro:` still accepts a plain WAV path (no crossfade unless `intro_crossfade_s` is set). Line timestamps in the assemble report are shifted by the intro's length.
 
 Rebuilding the title song (CPU): `STYLES=chant SPELLINGS=r4,r7,r8,r9 proto/.venv-vox/bin/python tools/title_song/chant.py`, then `proto/.venv-vox/bin/python tools/title_song/split_r7.py` (splits the whole-verse takes), `proto/.venv-pocket/bin/python tools/title_song/score.py` (per-clip ASR vs Devanagari), `proto/.venv-vox/bin/python tools/title_song/mix.py chant r4 build/title_song/v1.wav --clips <mixes.v1.clips>`, and `tools/title_song/verify.py build/title_song/v1` (ASR on the finished mix). Copy the chosen WAV to `assets/intro/title_song_v1.wav`. The text, respellings, styles, and seeds are in `configs/title_song.json`.
+
+## Swapping the title and ending of an assembled episode (no TTS)
+
+When only the title/ending changes, re-rendering lines is unnecessary. `tools/swap_intro_outro.py` finds the old intro and
+outro in the finished episode by cross-correlation, subtracts them (including their share of each 2.5 s equal-power
+crossfade, with the same curves as `mbh.episode.assemble`), splices the new ones in the same places, and re-masters to
+the configs/duration.yaml loudness (-16 LUFS, -1.5 dBTP). New assets/crossfades default to configs/intros.yaml and outros.yaml.
+
+```
+PYTHONPATH=src proto/.venv-pocket/bin/python tools/swap_intro_outro.py episodes/ep01.wav build/swap/ep01_v4.wav \
+  --old-intro assets/intro/title_song_v5_krishna.wav --old-outro assets/outro/ending_v2_krishna.wav \
+  --mp3 build/swap/ep01_v4.mp3 --report build/swap/ep01_v4.json
+```
+Input may be the lossless episode wav or the released mp3. The report lists the cut points, the master gain found, the
+loudness of the wav and the mp3 (the mp3 is trimmed once if the encoder shifts it by more than 0.1 LU), and a remnant check
+(normalized correlation of the old assets in the result; about 0.07 is the noise floor, the new ones about 1.0).
+The episode's line timeline shifts by (new intro - old intro) seconds. tests/test_swap_intro_outro.py checks that the swap
+equals a direct assembly with the new assets.

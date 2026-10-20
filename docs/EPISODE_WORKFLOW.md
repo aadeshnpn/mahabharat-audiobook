@@ -244,6 +244,32 @@ setsid nohup tools/render_sharded.sh episodes/ep03.yaml 4 > logs/render_ep03_sha
 
 `tools/render_sharded.sh` runs each shard as its own process with retries, writes `build/shards/<episode>/shard_K.done`, then writes the full render manifest (all lines cached) and runs `assemble --music --music-preset A`. Lines share the per-line cache, so rerun the same command after a crash or VM restart and it resumes. A shard render never overwrites the full-episode manifest. Delete the `.done` markers if you change the script so shards are rechecked.
 
+## Render cache off the box (`tools/cache_sync.py`)
+
+The build box is cleaned weekly, which wipes `build/` (the per-line cache) and the model downloads. Rendered lines are
+kept in two places. Voice references and intro/outro WAVs are already in git.
+
+1. **GitHub release assets** on the pre-release tag `render-cache`: per-episode (or per-song) `tar.gz` chunks of ≤ 50 MB
+   with content-addressed names, plus `manifest.json` (path → sha256, size, chunk). Pulling uses public URLs and needs no token.
+2. **Persistent agent store** `/cursor/stores/store-36ba7fba-…/mahabharat-cache/` (override with `$MBH_CACHE_STORE`):
+   a plain mirror of the cache files, updated after every finished shard.
+
+```bash
+python3 tools/cache_sync.py status                 # local vs the release manifest
+python3 tools/cache_sync.py restore                # copy back from the persistent store (fast, offline)
+python3 tools/cache_sync.py pull                   # download + verify missing chunks from the release
+python3 tools/cache_sync.py push                   # pack new/changed files, upload (needs gh auth or GITHUB_TOKEN)
+python3 tools/cache_sync.py push --export /workspace/mahabharat-export/cache_export   # no token: write chunks +
+                                                   # manifest.json to a dir; upload them all to the render-cache release
+python3 tools/cache_sync.py backup                 # mirror into the persistent store
+```
+
+`tools/render_sharded.sh` runs `restore` and then `pull` when `build/cache/voxcpm2` is empty, `backup` after each shard,
+and prints a reminder to `push` at the end. Cached paths are `build/cache/*/*.wav`, `build/song/*/takes/*.wav` and
+`build/title_song_v5/takes/*.wav`. Chunks are grouped by episode via `episodes/<id>.render.json`; anything unmatched
+goes into `lines`. To upload an export by hand: `gh release create render-cache --prerelease` (once), then
+`gh release upload render-cache DIR/*.tar.gz` and `gh release upload render-cache DIR/manifest.json --clobber`.
+
 ## Title song (opening intro)
 
 The opening title song is Bhagavad Gita 2.62–63, chanted over a code-generated tanpura drone. To use it, add one line to an episode spec:

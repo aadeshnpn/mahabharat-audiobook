@@ -93,3 +93,11 @@ Config: `configs/title_song_krishna.json`. Tool: `tools/title_song/krishna.py de
 end to end: `setsid nohup tools/title_song/krishna_all.sh > logs/title_v5.log 2>&1 &`, then
 `PYTHONPATH=src proto/.venv-vox/bin/python tools/title_song/krishna.py mix --piece ending --out build/title_song_v5/ending_v2_krishna.wav`.
 Hooks: `intro: title_song` -> assets/intro/title_song_v5_krishna.wav, `outro: ending_song` -> assets/outro/ending_v2_krishna.wav.
+
+## Title v6 (2026-10-20): spoken Krishna verse + sung leitmotif hook
+Research and brief: docs/TITLE_TRACK_RESEARCH.md. The hook is प्रणश्यति sung on the falling Bhairav motif m G r S
+(`configs/songs/title_v6_hook.yaml`, sung by the Krishna voice through WORLD and stacked into a choir). The verse stays
+spoken (approved Krishna takes from `tools/title_song/krishna.py`). Orchestra: `src/mbh/song/orchestra.py` (drum,
+strings, ostinato, bansuri, brass, choir). Concepts: `src/mbh/song/title6.py` (`sting`, `motif`, `coldopen`, `ending`),
+settings `configs/title_v6.yaml`. One command: `setsid nohup tools/song/title_v6.sh > logs/title_v6.log 2>&1 &`
+-> build/title_v6/<concept>.wav/.json (timeline, takes, per-segment ASR).

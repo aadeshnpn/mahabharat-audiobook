@@ -11,7 +11,7 @@ duck: 0.35
 bus_db: {voice: 0, choir: -1, orch: -3, fx: -2}
 krishna_takes: build/title_song_v5        # krishna.py takes + scores.json (best take per verse)
 hook_song: configs/songs/title_v6_hook.yaml
-hook_voice: singer_m                      # the choir's source voice
+hook_voice: krishna                       # the choir is built from Krishna singing the hook (ASR 0.44 vs 0.22 for singer_m)
 concepts: [sting, motif, coldopen]
 ending: {}
 master: {lufs: -16.0, true_peak_db: -2.0}

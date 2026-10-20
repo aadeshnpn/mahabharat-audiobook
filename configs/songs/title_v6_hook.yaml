@@ -21,7 +21,7 @@ lines:
     text: "प्रणश्यति।"
     context: "बुद्धिनाशात्प्रणश्यति। प्रणश्यति।"
     syllables: "प्र ण श्य ति"
-    melody: ["m:1", "G:1", "r:1", "S:3"]
+    melody: ["m:0.75", "G:0.75", "r:1", "S:3"]
   - id: hook_krodha
     text: "क्रोधात्।"
     syllables: "क्रो धात्"

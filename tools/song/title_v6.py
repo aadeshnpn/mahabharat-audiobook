@@ -50,7 +50,7 @@ elif step == "asr":
     for name in names:
         r = json.loads((OUT / f"{name}.json").read_text()); y = librosa.load(OUT / f"{name}.wav", sr=16000)[0]; rows = []
         for seg in r["timeline"]:
-            key = seg["what"].split()[0]
+            key = "hook" if seg["what"].startswith("choir hook") else seg["what"].split()[0]
             if key not in CFG["texts"]: continue
             a = int(max(0, seg["at"] - 0.2) * 16000); b = int((seg["at"] + seg["s"] + 0.3) * 16000)
             hyp = transcribe(y[a:b]); rows.append({"seg": seg["what"], "score": round(best_window_similarity(hyp, CFG["texts"][key]), 3), "asr": hyp})

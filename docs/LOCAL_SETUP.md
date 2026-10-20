@@ -124,3 +124,9 @@ noticeably quicker than on battery.
 | `nltk` LookupError in `tools/pronunciation/score.py` | `proto/.venv-pocket/bin/python -m nltk.downloader cmudict averaged_perceptron_tagger_eng`. |
 | Hugging Face download stalls | `export HF_HUB_ENABLE_HF_TRANSFER=0`, retry; or download on another machine and copy `~/.cache/huggingface/hub/models--openbmb--VoxCPM2`. |
 | MP3 louder/quieter than -16 LUFS | Use `tools/encode_mp3.py` (it re-measures the MP3 and corrects once); `ffmpeg -i x.mp3 -af ebur128=peak=true -f null -` to check. |
+
+## Getting the render cache (skip re-rendering)
+
+After cloning, `python3 tools/cache_sync.py pull` downloads every rendered line from the `render-cache` release
+(public, no token). After rendering, `python3 tools/cache_sync.py push` (with `gh auth login`) uploads the new lines. See
+docs/EPISODE_WORKFLOW.md "Render cache off the box".

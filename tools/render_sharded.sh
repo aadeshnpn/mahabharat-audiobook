@@ -9,6 +9,11 @@ cd "$(dirname "$0")/.."
 spec=$1; mins=${2:-4}; retries=${3:-6}; py=proto/.venv-vox/bin/python
 ep=$(basename "$spec" .yaml); marks=build/shards/$ep; mkdir -p "$marks"
 mbh() { PYTHONPATH=src MBH_VOX_PYTHON=$py $py -m mbh.cli episode "$@"; }
+# empty line cache (fresh/cleaned box): restore it first, from the persistent store, then the GitHub render-cache release
+if [ -z "$(ls -A build/cache/voxcpm2 2>/dev/null)" ]; then
+  python3 tools/cache_sync.py restore || true
+  python3 tools/cache_sync.py pull || true
+fi
 mbh render --list-shards --shard-minutes "$mins" "$spec" | tee "$marks/plan.txt"
 n=$(rg -o "shards=(\d+)" -r '$1' "$marks/plan.txt")
 for k in $(seq 1 "$n"); do
@@ -17,10 +22,11 @@ for k in $(seq 1 "$n"); do
     echo "== shard $k/$n try $t $(date +%T)"
     mbh render --shard "$k" --shard-minutes "$mins" "$spec" 2>&1 | rg -v "it/s\]|^\s*$"
     left=$(mbh render --dry-run --shard "$k" --shard-minutes "$mins" "$spec" | rg -c "^(would_render|missing_voice)" || true)
-    [ "${left:-0}" = 0 ] && { date +%FT%T > "$marks/shard_$k.done"; echo "== shard $k done"; break; }
+    [ "${left:-0}" = 0 ] && { date +%FT%T > "$marks/shard_$k.done"; echo "== shard $k done"; python3 tools/cache_sync.py backup || true; break; }
     echo "== shard $k: $left lines left"
   done
   [ -f "$marks/shard_$k.done" ] || { echo SHARD_FAILED "$k"; exit 1; }
 done
 mbh render "$spec" | tail -1          # all cached: writes the full manifest without loading the model
 mbh assemble --music --music-preset A "$spec" && echo EPISODE_DONE
+echo "next: python3 tools/cache_sync.py push   (or: push --export /workspace/mahabharat-export/cache_export, then upload)"

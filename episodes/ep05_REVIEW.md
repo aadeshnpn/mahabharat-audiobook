@@ -53,7 +53,7 @@ the KMG text (the builder checks this). The longest line is now about 45 s (Ep 1
 ## OCR / print repairs (spoken text only via `tts_replace`, flagged `ocr_fix`; KMG text untouched)
 These typos are in the source text (also in the Gutenberg edition):
 - ¶10 "Adivansavatara, **Samva**" → **Sambhava** (the sub-parva named again a few lines later as "The Sambhava parva").
-- ¶10 "the curse of **Animondavya**" → **Animandavya** (KMG's own spelling in §107).
+- ¶10 "the curse of **Animondavya**" → **Animandavya** (KMG's own spelling where his story is told later in the Adi parva).
 - ¶10 "the defeat of Salya, **Kama**" → **Karna** (the same rn→m misprint fixed in Ep 4).
 - ¶11 "divided into **seventh-eight** sections" → **seventy-eight**.
 - ¶12 "their brother Arjuna **staving** in the heavens" → **staying**.

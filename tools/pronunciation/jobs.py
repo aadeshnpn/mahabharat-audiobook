@@ -11,7 +11,11 @@ KEY = {"Vaisampayana": "Vaishampayana", "Saunaka": "Shaunaka", "Ugrasrava": "Ugr
        "Duhsasana": "Duhshasana", "Sakuni": "Shakuni", "Sakra": "Shakra", "Sastras": "Shastras", "Sikhandin": "Shikhandin",
        "Aswatthaman": "Ashvatthaman", "Dhristadyumna": "Dhrishtadyumna", "Santanu": "Shantanu", "Saivya": "Shaivya", "Dasaratha": "Dasharatha", "Sakti": "Shakti",
        # Episode 4
-       "Sweta": "Shweta", "Aisika": "Aishika", "Khilvansa": "Khilvamsha", "Sisupala-badha": "Shishupala vadha"}
+       "Sweta": "Shweta", "Aisika": "Aishika", "Khilvansa": "Khilvamsha", "Sisupala-badha": "Shishupala vadha",
+       # Episode 5
+       "Sisupala": "Shishupala", "Vaisravana": "Vaishravana", "Lomasa": "Lomasha", "Rishyasringa": "Rishyashringa",
+       "Sarngi": "Sharngi", "Saryati": "Sharyati", "Kailasa": "Kailasha", "Arshtishena": "Arshtishena", "Kartavirya": "Kartavirya",
+       "Dhaumya": "Dhaumya", "Sivi": "Shibi", "Vasishtha": "Vashishtha", "Sakuntala": "Shakuntala", "Animandavya": "Animandavya"}
 
 def words():
     rows = {}

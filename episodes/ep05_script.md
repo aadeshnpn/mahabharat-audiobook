@@ -18,11 +18,13 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > 'In the Adi parva are contained Paushya, Pauloma, Astika, Adivansavatara, Samva, the burning of the house of lac, the slaying of Hidimba, the destruction of the Asura Vaka, Chitraratha, the Swayamvara of Draupadi, her marriage after the overthrow of rivals in war, the arrival of Vidura, the restoration, Arjuna's exile, the abduction of Subhadra, the gift and receipt of the marriage dower, the burning of the Khandava forest, and the meeting with (the Asura-architect) Maya.
 
-*TTS:* 'In the Adi parva are contained Paushya, Pauloma, Astika, Adivansavatara, Sambhava, the burning of the house of lac, the slaying of Hidimba, the destruction of the Asura Vaka, Chitraratha, the Svayamvara of Drowpadee, her marriage after the overthrow of rivals in war, the arrival of Vidura, the restoration, Arjoona's exile, the abduction of Subhadra, the gift and receipt of the marriage dower, the burning of the Khandava forest, and the meeting with Maya.
+*TTS:* 'In the Adi parva are contained Paushyah, Pauloma, Astika, Adivansavatara, Sambhava, the burning of the house of lac, the slaying of Hidimba, the destruction of the Asura Vaka, Chitraratha, the Svayamvara of Drowpadee, her marriage after the overthrow of rivals in war, the arrival of Vidura, the restoration, Arjoona's exile, the abduction of Subhadra, the gift and receipt of the marriage dower, the burning of the Khandava forest, and the meeting with Maya.
 
 **00:48 · Sauti** · narration · warm · measured
 
 > The Paushya parva treats of the greatness of Utanka, and the Pauloma, of the sons of Bhrigu.
+
+*TTS:* The Paushyah parva treats of the greatness of Utanka, and the Pauloma, of the sons of Bhrigu.
 
 **00:56 · Sauti** · narration · warm · measured · override, gloss not spoken
 
@@ -168,7 +170,7 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Then comes the third parva called Aranyaka (relating to the forest) This parva treats of the wending of the Pandavas to the forest and the citizens, following the wise Yudhishthira, Yudhishthira's adoration of the god of day; according to the injunctions of Dhaumya, to be gifted with the power of maintaining the dependent Brahmanas with food and drink: the creation of food through the grace of the Sun:
 
-*TTS:* Then comes the third parva called Aranyaka. This parva treats of the wending of the Pandavas to the forest and the citizens, following the wise Yudhishthira, Yudhishthira's adoration of the god of day; according to the injunctions of Dhaumya, to be gifted with the power of maintaining the dependent Brahmanas with food and drink: the creation of food through the grace of the Sun:
+*TTS:* Then comes the third parva called Aranyaka. This parva treats of the wending of the Pandavas to the forest and the citizens, following the wise Yudhishthira, Yudhishthira's adoration of the god of day; according to the injunctions of Dhaumyah, to be gifted with the power of maintaining the dependent Brahmanas with food and drink: the creation of food through the grace of the Sun:
 
 **09:53 · Sauti** · narration · warm · measured · override
 
@@ -220,6 +222,8 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Then the story of Rishyasringa who adopted Brahmacharya mode of life from his very boyhood; then the history of Rama of great prowess, the son of Jamadagni, in which has been narrated the death of Kartavirya and the Haihayas; then the meeting between the Pandavas and the Vrishnis in the sacred spot called Prabhasa;
 
+*TTS:* Then the story of Rishyasringa who adopted Brahmacharya mode of life from his very boyhood; then the history of Rama of great prowess, the son of Jamadagni, in which has been narrated the death of Kartavirya and the Haihayahs; then the meeting between the Pandavas and the Vrishnis in the sacred spot called Prabhasa;
+
 **13:30 · Sauti** · narration · warm · measured · override, gloss not spoken
 
 > then the story of Su-kanya in which Chyavana, the son of Bhrigu, made the twins, Aswinis, drink, at the sacrifice of king Saryati, the Soma juice (from which they had been excluded by the other gods), and in which besides is shown how Chyavana himself acquired perpetual youth (as a boon from the grateful Aswinis).
@@ -242,7 +246,7 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > Bhima's meeting on his way, in a grove of bananas, with Hanuman, the son of Pavana of great prowess; Bhima's bath in the tank and the destruction of the flowers therein for obtaining the sweet-scented flower (he was in search of); his consequent battle with the mighty Rakshasas and the Yakshas of great prowess including Hanuman; the destruction of the Asura Jata by Bhima; the meeting (of the Pandavas) with the royal sage Vrishaparva; their departure for the asylum of Arshtishena and abode therein: the incitement of Bhima (to acts of vengeance) by Draupadi.
 
-*TTS:* Bheema's meeting on his way, in a grove of bananas, with Hanuman, the son of Pavana of great prowess; Bheema's bath in the tank and the destruction of the flowers therein for obtaining the sweet-scented flower; his consequent battle with the mighty Rakshasas and the Yakshas of great prowess including Hanuman; the destruction of the Asura Jata by Bheema; the meeting with the royal sage Vrishaparva; their departure for the asylum of Arshtishena and abode therein: the incitement of Bheema by Drowpadee.
+*TTS:* Bheema's meeting on his way, in a grove of bananas, with Hanuman, the son of Pavana of great prowess; Bheema's bath in the tank and the destruction of the flowers therein for obtaining the sweet-scented flower; his consequent battle with the mighty Rakshasas and the Yakshas of great prowess including Hanuman; the destruction of the Asura Jata by Bheema; the meeting with the royal sage Vrishaparva; their departure for the asylum of Arshtishaynuh and abode therein: the incitement of Bheema by Drowpadee.
 
 **15:24 · Sauti** · narration · warm · measured · override, gloss not spoken
 
@@ -266,7 +270,7 @@ Parenthetical glosses stay in the quoted line and are left out of the spoken lin
 
 > After these, is the story of Matsya; other old stories recited by Markandeya; the stories of Indradyumna and Dhundhumara; then the history of the chaste wife; the history of Angira, the meeting and conversation of Draupadi and Satyabhama; the return of the Pandavas to the forest of Dwaita; then the procession to see the calves and the captivity of Duryodhana; and when the wretch was being carried off, his rescue by Arjuna; here is Yudhishthira's dream of the deer; then the re-entry of the Pandavas into the Kamyaka forest, here also is the long story of Vrihidraunika.
 
-*TTS:* After these, is the story of Matsya; other old stories recited by Markandeya; the stories of Indradyumna and Dhundhumara; then the history of the chaste wife; the history of Angira, the meeting and conversation of Drowpadee and Satyabhama; the return of the Pandavas to the forest of Dwaita; then the procession to see the calves and the captivity of Duryodhana; and when the wretch was being carried off, his rescue by Arjoona; here is Yudhishthira's dream of the deer; then the re-entry of the Pandavas into the Kamyaka forest, here also is the long story of Vrihidraunika.
+*TTS:* After these, is the story of Matsya; other old stories recited by Markandeya; the stories of Indradyumna and Dhundhumara; then the history of the chaste wife; the history of Angira, the meeting and conversation of Drowpadee and Satyabhama; the return of the Pandavas to the forest of Dwaita; then the procession to see the calves and the captivity of Duryodhana; and when the wretch was being carried off, his rescue by Arjoona; here is Yudhishthira's dream of the deer; then the re-entry of the Pandavas into the Kamyaka forest, here also is the long story of Vreehidrownika.
 
 **17:25 · Sauti** · narration · warm · measured
 

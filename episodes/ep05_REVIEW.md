@@ -94,3 +94,16 @@ Harness pass → short sample → `setsid nohup tools/render_sharded.sh episodes
 process at a time) → assemble with music preset A, -16 LUFS, `intro: title_song` / `outro: ending_song` (v6 sting) →
 QA (`qa_episode.py`, `qa_music.py`) → `cache_sync.py backup` + export chunks for the render-cache release.
 The cache has been restored and pulled. All 52 lines are new, so all of them will render.
+
+## Pronunciation pass (2026-10-20, Sauti, harness)
+- 118 names: the 80 without a lexicon row and the 38 that had one but were unverified (`build/pron/ep05_terms.json`).
+  Round 1 (KMG spelling, carrier "Then X spoke again, softly."): 103/118 passed, 13 failed, 2 inconclusive.
+- Round 2 (KMG retakes + plain-word candidates, no caps or hyphens): 110/118 now verified.
+- New spoken forms: Paushya → Paushyah, Arshtishena → Arshtishaynuh, Haihayas → Haihayahs, Dhaumya → Dhaumyah,
+  Vrihidraunika → Vreehidrownika. Tarkshya and Kanwa passed as KMG on retake.
+- **Still pending (KMG kept, verified 0, need a listening check):** Chyavana (heard "Chivana"), Aurva ("Orva"),
+  Vena ("Veena"), Uchchaihsrava ("Uchayzrava"), Raivya ("Ravius"/"Rivea"), Kirmira (1 of 2 KMG takes passed),
+  Gaya ("Gaia"), Sauva ("Sava"). Several of these are likely English-ASR limits rather than bad readings.
+- Lexicon: 80 rows added (`source` ep05-harness), 38 rows updated. Results: `tools/pronunciation/results_2026-10-20_ep05.json`.
+- Sample with the v6 sting title: lines 0001, 0004 (Uchchaihsrava), 0039 (Rishyasringa, Kartavirya, Haihayas),
+  0040 (Sukanya, Chyavana, Aswinis, Saryati).

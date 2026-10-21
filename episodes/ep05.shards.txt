@@ -1,0 +1,6 @@
+shard 1	10 lines	~3 min 41 s	ep05-0001..ep05-0010
+shard 2	12 lines	~3 min 56 s	ep05-0011..ep05-0022
+shard 3	10 lines	~3 min 39 s	ep05-0023..ep05-0032
+shard 4	11 lines	~3 min 54 s	ep05-0033..ep05-0043
+shard 5	9 lines	~3 min 11 s	ep05-0044..ep05-0052
+shards=5

@@ -1,0 +1,53 @@
+# Episode 5. Text only (draft for review): `mbh episode build episodes/ep05.yaml`
+id: ep05
+title: "Episode 5: The Eighteen Parvas I: Adi, Sabha, and the Forest"
+book: 1
+target_duration_s: 1080
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep05.json
+strip_glosses: true
+music: true
+music_rules:
+  - {name: sabha_dice,        match: {section: 2, paragraph: 11, text: 'dice|gambling|play by the wily|exile'},          cue: grave_drone,       intensity: 0.4}
+  - {name: sabha_draupadi,    match: {section: 2, paragraph: 11, text: 'daughter-in-law'},                               cue: tender_resolve,    intensity: 0.4}
+  - {name: adi_lac_house,     match: {section: 2, paragraph: 10, text: 'house of lac|Purochana|Hidimba|Vaka'},           cue: grave_drone,       intensity: 0.35}
+  - {name: adi_wedding,       match: {section: 2, paragraph: 10, text: 'Swayamvara|wedding|wedded|Subhadra'},            cue: tender_resolve,    intensity: 0.35}
+  - {name: adi_khandava,      match: {section: 2, paragraph: 10, text: 'Khandava|Gandiva|discus'},                       cue: royal_resolve,     intensity: 0.35}
+  - {name: forest_sages,      match: {section: 2, paragraph: 12, text: 'Nala|Savitri|Markandeya|Lomasa|pilgrimage|Agastya|Ashtavakra|Rishyasringa'}, cue: sacred_solemn, intensity: 0.4}
+  - {name: forest_battles,    match: {section: 2, paragraph: 12, text: 'Mahadeva|Kirmira|Nivatakavachas|Yakshas|serpent|Jayadratha|Ravana|Rakshasas'}, cue: grave_drone, intensity: 0.4}
+  - {name: forest_wood,       match: {section: 2, paragraph: 12},                                                         cue: forest_ashram,     intensity: 0.35}
+  - {name: parva_catalogue,   match: {section: 2, paragraph: [9, 11]},                                                    cue: narration_warm,    intensity: 0.35}
+summary: >
+  Vyasa's hundred parvas are gathered into eighteen, and Sauti begins the second, fuller summary: the Adi parva (the
+  house of lac, Hidimba and Vaka, Draupadi's Swayamvara, Arjuna's exile and Subhadra, Khandava), the Sabha parva
+  (the hall, the Rajasuya, Sisupala, the game of dice and the exile) and the Aranyaka, the long forest parva with its
+  tales of Nala, Agastya, Rishyasringa, Ashtavakra, Hanuman, Markandeya, Rama and Savitri.
+end_reason: >
+  §2 ¶12 closes the Aranyaka (third) parva with its chapter and sloka counts ("...eleven thousand, six hundred and
+  sixty-four"). It ranked first in `mbh episode breaks`: a paragraph boundary in narration, between parvas. ¶13 opens
+  the Virata parva, which starts Ep 6. Going through ¶13 would put the episode over 20 minutes.
+segments:
+  - id: eighteen
+    kind: section
+    section: 2
+    paragraphs: [9, 10]
+    narrator: sauti
+    label: "The eighteen parvas: Adi"
+  - id: sabha
+    kind: section
+    section: 2
+    paragraphs: [11, 11]
+    narrator: sauti
+    label: "Sabha, the assembly"
+  - id: aranyaka
+    kind: section
+    section: 2
+    paragraphs: [12, 12]
+    narrator: sauti
+    label: "Aranyaka, the forest"
+
+intro: title_song      # v6 sting: Krishna, Gita 2.62-63 + sung hook (configs/intros.yaml)
+outro: ending_song     # v6 sting ending: Gita 2.63b + hook (configs/outros.yaml)

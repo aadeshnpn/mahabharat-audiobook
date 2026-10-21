@@ -1,0 +1,30 @@
+# v6 title hook: the leitmotif word प्रणश्यति (pra-na-shya-ti) sung on the falling Bhairav motif m G r S.
+# Used as the choir answer in tools/title_v6 (docs/TITLE_TRACK_RESEARCH.md). Original motif.
+id: title_v6_hook
+title: "v6 hook: pranashyati"
+raga: bhairav
+sa_hz: 130.81            # C3: low, grave
+tempo_bpm: 60
+voice:
+  id: singer_m
+  octave: 0
+  ref: voices/singer_m/candidates/singer_m-A_vox_s10_0.wav
+  prompt: "a deep grave male voice, slow and solemn"
+  seeds: [11, 23, 37, 41]
+  vibrato_cents: 18
+  vibrato_hz: 5.0
+  glide_s: 0.12
+arrangement: {preset: meditative, intro_beats: 1, outro_beats: 2}
+master: {lufs: -16.0, true_peak_db: -2.0}
+lines:
+  - id: hook
+    text: "प्रणश्यति।"
+    context: "बुद्धिनाशात्प्रणश्यति। प्रणश्यति।"
+    syllables: "प्र ण श्य ति"
+    melody: ["m:0.75", "G:0.75", "r:1", "S:3"]
+  - id: hook_krodha
+    text: "क्रोधात्।"
+    syllables: "क्रो धात्"
+    melody: ["G:1", "r:2"]
+structure:
+  - {line: hook}

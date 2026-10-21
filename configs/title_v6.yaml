@@ -1,0 +1,24 @@
+# Title v6 (docs/TITLE_TRACK_RESEARCH.md): spoken Krishna verse + sung leitmotif hook प्रणश्यति (m G r S, Bhairav).
+# Build: tools/song/title_v6.sh (takes -> hook render -> concepts -> master -> ASR). Module: src/mbh/song/title6.py
+sa_hz: 130.81
+beat_s: 1.0
+hook_onset_s: 0.6        # first sung vowel of the hook clip
+ring_s: 4.0
+fade_s: 2.5
+voice_reverb: 0.18
+choir_reverb: 0.4
+duck: 0.35
+bus_db: {voice: 0, choir: -1, orch: -3, fx: -2}
+krishna_takes: build/title_song_v5        # krishna.py takes + scores.json (best take per verse)
+hook_song: configs/songs/title_v6_hook.yaml
+hook_voice: krishna                       # the choir is built from Krishna singing the hook (ASR 0.44 vs 0.22 for singer_m)
+concepts: [sting, motif, coldopen]
+ending: {}
+master: {lufs: -16.0, true_peak_db: -2.0}
+texts:
+  k62a: "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते"
+  k62b: "सङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते"
+  k63a: "क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः"
+  k63b: "स्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति"
+  e63b: "स्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति"
+  hook: "प्रणश्यति"

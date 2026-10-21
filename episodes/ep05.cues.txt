@@ -1,0 +1,52 @@
+0001  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The high-souled Vyasa composed these hundred par
+0002  sauti          warm            -> narration_warm         0.35  [override]  'In the Adi parva are contained Paushya, Pauloma
+0003  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The Paushya parva treats of the greatness of Uta
+0004  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The Astika describes the birth of Garuda and of 
+0005  sauti          warm            -> narration_warm         0.35  [emotion:warm]  The Sambhava parva narrates the birth of various
+0006  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This parva also describes the greatness of Bhagi
+0007  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  In this parva is also narrated the birth of Bhis
+0008  sauti          solemn          -> sacred_solemn          0.50  [emotion:solemn]  the births of Dhritarashtra and Pandu through th
+0009  sauti          solemn          -> grave_drone            0.35  [rule:adi_lac_house]  then the advice administered to Yudhishthira on 
+0010  sauti          warm            -> grave_drone            0.35  [rule:adi_lac_house]  The birth of Ghatotkacha; the meeting of the Pan
+0011  sauti          warm            -> tender_resolve         0.35  [rule:adi_wedding]  the departure of the Pandavas for Panchala in ob
+0012  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This parva treats of the journey of the Pandavas
+0013  sauti          warm            -> tender_resolve         0.35  [rule:adi_wedding]  the ascertainment by Balarama and Krishna, at th
+0014  sauti          warm            -> royal_resolve          0.35  [rule:adi_khandava]  the sending of Vidura by the sons of Dhritarasht
+0015  sauti          warm            -> narration_warm         0.35  [emotion:warm]  In like manner hath the history of Sunda and Upa
+0016  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This parva then treats of the departure of Arjun
+0017  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This parva then describes Arjuna's meeting on th
+0018  sauti          warm            -> tender_resolve         0.35  [rule:adi_wedding]  the carrying away of Subhadra by Arjuna, incited
+0019  sauti          warm            -> royal_resolve          0.35  [rule:adi_khandava]  then follows the pleasure-trip of Krishna and Ar
+0020  sauti          warm            -> narration_warm         0.35  [emotion:warm]  This parva is divided by Vyasa into two hundred 
+0021  sauti          warm            -> narration_warm         0.35  [emotion:warm]  These two hundred and twenty-seven chapters cont
+0022  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The second is the extensive parva called Sabha o
+0023  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  The subjects of this parva are the establishment
+0024  sauti          solemn          -> grave_drone            0.40  [rule:sabha_dice]  the destruction of Sisupala on the occasion of t
+0025  sauti          solemn          -> grave_drone            0.40  [rule:sabha_dice]  the deliverance by Dhritarashtra of his afflicte
+0026  sauti          warm            -> grave_drone            0.40  [rule:sabha_dice]  The endeavours of Duryodhana to engage Yudhishth
+0027  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  These constitute what has been called by the gre
+0028  sauti          warm            -> narration_warm         0.35  [rule:parva_catalogue]  This parva is divided into seventh-eight section
+0029  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  Then comes the third parva called Aranyaka (rela
+0030  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  the expulsion by Dhritarashtra of Vidura who alw
+0031  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  and his curse on Duryodhana; Bhima's slaying of 
+0032  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  and Dhrishtadyumna's bringing the son of Draupad
+0033  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  his battle with Mahadeva in the guise of a hunte
+0034  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Here occurs the holy and highly pathetic story o
+0035  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Then the acquirement by Yudhishthira of the myst
+0036  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  then the pilgrimage of the Pandavas to various s
+0037  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  Here is the deprivation of Karna of his ear-ring
+0038  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Here also is recited the sacrificial magnificenc
+0039  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Then the story of Rishyasringa who adopted Brahm
+0040  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  then the story of Su-kanya in which Chyavana, th
+0041  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Then hath been described the history of king Man
+0042  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  Then the story of Yavakrita, and then that of th
+0043  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  Bhima's meeting on his way, in a grove of banana
+0044  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  Then is narrated the ascent on the hills of Kail
+0045  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  the commencement of the display of the celestial
+0046  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Here is described the reappearance of Vasudeva t
+0047  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  After these, is the story of Matsya; other old s
+0048  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  Here also is recited the story of Durvasa; then 
+0049  sauti          warm            -> grave_drone            0.40  [rule:forest_battles]  Here is the long history of Rama in which is sho
+0050  sauti          warm            -> sacred_solemn          0.40  [rule:forest_sages]  Here also is narrated the story of Savitri; then
+0051  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  These are all included in the third Parva called
+0052  sauti          warm            -> forest_ashram          0.35  [rule:forest_wood]  The number of slokas is eleven thousand, six hun

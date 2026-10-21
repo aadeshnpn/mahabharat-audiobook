@@ -1,0 +1,54 @@
+{
+ "old_intro": {
+  "start_s": 0.0,
+  "end_s": 43.309,
+  "episode_starts_s": 40.809,
+  "corr": 1.0,
+  "gain_db": 1.69,
+  "residual_db": -43.8
+ },
+ "old_outro": {
+  "start_s": 547.489,
+  "end_s": 565.523,
+  "corr": 0.9998,
+  "gain_db": 1.65,
+  "residual_db": -34.4
+ },
+ "dropped_head_s": 0.0,
+ "dropped_tail_s": 0.0,
+ "new_intro_s": 45.211,
+ "new_outro_s": 17.868,
+ "new_episode_starts_s": 42.711,
+ "new_outro_starts_s": 549.391,
+ "intro_crossfade_s": 2.5,
+ "outro_crossfade_s": 2.5,
+ "input": "episodes/ep02.wav",
+ "output": "build/swap/ep02_v3.wav",
+ "input_s": 565.523,
+ "seconds": 567.259,
+ "master": {
+  "before": -17.83,
+  "after": -16.08,
+  "gain_db": 1.83,
+  "iterations": 1,
+  "limited_samples": 34399,
+  "sample_peak_db": -2.0
+ },
+ "measured_lufs": -16.08,
+ "remnants": {
+  "old_intro": 0.0663,
+  "new_intro": 1.0,
+  "old_outro": 0.0769,
+  "new_outro": 0.9999
+ },
+ "old_intro_path": "assets/intro/title_song_v5_krishna.wav",
+ "new_intro_path": "assets/intro/title_song_v6_sting.wav",
+ "old_outro_path": "assets/outro/ending_v2_krishna.wav",
+ "new_outro_path": "assets/outro/ending_v6_sting.wav",
+ "mp3": {
+  "path": "/workspace/mahabharat-export/ep02_v3.mp3",
+  "lufs_ffmpeg": -16.0,
+  "true_peak_db": -1.8,
+  "trim_db": 0.4
+ }
+}

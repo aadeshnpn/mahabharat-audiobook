@@ -1,4 +1,6 @@
-# Episode 6 draft: review notes (text only, no audio)
+# Episode 6: review notes
+
+The script is approved. Aswatthaman voice candidates are below for a pick. No voice is installed, and the episode is not rendered.
 
 Script for review: `episodes/ep06_script.md`. Cue sheet: `episodes/ep06.cues.txt`. Spec: `episodes/ep06.yaml`.
 Overrides: `episodes/overrides/ep06.json`. Shard plan: `episodes/ep06.shards.txt` (5 shards, about 2.5–4 min each).
@@ -73,9 +75,7 @@ tender under the women's lament, grave on the iron statue, Gandhari's wrath, the
 - **Aswatthaman** speaks the vow ("without killing all the Panchalas… I will not take off armour") and the weapon
   ("This is for the destruction of all the Pandavas"). "Vowed" is not in the builder's speech-verb list, so the
   vow was split out by hand; the parts rejoin to the KMG sentence. There is no `voices/aswatthaman/ref.wav`.
-  The registry brief on the character ("a young Indian warrior, bright sharp tenor") is grounded in the birth
-  and the training (Book 1 §131–§144). These two lines are the night attack. A brief for them needs your ear
-  before any design. If you would rather keep both lines in Sauti's mouth, say so and the overrides come off.
+  Candidates for a night-attack voice are in the section below. Nothing is installed.
 - **The joint sentence** ("You should render us assistance in this war") is spoken by Duryodhana and Arjuna
   together. The builder gave it to Duryodhana, the first name. Under the crowd-voice rule Sauti reads it
   (commanding, one sentence). Giving it to Duryodhana would need a new voice and would leave Arjuna out.
@@ -139,8 +139,39 @@ Before rendering I propose the same harness pass as Ep 5 (Sauti's voice, and Kri
 KMG spelling first; plain-word respellings only for failures; no caps or hyphens), then a short sample.
 Aswatthaman's two lines wait on a voice.
 
-## Render plan (after your approval)
-Confirm the Aswatthaman assignment (design a voice, or put the vow and the weapon back on Sauti). Harness pass →
-short sample → `setsid nohup tools/render_sharded.sh episodes/ep06.yaml 4` (5 shards, one model process at a time) →
+## Aswatthaman voice candidates
+
+Six takes, three directions, two each. VoxCPM2, 10 steps. Briefs: `proto/voices_ep06.json`.
+
+Designed on the vow he speaks here (ep06-0080). Wrapping quotes are off, and the spoken spelling is Dhrishtadyumna:
+
+> without killing all the Panchalas including Dhrishtadyumna, and the Pandavas also with all their allies, I will not take off armour.
+
+The weapon line is not in these clips. It stays held out for a clone check after a pick: "This is for the destruction of all the Pandavas."
+
+The character brief is still the youth of the training scenes (bright sharp tenor, Book 1 §131–§144). These prompts keep that age and make the night attack darker, so the voice stays off Parasurama's middle-aged baritone and Krishna's warm deep voice. Every prompt ends with "clear Indian English accent".
+
+| Pick | Direction |
+|---|---|
+| **A_0**, **A_1** | Grave and cold. A young Brahmin warrior the night after his father's death: low, tight, unhurried, no warmth. |
+| **B_0**, **B_1** | Clenched wrath. The sharp tenor gone hard, a fury he is holding down, intense and clipped. |
+| **C_0**, **C_1** | Hollow and quiet. Dry and restrained after the slaughter, almost a whisper but still meant to be clear. C_1 is the quieter take. The first draw of C_0 collapsed to silence and was replaced. |
+
+Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatthaman_candidates.mp3` (50 s, 0.8 s gaps). Each take in that reel is leveled to about −20 LUFS so loudness does not decide the pick. The mp3 is gitignored with the other listening renders; the PR description has the same reel, with the pick label on screen. Raw clips stay in `voices/aswatthaman/candidates/` and are not committed. `voices/registry.json` is unchanged.
+
+| Start | Pick |
+|---|---|
+| 0:00 | A_0 grave / cold |
+| 0:08 | A_1 grave / cold |
+| 0:17 | B_0 clenched wrath |
+| 0:25 | B_1 clenched wrath |
+| 0:34 | C_0 hollow / quiet |
+| 0:42 | C_1 hollow / quiet |
+
+Say which take, for example A_0.
+
+## Render plan (after a voice pick)
+Pick one Aswatthaman take. Then install that reference, harness pass → short sample →
+`setsid nohup tools/render_sharded.sh episodes/ep06.yaml 4` (5 shards, one model process at a time) →
 assemble with music preset A, -16 LUFS, `intro: title_song` / `outro: ending_song` (v6 sting) → QA → cache backup.
-Nothing is rendered for this draft. All 115 lines are new.
+No pronunciation pass and no episode render until the pick. All 115 lines are still unrendered.

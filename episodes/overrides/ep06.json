@@ -1,0 +1,364 @@
+{
+ "overrides": [
+  {
+   "section": 2,
+   "paragraph": 13,
+   "contains": "Then the slaying by Bhima",
+   "split": [
+    {
+     "text": "Then the slaying by Bhima of the wicked Kichaka who, senseless with lust, had sought Draupadi; the appointment by prince Duryodhana of clever spies; and their despatch to all sides for tracing the Pandavas; the failure of these to discover the mighty sons of Pandu;"
+    },
+    {
+     "text": "the first seizure of Virata's kine by the Trigartas and the terrific battle that ensued; the capture of Virata by the enemy and his rescue by Bhimasena; the release also of the kine by the Pandava (Bhima); the seizure of Virata's kine again by the Kurus; the defeat in battle of all the Kurus by the single-handed Arjuna; the release of the king's kine;"
+    },
+    {
+     "text": "the bestowal by Virata of his daughter Uttara for Arjuna's acceptance on behalf of his son by Subhadra—Abhimanyu—the destroyer of foes."
+    }
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "First comes the installation",
+   "split": [
+    {
+     "text": "First comes the installation in the command of the army of the great instructor in arms, Drona: then the vow made by that great master of weapons of seizing the wise Yudhishthira in battle to please Duryodhana; then the retreat of Arjuna from the field before the Sansaptakas, then the overthrow of Bhagadatta like to a second Indra in the field, with the elephant Supritika, by Arjuna;"
+    },
+    {
+     "text": "then the death of the hero Abhimanyu in his teens, alone and unsupported, at the hands of many Maharathas including Jayadratha; then after the death of Abhimanyu, the destruction by Arjuna, in battle of seven Akshauhinis of troops and then of Jayadratha;"
+    },
+    {
+     "text": "then the entry, by Bhima of mighty arms and by that foremost of warriors-in-chariot, Satyaki, into the Kaurava ranks impenetrable even to the gods, in search of Arjuna in obedience to the orders of Yudhishthira, and the destruction of the remnant of the Sansaptakas."
+    }
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 17,
+   "contains": "Then the application to each other",
+   "split": [
+    {
+     "text": "Then the application to each other by Karna and Salya of harsh words on their setting out for the field, then the story of the swan and the crow recited in insulting allusion:"
+    },
+    {
+     "text": "then the death of Pandya at the hands of the high-souled Aswatthaman; then the death of Dandasena; then that of Darda; then Yudhishthira's imminent risk in single combat with Karna in the presence of all the warriors; then the mutual wrath of Yudhishthira and Arjuna; then Krishna's pacification of Arjuna."
+    }
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "Then the great charioteer, the son of Drona, of terrible wrath, vowed",
+   "split": [
+    {
+     "text": "Then the great charioteer, the son of Drona, of terrible wrath, vowed,",
+     "speaker": "sauti",
+     "type": "narration"
+    },
+    {
+     "text": "'without killing all the Panchalas including Drishtadyumna, and the Pandavas also with all their allies, I will not take off armour.'",
+     "speaker": "aswatthaman",
+     "type": "speech",
+     "emotion": "commanding",
+     "pace": "measured",
+     "direction": "Aswatthaman's vow, low and hard; one sentence inside the summary"
+    },
+    {
+     "text": "Having spoken those words, the three warriors leaving Duryodhana's side entered the great forest just as the sun was setting.",
+     "speaker": "sauti",
+     "type": "narration"
+    }
+   ]
+  },
+  {
+   "section": 2,
+   "type": "narration",
+   "apply_all": true,
+   "emotion": "warm",
+   "pace": "measured",
+   "direction": "reading the table of contents of a great epic; even, unhurried, each item distinct"
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "type": "narration",
+   "apply_all": true,
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "the night attack, told evenly; no melodrama"
+  },
+  {
+   "section": 2,
+   "paragraph": 20,
+   "type": "narration",
+   "apply_all": true,
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "the lament of the women; quiet, unhurried"
+  },
+  {
+   "section": 2,
+   "paragraph": 13,
+   "contains": "wicked Kichaka",
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "Kichaka; still the catalogue voice, no melodrama"
+  },
+  {
+   "section": 2,
+   "paragraph": 15,
+   "contains": "philosophy of final release",
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "the teaching on the eve of the war; reverent, even"
+  },
+  {
+   "section": 2,
+   "paragraph": 15,
+   "contains": "bed of arrows",
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "Bhishma fallen; quiet gravity"
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "death of the hero Abhimanyu",
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "Abhimanyu; grave, still even"
+  },
+  {
+   "section": 2,
+   "paragraph": 17,
+   "contains": "ripped open Dussasana",
+   "emotion": "solemn",
+   "pace": "measured",
+   "direction": "the vow fulfilled; grave, not gory"
+  },
+  {
+   "section": 2,
+   "paragraph": 14,
+   "contains": "You should render us assistance",
+   "speaker": "sauti",
+   "set_type": "speech",
+   "emotion": "commanding",
+   "pace": "measured",
+   "direction": "Duryodhana and Arjuna speak this one sentence together; no crowd voice, so Sauti reads it"
+  },
+  {
+   "section": 2,
+   "paragraph": 14,
+   "contains": "O ye first of men, a counsellor in myself",
+   "speaker": "krishna",
+   "set_type": "speech",
+   "emotion": "commanding",
+   "pace": "measured",
+   "direction": "Krishna offering himself or an akshauhini; calm, no haste"
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "This is for the destruction of all the Pandavas",
+   "speaker": "aswatthaman",
+   "set_type": "speech",
+   "emotion": "angry",
+   "pace": "measured",
+   "direction": "the weapon, one short sentence",
+   "tts_replace": [
+    [
+     "Pandavas'",
+     "Pandavas"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "This shall not be",
+   "speaker": "krishna",
+   "set_type": "speech",
+   "emotion": "commanding",
+   "pace": "measured",
+   "direction": "Krishna stopping the weapon; four words, firm and quiet"
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "; then Krishna saying.",
+   "tts_replace": [
+    [
+     "; then Krishna saying.",
+     "Then Krishna saying,"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": ", neutralised Aswatthaman's speech.",
+   "tts_replace": [
+    [
+     ", neutralised",
+     "Neutralised"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 14,
+   "contains": "story of Damvodvava",
+   "tts_replace": [
+    [
+     "Damvodvava",
+     "Dambhodbhava"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 14,
+   "contains": "high-souled Matuli",
+   "tts_replace": [
+    [
+     "Matuli",
+     "Matali"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 15,
+   "contains": "placing Shikandin",
+   "tts_replace": [
+    [
+     "Shikandin",
+     "Sikhandin"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "elephant Supritika",
+   "tts_replace": [
+    [
+     "Supritika",
+     "Supratika"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "of Shomadatta",
+   "tts_replace": [
+    [
+     "Shomadatta",
+     "Somadatta"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 17,
+   "contains": "that of Darda",
+   "tts_replace": [
+    [
+     "Darda",
+     "Danda"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 17,
+   "contains": "sixty-tour",
+   "tts_replace": [
+    [
+     "sixty-tour",
+     "sixty-four"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "including Drishtadyumna",
+   "tts_replace": [
+    [
+     "Drishtadyumna",
+     "Dhrishtadyumna"
+    ]
+   ],
+   "flags_add": [
+    "ocr_fix"
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 14,
+   "contains": "Sanat-sujata",
+   "tts_replace": [
+    [
+     "Sanat-sujata",
+     "Sanatsujata"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "warriors-in-chariot",
+   "tts_replace": [
+    [
+     "warriors-in-chariot",
+     "warriors in chariot"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 16,
+   "contains": "warrior-in-chariot Drupada",
+   "tts_replace": [
+    [
+     "warrior-in-chariot",
+     "warrior in chariot"
+    ]
+   ]
+  },
+  {
+   "section": 2,
+   "paragraph": 19,
+   "contains": "warrior-in-chariot Aswatthaman",
+   "tts_replace": [
+    [
+     "warrior-in-chariot",
+     "warrior in chariot"
+    ]
+   ]
+  }
+ ]
+}

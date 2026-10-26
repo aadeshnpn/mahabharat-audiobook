@@ -1,6 +1,16 @@
 {
  "about": "Approved voices. Each ref.wav is a VoxCPM2 voice-design clip leveled to -20 LUFS; the renderer clones it. Design briefs/candidates: proto/voices*.json + tools/voice_design/. Characters with voice_group use that group's voice.",
  "voices": {
+  "aswatthaman": {
+   "name": "Aswatthaman",
+   "ref": "voices/aswatthaman/ref.wav",
+   "ref_sha256": "3021373c98d7bff9f7a2dbaaae8a7cc016556c16ae9023fbce6374b7c5b62b1c",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "a young Indian Brahmin warrior the night after his father's death, low tight voice, cold and grave, unhurried, no warmth, clear Indian English accent",
+   "sample_line": "without killing all the Panchalas including Dhrishtadyumna, and the Pandavas also with all their allies, I will not take off armour.",
+   "notes": "Ep6 design 2026-10-26: A_1 of 6 candidates (user pick; preferred to A_0 as the male take), leveled to -20 LUFS",
+   "shared_by": []
+  },
   "bhishma": {
    "name": "Bhishma",
    "ref": "voices/bhishma/ref.wav",
@@ -61,6 +71,16 @@
    "notes": "Selected ganesa-A_scribe_vox_s10_0 (3 briefs x2): design WER 0.08, F0 246 Hz; clone WER 0 on ep01-0071; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
    "shared_by": []
   },
+  "krishna": {
+   "name": "Krishna (title/ending chant)",
+   "ref": "voices/krishna/ref.wav",
+   "ref_sha256": "01e55d11aad215dc131fbdfa12739c38b827ae81444c4995143cf2f78568b787",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "Lord Krishna, a divine Indian man's voice, warm, deep and serene yet commanding, compassionate and authoritative, slow measured Sanskrit chant",
+   "sample_line": "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
+   "notes": "Title v5 design 2026-10-13: A of 4 (best ASR on 2.62a, 0.72); chant only so far, pending user approval",
+   "shared_by": []
+  },
   "kunti": {
    "name": "Kunti",
    "ref": "voices/kunti/ref.wav",
@@ -83,6 +103,16 @@
     "satasringa_rishis",
     "valakhilyas"
    ]
+  },
+  "parasurama": {
+   "name": "Parasurama (Rama, son of Jamadagni)",
+   "ref": "voices/parasurama/ref.wav",
+   "ref_sha256": "513692864e4c6227109822f866459779db6974df89b49e4266945b929cb34f51",
+   "engine": "voxcpm2 (10 steps)",
+   "prompt": "a powerful middle-aged Indian warrior-sage, deep resonant baritone, grave and remorseful after great slaughter, slow and dignified, clear Indian English accent",
+   "sample_line": "If, O fathers, ye are favourably disposed towards me, the boon I ask is that I may be absolved from the sins born of my having annihilated the Kshatriyas in anger.",
+   "notes": "Ep4 design 2026-10-12: A_0 of 4 candidates (user pick), leveled to -20 LUFS",
+   "shared_by": []
   },
   "sanjaya": {
    "name": "Sanjaya",
@@ -142,26 +172,6 @@
    "prompt": "The great seer Vyasa, an old dark-skinned ascetic, low grave voice with a soft rasp and quiet intensity, slow measured cadence, compassionate authority, crisp clear diction, clear Indian English accent",
    "sample_line": "",
    "notes": "Selected vyasa-E_dark_ascetic_vox_s10_1 (round 2 of 5 briefs x2): design WER 0, F0 80 Hz; clone WER 0/0 on ep01-0069/0073; leveled -20 LUFS. Approved by Aadesh 2026-10-11.",
-   "shared_by": []
-  },
-  "parasurama": {
-   "name": "Parasurama (Rama, son of Jamadagni)",
-   "ref": "voices/parasurama/ref.wav",
-   "ref_sha256": "513692864e4c6227109822f866459779db6974df89b49e4266945b929cb34f51",
-   "engine": "voxcpm2 (10 steps)",
-   "prompt": "a powerful middle-aged Indian warrior-sage, deep resonant baritone, grave and remorseful after great slaughter, slow and dignified, clear Indian English accent",
-   "sample_line": "If, O fathers, ye are favourably disposed towards me, the boon I ask is that I may be absolved from the sins born of my having annihilated the Kshatriyas in anger.",
-   "notes": "Ep4 design 2026-10-12: A_0 of 4 candidates (user pick), leveled to -20 LUFS",
-   "shared_by": []
-  },
-  "krishna": {
-   "name": "Krishna (title/ending chant)",
-   "ref": "voices/krishna/ref.wav",
-   "ref_sha256": "01e55d11aad215dc131fbdfa12739c38b827ae81444c4995143cf2f78568b787",
-   "engine": "voxcpm2 (10 steps)",
-   "prompt": "Lord Krishna, a divine Indian man's voice, warm, deep and serene yet commanding, compassionate and authoritative, slow measured Sanskrit chant",
-   "sample_line": "… ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।",
-   "notes": "Title v5 design 2026-10-13: A of 4 (best ASR on 2.62a, 0.72); chant only so far, pending user approval",
    "shared_by": []
   }
  }

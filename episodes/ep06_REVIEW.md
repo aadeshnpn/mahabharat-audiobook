@@ -66,7 +66,7 @@ tender under the women's lament, grave on the iron statue, Gandhari's wrath, the
 |---|---|---|---|
 | Sauti | 111 | about 17:26 | approved (`voices/sauti/ref.wav`) |
 | Krishna | 2 | 14 s | approved (`voices/krishna/ref.wav`) |
-| Aswatthaman | 2 | 13 s | **not installed** |
+| Aswatthaman | 2 | 13 s | **A_1 installed** (`voices/aswatthaman/ref.wav`) |
 
 - **Krishna** speaks the offer at Upaplavya ("O ye first of men, a counsellor in myself who will not fight…") and,
   in Sauptika, "This shall not be." Bare "Krishna" in this span is Vasudeva throughout. Nothing here is Draupadi.
@@ -168,7 +168,7 @@ Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatt
 | 0:34 | C_0 hollow / quiet |
 | 0:42 | C_1 hollow / quiet |
 
-Say which take, for example A_0.
+**Pick: A_1** (grave / cold, second take). Installed 2026-10-26 as `voices/aswatthaman/ref.wav`, leveled to −20 LUFS. The user preferred A_1 to A_0 as the male take. Registry notes record that. The weapon line is still not this voice's reference clip.
 
 ## Render plan (after a voice pick)
 Pick one Aswatthaman take. Then install that reference, harness pass → short sample →

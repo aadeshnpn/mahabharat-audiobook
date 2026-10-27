@@ -24,7 +24,7 @@ Kuru	KOO-roo		curated	1	harness 2026-10-10: 'Kuru' passed 4/4 takes on bhishma,s
 Pandu	PAHN-doo		curated	1	harness 2026-10-10: 'Pandu' passed 3/3 takes on bhishma,sauti,vaisampayana	Pandu
 Brahmacharya	BRAH-muh-CHAR-yuh		curated	1	harness 2026-10-10: 'Brahmacharya' passed 3/3 takes on bhishma,sauti,vaisampayana	Brahmacharya
 Apsaras	UP-suh-rahs		curated	1	harness 2026-10-10: 'Apsaras' passed 3/3 takes on bhishma,sauti,vaisampayana	Apsaras
-Hastinapura	huh-stin-ah-POO-ruh		curated	0		
+Hastinapura	huh-stin-ah-POO-ruh		curated	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Hastinapura' passed 1/1 on each voice	Hastinapura
 Kurukshetra	koo-rook-SHAY-truh		curated	0		
 Devavrata	DAY-vuh-VRAH-tuh		curated	1	Bhishma's name before the vow; harness 2026-10-10: 'Devavrata' passed 3/3 takes on bhishma,sauti,vaisampayana	Devavrata
 Gangeya	GAHN-gay-yuh		curated	0		
@@ -41,7 +41,7 @@ Rishi	RISH-ee		curated	1	harness 2026-10-10: 'Rishee' passed 4/4 takes on bhishm
 Rishis	RISH-eez		curated	1	same stress as the Naimisha Rishis registry respelling; harness 2026-10-10: 'Rishis' passed 4/4 takes on bhishma,sauti,vaisampayana	Rishis
 Paurava	POW-ruh-vuh		curated	0		
 Pauravas	POW-ruh-vuhs		curated	0		
-Kshatriya	KSHA-tree-yuh		curated	0		
+Kshatriya	KSHA-tree-yuh		curated	1	harness 2026-10-26 (ep06, sauti+aswatthaman): KMG failed once on Sauti ('Chhatria') and passed on retake; Aswatthaman passed. 'Khatriya' failed	Kshatriya
 Kshatriyas	KSHA-tree-yuhs		curated	0		
 Brahmana	BRAH-muh-nuh		curated	1	harness 2026-10-20 (ep05, sauti): 'Brahmana' passed 1/1 takes	Brahmana
 Brahmanas	BRAH-muh-nuhs		curated	1	harness ep01 2026-10-10: 'Brahmanas' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-20 (ep05, sauti): 'Brahmanas' passed 1/1 takes	Brahmanas
@@ -134,7 +134,7 @@ Menaka	MAY-nuh-kaa		character-registry	0
 Nakula	NUH-koo-luh		character-registry	1	harness 2026-10-11: 'Nakula' passed 2 takes on bhishma,sauti	Nakula
 Nandini	NUN-di-nee		character-registry	0		
 Narada	NAA-ruh-duh		character-registry	1	harness 2026-10-11: 'Naaruda' passed 2 takes on bhishma,sauti	Naaruda
-Parasara	PUH-raa-shuh-ruh		character-registry	0	harness ep01 2026-10-10: 'Parasara' passed (sauti, 1 take; provisional until a 2nd voice)	Parasara
+Parasara	PUH-raa-shuh-ruh		character-registry	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Parasara' passed 1/1 on each voice (ep01 was provisional on Sauti alone)	Parasara
 Paushya	POWSH-yuh		character-registry	1	harness 2026-10-20 (ep05, sauti): KMG 'Paushya' 1/2; 'Paushyah' passed 1/1	Paushyah
 Pitris	PI-treez		character-registry	0	harness ep01 2026-10-10: pending (no form passed on sauti)	
 Pramadvara	pruh-MUD-vuh-raa		character-registry	0		
@@ -236,10 +236,10 @@ Vivaswans	Vivaswans		ep01-harness	0	harness ep01 2026-10-10: 'Vivaswans' passed 
 Mahya	Mahya		ep01-harness	0	harness ep01 2026-10-10: 'Mahhya' passed (sauti, 1 take; provisional until a 2nd voice)	Mahhya
 Deva-vrata	Deva-vrata		ep01-harness	0	harness ep01 2026-10-10: 'Deva vrata' passed (sauti, 1 take; provisional until a 2nd voice)	Deva vrata
 Su-vrata	Su-vrata		ep01-harness	0	harness ep01 2026-10-10: 'Su vrata' passed (sauti, 1 take; provisional until a 2nd voice)	Su vrata
-Kurus	Kurus		ep01-harness	0	harness ep01 2026-10-10: 'Kurus' passed (sauti, 1 take; provisional until a 2nd voice)	Kurus
+Kurus	Kurus		ep01-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman's first take was empty and the retake passed ('Kura')	Kurus
 Yadus	Yadus		ep01-harness	0	harness ep01 2026-10-10: 'Yadus' passed (sauti, 1 take; provisional until a 2nd voice)	Yadus
 Ikshwaku	Ikshwaku		ep01-harness	0	harness ep01 2026-10-10: 'Ikshwaku' passed (sauti, 1 take; provisional until a 2nd voice)	Ikshwaku
-Yoga	Yoga		ep01-harness	0	harness ep01 2026-10-10: 'Yoga' passed (sauti, 1 take; provisional until a 2nd voice)	Yoga
+Yoga	Yoga		ep01-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Yoga' passed 1/1 on each voice	Yoga
 Vijnana	Vijnana		ep01-harness	0	harness ep01 2026-10-10: 'Vijnana' passed (sauti, 1 take; provisional until a 2nd voice)	Vijnana
 Uparichara	Uparichara		ep01-harness	0	harness ep01 2026-10-10: 'Uparichara' passed (sauti, 1 take; provisional until a 2nd voice)	Uparichara
 Rik	Rik		ep01-harness	0	harness ep01 2026-10-10: 'Rik' passed (sauti, 1 take; provisional until a 2nd voice)	Rik
@@ -255,11 +255,11 @@ Sabha	Sabha		ep01-harness	1	harness ep01 2026-10-10: 'Sabha' passed (sauti, 1 ta
 Aranya	Aranya		ep01-harness	1	harness ep01 2026-10-10: 'Aranya' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-20 (ep05, sauti): 'Aranya' passed 1/1 takes	Aranya
 Arani	Arani		ep01-harness	0	harness ep01 2026-10-10: 'Arani' passed (sauti, 1 take; provisional until a 2nd voice)	Arani
 Virata	Virata		ep01-harness	1	harness ep01 2026-10-10: 'Virata' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-11 (ep03): 'Virata' passed 5 takes on dhritarashtra,sanjaya,sauti	Virata
-Udyoga	Udyoga		ep01-harness	0	harness ep01 2026-10-10: 'Udyoga' passed (sauti, 1 take; provisional until a 2nd voice)	Udyoga
+Udyoga	Udyoga		ep01-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman failed once ('Utayoga') and passed on retake	Udyoga
 Drona	Drona		ep01-harness	1	harness ep01 2026-10-10: 'Drona' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-11: 'Drona' passed 4 takes on bhishma,sauti	Drona
 Salya	Salya		ep01-harness	1	harness ep01 2026-10-10: 'Salya' passed (sauti, 1 take; provisional until a 2nd voice); harness 2026-10-20 (ep05, sauti): 'Salya' passed 1/1 takes	Salya
-Stri	Stri		ep01-harness	0	harness ep01 2026-10-10: 'Stri' passed (sauti, 1 take; provisional until a 2nd voice)	Stri
-Aishika	Aishika		ep01-harness	0	harness ep01 2026-10-10: 'Aishika' passed (sauti, 1 take; provisional until a 2nd voice)	Aishika
+Stri	Stri		ep01-harness	0	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed ('Stry'); Aswatthaman did not (empty, empty, then 'try'). KMG kept	Stri
+Aishika	Aishika		ep01-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Aishika' passed 1/1 on each voice	Aishika
 Santi	Santi		ep01-harness	0	harness ep01 2026-10-10: 'Santi' passed (sauti, 1 take; provisional until a 2nd voice)	Santi
 Aswamedha	Aswamedha		ep01-harness	0	harness ep01 2026-10-10: 'Ushvumaydhuh' passed (sauti, 1 take; provisional until a 2nd voice)	Ushvumaydhuh
 Asramavasika	Asramavasika		ep01-harness	0	harness ep01 2026-10-10: 'Asramavasika' passed (sauti, 1 take; provisional until a 2nd voice)	Asramavasika
@@ -311,7 +311,7 @@ Jalapradana	Jalapradana		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'J
 Pritana	Pritana		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Pritana' failed; 'Pritanaa' passed	Pritanaa
 Swayamvara	Swayamvara		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Swayamvara' failed; 'Svayamvara' passed	Svayamvara
 Sweta	Sweta		ep04-harness	1	harness 2026-10-12 (ep04, sauti): KMG 'Sweta' failed; 'Shwayta' passed	Shwayta
-Akshauhini	Akshauhini		ep04-harness	0	harness 2026-10-12 (ep04, sauti): KMG and Akshowhinee/Akshauhinee heard as 'Akshawini'; KMG kept, needs a listening check	Akshauhini
+Akshauhini	Akshauhini		ep04-harness	0	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman heard 'Akshawini' twice; Krishna's carrier take failed. KMG kept, as in ep04	Akshauhini
 Rama	Rama		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Rama' passed 1/1 takes	Rama
 Madhava	Madhava		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Madhava' passed 1/1 takes	Madhava
 Sisupala	Sisupala		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Sisupala' passed 1/1 takes	Sisupala
@@ -392,3 +392,30 @@ Ekachakra	Ekachakra		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Ekachakra
 Kartavirya	Kartavirya		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Kartavirya' passed 1/1 takes	Kartavirya
 Surabhi	Surabhi		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Surabhi' passed 1/1 takes	Surabhi
 Jata	Jata		ep05-harness	1	harness 2026-10-20 (ep05, sauti): 'Jata' passed 1/1 takes	Jata
+Alambusha	Alambusha		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman failed once ('Alan Busher') and passed on retake	Alambusha
+Amba	Amba		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Amba' passed 1/1 on each voice	Amba
+Bhagadatta	Bhagadatta		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Bhagadatta' passed 1/1 on each voice	Bhagadatta
+Bidula	Bidula		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman failed once ('Bajula') and passed on retake	Bidula
+Dambhodbhava	Dambhodbhava		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices; heard 'Dambudbava' / 'Dambud Bhava' (the coarse key treats that as the same)	Dambhodbhava
+Danda	Danda		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Danda' passed 1/1 on each voice	Danda
+Dandasena	Dandasena		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed; Aswatthaman failed once ('Dandesina', 0.78) and passed on retake	Dandasena
+Dussasana	Dussasana		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (heard 'Dassasana' / 'Dusasana')	Dussasana
+Galava	Galava		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices; Aswatthaman heard 'Galaba'	Galava
+Jalasandha	Jalasandha		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Jalasandha' passed 1/1 on each voice	Jalasandha
+Jambu	Jambu		ep06-harness	0	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti heard 'Jambu'; Aswatthaman heard 'Jumbo'. The coarse key scored that as a pass. KMG kept for a listen	Jambu
+Kichaka	Kichaka		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Kichaka' passed 1/1 on each voice	Kichaka
+Maharathas	Maharathas		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (Aswatthaman heard 'Maharata')	Maharathas
+Matali	Matali		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Matali' passed 1/1 on each voice	Matali
+Pandya	Pandya		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Pandya' passed 1/1 on each voice	Pandya
+Sansaptakas	Sansaptakas		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): KMG failed both voices twice. 'Samsaptakas' passed (Sauti 'Samsaptaka'; Aswatthaman 'some Saptaka'). 'Samshaptakas' also cleared the number but Sauti's hearing was messier	Samsaptakas
+Sanatsujata	Sanatsujata		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (heard 'Sanat Sujata')	Sanatsujata
+Sauptika	Sauptika		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): Sauti passed ('Saptika'); Aswatthaman failed once ('Subtica') and passed on retake ('Soptika')	Sauptika
+Satyaki	Satyaki		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Satyaki' passed 1/1 on each voice	Satyaki
+shami	shami		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (heard 'Shami'); the tree is printed in lower case	shami
+Somadatta	Somadatta		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Somadatta' passed 1/1 on each voice	Somadatta
+Srutayus	Srutayus		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): KMG failed once each ('Shrutaiya' / 'Shrutiya') and passed on retake ('Shrutayas'). Plain 'Shrutayus' also passed; KMG kept	Srutayus
+Supratika	Supratika		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Supratika' passed 1/1 on each voice	Supratika
+Trigartas	Trigartas		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (heard 'Trigatus' / 'Trigarta')	Trigartas
+Tripura	Tripura		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (Aswatthaman heard 'Tripoda')	Tripura
+Uluka	Uluka		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): 'Uluka' passed 1/1 on each voice	Uluka
+Upaplavya	Upaplavya		ep06-harness	1	harness 2026-10-26 (ep06, sauti+aswatthaman): passed both voices (Aswatthaman heard 'Upa Plavya')	Upaplavya

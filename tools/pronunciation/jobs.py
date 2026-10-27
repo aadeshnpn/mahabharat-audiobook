@@ -15,7 +15,10 @@ KEY = {"Vaisampayana": "Vaishampayana", "Saunaka": "Shaunaka", "Ugrasrava": "Ugr
        # Episode 5
        "Sisupala": "Shishupala", "Vaisravana": "Vaishravana", "Lomasa": "Lomasha", "Rishyasringa": "Rishyashringa",
        "Sarngi": "Sharngi", "Saryati": "Sharyati", "Kailasa": "Kailasha", "Arshtishena": "Arshtishena", "Kartavirya": "Kartavirya",
-       "Dhaumya": "Dhaumya", "Sivi": "Shibi", "Vasishtha": "Vashishtha", "Sakuntala": "Shakuntala", "Animandavya": "Animandavya"}
+       "Dhaumya": "Dhaumya", "Sivi": "Shibi", "Vasishtha": "Vashishtha", "Sakuntala": "Shakuntala", "Animandavya": "Animandavya",
+       # Episode 6: KMG writes the sh-sound as s
+       "Dussasana": "Duhshasana", "Sansaptakas": "Samshaptakas", "Sauptika": "Shauptika",
+       "Srutayus": "Shrutayus", "Parasara": "Parashara"}
 
 def words():
     rows = {}

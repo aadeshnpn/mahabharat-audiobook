@@ -1,0 +1,115 @@
+0001  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  The extensive Parva that comes next is called Vi
+0002  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  The Pandavas arriving at the dominions of Virata
+0003  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  Here hath been recited their entry into the city
+0004  sauti          solemn          -> grave_drone            0.40  [rule:virata_kichaka]  Then the slaying by Bhima of the wicked Kichaka 
+0005  sauti          warm            -> grave_drone            0.40  [rule:virata_battle]  the first seizure of Virata's kine by the Trigar
+0006  sauti          warm            -> tender_resolve         0.40  [rule:virata_wedding]  the bestowal by Virata of his daughter Uttara fo
+0007  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  These are the contents of the extensive fourth P
+0008  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  The great Rishi Vyasa has composed in these sixt
+0009  sauti          warm            -> forest_ashram          0.35  [rule:virata_disguise]  The number of slokas is two thousand and fifty.
+0010  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Listen then to (the contents of) the fifth Parva
+0011  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  While the Pandavas, desirous of victory, were re
+0012  sauti          commanding      -> royal_resolve          0.40  [rule:udyoga_offer]  You should render us assistance in this war.
+0013  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  The high-souled Krishna, upon these words being 
+0014  krishna        commanding      -> royal_resolve          0.40  [rule:udyoga_offer]  O ye first of men, a counsellor in myself who wi
+0015  sauti          warm            -> royal_resolve          0.40  [rule:udyoga_offer]  Blind to his own interests, the foolish Duryodha
+0016  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Then is described how, when the king of Madra wa
+0017  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Then comes the despatch by the Pandavas of their
+0018  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  Then is described how king Dhritarashtra of grea
+0019  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  Here hath been described the sleeplessness of Dh
+0020  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  It was on this occasion that Vidura addressed to
+0021  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  It was here also that Sanat-sujata recited to th
+0022  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  On the next morning Sanjaya spoke, in the court 
+0023  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  It was then that the illustrious Krishna, moved 
+0024  sauti          warm            -> sacred_solemn          0.40  [rule:udyoga_peace]  Then comes the rejection by prince Duryodhana of
+0025  sauti          warm            -> narration_warm         0.35  [rule:udyoga_tales]  Here hath been recited the story of Damvodvava; 
+0026  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Then the exhibition by Krishna, before the assem
+0027  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Then the return of Krishna, the chastiser of ene
+0028  sauti          warm            -> grave_drone            0.40  [rule:udyoga_march]  It was then that those oppressors of foes, the P
+0029  sauti          warm            -> grave_drone            0.40  [rule:udyoga_march]  Then comes the march from Hastinapura, for battl
+0030  sauti          warm            -> grave_drone            0.40  [rule:udyoga_march]  Then the tale of the troops by both parties.
+0031  sauti          warm            -> grave_drone            0.40  [rule:udyoga_march]  Then the despatch by prince Duryodhana of Uluka 
+0032  sauti          warm            -> grave_drone            0.40  [rule:udyoga_march]  Then the tale of charioteers of different classe
+0033  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  Then the story of Amba.
+0034  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  These all have been described in the fifth Parva
+0035  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  O ye ascetics, the great Vyasa hath composed one
+0036  sauti          warm            -> narration_warm         0.35  [rule:udyoga_catalogue]  The number of slokas also composed in this by th
+0037  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  Then is recited the Bhishma Parva replete with w
+0038  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  In this hath been narrated by Sanjaya the format
+0039  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  Here hath been described the great depression of
+0040  sauti          solemn          -> sacred_solemn          0.50  [rule:bhishma_gita]  In this the high-souled Vasudeva by reasons base
+0041  sauti          warm            -> grave_drone            0.45  [rule:bhishma_fall]  In this the magnanimous Krishna, attentive to th
+0042  sauti          warm            -> grave_drone            0.45  [rule:bhishma_fall]  In this, Krishna also smote with piercing words 
+0043  sauti          warm            -> grave_drone            0.45  [rule:bhishma_fall]  In this, the foremost of bowmen, Arjuna, placing
+0044  sauti          solemn          -> grave_drone            0.45  [rule:bhishma_fall]  In this, Bhishma lay stretched on his bed of arr
+0045  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  This extensive Parva is known as the sixth in th
+0046  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  In this have been composed one hundred and seven
+0047  sauti          warm            -> grave_drone            0.35  [rule:bhishma_parva]  The number of slokas is five thousand, eight hun
+0048  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  Then is recited the wonderful Parva called Drona
+0049  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  First comes the installation in the command of t
+0050  sauti          solemn          -> grave_drone            0.50  [rule:drona_abhimanyu]  then the death of the hero Abhimanyu in his teen
+0051  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  then the entry, by Bhima of mighty arms and by t
+0052  sauti          warm            -> grave_drone            0.50  [rule:drona_abhimanyu]  In the Drona Parva, is the death of Alambusha, o
+0053  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  Then the glory of Rudra in connection with the b
+0054  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  Then the arrival of Vyasa and recital by him of 
+0055  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  This is the great seventh Parva of the Bharata i
+0056  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  The number of sections in this is one hundred an
+0057  sauti          warm            -> grave_drone            0.40  [rule:drona_parva]  The number of slokas as composed in the Drona Pa
+0058  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  Then comes the most wonderful Parva called Karna
+0059  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  In this is narrated the appointment of the wise 
+0060  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  Then the history of the fall of the Asura Tripur
+0061  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  Then the application to each other by Karna and 
+0062  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  then the death of Pandya at the hands of the hig
+0063  sauti          solemn          -> grave_drone            0.50  [rule:karna_blood]  In this Parva, Bhima, in fulfilment of his vow, 
+0064  sauti          warm            -> grave_drone            0.50  [rule:karna_blood]  Then Arjuna slew the great Karna in single comba
+0065  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  Readers of the Bharata call this the eighth Parv
+0066  sauti          warm            -> grave_drone            0.40  [rule:karna_parva]  The number of sections in this is sixty-nine and
+0067  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  Then hath been recited the wonderful Parva calle
+0068  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  After all the great warriors had been slain, the
+0069  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  The encounters one after another, of charioteers
+0070  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  Then comes the fall of the great Salya at the ha
+0071  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  Here also is the death of Sakuni in battle at th
+0072  sauti          warm            -> grave_drone            0.45  [rule:salya_mace]  Upon only a small remnant of the troops remainin
+0073  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  Then is narrated the receipt of this intelligenc
+0074  sauti          warm            -> grave_drone            0.45  [rule:salya_mace]  Then comes the encounter with clubs, between Dur
+0075  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  These all have been described in the wonderful n
+0076  sauti          warm            -> grave_drone            0.35  [rule:salya_parva]  In this the number of sections is fifty-nine and
+0077  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Then shall I describe the Parva called Sauptika 
+0078  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  On the Pandavas having gone away, the mighty cha
+0079  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Then the great charioteer, the son of Drona, of 
+0080  aswatthaman    commanding      -> grave_drone            0.50  [rule:sauptika_night]  'without killing all the Panchalas including Dri
+0081  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Having spoken those words, the three warriors le
+0082  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  While sitting under a large banian tree in the n
+0083  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  At the sight of this, Aswatthaman, his heart ful
+0084  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  And wending to the gate of the camp, he saw ther
+0085  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  And seeing that Rakshasa obstructing all his wea
+0086  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  And then accompanied by Kritavarman and Kripa he
+0087  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  All perished on that fatal night except the five
+0088  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Those escaped owing to Krishna's counsels, then 
+0089  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Then Draupadi distressed at the death of her son
+0090  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Then Bhima of terrible prowess, moved by the wor
+0091  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  The son of Drona from fear of Bhimasena and impe
+0092  aswatthaman    angry           -> grave_drone            0.50  [rule:sauptika_night]  This is for the destruction of all the Pandavas'
+0093  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  ; then Krishna saying.
+0094  krishna        commanding      -> grave_drone            0.50  [rule:sauptika_night]  This shall not be
+0095  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  , neutralised Aswatthaman's speech.
+0096  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Then Arjuna neutralised that weapon by one of hi
+0097  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Seeing the wicked Aswatthaman's destructive inte
+0098  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Pandava then deprived the mighty warrior-in-char
+0099  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  Thus the tenth Parva, called Sauptika, is recite
+0100  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  The great Vyasa hath composed this in eighteen s
+0101  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  The number of slokas also composed (in this) by 
+0102  sauti          solemn          -> grave_drone            0.50  [rule:sauptika_night]  In this Parva has been put together by the great
+0103  sauti          solemn          -> grave_drone            0.45  [rule:stri_blows]  After this hath been recited the highly pathetic
+0104  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Then Vidura, removing the distressed Dhritarasht
+0105  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Then hath been described the wending of the dist
+0106  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Here follow the pathetic wailings of the wives o
+0107  sauti          solemn          -> grave_drone            0.45  [rule:stri_blows]  Then the wrath of Gandhari and Dhritarashtra and
+0108  sauti          solemn          -> grave_drone            0.45  [rule:stri_blows]  Then the Kshatriya ladies saw those heroes,—thei
+0109  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Then the pacification by Krishna of the wrath of
+0110  sauti          solemn          -> grave_drone            0.45  [rule:stri_blows]  Then the cremation of the bodies of the deceased
+0111  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Then upon the presentation of water of the manes
+0112  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Those have all been described by the great Rishi
+0113  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  Its perusal moveth every feeling heart with sorr
+0114  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  The number of sections composed is twenty-seven.
+0115  sauti          solemn          -> tender_resolve         0.40  [rule:stri_lament]  The number of slokas is seven hundred and sevent

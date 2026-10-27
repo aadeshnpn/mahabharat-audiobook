@@ -1,0 +1,106 @@
+# Episode 6. Text only (draft for review): `mbh episode build episodes/ep06.yaml`
+id: ep06
+title: "Episode 6: The Eighteen Parvas II: Virata, the War, and the Women"
+book: 1
+target_duration_s: 1080
+speech_tags: keep
+narrator_default: sauti
+timing: configs/duration.yaml
+lexicon: lexicon/book01.tsv
+overrides: episodes/overrides/ep06.json
+strip_glosses: true
+music: true
+music_rules:
+  # Virata (¶13): disguise, then Kichaka, the cattle raids, the wedding
+  - {name: virata_kichaka,  match: {section: 2, paragraph: 13, text: 'Kichaka|lust'},                         cue: grave_drone,    intensity: 0.4}
+  - {name: virata_battle,   match: {section: 2, paragraph: 13, text: 'Trigartas|seizure of Virata|defeat in battle|kine again'}, cue: grave_drone, intensity: 0.4}
+  - {name: virata_wedding,  match: {section: 2, paragraph: 13, text: 'Uttara|Abhimanyu'},                     cue: tender_resolve, intensity: 0.4}
+  - {name: virata_disguise, match: {section: 2, paragraph: 13},                                              cue: forest_ashram,  intensity: 0.35}
+  # Udyoga (¶14): Krishna's offer, the peace embassy, the march
+  - {name: udyoga_offer,    match: {section: 2, paragraph: 14, text: 'assistance in this war|Akshauhini of troops|unfighting counsellor'}, cue: royal_resolve, intensity: 0.4}
+  - {name: udyoga_peace,    match: {section: 2, paragraph: 14, text: 'sleeplessness|Sanat-sujata|Vidura addressed|bringing about peace|solicit peace|desire for peace'}, cue: sacred_solemn, intensity: 0.4}
+  - {name: udyoga_march,    match: {section: 2, paragraph: 14, text: 'preparation for war|march from Hastinapura|Uluka as envoy|tale of the troops|tale of charioteers'}, cue: grave_drone, intensity: 0.4}
+  - {name: udyoga_tales,    match: {section: 2, paragraph: 14, text: 'Damvodvava|Matuli|Galava|Bidula'},      cue: narration_warm, intensity: 0.35}
+  - {name: udyoga_catalogue,match: {section: 2, paragraph: 14},                                              cue: narration_warm, intensity: 0.35}
+  # Bhishma (¶15): the Gita, then the fall
+  - {name: bhishma_gita,    match: {section: 2, paragraph: 15, text: 'philosophy of final release|compunction'}, cue: sacred_solemn, intensity: 0.5}
+  - {name: bhishma_fall,    match: {section: 2, paragraph: 15, text: 'driving whip|Shikandin|bed of arrows|Gandiva|sharpest arrows'}, cue: grave_drone, intensity: 0.45}
+  - {name: bhishma_parva,   match: {section: 2, paragraph: 15},                                              cue: grave_drone,    intensity: 0.35}
+  # Drona (¶16)
+  - {name: drona_abhimanyu, match: {section: 2, paragraph: 16, text: 'Abhimanyu|Jayadratha|Narayana'},        cue: grave_drone,    intensity: 0.5}
+  - {name: drona_parva,     match: {section: 2, paragraph: 16},                                              cue: grave_drone,    intensity: 0.4}
+  # Karna (¶17)
+  - {name: karna_blood,     match: {section: 2, paragraph: 17, text: 'Dussasana|slew the great Karna'},       cue: grave_drone,    intensity: 0.5}
+  - {name: karna_parva,     match: {section: 2, paragraph: 17},                                              cue: grave_drone,    intensity: 0.4}
+  # Salya (¶18)
+  - {name: salya_mace,      match: {section: 2, paragraph: 18, text: 'clubs|thighs|mace|the lake'},           cue: grave_drone,    intensity: 0.45}
+  - {name: salya_parva,     match: {section: 2, paragraph: 18},                                              cue: grave_drone,    intensity: 0.35}
+  # Sauptika (¶19): the night attack, one bed
+  - {name: sauptika_night,  match: {section: 2, paragraph: 19},                                              cue: grave_drone,    intensity: 0.5}
+  # Stri (¶20): the blows, then the lament
+  - {name: stri_blows,      match: {section: 2, paragraph: 20, text: 'statue of hard iron|Then the wrath of Gandhari|lying dead|the cremation'}, cue: grave_drone, intensity: 0.45}
+  - {name: stri_lament,     match: {section: 2, paragraph: 20},                                              cue: tender_resolve, intensity: 0.4}
+summary: >
+  Sauti continues the eighteen-parva summary: Virata (the year in disguise, Kichaka, the cattle
+  raids, Uttara and Abhimanyu), Udyoga (Krishna's offer, Salya, the peace embassy, the march),
+  then the war books Bhishma, Drona, Karna and Salya, the night attack in Sauptika, and the
+  Stri parva, the lament of the women, through its sloka count.
+end_reason: >
+  §2 ¶20 closes the Stri (eleventh) parva with its sloka count ("...seven hundred and seventy-five").
+  From §2 ¶13 at a target of 1080 s, `mbh episode breaks` ranks a mid-¶20 sentence first (1075 s,
+  during the cremation) and this paragraph boundary second, a third of a point behind (1110 s).
+  The paragraph boundary is between parvas, in narration, on a complete sentence. ¶19 (Sauptika)
+  ends at 996 s, inside the window but well short of the target. ¶21 opens the Santi parva and,
+  with the v6 sting, pushes the file past 20 minutes. Santi starts Ep 7.
+segments:
+  - id: virata
+    kind: section
+    section: 2
+    paragraphs: [13, 13]
+    narrator: sauti
+    label: "Virata, the year in disguise"
+  - id: udyoga
+    kind: section
+    section: 2
+    paragraphs: [14, 14]
+    narrator: sauti
+    label: "Udyoga, the preparations"
+  - id: bhishma
+    kind: section
+    section: 2
+    paragraphs: [15, 15]
+    narrator: sauti
+    label: "Bhishma, the fall"
+  - id: drona
+    kind: section
+    section: 2
+    paragraphs: [16, 16]
+    narrator: sauti
+    label: "Drona, the teacher's command"
+  - id: karna
+    kind: section
+    section: 2
+    paragraphs: [17, 17]
+    narrator: sauti
+    label: "Karna, the eighth parva"
+  - id: salya
+    kind: section
+    section: 2
+    paragraphs: [18, 18]
+    narrator: sauti
+    label: "Salya, the mace"
+  - id: sauptika
+    kind: section
+    section: 2
+    paragraphs: [19, 19]
+    narrator: sauti
+    label: "Sauptika, the night attack"
+  - id: stri
+    kind: section
+    section: 2
+    paragraphs: [20, 20]
+    narrator: sauti
+    label: "Stri, the lament of the women"
+
+intro: title_song      # v6 sting: Krishna, Gita 2.62-63 + sung hook (configs/intros.yaml)
+outro: ending_song     # v6 sting ending: Gita 2.63b + hook (configs/outros.yaml)

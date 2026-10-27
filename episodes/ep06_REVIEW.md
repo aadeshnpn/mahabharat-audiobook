@@ -180,12 +180,5 @@ Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatt
 
 **Pick: A_1** (grave / cold, second take). Installed 2026-10-26 as `voices/aswatthaman/ref.wav`, leveled to −20 LUFS. The user preferred A_1 to A_0 as the male take. Registry notes record that. The weapon line is still not this voice's reference clip.
 
-## Short sample (not the episode)
-`samples/ep06_sample.mp3`, gitignored like the other listening renders. The PR has the same file. v6 title sting,
-then ep06-0001 (Virata opens), 0013–0014 (Krishna's offer, which carries Akshauhini), 0025 (Dambhodbhava, Matali,
-Galava, Bidula), 0049 (Sansaptakas, now spoken Samsaptakas), 0079–0080 (the vow, A_1), 0091–0092 (the weapon),
-0094 (Krishna, "This shall not be"). Music preset A.
-
-Full render, after you approve this sample: `setsid nohup tools/render_sharded.sh episodes/ep06.yaml 4`
-(5 shards, one model process) → assemble, preset A, −16 LUFS, title sting and ending → QA → cache backup.
-All 115 lines are still unrendered apart from the lines in this sample.
+## Short sample
+Approved. `samples/ep06_sample.mp3`. The full episode is `samples/ep06_v1.mp3`. QA: `episodes/ep06_QA.md`.

@@ -1,6 +1,6 @@
 # Episode 6: review notes
 
-The script is approved. Aswatthaman voice candidates are below for a pick. No voice is installed, and the episode is not rendered.
+The script is approved. Aswatthaman A_1 is installed. A short sample is rendered for a listen. The full episode is not.
 
 Script for review: `episodes/ep06_script.md`. Cue sheet: `episodes/ep06.cues.txt`. Spec: `episodes/ep06.yaml`.
 Overrides: `episodes/overrides/ep06.json`. Shard plan: `episodes/ep06.shards.txt` (5 shards, about 2.5–4 min each).
@@ -135,9 +135,19 @@ Uluka, Upaplavya.
 Nine more are in the lexicon and still unverified: Aishika, Akshauhini, Hastinapura, Kshatriya, Kurus, Parasara,
 Stri, Udyoga, Yoga. Aishika did pass on Sauti in the Ep 1 harness; the row was left provisional.
 
-Before rendering I propose the same harness pass as Ep 5 (Sauti's voice, and Krishna's on his two lines;
-KMG spelling first; plain-word respellings only for failures; no caps or hyphens), then a short sample.
-Aswatthaman's two lines wait on a voice.
+## Pronunciation pass (2026-10-26, Sauti and Aswatthaman)
+36 names: the 27 with no row, and the 9 that were unverified. Round 1 was the KMG spelling in the carrier
+"Then X spoke again, softly." Round 2 retook the misses and tried a plain-word form only where KMG failed.
+Krishna was added for Akshauhini, because that name is in his offer. Results:
+`tools/pronunciation/results_2026-10-26_ep06.json`.
+
+- **33 verified on KMG**, including the names that needed a retake (Kshatriya, Kurus, Udyoga, Alambusha, Bidula,
+  Dandasena, Sauptika, Srutayus). Srutayus also passed as Shrutayus; KMG was kept.
+- **One spoken-form change:** Sansaptakas → **Samsaptakas**. KMG failed on both voices twice. Samsaptakas passed
+  (Sauti heard "Samsaptaka"). Samshaptakas also cleared the score, with a messier Sauti hearing, so it was not used.
+- **Left unverified, KMG kept:** Akshauhini (Sauti passed; Aswatthaman heard "Akshawini" twice; Krishna's carrier
+  take failed — listen for it on his offer), Stri (Sauti passed; Aswatthaman did not, three tries), Jambu (Sauti
+  heard Jambu; Aswatthaman heard "Jumbo"; the coarse key had scored that as a pass).
 
 ## Aswatthaman voice candidates
 
@@ -157,7 +167,7 @@ The character brief is still the youth of the training scenes (bright sharp teno
 | **B_0**, **B_1** | Clenched wrath. The sharp tenor gone hard, a fury he is holding down, intense and clipped. |
 | **C_0**, **C_1** | Hollow and quiet. Dry and restrained after the slaughter, almost a whisper but still meant to be clear. C_1 is the quieter take. The first draw of C_0 collapsed to silence and was replaced. |
 
-Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatthaman_candidates.mp3` (50 s, 0.8 s gaps). Each take in that reel is leveled to about −20 LUFS so loudness does not decide the pick. The mp3 is gitignored with the other listening renders; the PR description has the same reel, with the pick label on screen. Raw clips stay in `voices/aswatthaman/candidates/` and are not committed. `voices/registry.json` is unchanged.
+Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatthaman_candidates.mp3` (50 s, 0.8 s gaps). Each take in that reel is leveled to about −20 LUFS so loudness does not decide the pick. The mp3 is gitignored with the other listening renders; the PR description has the same reel, with the pick label on screen. Raw clips stay in `voices/aswatthaman/candidates/` and are not committed. The installed reference is `voices/aswatthaman/ref.wav`.
 
 | Start | Pick |
 |---|---|
@@ -170,8 +180,12 @@ Audition, same place as the Ep 4 Parasurama reel: `samples/auditions/ep06_aswatt
 
 **Pick: A_1** (grave / cold, second take). Installed 2026-10-26 as `voices/aswatthaman/ref.wav`, leveled to −20 LUFS. The user preferred A_1 to A_0 as the male take. Registry notes record that. The weapon line is still not this voice's reference clip.
 
-## Render plan (after a voice pick)
-Pick one Aswatthaman take. Then install that reference, harness pass → short sample →
-`setsid nohup tools/render_sharded.sh episodes/ep06.yaml 4` (5 shards, one model process at a time) →
-assemble with music preset A, -16 LUFS, `intro: title_song` / `outro: ending_song` (v6 sting) → QA → cache backup.
-No pronunciation pass and no episode render until the pick. All 115 lines are still unrendered.
+## Short sample (not the episode)
+`samples/ep06_sample.mp3`, gitignored like the other listening renders. The PR has the same file. v6 title sting,
+then ep06-0001 (Virata opens), 0013–0014 (Krishna's offer, which carries Akshauhini), 0025 (Dambhodbhava, Matali,
+Galava, Bidula), 0049 (Sansaptakas, now spoken Samsaptakas), 0079–0080 (the vow, A_1), 0091–0092 (the weapon),
+0094 (Krishna, "This shall not be"). Music preset A.
+
+Full render, after you approve this sample: `setsid nohup tools/render_sharded.sh episodes/ep06.yaml 4`
+(5 shards, one model process) → assemble, preset A, −16 LUFS, title sting and ending → QA → cache backup.
+All 115 lines are still unrendered apart from the lines in this sample.
